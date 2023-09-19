@@ -1,0 +1,54 @@
+@keyframes come-out {
+  0% {
+    top: 20px;
+  }
+
+  80% {
+    top: 20px;
+  }
+
+  100% {
+    top: -30px;
+  }
+}
+
+.notify__wrapper {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: come-out 2s;
+}
+
+.notify {
+  width: fit-content;
+  min-width: 160px;
+  max-width: 600px;
+  padding: 8px 12px;
+  border: 1px solid;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.notify--success {
+  border-color: #25371c;
+  background-color: #1c2518;
+  color: #67c23a;
+}
+
+.notify--warning {
+  border-color: #3e301c;
+  background-color: #292218;
+  color: #e6a23c;
+}
+
+.notify--error {
+  border-color: #412626;
+  background-color: #2b1d1d;
+  color: #f56c6c;
+}
+
+.notify--info {
+  border-color: #2d2d2f;
+  background-color: #202121;
+  color: #909399;
+}

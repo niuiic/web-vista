@@ -1,0 +1,18 @@
+.main {
+  height: 100%;
+  padding: 12px;
+  background-color: var(--s-color-bg-dark-3);
+}
+
+.showcases {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  width: fit-content;
+  margin: 20px auto;
+}
+
+:global(.showcase) {
+  align-self: center;
+  justify-self: center;
+}

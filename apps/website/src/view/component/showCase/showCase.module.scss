@@ -1,0 +1,149 @@
+.showcase {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 300px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: var(--s-color-bg-dark-2);
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info__left {
+  flex: 1;
+  overflow: hidden;
+}
+
+.title {
+  overflow: hidden;
+  color: var(--s-color-text-light-1);
+  font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tags {
+  overflow: hidden;
+  width: fit-content;
+  background: linear-gradient(90deg, #00f260 0%, #40e0d0 100%);
+  background-clip: text;
+  color: transparent;
+  font-size: var(--s-font-size-small);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.category {
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: #40e0d0;
+  text-align: center;
+}
+
+.desc {
+  overflow: hidden;
+  color: var(--s-color-text-light-2);
+  font-size: var(--s-font-size-small);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.frame__wrapper {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  margin-bottom: 8px;
+  border-radius: 8px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    width: 200px;
+    height: 150px;
+    background: linear-gradient(to top right, transparent 50%, rgb(0 0 0 / 50%) 100%);
+  }
+}
+
+.frame__wrapper:hover::after {
+  display: block;
+}
+
+.frame__wrapper--disactive {
+  pointer-events: none;
+}
+
+.frame {
+  height: 100%;
+  background: var(--s-color-bg-light-1);
+}
+
+.frame__btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  display: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: var(--s-color-bg-dark-5);
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  user-select: none;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+}
+
+.frame__wrapper:hover .frame__btn {
+  display: block;
+}
+
+.dialog__body .frame {
+  flex: 1;
+  height: unset;
+}
+
+.dialog {
+  overflow: auto;
+}
+
+.dialog :global(.dialog__inner) {
+  width: 1200px;
+  max-width: 100%;
+  border-radius: 8px;
+  background: var(--s-color-bg-dark-1);
+}
+
+.dialog__header {
+  padding: 8px;
+}
+
+.dialog__body {
+  display: flex;
+  overflow: auto;
+  min-height: 240px;
+  max-height: 80vh;
+}
+
+.tabs {
+  padding: 8px;
+  background: var(--s-color-bg-dark-3);
+}
+
+.code__wrapper {
+  flex: 1;
+  overflow: auto;
+  background: var(--s-color-bg-dark-4);
+}

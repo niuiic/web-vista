@@ -1,0 +1,19 @@
+.input {
+  padding: 8px 20px;
+  border-radius: 4px;
+  background-color: var(--s-color-bg-dark-1);
+}
+
+.input__inner {
+  width: calc(100% - 2 * 20px);
+  color: var(--s-color-text-light-1);
+  font-size: var(--s-font-size-small);
+
+  &::placeholder {
+    color: var(--s-color-text-light-2);
+  }
+}
+
+.input__prefix {
+  margin-right: 10px;
+}

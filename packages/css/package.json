@@ -1,0 +1,21 @@
+{
+  "name": "css-components",
+  "version": "0.0.0",
+  "type": "module",
+  "module": "./dist/index.mjs",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    "import": "./dist/index.mjs"
+  },
+  "scripts": {
+    "dev": "farm start",
+    "build": "tsx cli/build.ts",
+    "preview": "farm preview"
+  },
+  "devDependencies": {
+    "eslint-config-custom": "workspace:*",
+    "stylelint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*",
+    "farm-plugins": "workspace:*"
+  }
+}
