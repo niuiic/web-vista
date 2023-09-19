@@ -1,0 +1,27 @@
+html {
+  --s-font-size-large: 45px;
+  --s-font-size-middle: 27px;
+  --s-font-size-normal: 16px;
+  --s-font-size-small: 14px;
+}
+
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: JetBrainsMono;
+  src: url('@/asset/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: bold;
+  font-style: normal;
+  font-family: JetBrainsMono;
+  src: url('@/asset/font/JetBrainsMono-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: bold;
+  font-style: italic;
+  font-family: JetBrainsMono;
+  src: url('@/asset/font/JetBrainsMono-BoldItalic.woff2') format('woff2');
+}

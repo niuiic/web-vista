@@ -1,0 +1,16 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "farm-plugins#build": {},
+    "postcss-plugins#build": {},
+    "layout#build": {
+      "dependsOn": ["postcss-plugins#build"]
+    },
+    "css#build": {},
+    "webgl#build": {},
+    "dev": {
+      "cache": false,
+      "persistent": true
+    }
+  }
+}

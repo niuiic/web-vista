@@ -1,0 +1,15 @@
+{
+  "name": "css",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "farm start",
+    "build": "farm build",
+    "preview": "farm preview"
+  },
+  "devDependencies": {
+    "eslint-config-custom": "workspace:*",
+    "stylelint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*"
+  }
+}

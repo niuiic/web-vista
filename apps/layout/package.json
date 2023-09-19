@@ -1,0 +1,30 @@
+{
+  "name": "layout",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "farm start",
+    "build": "farm build",
+    "preview": "farm preview"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/eslint-parser": "^7.22.15",
+    "@babel/preset-react": "^7.22.15",
+    "@farmfe/js-plugin-postcss": "^1.1.1",
+    "@farmfe/plugin-react": "^0.3.4",
+    "@types/react": "^18.2.34",
+    "@types/react-dom": "^18.2.14",
+    "eslint-config-custom": "workspace:*",
+    "eslint-plugin-react": "^7.33.2",
+    "postcss": "^8.4.31",
+    "react-refresh": "^0.14.0",
+    "stylelint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*",
+    "postcss-plugins": "workspace:*"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "farm-plugins",
+  "version": "0.0.0",
+  "main": "dist/index.cjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "farm build"
+  },
+  "devDependencies": {
+    "tsconfig": "workspace:*",
+    "eslint-config-custom": "workspace:*"
+  }
+}
