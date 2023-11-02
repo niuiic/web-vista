@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <title>Layout</title>
+  <link rel="stylesheet" href="/index_1719.134eadf8.css"><script data-farm-entry-script="true">
+window.process = {
+  env: {
+    NODE_ENV: 'production',
+  },
+};
+window.__farm_namespace__ = 'c61404957758dfda283709e89376ab3e';
+(globalThis || window || global || self)[__farm_namespace__] = {};
+(globalThis || window || global || self)[__farm_namespace__] = {
+  __FARM_TARGET_ENV__: 'browser',
+};
+window.process.env.NODE_ENV = 'production';</script><script data-farm-entry-script="true">(function(modules, entryModule) {
+    var cache = {};
+    function require(id) {
+        if (cache[id]) return cache[id].exports;
+        var module = {
+            id: id,
+            exports: {}
+        };
+        modules[id](module, module.exports, require);
+        cache[id] = module;
+        return module.exports;
+    }
+    require(entryModule);
+})({
+    "39552e21": function(module, exports, farmRequire, farmDynamicRequire) {
+        "use strict";
+        Object.defineProperty(exports, "__esModule", {
+            value: true
+        });
+        Object.defineProperty(exports, "Module", {
+            enumerable: true,
+            get: function() {
+                return Module;
+            }
+        });
+        class Module {
+            id;
+            exports;
+            meta;
+            require;
+            dispose;
+            constructor(id, require){
+                this.id = id;
+                this.exports = {};
+                this.meta = {
+                    env: {}
+                };
+                this.require = require;
+            }
+            onDispose(callback) {
+                this.dispose = callback;
+            }
+        }
+    },
+    "45cc7871": function(module, exports, farmRequire, farmDynamicRequire) {
+        "use strict";
+        Object.defineProperty(exports, "__esModule", {
+            value: true
+        });
+        function _export(target, all) {
+            for(var name in all)Object.defineProperty(target, name, {
+                enumerable: true,
+                get: all[name]
+            });
+        }
+        _export(exports, {
+            _export_star: function() {
+                return _export_star;
+            },
+            _: function() {
+                return _export_star;
+            }
+        });
+        function _export_star(from, to) {
+            Object.keys(from).forEach(function(k) {
+                if (k !== "default" && !Object.prototype.hasOwnProperty.call(to, k)) {
+                    Object.defineProperty(to, k, {
+                        enumerable: true,
+                        get: function() {
+                            return from[k];
+                        }
+                    });
+                }
+            });
+            return from;
+        }
+    },
+    "541f7eae": function(module, exports, farmRequire, farmDynamicRequire) {
+        "use strict";
+        Object.defineProperty(exports, "__esModule", {
+            value: true
+        });
+        var _modulesystem = farmRequire("b591b4a8");
+        var _resourceloader = farmRequire("ef0721f5");
+        _resourceloader.__farm_global_this__.__farm_module_system__ = (function() {
+            const moduleSystem = new _modulesystem.ModuleSystem();
+            return function() {
+                return moduleSystem;
+            };
+        })()();
+        (globalThis || window || global || self)[__farm_namespace__].__farm_module_system__.setPlugins([]);
+    },
+    "920f004a": function(module, exports, farmRequire, farmDynamicRequire) {
+        "use strict";
+        Object.defineProperty(exports, "__esModule", {
+            value: true
+        });
+        Object.defineProperty(exports, "FarmRuntimePluginContainer", {
+            enumerable: true,
+            get: function() {
+                return FarmRuntimePluginContainer;
+            }
+        });
+        class FarmRuntimePluginContainer {
+            plugins = [];
+            constructor(plugins){
+                this.plugins = plugins;
+            }
+            hookSerial(hookName, ...args) {
+                for (const plugin of this.plugins){
+                    const hook = plugin[hookName];
+                    if (hook) {
+                        hook.apply(plugin, args);
+                    }
+                }
+            }
+            hookBail(hookName, ...args) {
+                for (const plugin of this.plugins){
+                    const hook = plugin[hookName];
+                    if (hook) {
+                        const result = hook.apply(plugin, args);
+                        if (result) {
+                            return result;
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "b591b4a8": function(module, exports, farmRequire, farmDynamicRequire) {
+        "use strict";
+        Object.defineProperty(exports, "__esModule", {
+            value: true
+        });
+        Object.defineProperty(exports, "ModuleSystem", {
+            enumerable: true,
+            get: function() {
+                return ModuleSystem;
+            }
+        });
+        var _module = farmRequire("39552e21");
+        var _plugin = farmRequire("920f004a");
+        var _resourceloader = farmRequire("ef0721f5");
+        var _interop_require_default = farmRequire("ca62dec2");
+        var _interop_require_wildcard = farmRequire("c4321c4c");
+        var _export_star = farmRequire("45cc7871");
+        const INTERNAL_MODULE_MAP = {
+            "@swc/helpers/_/_interop_require_default": {
+                default: _interop_require_default._interop_require_default,
+                _: _interop_require_default._interop_require_default
+            },
+            "@swc/helpers/_/_interop_require_wildcard": {
+                default: _interop_require_wildcard._interop_require_wildcard,
+                _: _interop_require_wildcard._interop_require_wildcard
+            },
+            "@swc/helpers/_/_export_star": {
+                default: _export_star._export_star,
+                _: _export_star._export_star
+            }
+        };
+        class ModuleSystem {
+            modules;
+            cache;
+            publicPaths;
+            dynamicModuleResourcesMap;
+            resourceLoader;
+            pluginContainer;
+            constructor(){
+                this.modules = {};
+                this.cache = {};
+                this.publicPaths = [];
+                this.dynamicModuleResourcesMap = {};
+                this.resourceLoader = new _resourceloader.ResourceLoader(this.publicPaths);
+                this.pluginContainer = new _plugin.FarmRuntimePluginContainer([]);
+            }
+            require(moduleId) {
+                if (INTERNAL_MODULE_MAP[moduleId]) {
+                    return INTERNAL_MODULE_MAP[moduleId];
+                }
+                if (this.cache[moduleId]) {
+                    const shouldSkip = this.pluginContainer.hookBail("readModuleCache", this.cache[moduleId]);
+                    if (!shouldSkip) {
+                        return this.cache[moduleId].exports;
+                    }
+                }
+                const initializer = this.modules[moduleId];
+                if (!initializer) {
+                    if (_resourceloader.targetEnv === "node") {
+                        return __farmNodeRequire(moduleId);
+                    }
+                    return {};
+                }
+                const module = new _module.Module(moduleId, this.require.bind(this));
+                this.pluginContainer.hookSerial("moduleCreated", module);
+                this.cache[moduleId] = module;
+                initializer(module, module.exports, this.require.bind(this), this.farmDynamicRequire.bind(this));
+                this.pluginContainer.hookSerial("moduleInitialized", module);
+                return module.exports;
+            }
+            farmDynamicRequire(moduleId) {
+                if (this.modules[moduleId]) {
+                    const exports1 = this.require(moduleId);
+                    if (exports1.__farm_async) {
+                        return exports1.default;
+                    } else {
+                        return Promise.resolve(exports1);
+                    }
+                }
+                const resources = this.dynamicModuleResourcesMap[moduleId];
+                if (!resources || resources.length === 0) {
+                    throw new Error(`Dynamic imported module "${moduleId}" does not belong to any resource`);
+                }
+                return Promise.all(resources.map((resource)=>this.resourceLoader.load(resource))).then(()=>{
+                    const result = this.require(moduleId);
+                    if (result.__farm_async) {
+                        return result.default;
+                    } else {
+                        return result;
+                    }
+                }).catch((err)=>{
+                    console.error(`[Farm] Error loading dynamic module "${moduleId}"`, err);
+                    throw err;
+                });
+            }
+            register(moduleId, initializer) {
+                if (this.modules[moduleId]) {
+                    console.warn(`Module "${moduleId}" has registered! It should not be registered twice`);
+                    return;
+                }
+                this.modules[moduleId] = initializer;
+            }
+            update(moduleId, init) {
+                this.modules[moduleId] = init;
+                this.clearCache(moduleId);
+            }
+            delete(moduleId) {
+                if (this.modules[moduleId]) {
+                    this.cache[moduleId] && this.cache[moduleId].dispose?.();
+                    this.clearCache(moduleId);
+                    delete this.modules[moduleId];
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            getCache(moduleId) {
+                return this.cache[moduleId];
+            }
+            clearCache(moduleId) {
+                if (this.cache[moduleId]) {
+                    delete this.cache[moduleId];
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            setInitialLoadedResources(resources) {
+                for (const resource of resources){
+                    this.resourceLoader.setLoadedResource(resource);
+                }
+            }
+            setDynamicModuleResourcesMap(dynamicModuleResourcesMap) {
+                this.dynamicModuleResourcesMap = dynamicModuleResourcesMap;
+            }
+            setPublicPaths(publicPaths) {
+                this.publicPaths = publicPaths;
+                this.resourceLoader.publicPaths = this.publicPaths;
+            }
+            setPlugins(plugins) {
+                this.pluginContainer.plugins = plugins;
+            }
+            bootstrap() {
+                this.pluginContainer.hookSerial("bootstrap", this);
+            }
+        }
+    },
+    "c4321c4c": function(module, exports, farmRequire, farmDynamicRequire) {
+        "use strict";
+        Object.defineProperty(exports, "__esModule", {
+            value: true
+        });
+        function _export(target, all) {
+            for(var name in all)Object.defineProperty(target, name, {
+                enumerable: true,
+                get: all[name]
+            });
+        }
+        _export(exports, {
+            _interop_require_wildcard: function() {
+                return _interop_require_wildcard;
+            },
+            _: function() {
+                return _interop_require_wildcard;
+            }
+        });
+        function _getRequireWildcardCache(nodeInterop) {
+            if (typeof WeakMap !== "function") return null;
+            var cacheBabelInterop = new WeakMap();
+            var cacheNodeInterop = new WeakMap();
+            return (_getRequireWildcardCache = function(nodeInterop) {
+                return nodeInterop ? cacheNodeInterop : cacheBabelInterop;
+            })(nodeInterop);
+        }
+        function _interop_require_wildcard(obj, nodeInterop) {
+            if (!nodeInterop && obj && obj.__esModule) return obj;
+            if (obj === null || typeof obj !== "object" && typeof obj !== "function") return {
+                default: obj
+            };
+            var cache = _getRequireWildcardCache(nodeInterop);
+            if (cache && cache.has(obj)) return cache.get(obj);
+            var newObj = {
+                __proto__: null
+            };
+            var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
+            for(var key in obj){
+                if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
+                    var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
+                    if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
+                    else newObj[key] = obj[key];
+                }
+            }
+            newObj.default = obj;
+            if (cache) cache.set(obj, newObj);
+            return newObj;
+        }
+    },
+    "ca62dec2": function(module, exports, farmRequire, farmDynamicRequire) {
+        "use strict";
+        Object.defineProperty(exports, "__esModule", {
+            value: true
+        });
+        function _export(target, all) {
+            for(var name in all)Object.defineProperty(target, name, {
+                enumerable: true,
+                get: all[name]
+            });
+        }
+        _export(exports, {
+            _interop_require_default: function() {
+                return _interop_require_default;
+            },
+            _: function() {
+                return _interop_require_default;
+            }
+        });
+        function _interop_require_default(obj) {
+            return obj && obj.__esModule ? obj : {
+                default: obj
+            };
+        }
+    },
+    "ef0721f5": function(module, exports, farmRequire, farmDynamicRequire) {
+        "use strict";
+        Object.defineProperty(exports, "__esModule", {
+            value: true
+        });
+        function _export(target, all) {
+            for(var name in all)Object.defineProperty(target, name, {
+                enumerable: true,
+                get: all[name]
+            });
+        }
+        _export(exports, {
+            __farm_global_this__: function() {
+                return __farm_global_this__;
+            },
+            targetEnv: function() {
+                return targetEnv;
+            },
+            ResourceLoader: function() {
+                return ResourceLoader;
+            }
+        });
+        const __farm_global_this__ = (globalThis || window || global || self)[__farm_namespace__];
+        const targetEnv = __farm_global_this__.__FARM_TARGET_ENV__ || "node";
+        class ResourceLoader {
+            _loadedResources = {};
+            _loadingResources = {};
+            publicPaths;
+            constructor(publicPaths){
+                this.publicPaths = publicPaths;
+            }
+            load(resource, index = 0) {
+                if (targetEnv === "node") {
+                    if (resource.type === "script") {
+                        return this._loadScript(`./${resource.path}`);
+                    } else if (resource.type === "link") {
+                        return this._loadLink(`./${resource.path}`);
+                    }
+                }
+                const publicPath = this.publicPaths[index];
+                const url = `${publicPath === "/" ? "" : publicPath}/${resource.path}`;
+                if (this._loadedResources[resource.path]) {
+                    return;
+                } else if (this._loadingResources[resource.path]) {
+                    return this._loadingResources[resource.path];
+                }
+                let promise = Promise.resolve();
+                if (resource.type === "script") {
+                    promise = this._loadScript(url);
+                } else if (resource.type === "link") {
+                    promise = this._loadLink(url);
+                }
+                this._loadingResources[resource.path] = promise;
+                promise.then(()=>{
+                    this._loadedResources[resource.path] = true;
+                }).catch((e)=>{
+                    console.warn(`[Farm] Failed to load resource "${url}" using publicPath: ${this.publicPaths[index]}`);
+                    index++;
+                    if (index < this.publicPaths.length) {
+                        return this.load(resource, index);
+                    } else {
+                        throw new Error(`[Farm] Failed to load resource: "${resource.path}, type: ${resource.type}". ${e}`);
+                    }
+                });
+                return promise;
+            }
+            setLoadedResource(path) {
+                this._loadedResources[path] = true;
+            }
+            _loadScript(path) {
+                if (targetEnv === "node") {
+                    return import(path);
+                } else {
+                    return new Promise((resolve, reject)=>{
+                        const script = document.createElement("script");
+                        script.src = path;
+                        document.body.appendChild(script);
+                        script.onload = ()=>{
+                            resolve();
+                        };
+                        script.onerror = (e)=>{
+                            reject(e);
+                        };
+                    });
+                }
+            }
+            _loadLink(path) {
+                if (targetEnv === "node") {
+                    return Promise.resolve();
+                } else {
+                    return new Promise((resolve, reject)=>{
+                        const link = document.createElement("link");
+                        link.rel = "stylesheet";
+                        link.href = path;
+                        document.head.appendChild(link);
+                        link.onload = ()=>{
+                            resolve();
+                        };
+                        link.onerror = (e)=>{
+                            reject(e);
+                        };
+                    });
+                }
+            }
+        }
+    }
+}, "541f7eae");
+</script></head>
+  <body>
+    <div id="app"></div>
+    
+  
+
+<script src="/index_7bf2.637129e2.js" data-farm-resource="true"></script><script src="/index_908f.0966f6e5.js" data-farm-resource="true"></script><script src="/index_bd7c.4f189e4f.js" data-farm-resource="true"></script><script src="/index_c47f.480a6f0a.js" data-farm-resource="true"></script><script data-farm-entry-script="true">(globalThis || window || global || self)[__farm_namespace__].__farm_module_system__.setInitialLoadedResources(['index_1719.134eadf8.css','index_7bf2.637129e2.js','index_908f.0966f6e5.js','index_bd7c.4f189e4f.js','index_c47f.480a6f0a.js']);</script><script data-farm-entry-script="true">(globalThis || window || global || self)[__farm_namespace__].__farm_module_system__.setDynamicModuleResourcesMap({  });</script><script data-farm-entry-script="true">(globalThis || window || global || self)[__farm_namespace__].__farm_module_system__.setPublicPaths(['/']);</script><script data-farm-entry-script="true">(globalThis || window || global || self)[__farm_namespace__].__farm_module_system__.bootstrap();</script><script data-farm-entry-script="true">(globalThis || window || global || self)[__farm_namespace__].__farm_module_system__.require("2c6e69f1")</script></body></html>
