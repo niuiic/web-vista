@@ -30,122 +30,7 @@ window.process.env.NODE_ENV = 'production';</script><script data-farm-entry-scri
     }
     require(entryModule);
 })({
-    "39552e21": function(module, exports, farmRequire, farmDynamicRequire) {
-        "use strict";
-        Object.defineProperty(exports, "__esModule", {
-            value: true
-        });
-        Object.defineProperty(exports, "Module", {
-            enumerable: true,
-            get: function() {
-                return Module;
-            }
-        });
-        class Module {
-            id;
-            exports;
-            meta;
-            require;
-            dispose;
-            constructor(id, require){
-                this.id = id;
-                this.exports = {};
-                this.meta = {
-                    env: {}
-                };
-                this.require = require;
-            }
-            onDispose(callback) {
-                this.dispose = callback;
-            }
-        }
-    },
-    "45cc7871": function(module, exports, farmRequire, farmDynamicRequire) {
-        "use strict";
-        Object.defineProperty(exports, "__esModule", {
-            value: true
-        });
-        function _export(target, all) {
-            for(var name in all)Object.defineProperty(target, name, {
-                enumerable: true,
-                get: all[name]
-            });
-        }
-        _export(exports, {
-            _export_star: function() {
-                return _export_star;
-            },
-            _: function() {
-                return _export_star;
-            }
-        });
-        function _export_star(from, to) {
-            Object.keys(from).forEach(function(k) {
-                if (k !== "default" && !Object.prototype.hasOwnProperty.call(to, k)) {
-                    Object.defineProperty(to, k, {
-                        enumerable: true,
-                        get: function() {
-                            return from[k];
-                        }
-                    });
-                }
-            });
-            return from;
-        }
-    },
-    "541f7eae": function(module, exports, farmRequire, farmDynamicRequire) {
-        "use strict";
-        Object.defineProperty(exports, "__esModule", {
-            value: true
-        });
-        var _modulesystem = farmRequire("b591b4a8");
-        var _resourceloader = farmRequire("ef0721f5");
-        _resourceloader.__farm_global_this__.__farm_module_system__ = (function() {
-            const moduleSystem = new _modulesystem.ModuleSystem();
-            return function() {
-                return moduleSystem;
-            };
-        })()();
-        (globalThis || window || global || self)[__farm_namespace__].__farm_module_system__.setPlugins([]);
-    },
-    "920f004a": function(module, exports, farmRequire, farmDynamicRequire) {
-        "use strict";
-        Object.defineProperty(exports, "__esModule", {
-            value: true
-        });
-        Object.defineProperty(exports, "FarmRuntimePluginContainer", {
-            enumerable: true,
-            get: function() {
-                return FarmRuntimePluginContainer;
-            }
-        });
-        class FarmRuntimePluginContainer {
-            plugins = [];
-            constructor(plugins){
-                this.plugins = plugins;
-            }
-            hookSerial(hookName, ...args) {
-                for (const plugin of this.plugins){
-                    const hook = plugin[hookName];
-                    if (hook) {
-                        hook.apply(plugin, args);
-                    }
-                }
-            }
-            hookBail(hookName, ...args) {
-                for (const plugin of this.plugins){
-                    const hook = plugin[hookName];
-                    if (hook) {
-                        const result = hook.apply(plugin, args);
-                        if (result) {
-                            return result;
-                        }
-                    }
-                }
-            }
-        }
-    },
-    "b591b4a8": function(module, exports, farmRequire, farmDynamicRequire) {
+    "1566b070": function(module, exports, farmRequire, farmDynamicRequire) {
         "use strict";
         Object.defineProperty(exports, "__esModule", {
             value: true
@@ -156,9 +41,9 @@ window.process.env.NODE_ENV = 'production';</script><script data-farm-entry-scri
                 return ModuleSystem;
             }
         });
-        var _module = farmRequire("39552e21");
-        var _plugin = farmRequire("920f004a");
-        var _resourceloader = farmRequire("ef0721f5");
+        var _module = farmRequire("74323f6f");
+        var _plugin = farmRequire("a521c8db");
+        var _resourceloader = farmRequire("fe8a4a31");
         var _interop_require_default = farmRequire("ca62dec2");
         var _interop_require_wildcard = farmRequire("c4321c4c");
         var _export_star = farmRequire("45cc7871");
@@ -211,6 +96,11 @@ window.process.env.NODE_ENV = 'production';</script><script data-farm-entry-scri
                 const module = new _module.Module(moduleId, this.require.bind(this));
                 this.pluginContainer.hookSerial("moduleCreated", module);
                 this.cache[moduleId] = module;
+                if (!(globalThis || global || window || {}).require) {
+                    (globalThis || global || window || {
+                        require: undefined
+                    }).require = this.require.bind(this);
+                }
                 initializer(module, module.exports, this.require.bind(this), this.farmDynamicRequire.bind(this));
                 this.pluginContainer.hookSerial("moduleInitialized", module);
                 return module.exports;
@@ -292,6 +182,121 @@ window.process.env.NODE_ENV = 'production';</script><script data-farm-entry-scri
             }
         }
     },
+    "45cc7871": function(module, exports, farmRequire, farmDynamicRequire) {
+        "use strict";
+        Object.defineProperty(exports, "__esModule", {
+            value: true
+        });
+        function _export(target, all) {
+            for(var name in all)Object.defineProperty(target, name, {
+                enumerable: true,
+                get: all[name]
+            });
+        }
+        _export(exports, {
+            _export_star: function() {
+                return _export_star;
+            },
+            _: function() {
+                return _export_star;
+            }
+        });
+        function _export_star(from, to) {
+            Object.keys(from).forEach(function(k) {
+                if (k !== "default" && !Object.prototype.hasOwnProperty.call(to, k)) {
+                    Object.defineProperty(to, k, {
+                        enumerable: true,
+                        get: function() {
+                            return from[k];
+                        }
+                    });
+                }
+            });
+            return from;
+        }
+    },
+    "74323f6f": function(module, exports, farmRequire, farmDynamicRequire) {
+        "use strict";
+        Object.defineProperty(exports, "__esModule", {
+            value: true
+        });
+        Object.defineProperty(exports, "Module", {
+            enumerable: true,
+            get: function() {
+                return Module;
+            }
+        });
+        class Module {
+            id;
+            exports;
+            meta;
+            require;
+            dispose;
+            constructor(id, require){
+                this.id = id;
+                this.exports = {};
+                this.meta = {
+                    env: {}
+                };
+                this.require = require;
+            }
+            onDispose(callback) {
+                this.dispose = callback;
+            }
+        }
+    },
+    "a521c8db": function(module, exports, farmRequire, farmDynamicRequire) {
+        "use strict";
+        Object.defineProperty(exports, "__esModule", {
+            value: true
+        });
+        Object.defineProperty(exports, "FarmRuntimePluginContainer", {
+            enumerable: true,
+            get: function() {
+                return FarmRuntimePluginContainer;
+            }
+        });
+        class FarmRuntimePluginContainer {
+            plugins = [];
+            constructor(plugins){
+                this.plugins = plugins;
+            }
+            hookSerial(hookName, ...args) {
+                for (const plugin of this.plugins){
+                    const hook = plugin[hookName];
+                    if (hook) {
+                        hook.apply(plugin, args);
+                    }
+                }
+            }
+            hookBail(hookName, ...args) {
+                for (const plugin of this.plugins){
+                    const hook = plugin[hookName];
+                    if (hook) {
+                        const result = hook.apply(plugin, args);
+                        if (result) {
+                            return result;
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "c2cf9d4e": function(module, exports, farmRequire, farmDynamicRequire) {
+        "use strict";
+        Object.defineProperty(exports, "__esModule", {
+            value: true
+        });
+        var _modulesystem = farmRequire("1566b070");
+        var _resourceloader = farmRequire("fe8a4a31");
+        _resourceloader.__farm_global_this__.__farm_module_system__ = (function() {
+            const moduleSystem = new _modulesystem.ModuleSystem();
+            return function() {
+                return moduleSystem;
+            };
+        })()();
+        (globalThis || window || global || self)[__farm_namespace__].__farm_module_system__.setPlugins([]);
+    },
     "c4321c4c": function(module, exports, farmRequire, farmDynamicRequire) {
         "use strict";
         Object.defineProperty(exports, "__esModule", {
@@ -367,7 +372,7 @@ window.process.env.NODE_ENV = 'production';</script><script data-farm-entry-scri
             };
         }
     },
-    "ef0721f5": function(module, exports, farmRequire, farmDynamicRequire) {
+    "fe8a4a31": function(module, exports, farmRequire, farmDynamicRequire) {
         "use strict";
         Object.defineProperty(exports, "__esModule", {
             value: true
@@ -473,7 +478,7 @@ window.process.env.NODE_ENV = 'production';</script><script data-farm-entry-scri
             }
         }
     }
-}, "541f7eae");
+}, "c2cf9d4e");
 </script></head>
   <body>
     <div id="app"></div>
