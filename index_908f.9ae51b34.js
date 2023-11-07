@@ -133,16 +133,22 @@
                     }),
                     (0, _jsxruntime.jsx)("h2", {
                         className: _navmodulescss.default.slogan,
-                        children: "Sharing Ideas"
+                        children: (0, _jsxruntime.jsx)("span", {
+                            className: _navmodulescss.default["slogan__inner"],
+                            children: "Sharing Ideas"
+                        })
                     }),
-                    props.entries.map((entry)=>(0, _jsxruntime.jsx)("p", {
-                            className: [
-                                _navmodulescss.default.entry,
-                                "o-btn"
-                            ].join(" "),
-                            onClick: entry.onClick,
-                            children: entry.label
-                        }, entry.label))
+                    (0, _jsxruntime.jsx)("ul", {
+                        className: _navmodulescss.default.entries,
+                        children: props.entries.map((entry)=>(0, _jsxruntime.jsx)("li", {
+                                className: [
+                                    _navmodulescss.default.entry,
+                                    "o-btn"
+                                ].join(" "),
+                                onClick: entry.onClick,
+                                children: entry.label
+                            }, entry.label))
+                    })
                 ]
             });
         };
@@ -195,11 +201,13 @@
         });
         "";
         var _default = {
-            "nav": `nav-a346a3ab`,
-            "title": `title-a346a3ab`,
-            "border-color": `border-color-a346a3ab`,
-            "slogan": `slogan-a346a3ab`,
-            "entry": `entry-a346a3ab`
+            "nav": `nav-9e0129be`,
+            "title": `title-9e0129be`,
+            "entry": `entry-9e0129be`,
+            "slogan__inner": `slogan__inner-9e0129be`,
+            "change-color": `change-color-9e0129be`,
+            "slogan": `slogan-9e0129be`,
+            "entries": `entries-9e0129be`
         };
     },
     "aedc679a": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -230,4 +238,4 @@
     }
 });
 
-//# sourceMappingURL=/index_908f.0966f6e5.js.map
+//# sourceMappingURL=/index_908f.9ae51b34.js.map
