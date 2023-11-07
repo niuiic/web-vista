@@ -90,12 +90,25 @@
         var _jsxruntime = farmRequire("892c81fb");
         var _footermodulescss = _interop_require_default._(farmRequire("67c07953"));
         const Footer = ()=>{
+            const accessGithub = ()=>{
+                window.open("https://github.com/niuiic/gallery", "_blank");
+            };
             return (0, _jsxruntime.jsxs)("div", {
                 className: _footermodulescss.default.footer,
                 children: [
-                    (0, _jsxruntime.jsx)("p", {
+                    (0, _jsxruntime.jsxs)("p", {
                         className: _footermodulescss.default.text,
-                        children: "Released under the MIT License."
+                        children: [
+                            "Access on ",
+                            (0, _jsxruntime.jsx)("span", {
+                                className: [
+                                    _footermodulescss.default.link,
+                                    "o-btn"
+                                ].join(" "),
+                                onClick: accessGithub,
+                                children: "github"
+                            })
+                        ]
                     }),
                     (0, _jsxruntime.jsx)("p", {
                         className: _footermodulescss.default.text,
@@ -137,8 +150,9 @@
         });
         "";
         var _default = {
-            "footer": `footer-77ed408b`,
-            "text": `text-77ed408b`
+            "footer": `footer-f2962e6e`,
+            "text": `text-f2962e6e`,
+            "link": `link-f2962e6e`
         };
     },
     "7dfa112b": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -292,4 +306,4 @@
     }
 });
 
-//# sourceMappingURL=/index_d297.ba5021da.js.map
+//# sourceMappingURL=/index_d297.10fa6d61.js.map
