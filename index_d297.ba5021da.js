@@ -75,6 +75,36 @@
         });
         var _default = "/JetBrainsMono-BoldItalic.3a013466.woff2";
     },
+    "56fdf8a1": function(module, exports, farmRequire, farmDynamicRequire) {
+        "use strict";
+        Object.defineProperty(exports, "__esModule", {
+            value: true
+        });
+        Object.defineProperty(exports, "Footer", {
+            enumerable: true,
+            get: function() {
+                return Footer;
+            }
+        });
+        var _interop_require_default = farmRequire("@swc/helpers/_/_interop_require_default");
+        var _jsxruntime = farmRequire("892c81fb");
+        var _footermodulescss = _interop_require_default._(farmRequire("67c07953"));
+        const Footer = ()=>{
+            return (0, _jsxruntime.jsxs)("div", {
+                className: _footermodulescss.default.footer,
+                children: [
+                    (0, _jsxruntime.jsx)("p", {
+                        className: _footermodulescss.default.text,
+                        children: "Released under the MIT License."
+                    }),
+                    (0, _jsxruntime.jsx)("p", {
+                        className: _footermodulescss.default.text,
+                        children: "Copyright \xa9 2023-present niuiic"
+                    })
+                ]
+            });
+        };
+    },
     "5d89d03e": function(module, exports, farmRequire, farmDynamicRequire) {
         "use strict";
         Object.defineProperty(exports, "__esModule", {
@@ -88,10 +118,27 @@
         });
         "";
         var _default = {
-            "nav": `nav-1054bb89`,
-            "footer": `footer-1054bb89`,
-            "main": `main-1054bb89`,
-            "layout": `layout-1054bb89`
+            "nav": `nav-891b01ca`,
+            "footer": `footer-891b01ca`,
+            "main": `main-891b01ca`,
+            "layout": `layout-891b01ca`
+        };
+    },
+    "67c07953": function(module, exports, farmRequire, farmDynamicRequire) {
+        "use strict";
+        Object.defineProperty(exports, "__esModule", {
+            value: true
+        });
+        Object.defineProperty(exports, "default", {
+            enumerable: true,
+            get: function() {
+                return _default;
+            }
+        });
+        "";
+        var _default = {
+            "footer": `footer-77ed408b`,
+            "text": `text-77ed408b`
         };
     },
     "7dfa112b": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -166,6 +213,7 @@
         });
         var _jsxruntime = farmRequire("892c81fb");
         var _layout = farmRequire("7dfa112b");
+        var _footer = farmRequire("9fd73c3e");
         var _nav = farmRequire("0c7ee846");
         const App = ()=>{
             const entries = [
@@ -182,11 +230,17 @@
                 main: (0, _jsxruntime.jsx)("div", {
                     children: "hello"
                 }),
-                footer: (0, _jsxruntime.jsx)("div", {
-                    children: "hello"
-                })
+                footer: (0, _jsxruntime.jsx)(_footer.Footer, {})
             });
         };
+    },
+    "9fd73c3e": function(module, exports, farmRequire, farmDynamicRequire) {
+        "use strict";
+        Object.defineProperty(exports, "__esModule", {
+            value: true
+        });
+        var _export_star = farmRequire("@swc/helpers/_/_export_star");
+        _export_star._(farmRequire("56fdf8a1"), exports);
     },
     "a81951de": function(module, exports, farmRequire, farmDynamicRequire) {
         "use strict";
@@ -201,13 +255,13 @@
         });
         "";
         var _default = {
-            "nav": `nav-9e0129be`,
-            "title": `title-9e0129be`,
-            "entry": `entry-9e0129be`,
-            "slogan__inner": `slogan__inner-9e0129be`,
-            "change-color": `change-color-9e0129be`,
-            "slogan": `slogan-9e0129be`,
-            "entries": `entries-9e0129be`
+            "nav": `nav-fe2c2ca1`,
+            "title": `title-fe2c2ca1`,
+            "entry": `entry-fe2c2ca1`,
+            "slogan__inner": `slogan__inner-fe2c2ca1`,
+            "change-color": `change-color-fe2c2ca1`,
+            "slogan": `slogan-fe2c2ca1`,
+            "entries": `entries-fe2c2ca1`
         };
     },
     "aedc679a": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -238,4 +292,4 @@
     }
 });
 
-//# sourceMappingURL=/index_908f.9ae51b34.js.map
+//# sourceMappingURL=/index_d297.ba5021da.js.map
