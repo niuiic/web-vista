@@ -120,14 +120,41 @@
         });
         var _interop_require_default = farmRequire("@swc/helpers/_/_interop_require_default");
         var _jsxruntime = farmRequire("892c81fb");
+        var _react = farmRequire("d9571927");
+        var _icon = farmRequire("bc9e4543");
         var _layoutmodulescss = _interop_require_default._(farmRequire("5d89d03e"));
         const Layout = (props)=>{
+            const [collapseNav, setCollapseNav] = (0, _react.useState)(false);
+            const onClickNav = ()=>{
+                if (collapseNav) {
+                    setCollapseNav(false);
+                }
+            };
+            const onClickCollapseBtn = ()=>{
+                setCollapseNav(true);
+            };
             return (0, _jsxruntime.jsxs)("div", {
-                className: _layoutmodulescss.default.layout,
+                className: [
+                    _layoutmodulescss.default.layout,
+                    collapseNav ? _layoutmodulescss.default["layout--nav-collapsed"] : ""
+                ].join(" "),
                 children: [
-                    (0, _jsxruntime.jsx)("nav", {
-                        className: _layoutmodulescss.default.nav,
-                        children: props.nav
+                    (0, _jsxruntime.jsxs)("nav", {
+                        className: [
+                            _layoutmodulescss.default.nav,
+                            collapseNav ? _layoutmodulescss.default["nav-collapsed"] : ""
+                        ].join(" "),
+                        onClick: onClickNav,
+                        children: [
+                            collapseNav ? undefined : props.nav,
+                            collapseNav ? undefined : (0, _jsxruntime.jsx)("div", {
+                                className: _layoutmodulescss.default["collapse-btn"],
+                                onClick: onClickCollapseBtn,
+                                children: (0, _jsxruntime.jsx)(_icon.Icon, {
+                                    name: "collapse"
+                                })
+                            })
+                        ]
                     }),
                     (0, _jsxruntime.jsx)("main", {
                         className: _layoutmodulescss.default.main,
@@ -210,10 +237,14 @@
         });
         "";
         var _default = {
-            "nav": `nav-891b01ca`,
-            "footer": `footer-891b01ca`,
-            "main": `main-891b01ca`,
-            "layout": `layout-891b01ca`
+            "nav-collapsed": `nav-collapsed-52482fc2`,
+            "footer": `footer-52482fc2`,
+            "layout": `layout-52482fc2`,
+            "collapse-btn": `collapse-btn-52482fc2`,
+            "nav": `nav-52482fc2`,
+            "main": `main-52482fc2`,
+            "dyn-bg": `dyn-bg-52482fc2`,
+            "layout--nav-collapsed": `layout--nav-collapsed-52482fc2`
         };
     },
     "67c07953": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -421,7 +452,7 @@
         _export_star._(farmRequire("e8703c4f"), exports);
     },
     "c5a7f327": function(module, exports, farmRequire, farmDynamicRequire) {
-        window._iconfont_svg_string_4319158 = '<svg><symbol id="icon-search" viewBox="0 0 1024 1024"><path d="M473.142857 54.514286c-231.2 0-418.742857 187.428571-418.742857 418.742857 0 231.2 187.428571 418.742857 418.742857 418.742857 102.742857 0 196.8-37.028571 269.6-98.285714L918.171429 969.142857l50.514285-50.514286-175.428571-175.657142c61.485714-72.914286 98.514286-167.085714 98.514286-269.828572 0.114286-231.2-187.428571-418.628571-418.628572-418.628571z m0 765.828571c-46.857143 0-92.342857-9.142857-135.085714-27.2-41.371429-17.485714-78.514286-42.514286-110.4-74.4-31.885714-31.885714-56.914286-69.028571-74.4-110.4-18.057143-42.742857-27.2-88.228571-27.2-135.085714s9.142857-92.342857 27.2-135.085714c17.485714-41.371429 42.514286-78.514286 74.4-110.4 31.885714-31.885714 69.028571-56.914286 110.4-74.4 42.742857-18.057143 88.228571-27.2 135.085714-27.2s92.342857 9.142857 135.085714 27.2c41.371429 17.485714 78.514286 42.514286 110.4 74.4 31.885714 31.885714 56.914286 69.028571 74.4 110.4 18.057143 42.742857 27.2 88.228571 27.2 135.085714s-9.142857 92.342857-27.2 135.085714c-17.485714 41.371429-42.514286 78.514286-74.4 110.4s-69.028571 56.914286-110.4 74.4c-42.742857 18.057143-88.228571 27.2-135.085714 27.2z" fill="#c7c9d3" ></path></symbol></svg>', function(n) {
+        window._iconfont_svg_string_4319158 = '<svg><symbol id="icon-collapse" viewBox="0 0 1260 1024"><path d="M58.998108 113.822239h1144.122197A57.028879 57.028879 0 0 0 1260.306723 56.872129 57.028879 57.028879 0 0 0 1203.120305 0.000788H58.998108a57.028879 57.028879 0 0 0-57.186417 56.871341c0 31.507668 25.59998 56.95011 57.186417 56.95011z m1144.122197 340.046507H499.632846a57.028879 57.028879 0 0 0-57.186417 56.871341c0 31.428899 25.59998 56.871341 57.186417 56.871341h703.40869A57.028879 57.028879 0 0 0 1260.306723 510.740087a57.028879 57.028879 0 0 0-57.186418-56.871341z m0 456.309803H58.998108a57.028879 57.028879 0 0 0-57.186417 56.95011c0 31.428899 25.59998 56.871341 57.186417 56.871341h1144.122197a57.028879 57.028879 0 0 0 57.186418-56.871341 57.028879 57.028879 0 0 0-57.186418-56.95011zM285.932088 227.013536L0 511.527779l285.932088 284.514243V227.013536z" fill="#c7c9d3" ></path></symbol><symbol id="icon-search" viewBox="0 0 1024 1024"><path d="M473.142857 54.514286c-231.2 0-418.742857 187.428571-418.742857 418.742857 0 231.2 187.428571 418.742857 418.742857 418.742857 102.742857 0 196.8-37.028571 269.6-98.285714L918.171429 969.142857l50.514285-50.514286-175.428571-175.657142c61.485714-72.914286 98.514286-167.085714 98.514286-269.828572 0.114286-231.2-187.428571-418.628571-418.628572-418.628571z m0 765.828571c-46.857143 0-92.342857-9.142857-135.085714-27.2-41.371429-17.485714-78.514286-42.514286-110.4-74.4-31.885714-31.885714-56.914286-69.028571-74.4-110.4-18.057143-42.742857-27.2-88.228571-27.2-135.085714s9.142857-92.342857 27.2-135.085714c17.485714-41.371429 42.514286-78.514286 74.4-110.4 31.885714-31.885714 69.028571-56.914286 110.4-74.4 42.742857-18.057143 88.228571-27.2 135.085714-27.2s92.342857 9.142857 135.085714 27.2c41.371429 17.485714 78.514286 42.514286 110.4 74.4 31.885714 31.885714 56.914286 69.028571 74.4 110.4 18.057143 42.742857 27.2 88.228571 27.2 135.085714s-9.142857 92.342857-27.2 135.085714c-17.485714 41.371429-42.514286 78.514286-74.4 110.4s-69.028571 56.914286-110.4 74.4c-42.742857 18.057143-88.228571 27.2-135.085714 27.2z" fill="#c7c9d3" ></path></symbol></svg>', function(n) {
             var t = (t = document.getElementsByTagName("script"))[t.length - 1], e = t.getAttribute("data-injectcss"), t = t.getAttribute("data-disable-injectsvg");
             if (!t) {
                 var o, i, c, s, d, a = function(t, e) {
@@ -501,4 +532,4 @@
     }
 });
 
-//# sourceMappingURL=/index_47c9.81cc5c6a.js.map
+//# sourceMappingURL=/index_47c9.165c9ec6.js.map
