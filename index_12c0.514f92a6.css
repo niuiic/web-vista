@@ -378,11 +378,11 @@ html {
   -o-animation: bg-wave-flow-f568b156 1s infinite linear;
   animation: bg-wave-flow-f568b156 1s infinite linear;
 }
-.nav-562acdbd {
+.nav-89509faa {
   height: 100%;
   background: var(--s-color-bg-dark-2);
 }
-.title-562acdbd {
+.title-89509faa {
   padding-block: -webkit-calc(20 * var(--unit-length));
   padding-block: -moz-calc(20 * var(--unit-length));
   padding-block: calc(20 * var(--unit-length));
@@ -412,7 +412,7 @@ html {
   inherits: false;
   initial-value: #ff0080;
 }
-@-webkit-keyframes change-color-562acdbd {
+@-webkit-keyframes change-color-89509faa {
   0% {
     --color-stop1: #40e0d0;
     --color-stop2: #ff8c00;
@@ -434,7 +434,7 @@ html {
     --color-stop3: #ff0080;
   }
 }
-@-moz-keyframes change-color-562acdbd {
+@-moz-keyframes change-color-89509faa {
   0% {
     --color-stop1: #40e0d0;
     --color-stop2: #ff8c00;
@@ -456,7 +456,7 @@ html {
     --color-stop3: #ff0080;
   }
 }
-@-o-keyframes change-color-562acdbd {
+@-o-keyframes change-color-89509faa {
   0% {
     --color-stop1: #40e0d0;
     --color-stop2: #ff8c00;
@@ -478,7 +478,7 @@ html {
     --color-stop3: #ff0080;
   }
 }
-@keyframes change-color-562acdbd {
+@keyframes change-color-89509faa {
   0% {
     --color-stop1: #40e0d0;
     --color-stop2: #ff8c00;
@@ -500,7 +500,7 @@ html {
     --color-stop3: #ff0080;
   }
 }
-.slogan-562acdbd {
+.slogan-89509faa {
   width: -webkit-calc(140 * var(--unit-length));
   width: -moz-calc(140 * var(--unit-length));
   width: calc(140 * var(--unit-length));
@@ -513,32 +513,33 @@ html {
   border-radius: -webkit-calc(4 * var(--unit-length));
   border-radius: -moz-calc(4 * var(--unit-length));
   border-radius: calc(4 * var(--unit-length));
+  font-size: var(--s-font-size-small);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
 @supports (--css: variable) {
-  .slogan-562acdbd {
+  .slogan-89509faa {
     background-image: -webkit-linear-gradient(left, var(--color-stop1) 0%, var(--color-stop2) 50%, var(--color-stop3) 100%);
     background-image: -moz-linear-gradient(left, var(--color-stop1) 0%, var(--color-stop2) 50%, var(--color-stop3) 100%);
     background-image: -o-linear-gradient(left, var(--color-stop1) 0%, var(--color-stop2) 50%, var(--color-stop3) 100%);
     background-image: linear-gradient(90deg, var(--color-stop1) 0%, var(--color-stop2) 50%, var(--color-stop3) 100%);
-    -webkit-animation: change-color-562acdbd 4s linear infinite;
-    -moz-animation: change-color-562acdbd 4s linear infinite;
-    -o-animation: change-color-562acdbd 4s linear infinite;
-    animation: change-color-562acdbd 4s linear infinite;
+    -webkit-animation: change-color-89509faa 4s linear infinite;
+    -moz-animation: change-color-89509faa 4s linear infinite;
+    -o-animation: change-color-89509faa 4s linear infinite;
+    animation: change-color-89509faa 4s linear infinite;
   }
 }
 @supports not (--css: variable) {
-  .slogan-562acdbd {
+  .slogan-89509faa {
     background-image: -webkit-linear-gradient(left, #40e0d0 0%, #ff8c00 50%, #ff0080 100%);
     background-image: -moz-linear-gradient(left, #40e0d0 0%, #ff8c00 50%, #ff0080 100%);
     background-image: -o-linear-gradient(left, #40e0d0 0%, #ff8c00 50%, #ff0080 100%);
     background-image: linear-gradient(90deg, #40e0d0 0%, #ff8c00 50%, #ff0080 100%);
   }
 }
-.slogan__inner-562acdbd {
+.slogan__inner-89509faa {
   display: inline-block;
   width: -webkit-calc(100% - (6 * var(--unit-length)));
   width: -moz-calc(100% - (6 * var(--unit-length)));
@@ -558,12 +559,12 @@ html {
   line-height: calc(46 * var(--unit-length));
   text-align: center;
 }
-.entries-562acdbd {
+.entries-89509faa {
   margin-top: -webkit-calc(20 * var(--unit-length));
   margin-top: -moz-calc(20 * var(--unit-length));
   margin-top: calc(20 * var(--unit-length));
 }
-.entry-562acdbd {
+.entry-89509faa {
   height: -webkit-calc(36 * var(--unit-length));
   height: -moz-calc(36 * var(--unit-length));
   height: calc(36 * var(--unit-length));
@@ -575,7 +576,7 @@ html {
   line-height: -moz-calc(36 * var(--unit-length));
   line-height: calc(36 * var(--unit-length));
 }
-.entry-562acdbd:hover {
+.entry-89509faa:hover {
   background-color: var(--s-color-bg-dark-3);
 }
 .input-f03885e4 {
@@ -627,4 +628,4 @@ html {
   padding: calc(12 * var(--unit-length));
   background-color: var(--s-color-bg-dark-3);
 }
-/*# sourceMappingURL=/index_3bf5.ab32b2fc.css.map */
+/*# sourceMappingURL=/index_12c0.514f92a6.css.map */
