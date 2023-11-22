@@ -117,8 +117,6 @@ html {
   user-select: none;
 }
 html {
-  --s-color-green: #46cf73;
-  --s-color-blue: #76daff;
   --s-color-bg-dark-1: #2c303b;
   --s-color-bg-dark-2: #1e1e26;
   --s-color-bg-dark-3: #131418;
@@ -621,6 +619,56 @@ html {
   margin-right: -moz-calc(10 * var(--unit-length));
   margin-right: calc(10 * var(--unit-length));
 }
+.notify-522456c5 {
+  position: fixed;
+  top: -webkit-calc(20 * var(--unit-length));
+  top: -moz-calc(20 * var(--unit-length));
+  top: calc(20 * var(--unit-length));
+  left: 50%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: -webkit-calc(160 * var(--unit-length));
+  min-width: -moz-calc(160 * var(--unit-length));
+  min-width: calc(160 * var(--unit-length));
+  padding: -webkit-calc(8 * var(--unit-length)) -webkit-calc(12 * var(--unit-length));
+  padding: -moz-calc(8 * var(--unit-length)) -moz-calc(12 * var(--unit-length));
+  padding: calc(8 * var(--unit-length)) calc(12 * var(--unit-length));
+  border: -webkit-calc(1 * var(--unit-length)) solid;
+  border: -moz-calc(1 * var(--unit-length)) solid;
+  border: calc(1 * var(--unit-length)) solid;
+  -webkit-border-radius: -webkit-calc(2 * var(--unit-length));
+  -moz-border-radius: -moz-calc(2 * var(--unit-length));
+  border-radius: -webkit-calc(2 * var(--unit-length));
+  border-radius: -moz-calc(2 * var(--unit-length));
+  border-radius: calc(2 * var(--unit-length));
+  text-align: center;
+  -webkit-transform: translatex(-50%);
+  -moz-transform: translatex(-50%);
+  -ms-transform: translatex(-50%);
+  -o-transform: translatex(-50%);
+  transform: translatex(-50%);
+}
+.notify--success-522456c5 {
+  border-color: #25371c;
+  background-color: #1c2518;
+  color: #67c23a;
+}
+.notify--warning-522456c5 {
+  border-color: #3e301c;
+  background-color: #292218;
+  color: #e6a23c;
+}
+.notify--error-522456c5 {
+  border-color: #412626;
+  background-color: #2b1d1d;
+  color: #f56c6c;
+}
+.notify--info-522456c5 {
+  border-color: #2d2d2f;
+  background-color: #202121;
+  color: #909399;
+}
 .main-3d2210f3 {
   height: 100%;
   padding: -webkit-calc(12 * var(--unit-length));
@@ -628,4 +676,4 @@ html {
   padding: calc(12 * var(--unit-length));
   background-color: var(--s-color-bg-dark-3);
 }
-/*# sourceMappingURL=index_12c0.514f92a6.css.map */
+/*# sourceMappingURL=index_4dfd.de02275a.css.map */
