@@ -133,16 +133,6 @@
     };
 },
 "23ec4682": function(module, exports, farmRequire, farmDynamicRequire) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    Object.defineProperty(exports, "default", {
-        enumerable: true,
-        get: function() {
-            return _default;
-        }
-    });
     (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"] = {
         __FARM_TARGET_ENV__: "browser"
     };
@@ -551,88 +541,6 @@
             });
         }
     }, "78d37cf6");
-    !function(e1) {
-        for(var t1 in e1)e1[t1].__farm_resource_pot__ = "index_b73f.js", (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__.register(t1, e1[t1]);
-    }({
-        "1595ecfa": function(e1, t1, r1, n1) {
-            "use strict";
-            Object.defineProperty(t1, "__esModule", {
-                value: !0
-            }), Object.defineProperty(t1, "default", {
-                enumerable: !0,
-                get: function() {
-                    return u1;
-                }
-            });
-            var u1 = `.text {
-  color: red;
-}`;
-        },
-        "3650c57d": function(e1, t1, r1, n1) {
-            "use strict";
-            Object.defineProperty(t1, "__esModule", {
-                value: !0
-            }), function(e1, t1) {
-                for(var r1 in t1)Object.defineProperty(e1, r1, {
-                    enumerable: !0,
-                    get: t1[r1]
-                });
-            }(t1, {
-                css: function() {
-                    return c1.default;
-                },
-                html: function() {
-                    return o1.default;
-                }
-            });
-            var u1 = r1("@swc/helpers/_/_interop_require_default"), o1 = u1._(r1("a9ddf789")), c1 = u1._(r1("1595ecfa")), f1 = u1._(r1("48c49032"));
-            console.log(o1.default), console.log(f1.default);
-        },
-        "48c49032": function(e1, t1, r1, n1) {
-            "use strict";
-            Object.defineProperty(t1, "__esModule", {
-                value: !0
-            }), Object.defineProperty(t1, "default", {
-                enumerable: !0,
-                get: function() {
-                    return u1;
-                }
-            });
-            var u1 = ".text {\n  color: red;\n}\n";
-        },
-        "953dfae2": function(e1, t1, r1, n1) {
-            "use strict";
-            Object.defineProperty(t1, "__esModule", {
-                value: !0
-            }), Object.defineProperty(t1, "default", {
-                enumerable: !0,
-                get: function() {
-                    return u1;
-                }
-            });
-            var u1 = [
-                r1("@swc/helpers/_/_interop_require_wildcard")._(r1("3650c57d"))
-            ];
-        },
-        a9ddf789: function(e1, t1, r1, n1) {
-            "use strict";
-            Object.defineProperty(t1, "__esModule", {
-                value: !0
-            }), Object.defineProperty(t1, "default", {
-                enumerable: !0,
-                get: function() {
-                    return u1;
-                }
-            });
-            var u1 = '<span class="text">hello</span>\n';
-        }
-    });
-    (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__.setInitialLoadedResources([]);
-    (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__.setDynamicModuleResourcesMap({});
-    var farmModuleSystem = (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__;
-    farmModuleSystem.bootstrap();
-    var entry = farmModuleSystem.require("953dfae2");
-    var _default = entry.default || entry;
 },
 "2c6e69f1": function(module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
@@ -1387,4 +1295,4 @@
     var _export_star = farmRequire("@swc/helpers/_/_export_star");
     _export_star._(farmRequire("2ea370be"), exports);
 },});
-//# sourceMappingURL=index_60a7.b45cf583.js.map
+//# sourceMappingURL=index_60a7.9d1035c0.js.map
