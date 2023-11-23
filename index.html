@@ -5,18 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <title>Gallery</title>
-  <link rel="stylesheet" href="/index_63ba.4a60cf18.css"><link rel="stylesheet" href="/index_b5ef.5694fa11.css"><script data-farm-entry-script="true">
-window.process = {
-  env: {
-    NODE_ENV: 'production',
-  },
-};
-window.__farm_namespace__ = 'd1befa03c79ca0b84ecc488dea96bc68';
-(globalThis || window || global || self)[__farm_namespace__] = {};
-(globalThis || window || global || self)[__farm_namespace__] = {
+  <link rel="stylesheet" href="/index_ecba.9e112aeb.css"><link rel="stylesheet" href="/index_b5ef.5694fa11.css"><script data-farm-entry-script="true">
+(globalThis || window || self || global)['d1befa03c79ca0b84ecc488dea96bc68'] = {};
+(globalThis || window || self || global)['d1befa03c79ca0b84ecc488dea96bc68'] = {
   __FARM_TARGET_ENV__: 'browser',
-};
-window.process.env.NODE_ENV = 'production';</script><script data-farm-entry-script="true">(function (modules, entryModule) {
+};</script><script data-farm-entry-script="true">(function (modules, entryModule) {
             var cache = {};
 
             function dynamicRequire(id) {
@@ -37,7 +30,7 @@ window.process.env.NODE_ENV = 'production';</script><script data-farm-entry-scri
             }
           
             require(entryModule);
-          })({"0daad6ea": function(module, exports, farmRequire, farmDynamicRequire) {
+          })({"45cc7871": function(module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -49,29 +42,28 @@ window.process.env.NODE_ENV = 'production';</script><script data-farm-entry-scri
         });
     }
     _export(exports, {
-        FarmRuntimePlugin: function() {
-            return _plugin.FarmRuntimePlugin;
+        _: function() {
+            return _export_star;
         },
-        ModuleSystem: function() {
-            return _modulesystem.ModuleSystem;
+        _export_star: function() {
+            return _export_star;
         }
     });
-    var _interop_require_default = farmRequire("ca62dec2");
-    var _indexts = _interop_require_default._(farmRequire("d88d4f71"));
-    var _modulesystem = farmRequire("3b2ca79c");
-    var _plugin = farmRequire("3f99e8ab");
-    var _resourceloader = farmRequire("96b1563d");
-    _resourceloader.__farm_global_this__.__farm_module_system__ = (function() {
-        const moduleSystem = new _modulesystem.ModuleSystem();
-        return function() {
-            return moduleSystem;
-        };
-    })()();
-    (globalThis || window || global || self)[__farm_namespace__].__farm_module_system__.setPlugins([
-        _indexts.default
-    ]);
+    function _export_star(from, to) {
+        Object.keys(from).forEach(function(k) {
+            if (k !== "default" && !Object.prototype.hasOwnProperty.call(to, k)) {
+                Object.defineProperty(to, k, {
+                    enumerable: true,
+                    get: function() {
+                        return from[k];
+                    }
+                });
+            }
+        });
+        return from;
+    }
 },
-"3b2ca79c": function(module, exports, farmRequire, farmDynamicRequire) {
+"48dd9d2c": function(module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -82,9 +74,9 @@ window.process.env.NODE_ENV = 'production';</script><script data-farm-entry-scri
             return ModuleSystem;
         }
     });
-    var _module = farmRequire("98bb4bbf");
-    var _plugin = farmRequire("3f99e8ab");
-    var _resourceloader = farmRequire("96b1563d");
+    var _module = farmRequire("b66f5dde");
+    var _plugin = farmRequire("81d30019");
+    var _resourceloader = farmRequire("ab11f41d");
     var _interop_require_default = farmRequire("ca62dec2");
     var _interop_require_wildcard = farmRequire("c4321c4c");
     var _export_star = farmRequire("45cc7871");
@@ -246,7 +238,41 @@ window.process.env.NODE_ENV = 'production';</script><script data-farm-entry-scri
         }
     }
 },
-"3f99e8ab": function(module, exports, farmRequire, farmDynamicRequire) {
+"78d37cf6": function(module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    function _export(target, all) {
+        for(var name in all)Object.defineProperty(target, name, {
+            enumerable: true,
+            get: all[name]
+        });
+    }
+    _export(exports, {
+        FarmRuntimePlugin: function() {
+            return _plugin.FarmRuntimePlugin;
+        },
+        ModuleSystem: function() {
+            return _modulesystem.ModuleSystem;
+        }
+    });
+    var _interop_require_default = farmRequire("ca62dec2");
+    var _indexts = _interop_require_default._(farmRequire("a4eb5b9a"));
+    var _modulesystem = farmRequire("48dd9d2c");
+    var _plugin = farmRequire("81d30019");
+    var _resourceloader = farmRequire("ab11f41d");
+    _resourceloader.__farm_global_this__.__farm_module_system__ = (function() {
+        const moduleSystem = new _modulesystem.ModuleSystem();
+        return function() {
+            return moduleSystem;
+        };
+    })()();
+    (globalThis || window || self || global)["d1befa03c79ca0b84ecc488dea96bc68"].__farm_module_system__.setPlugins([
+        _indexts.default
+    ]);
+},
+"81d30019": function(module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -283,40 +309,44 @@ window.process.env.NODE_ENV = 'production';</script><script data-farm-entry-scri
         }
     }
 },
-"45cc7871": function(module, exports, farmRequire, farmDynamicRequire) {
+"a4eb5b9a": function(module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
         value: true
     });
-    function _export(target, all) {
-        for(var name in all)Object.defineProperty(target, name, {
-            enumerable: true,
-            get: all[name]
-        });
-    }
-    _export(exports, {
-        _: function() {
-            return _export_star;
-        },
-        _export_star: function() {
-            return _export_star;
+    Object.defineProperty(exports, "default", {
+        enumerable: true,
+        get: function() {
+            return _default;
         }
     });
-    function _export_star(from, to) {
-        Object.keys(from).forEach(function(k) {
-            if (k !== "default" && !Object.prototype.hasOwnProperty.call(to, k)) {
-                Object.defineProperty(to, k, {
-                    enumerable: true,
-                    get: function() {
-                        return from[k];
-                    }
-                });
+    const __global_this__ = globalThis || window;
+    var _default = {
+        name: "farm-runtime-import-meta",
+        _moduleSystem: {},
+        bootstrap (system) {
+            this._moduleSystem = system;
+        },
+        moduleCreated (module) {
+            module.meta.env = {
+                ...{
+                    "NODE_ENV": "production"
+                } ?? {},
+                mode: "production",
+                dev: "production" === "development",
+                prod: "production" === "production"
+            };
+            const publicPath = this._moduleSystem.publicPaths[0] ?? "";
+            if (__global_this__.location) {
+                const url = `${__global_this__.location.protocol}//${__global_this__.location.host}${publicPath.endsWith("/") ? publicPath.slice(0, -1) : publicPath}/${module.resource_pot}`;
+                module.meta.url = url;
+            } else {
+                module.meta.url = module.resource_pot;
             }
-        });
-        return from;
-    }
+        }
+    };
 },
-"96b1563d": function(module, exports, farmRequire, farmDynamicRequire) {
+"ab11f41d": function(module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -341,92 +371,92 @@ window.process.env.NODE_ENV = 'production';</script><script data-farm-entry-scri
             return targetEnv;
         }
     });
-    const __farm_global_this__ = (globalThis || window || global || self)[__farm_namespace__];
+    const __farm_global_this__ = eval("(globalThis || window || self || global)['d1befa03c79ca0b84ecc488dea96bc68']");
     const targetEnv = __farm_global_this__.__FARM_TARGET_ENV__ || "node";
     const isBrowser = targetEnv === "browser" && (globalThis || window).document;
     class ResourceLoader {
         _loadedResources = {};
         _loadingResources = {};
         publicPaths;
-        constructor(publicPaths){
-            this.publicPaths = publicPaths;
+        constructor(publicPaths1){
+            this.publicPaths = publicPaths1;
         }
-        load(resource, index = 0) {
+        load(resource1, index1 = 0) {
             if (!isBrowser) {
-                if (resource.type === "script") {
-                    return this._loadScript(`./${resource.path}`);
-                } else if (resource.type === "link") {
-                    return this._loadLink(`./${resource.path}`);
+                if (resource1.type === "script") {
+                    return this._loadScript(`./${resource1.path}`);
+                } else if (resource1.type === "link") {
+                    return this._loadLink(`./${resource1.path}`);
                 }
             }
-            const publicPath = this.publicPaths[index];
-            const url = `${publicPath === "/" ? "" : publicPath}/${resource.path}`;
-            if (this._loadedResources[resource.path]) {
+            const publicPath1 = this.publicPaths[index1];
+            const url1 = `${publicPath1 === "/" ? "" : publicPath1}/${resource1.path}`;
+            if (this._loadedResources[resource1.path]) {
                 return;
-            } else if (this._loadingResources[resource.path]) {
-                return this._loadingResources[resource.path];
+            } else if (this._loadingResources[resource1.path]) {
+                return this._loadingResources[resource1.path];
             }
-            let promise = Promise.resolve();
-            if (resource.type === "script") {
-                promise = this._loadScript(url);
-            } else if (resource.type === "link") {
-                promise = this._loadLink(url);
+            let promise1 = Promise.resolve();
+            if (resource1.type === "script") {
+                promise1 = this._loadScript(url1);
+            } else if (resource1.type === "link") {
+                promise1 = this._loadLink(url1);
             }
-            this._loadingResources[resource.path] = promise;
-            promise.then(()=>{
-                this._loadedResources[resource.path] = true;
-            }).catch((e)=>{
-                console.warn(`[Farm] Failed to load resource "${url}" using publicPath: ${this.publicPaths[index]}`);
-                index++;
-                if (index < this.publicPaths.length) {
-                    return this.load(resource, index);
+            this._loadingResources[resource1.path] = promise1;
+            promise1.then(()=>{
+                this._loadedResources[resource1.path] = true;
+            }).catch((e1)=>{
+                console.warn(`[Farm] Failed to load resource "${url1}" using publicPath: ${this.publicPaths[index1]}`);
+                index1++;
+                if (index1 < this.publicPaths.length) {
+                    return this.load(resource1, index1);
                 } else {
-                    throw new Error(`[Farm] Failed to load resource: "${resource.path}, type: ${resource.type}". ${e}`);
+                    throw new Error(`[Farm] Failed to load resource: "${resource1.path}, type: ${resource1.type}". ${e1}`);
                 }
             });
-            return promise;
+            return promise1;
         }
-        setLoadedResource(path) {
-            this._loadedResources[path] = true;
+        setLoadedResource(path1) {
+            this._loadedResources[path1] = true;
         }
-        _loadScript(path) {
+        _loadScript(path1) {
             if (!isBrowser) {
-                return import(path);
+                return import(path1);
             } else {
-                return new Promise((resolve, reject)=>{
-                    const script = document.createElement("script");
-                    script.src = path;
-                    document.body.appendChild(script);
-                    script.onload = ()=>{
-                        resolve();
+                return new Promise((resolve1, reject1)=>{
+                    const script1 = document.createElement("script");
+                    script1.src = path1;
+                    document.body.appendChild(script1);
+                    script1.onload = ()=>{
+                        resolve1();
                     };
-                    script.onerror = (e)=>{
-                        reject(e);
+                    script1.onerror = (e1)=>{
+                        reject1(e1);
                     };
                 });
             }
         }
-        _loadLink(path) {
+        _loadLink(path1) {
             if (!isBrowser) {
                 return Promise.resolve();
             } else {
-                return new Promise((resolve, reject)=>{
-                    const link = document.createElement("link");
-                    link.rel = "stylesheet";
-                    link.href = path;
-                    document.head.appendChild(link);
-                    link.onload = ()=>{
-                        resolve();
+                return new Promise((resolve1, reject1)=>{
+                    const link1 = document.createElement("link");
+                    link1.rel = "stylesheet";
+                    link1.href = path1;
+                    document.head.appendChild(link1);
+                    link1.onload = ()=>{
+                        resolve1();
                     };
-                    link.onerror = (e)=>{
-                        reject(e);
+                    link1.onerror = (e1)=>{
+                        reject1(e1);
                     };
                 });
             }
         }
     }
 },
-"98bb4bbf": function(module, exports, farmRequire, farmDynamicRequire) {
+"b66f5dde": function(module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -531,45 +561,10 @@ window.process.env.NODE_ENV = 'production';</script><script data-farm-entry-scri
             default: obj
         };
     }
-},
-"d88d4f71": function(module, exports, farmRequire, farmDynamicRequire) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    Object.defineProperty(exports, "default", {
-        enumerable: true,
-        get: function() {
-            return _default;
-        }
-    });
-    const __global_this__ = globalThis || window;
-    var _default = {
-        name: "farm-runtime-import-meta",
-        _moduleSystem: {},
-        bootstrap (system) {
-            this._moduleSystem = system;
-        },
-        moduleCreated (module) {
-            module.meta.env = {
-                ...process.env,
-                mode: process.env.NODE_ENV,
-                dev: process.env.NODE_ENV === "development",
-                prod: process.env.NODE_ENV === "production"
-            };
-            const publicPath = this._moduleSystem.publicPaths[0] ?? "";
-            if (__global_this__.location) {
-                const url = `${__global_this__.location.protocol}//${__global_this__.location.host}${publicPath.endsWith("/") ? publicPath.slice(0, -1) : publicPath}/${module.resource_pot}`;
-                module.meta.url = url;
-            } else {
-                module.meta.url = module.resource_pot;
-            }
-        }
-    };
-},}, "0daad6ea");</script></head>
+},}, "78d37cf6");</script></head>
   <body>
     <div id="app"></div>
     
   
 
-<script src="/index_7bf2.7d082048.js" data-farm-resource="true"></script><script src="/index_b720.a9143373.js" data-farm-resource="true"></script><script src="/index_bd7c.aa7d50d2.js" data-farm-resource="true"></script><script src="/index_c47f.4a05a7ac.js" data-farm-resource="true"></script><script data-farm-entry-script="true">(globalThis || window || global || self)[__farm_namespace__].__farm_module_system__.setInitialLoadedResources(['index_63ba.4a60cf18.css','index_7bf2.7d082048.js','index_b5ef.5694fa11.css','index_b720.a9143373.js','index_bd7c.aa7d50d2.js','index_c47f.4a05a7ac.js']);</script><script data-farm-entry-script="true">(globalThis || window || global || self)[__farm_namespace__].__farm_module_system__.setDynamicModuleResourcesMap({  });</script><script data-farm-entry-script="true">(globalThis || window || global || self)[__farm_namespace__].__farm_module_system__.setPublicPaths(['/']);</script><script data-farm-entry-script="true">(globalThis || window || global || self)[__farm_namespace__].__farm_module_system__.bootstrap();</script><script data-farm-entry-script="true">(globalThis || window || global || self)[__farm_namespace__].__farm_module_system__.require("2c6e69f1")</script></body></html>
+<script src="/index_7bf2.aad2334e.js" data-farm-resource="true"></script><script src="/index_60a7.9d1035c0.js" data-farm-resource="true"></script><script src="/index_bd7c.8b28fa24.js" data-farm-resource="true"></script><script src="/index_c47f.290c7217.js" data-farm-resource="true"></script><script data-farm-entry-script="true">(globalThis || window || self || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.setInitialLoadedResources(['index_60a7.9d1035c0.js','index_7bf2.aad2334e.js','index_b5ef.5694fa11.css','index_bd7c.8b28fa24.js','index_c47f.290c7217.js','index_ecba.9e112aeb.css']);</script><script data-farm-entry-script="true">(globalThis || window || self || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.setDynamicModuleResourcesMap({  });</script><script data-farm-entry-script="true">(globalThis || window || self || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.setPublicPaths(['/']);</script><script data-farm-entry-script="true">(globalThis || window || self || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.bootstrap();</script><script data-farm-entry-script="true">(globalThis || window || self || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.require("2c6e69f1")</script></body></html>
