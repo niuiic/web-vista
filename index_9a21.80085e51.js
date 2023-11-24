@@ -1,6 +1,6 @@
 (function (modules) {
             for (var key in modules) {
-              modules[key].__farm_resource_pot__ = 'index_60a7.js';
+              modules[key].__farm_resource_pot__ = 'index_9a21.js';
                 (globalThis || window || self || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(key, modules[key]);
             }
         })({"03887fe2": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -133,6 +133,464 @@
     };
 },
 "23ec4682": function(module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    Object.defineProperty(exports, "default", {
+        enumerable: true,
+        get: function() {
+            return _default;
+        }
+    });
+    farmRequire("87b95526");
+    farmRequire("41da0d88");
+    !function(e) {
+        for(var r in e)e[r].__farm_resource_pot__ = "index_a2a1.js", (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__.register(r, e[r]);
+    }({
+        "953dfae2": function(e, r, _, t) {
+            "use strict";
+            Object.defineProperty(r, "__esModule", {
+                value: !0
+            }), Object.defineProperty(r, "default", {
+                enumerable: !0,
+                get: function() {
+                    return a;
+                }
+            });
+            var a = [
+                _("@swc/helpers/_/_interop_require_wildcard")._(_("3650c57d"))
+            ];
+        }
+    });
+    (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__.setInitialLoadedResources([
+        "wavyUnderline.38cdb788.js"
+    ]);
+    (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__.setDynamicModuleResourcesMap({});
+    var farmModuleSystem = (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__;
+    farmModuleSystem.bootstrap();
+    var entry = farmModuleSystem.require("953dfae2");
+    var _default = entry.default || entry;
+},
+"2c6e69f1": function(module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    var _jsxruntime = farmRequire("892c81fb");
+    farmRequire("c5a7f327");
+    "";
+    "";
+    "";
+    "";
+    var _react = farmRequire("d9571927");
+    var _client = farmRequire("b62921c1");
+    var _App = farmRequire("93843902");
+    var _notify = farmRequire("44f760a0");
+    if (!document.head.attachShadow) {
+        (0, _notify.notify)("error", "Your browser does not support shadow dom. Please use the another browser supporting it instead.");
+    }
+    (0, _client.createRoot)(document.querySelector("#app")).render((0, _jsxruntime.jsx)(_react.StrictMode, {
+        children: (0, _jsxruntime.jsx)(_App.App, {})
+    }));
+},
+"2ea370be": function(module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    Object.defineProperty(exports, "Frame", {
+        enumerable: true,
+        get: function() {
+            return Frame;
+        }
+    });
+    var _jsxruntime = farmRequire("892c81fb");
+    var _react = farmRequire("d9571927");
+    const Frame = (props)=>{
+        const containerRef = (0, _react.useRef)();
+        let shadowRoot;
+        (0, _react.useEffect)(()=>{
+            if (!shadowRoot) {
+                const root = containerRef.current?.attachShadow({
+                    mode: "open"
+                });
+                if (!root) {
+                    return;
+                }
+                shadowRoot = root;
+            }
+            while(shadowRoot.firstChild){
+                shadowRoot.removeChild(shadowRoot.firstChild);
+            }
+            if (props.html) {
+                shadowRoot.innerHTML = props.html;
+            }
+            if (props.css) {
+                const style = document.createElement("style");
+                style.textContent = props.css;
+                shadowRoot.appendChild(style);
+            }
+            if (props.js) {
+                const script = document.createElement("script");
+                script.textContent = props.js;
+                shadowRoot.appendChild(script);
+            }
+        }, [
+            props.js,
+            props.html,
+            props.css
+        ]);
+        return (0, _jsxruntime.jsx)("div", {
+            ref: containerRef,
+            className: props.className
+        });
+    };
+},
+"3ef60bee": function(module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    Object.defineProperty(exports, "Layout", {
+        enumerable: true,
+        get: function() {
+            return Layout;
+        }
+    });
+    var _interop_require_default = farmRequire("@swc/helpers/_/_interop_require_default");
+    var _jsxruntime = farmRequire("892c81fb");
+    var _react = farmRequire("d9571927");
+    var _icon = farmRequire("bc9e4543");
+    var _layoutmodulescss = _interop_require_default._(farmRequire("5d89d03e"));
+    const Layout = (props)=>{
+        const [collapseNav, setCollapseNav] = (0, _react.useState)(false);
+        const onClickNav = ()=>{
+            if (collapseNav) {
+                setCollapseNav(false);
+            }
+        };
+        const onClickCollapseBtn = ()=>{
+            setCollapseNav(true);
+        };
+        return (0, _jsxruntime.jsxs)("div", {
+            className: [
+                _layoutmodulescss.default.layout,
+                collapseNav ? _layoutmodulescss.default["layout--nav-collapsed"] : ""
+            ].join(" "),
+            children: [
+                (0, _jsxruntime.jsxs)("nav", {
+                    className: [
+                        _layoutmodulescss.default.nav,
+                        collapseNav ? _layoutmodulescss.default["nav-collapsed"] : ""
+                    ].join(" "),
+                    onClick: onClickNav,
+                    children: [
+                        collapseNav ? undefined : props.nav,
+                        collapseNav ? undefined : (0, _jsxruntime.jsx)("div", {
+                            className: _layoutmodulescss.default["collapse-btn"],
+                            onClick: onClickCollapseBtn,
+                            children: (0, _jsxruntime.jsx)(_icon.Icon, {
+                                name: "collapse"
+                            })
+                        })
+                    ]
+                }),
+                (0, _jsxruntime.jsx)("main", {
+                    className: _layoutmodulescss.default.main,
+                    children: props.main
+                }),
+                (0, _jsxruntime.jsx)("footer", {
+                    className: _layoutmodulescss.default.footer,
+                    children: props.footer
+                })
+            ]
+        });
+    };
+},
+"41da0d88": function(module, exports, farmRequire, farmDynamicRequire) {
+    !function(e) {
+        for(var t in e)e[t].__farm_resource_pot__ = "wavyUnderline.js", (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__.register(t, e[t]);
+    }({
+        "1595ecfa": function(e, t, r, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return o;
+                }
+            });
+            var o = `.text {
+  color: red;
+}`;
+        },
+        "3650c57d": function(e, t, r, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), function(e, t) {
+                for(var r in t)Object.defineProperty(e, r, {
+                    enumerable: !0,
+                    get: t[r]
+                });
+            }(t, {
+                css: function() {
+                    return l.default;
+                },
+                html: function() {
+                    return u.default;
+                }
+            });
+            var o = r("@swc/helpers/_/_interop_require_default"), u = o._(r("a9ddf789")), l = o._(r("1595ecfa")), f = o._(r("48c49032"));
+            console.log(u.default), console.log(f.default);
+        },
+        "48c49032": function(e, t, r, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return o;
+                }
+            });
+            var o = `.text {
+  color: red;
+}
+`;
+        },
+        a9ddf789: function(e, t, r, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return o;
+                }
+            });
+            var o = `<span class="text">hello</span>
+`;
+        }
+    });
+},
+"44f760a0": function(module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    var _export_star = farmRequire("@swc/helpers/_/_export_star");
+    _export_star._(farmRequire("945ecf99"), exports);
+},
+"48529b60": function(module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    Object.defineProperty(exports, "default", {
+        enumerable: true,
+        get: function() {
+            return _default;
+        }
+    });
+    var _default = "/JetBrainsMono-BoldItalic.3a013466.woff2";
+},
+"56fdf8a1": function(module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    Object.defineProperty(exports, "Footer", {
+        enumerable: true,
+        get: function() {
+            return Footer;
+        }
+    });
+    var _interop_require_default = farmRequire("@swc/helpers/_/_interop_require_default");
+    var _jsxruntime = farmRequire("892c81fb");
+    var _footermodulescss = _interop_require_default._(farmRequire("67c07953"));
+    const Footer = ()=>{
+        const accessGithub = ()=>{
+            window.open("https://github.com/niuiic/gallery", "_blank");
+        };
+        return (0, _jsxruntime.jsxs)("div", {
+            className: _footermodulescss.default.footer,
+            children: [
+                (0, _jsxruntime.jsxs)("p", {
+                    className: _footermodulescss.default.text,
+                    children: [
+                        "View on ",
+                        (0, _jsxruntime.jsx)("span", {
+                            className: [
+                                _footermodulescss.default.link,
+                                "o-btn"
+                            ].join(" "),
+                            onClick: accessGithub,
+                            children: "github"
+                        })
+                    ]
+                }),
+                (0, _jsxruntime.jsx)("p", {
+                    className: _footermodulescss.default.text,
+                    children: "Copyright \xa9 2023-present niuiic"
+                })
+            ]
+        });
+    };
+},
+"5d89d03e": function(module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    Object.defineProperty(exports, "default", {
+        enumerable: true,
+        get: function() {
+            return _default;
+        }
+    });
+    "";
+    var _default = {
+        "collapse-btn": `collapse-btn-e21327f6`,
+        "dyn-bg": `dyn-bg-e21327f6`,
+        "footer": `footer-e21327f6`,
+        "layout": `layout-e21327f6`,
+        "layout--nav-collapsed": `layout--nav-collapsed-e21327f6`,
+        "main": `main-e21327f6`,
+        "nav": `nav-e21327f6`,
+        "nav-collapsed": `nav-collapsed-e21327f6`
+    };
+},
+"67c07953": function(module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    Object.defineProperty(exports, "default", {
+        enumerable: true,
+        get: function() {
+            return _default;
+        }
+    });
+    "";
+    var _default = {
+        "bg-wave-flow": `bg-wave-flow-f568b156`,
+        "footer": `footer-f568b156`,
+        "link": `link-f568b156`,
+        "text": `text-f568b156`
+    };
+},
+"6e9a280b": function(module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    var _export_star = farmRequire("@swc/helpers/_/_export_star");
+    _export_star._(farmRequire("1fb2c2db"), exports);
+},
+"703aab8a": function(module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    Object.defineProperty(exports, "default", {
+        enumerable: true,
+        get: function() {
+            return _default;
+        }
+    });
+    "";
+    var _default = {
+        "main": `main-3d2210f3`
+    };
+},
+"779af01c": function(module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    Object.defineProperty(exports, "default", {
+        enumerable: true,
+        get: function() {
+            return _default;
+        }
+    });
+    "";
+    var _default = {
+        "dialog": `dialog-74c2c5f8`,
+        "dialog__inner": `dialog__inner-74c2c5f8`
+    };
+},
+"786b7de5": function(module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    var _export_star = farmRequire("@swc/helpers/_/_export_star");
+    _export_star._(farmRequire("fa5afec0"), exports);
+},
+"7dfa112b": function(module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    var _export_star = farmRequire("@swc/helpers/_/_export_star");
+    _export_star._(farmRequire("3ef60bee"), exports);
+},
+"824607c6": function(module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    Object.defineProperty(exports, "Nav", {
+        enumerable: true,
+        get: function() {
+            return Nav;
+        }
+    });
+    var _interop_require_default = farmRequire("@swc/helpers/_/_interop_require_default");
+    var _jsxruntime = farmRequire("892c81fb");
+    var _navmodulescss = _interop_require_default._(farmRequire("a81951de"));
+    const Nav = (props)=>{
+        const goHome = ()=>{
+            window.location.href = window.location.protocol + "//" + window.location.host;
+        };
+        return (0, _jsxruntime.jsxs)("div", {
+            className: _navmodulescss.default.nav,
+            children: [
+                (0, _jsxruntime.jsx)("h1", {
+                    className: [
+                        _navmodulescss.default.title,
+                        "o-btn"
+                    ].join(" "),
+                    onClick: goHome,
+                    children: "Gallery"
+                }),
+                (0, _jsxruntime.jsx)("h2", {
+                    className: _navmodulescss.default.slogan,
+                    children: (0, _jsxruntime.jsx)("span", {
+                        className: _navmodulescss.default["slogan__inner"],
+                        children: "Sharing Ideas"
+                    })
+                }),
+                (0, _jsxruntime.jsx)("ul", {
+                    className: _navmodulescss.default.entries,
+                    children: props.entries.map((entry)=>(0, _jsxruntime.jsx)("li", {
+                            className: [
+                                _navmodulescss.default.entry,
+                                "o-btn"
+                            ].join(" "),
+                            onClick: entry.onClick,
+                            children: entry.label
+                        }, entry.label))
+                })
+            ]
+        });
+    };
+},
+"87b95526": function(module, exports, farmRequire, farmDynamicRequire) {
     (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"] = {
         __FARM_TARGET_ENV__: "browser"
     };
@@ -542,356 +1000,6 @@
         }
     }, "78d37cf6");
 },
-"2c6e69f1": function(module, exports, farmRequire, farmDynamicRequire) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    var _jsxruntime = farmRequire("892c81fb");
-    farmRequire("c5a7f327");
-    "";
-    "";
-    "";
-    "";
-    var _react = farmRequire("d9571927");
-    var _client = farmRequire("b62921c1");
-    var _App = farmRequire("93843902");
-    var _notify = farmRequire("44f760a0");
-    if (!document.head.attachShadow) {
-        (0, _notify.notify)("error", "Your browser does not support shadow dom. Please use the another browser supporting it instead.");
-    }
-    (0, _client.createRoot)(document.querySelector("#app")).render((0, _jsxruntime.jsx)(_react.StrictMode, {
-        children: (0, _jsxruntime.jsx)(_App.App, {})
-    }));
-},
-"2ea370be": function(module, exports, farmRequire, farmDynamicRequire) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    Object.defineProperty(exports, "Frame", {
-        enumerable: true,
-        get: function() {
-            return Frame;
-        }
-    });
-    var _jsxruntime = farmRequire("892c81fb");
-    var _react = farmRequire("d9571927");
-    const Frame = (props)=>{
-        const containerRef = (0, _react.useRef)();
-        let shadowRoot;
-        (0, _react.useEffect)(()=>{
-            if (!shadowRoot) {
-                const root = containerRef.current?.attachShadow({
-                    mode: "open"
-                });
-                if (!root) {
-                    return;
-                }
-                shadowRoot = root;
-            }
-            while(shadowRoot.firstChild){
-                shadowRoot.removeChild(shadowRoot.firstChild);
-            }
-            if (props.html) {
-                shadowRoot.innerHTML = props.html;
-            }
-            if (props.css) {
-                const style = document.createElement("style");
-                style.textContent = props.css;
-                shadowRoot.appendChild(style);
-            }
-            if (props.js) {
-                const script = document.createElement("script");
-                script.textContent = props.js;
-                shadowRoot.appendChild(script);
-            }
-        }, [
-            props.js,
-            props.html,
-            props.css
-        ]);
-        return (0, _jsxruntime.jsx)("div", {
-            ref: containerRef,
-            className: props.className
-        });
-    };
-},
-"3ef60bee": function(module, exports, farmRequire, farmDynamicRequire) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    Object.defineProperty(exports, "Layout", {
-        enumerable: true,
-        get: function() {
-            return Layout;
-        }
-    });
-    var _interop_require_default = farmRequire("@swc/helpers/_/_interop_require_default");
-    var _jsxruntime = farmRequire("892c81fb");
-    var _react = farmRequire("d9571927");
-    var _icon = farmRequire("bc9e4543");
-    var _layoutmodulescss = _interop_require_default._(farmRequire("5d89d03e"));
-    const Layout = (props)=>{
-        const [collapseNav, setCollapseNav] = (0, _react.useState)(false);
-        const onClickNav = ()=>{
-            if (collapseNav) {
-                setCollapseNav(false);
-            }
-        };
-        const onClickCollapseBtn = ()=>{
-            setCollapseNav(true);
-        };
-        return (0, _jsxruntime.jsxs)("div", {
-            className: [
-                _layoutmodulescss.default.layout,
-                collapseNav ? _layoutmodulescss.default["layout--nav-collapsed"] : ""
-            ].join(" "),
-            children: [
-                (0, _jsxruntime.jsxs)("nav", {
-                    className: [
-                        _layoutmodulescss.default.nav,
-                        collapseNav ? _layoutmodulescss.default["nav-collapsed"] : ""
-                    ].join(" "),
-                    onClick: onClickNav,
-                    children: [
-                        collapseNav ? undefined : props.nav,
-                        collapseNav ? undefined : (0, _jsxruntime.jsx)("div", {
-                            className: _layoutmodulescss.default["collapse-btn"],
-                            onClick: onClickCollapseBtn,
-                            children: (0, _jsxruntime.jsx)(_icon.Icon, {
-                                name: "collapse"
-                            })
-                        })
-                    ]
-                }),
-                (0, _jsxruntime.jsx)("main", {
-                    className: _layoutmodulescss.default.main,
-                    children: props.main
-                }),
-                (0, _jsxruntime.jsx)("footer", {
-                    className: _layoutmodulescss.default.footer,
-                    children: props.footer
-                })
-            ]
-        });
-    };
-},
-"44f760a0": function(module, exports, farmRequire, farmDynamicRequire) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    var _export_star = farmRequire("@swc/helpers/_/_export_star");
-    _export_star._(farmRequire("945ecf99"), exports);
-},
-"48529b60": function(module, exports, farmRequire, farmDynamicRequire) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    Object.defineProperty(exports, "default", {
-        enumerable: true,
-        get: function() {
-            return _default;
-        }
-    });
-    var _default = "/JetBrainsMono-BoldItalic.3a013466.woff2";
-},
-"56fdf8a1": function(module, exports, farmRequire, farmDynamicRequire) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    Object.defineProperty(exports, "Footer", {
-        enumerable: true,
-        get: function() {
-            return Footer;
-        }
-    });
-    var _interop_require_default = farmRequire("@swc/helpers/_/_interop_require_default");
-    var _jsxruntime = farmRequire("892c81fb");
-    var _footermodulescss = _interop_require_default._(farmRequire("67c07953"));
-    const Footer = ()=>{
-        const accessGithub = ()=>{
-            window.open("https://github.com/niuiic/gallery", "_blank");
-        };
-        return (0, _jsxruntime.jsxs)("div", {
-            className: _footermodulescss.default.footer,
-            children: [
-                (0, _jsxruntime.jsxs)("p", {
-                    className: _footermodulescss.default.text,
-                    children: [
-                        "View on ",
-                        (0, _jsxruntime.jsx)("span", {
-                            className: [
-                                _footermodulescss.default.link,
-                                "o-btn"
-                            ].join(" "),
-                            onClick: accessGithub,
-                            children: "github"
-                        })
-                    ]
-                }),
-                (0, _jsxruntime.jsx)("p", {
-                    className: _footermodulescss.default.text,
-                    children: "Copyright \xa9 2023-present niuiic"
-                })
-            ]
-        });
-    };
-},
-"5d89d03e": function(module, exports, farmRequire, farmDynamicRequire) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    Object.defineProperty(exports, "default", {
-        enumerable: true,
-        get: function() {
-            return _default;
-        }
-    });
-    "";
-    var _default = {
-        "collapse-btn": `collapse-btn-e21327f6`,
-        "dyn-bg": `dyn-bg-e21327f6`,
-        "footer": `footer-e21327f6`,
-        "layout": `layout-e21327f6`,
-        "layout--nav-collapsed": `layout--nav-collapsed-e21327f6`,
-        "main": `main-e21327f6`,
-        "nav": `nav-e21327f6`,
-        "nav-collapsed": `nav-collapsed-e21327f6`
-    };
-},
-"67c07953": function(module, exports, farmRequire, farmDynamicRequire) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    Object.defineProperty(exports, "default", {
-        enumerable: true,
-        get: function() {
-            return _default;
-        }
-    });
-    "";
-    var _default = {
-        "bg-wave-flow": `bg-wave-flow-f568b156`,
-        "footer": `footer-f568b156`,
-        "link": `link-f568b156`,
-        "text": `text-f568b156`
-    };
-},
-"6e9a280b": function(module, exports, farmRequire, farmDynamicRequire) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    var _export_star = farmRequire("@swc/helpers/_/_export_star");
-    _export_star._(farmRequire("1fb2c2db"), exports);
-},
-"703aab8a": function(module, exports, farmRequire, farmDynamicRequire) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    Object.defineProperty(exports, "default", {
-        enumerable: true,
-        get: function() {
-            return _default;
-        }
-    });
-    "";
-    var _default = {
-        "main": `main-3d2210f3`
-    };
-},
-"779af01c": function(module, exports, farmRequire, farmDynamicRequire) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    Object.defineProperty(exports, "default", {
-        enumerable: true,
-        get: function() {
-            return _default;
-        }
-    });
-    "";
-    var _default = {
-        "dialog": `dialog-74c2c5f8`,
-        "dialog__inner": `dialog__inner-74c2c5f8`
-    };
-},
-"786b7de5": function(module, exports, farmRequire, farmDynamicRequire) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    var _export_star = farmRequire("@swc/helpers/_/_export_star");
-    _export_star._(farmRequire("fa5afec0"), exports);
-},
-"7dfa112b": function(module, exports, farmRequire, farmDynamicRequire) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    var _export_star = farmRequire("@swc/helpers/_/_export_star");
-    _export_star._(farmRequire("3ef60bee"), exports);
-},
-"824607c6": function(module, exports, farmRequire, farmDynamicRequire) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    Object.defineProperty(exports, "Nav", {
-        enumerable: true,
-        get: function() {
-            return Nav;
-        }
-    });
-    var _interop_require_default = farmRequire("@swc/helpers/_/_interop_require_default");
-    var _jsxruntime = farmRequire("892c81fb");
-    var _navmodulescss = _interop_require_default._(farmRequire("a81951de"));
-    const Nav = (props)=>{
-        const goHome = ()=>{
-            window.location.href = window.location.protocol + "//" + window.location.host;
-        };
-        return (0, _jsxruntime.jsxs)("div", {
-            className: _navmodulescss.default.nav,
-            children: [
-                (0, _jsxruntime.jsx)("h1", {
-                    className: [
-                        _navmodulescss.default.title,
-                        "o-btn"
-                    ].join(" "),
-                    onClick: goHome,
-                    children: "Gallery"
-                }),
-                (0, _jsxruntime.jsx)("h2", {
-                    className: _navmodulescss.default.slogan,
-                    children: (0, _jsxruntime.jsx)("span", {
-                        className: _navmodulescss.default["slogan__inner"],
-                        children: "Sharing Ideas"
-                    })
-                }),
-                (0, _jsxruntime.jsx)("ul", {
-                    className: _navmodulescss.default.entries,
-                    children: props.entries.map((entry)=>(0, _jsxruntime.jsx)("li", {
-                            className: [
-                                _navmodulescss.default.entry,
-                                "o-btn"
-                            ].join(" "),
-                            onClick: entry.onClick,
-                            children: entry.label
-                        }, entry.label))
-                })
-            ]
-        });
-    };
-},
 "8c2a1c95": function(module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
@@ -1295,4 +1403,4 @@
     var _export_star = farmRequire("@swc/helpers/_/_export_star");
     _export_star._(farmRequire("2ea370be"), exports);
 },});
-//# sourceMappingURL=index_60a7.9d1035c0.js.map
+//# sourceMappingURL=index_9a21.80085e51.js.map
