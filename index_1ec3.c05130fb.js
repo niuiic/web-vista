@@ -1,6 +1,6 @@
 (function (modules) {
             for (var key in modules) {
-              modules[key].__farm_resource_pot__ = 'index_84f0.js';
+              modules[key].__farm_resource_pot__ = 'index_1ec3.js';
                 (globalThis || window || self || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(key, modules[key]);
             }
         })({"03887fe2": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -34,6 +34,14 @@
     });
     var _export_star = farmRequire("@swc/helpers/_/_export_star");
     _export_star._(farmRequire("824607c6"), exports);
+},
+"14a92e63": function(module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    var _export_star = farmRequire("@swc/helpers/_/_export_star");
+    _export_star._(farmRequire("554343aa"), exports);
 },
 "1e81784d": function(module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
@@ -170,6 +178,24 @@
     farmModuleSystem.bootstrap();
     var entry = farmModuleSystem.require("953dfae2");
     var _default = entry.default || entry;
+},
+"2bcde850": function(module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    Object.defineProperty(exports, "default", {
+        enumerable: true,
+        get: function() {
+            return _default;
+        }
+    });
+    "";
+    var _default = {
+        "tab": `tab-89077faa`,
+        "tab--active": `tab--active-89077faa`,
+        "tabs": `tabs-89077faa`
+    };
 },
 "2c6e69f1": function(module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
@@ -328,6 +354,48 @@
     });
     var _default = "/JetBrainsMono-BoldItalic.3a013466.woff2";
 },
+"554343aa": function(module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    Object.defineProperty(exports, "Tabs", {
+        enumerable: true,
+        get: function() {
+            return Tabs;
+        }
+    });
+    var _interop_require_default = farmRequire("@swc/helpers/_/_interop_require_default");
+    var _jsxruntime = farmRequire("892c81fb");
+    var _react = farmRequire("d9571927");
+    var _tabsmodulescss = _interop_require_default._(farmRequire("2bcde850"));
+    const Tabs = (props)=>{
+        const [curTab, setCurTab] = (0, _react.useState)();
+        const onClickTab = (tab)=>{
+            if (curTab !== tab) {
+                setCurTab(tab);
+                props.onTabChange && props.onTabChange(tab);
+            } else {
+                setCurTab(undefined);
+                props.onTabChange && props.onTabChange(undefined);
+            }
+        };
+        return (0, _jsxruntime.jsx)("div", {
+            className: [
+                _tabsmodulescss.default.tabs,
+                props.className ?? ""
+            ].join(" "),
+            children: props.tabs.map((x)=>(0, _jsxruntime.jsx)("span", {
+                    className: [
+                        _tabsmodulescss.default.tab,
+                        curTab === x ? _tabsmodulescss.default["tab--active"] : ""
+                    ].join(" "),
+                    onClick: ()=>onClickTab(x),
+                    children: x
+                }, x))
+        });
+    };
+},
 "56fdf8a1": function(module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
@@ -450,8 +518,8 @@
     });
     "";
     var _default = {
-        "dialog": `dialog-74c2c5f8`,
-        "dialog__inner": `dialog__inner-74c2c5f8`
+        "dialog": `dialog-6a937a09`,
+        "dialog__inner": `dialog__inner-6a937a09`
     };
 },
 "786b7de5": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -461,6 +529,40 @@
     });
     var _export_star = farmRequire("@swc/helpers/_/_export_star");
     _export_star._(farmRequire("fa5afec0"), exports);
+},
+"7955362b": function(module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    Object.defineProperty(exports, "Code", {
+        enumerable: true,
+        get: function() {
+            return Code;
+        }
+    });
+    var _interop_require_default = farmRequire("@swc/helpers/_/_interop_require_default");
+    var _jsxruntime = farmRequire("892c81fb");
+    var _highlight = _interop_require_default._(farmRequire("c85d2dfa"));
+    var _react = farmRequire("d9571927");
+    var _codemodulescss = _interop_require_default._(farmRequire("c86c3cd1"));
+    const Code = (props)=>{
+        const codeRef = (0, _react.useRef)();
+        (0, _react.useEffect)(()=>{
+            if (codeRef.current) {
+                codeRef.current.innerHTML = _highlight.default.highlight(props.code, {
+                    language: props.language
+                }).value;
+            }
+        }, [
+            props.code,
+            props.language
+        ]);
+        return (0, _jsxruntime.jsx)("code", {
+            className: _codemodulescss.default.code,
+            ref: codeRef
+        });
+    };
 },
 "7dfa112b": function(module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
@@ -1123,12 +1225,18 @@
     });
     "";
     var _default = {
-        "frame": `frame-d90572fd`,
-        "frame__btn": `frame__btn-d90572fd`,
-        "frame__wrapper": `frame__wrapper-d90572fd`,
-        "show-case": `show-case-d90572fd`,
-        "tags": `tags-d90572fd`,
-        "title": `title-d90572fd`
+        "code__wrapper": `code__wrapper-c5778abd`,
+        "dialog": `dialog-c5778abd`,
+        "dialog__body": `dialog__body-c5778abd`,
+        "dialog__header": `dialog__header-c5778abd`,
+        "frame": `frame-c5778abd`,
+        "frame__btn": `frame__btn-c5778abd`,
+        "frame__wrapper": `frame__wrapper-c5778abd`,
+        "frame__wrapper--disactive": `frame__wrapper--disactive-c5778abd`,
+        "show-case": `show-case-c5778abd`,
+        "tabs": `tabs-c5778abd`,
+        "tags": `tags-c5778abd`,
+        "title": `title-c5778abd`
     };
 },
 "9fd73c3e": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -1160,6 +1268,14 @@
         "slogan__inner": `slogan__inner-89509faa`,
         "title": `title-89509faa`
     };
+},
+"ac0a0cbe": function(module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    var _export_star = farmRequire("@swc/helpers/_/_export_star");
+    _export_star._(farmRequire("7955362b"), exports);
 },
 "aedc679a": function(module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
@@ -1236,6 +1352,22 @@
     });
     var _default = "/JetBrainsMono-Bold.c503cc5e.woff2";
 },
+"c86c3cd1": function(module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    Object.defineProperty(exports, "default", {
+        enumerable: true,
+        get: function() {
+            return _default;
+        }
+    });
+    "";
+    var _default = {
+        "code": `code-51eeec3a`
+    };
+},
 "e8703c4f": function(module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
@@ -1278,11 +1410,13 @@
     var _dialogmodulescss = _interop_require_default._(farmRequire("779af01c"));
     const Dialog = (props)=>{
         const dialogRef = (0, _react.useRef)();
-        const onClickOutside = (e)=>{
+        const onClickOutside = (0, _react.useCallback)((e)=>{
             if (props.onClickOutside && !dialogRef?.current?.contains(e.target)) {
                 props.onClickOutside();
             }
-        };
+        }, [
+            props.onClickOutside
+        ]);
         (0, _react.useEffect)(()=>{
             document.addEventListener("click", onClickOutside);
             return ()=>document.removeEventListener("click", onClickOutside);
@@ -1292,22 +1426,13 @@
                 props.className,
                 _dialogmodulescss.default.dialog
             ].filter((x)=>x).join(" "),
-            children: (0, _jsxruntime.jsxs)("div", {
+            children: (0, _jsxruntime.jsx)("div", {
                 ref: dialogRef,
                 className: [
                     _dialogmodulescss.default["dialog__inner"],
                     "dialog__inner"
                 ].join(" "),
-                children: [
-                    (0, _jsxruntime.jsx)("div", {
-                        className: "dialog__header",
-                        children: props.header
-                    }),
-                    (0, _jsxruntime.jsx)("div", {
-                        className: "dialog__body",
-                        children: props.children
-                    })
-                ]
+                children: props.children
             })
         });
     };
@@ -1326,29 +1451,94 @@
     var _interop_require_default = farmRequire("@swc/helpers/_/_interop_require_default");
     var _jsxruntime = farmRequire("892c81fb");
     var _react = farmRequire("d9571927");
+    var _code = farmRequire("ac0a0cbe");
     var _dialog = farmRequire("03887fe2");
     var _frame = farmRequire("fb0b54ac");
     var _icon = farmRequire("bc9e4543");
+    var _tabs = farmRequire("14a92e63");
     var _showCasemodulescss = _interop_require_default._(farmRequire("9e553abd"));
     const ShowCase = (props)=>{
         const hasTags = props.options.tags && props.options.tags.length > 0;
-        const [dialogVisiable, setDialogVisiable] = (0, _react.useState)(true);
+        const [dialogVisiable, setDialogVisiable] = (0, _react.useState)(false);
+        const showDialog = ()=>setDialogVisiable(true);
+        const Info = (0, _react.useCallback)(()=>(0, _jsxruntime.jsxs)(_jsxruntime.Fragment, {
+                children: [
+                    (0, _jsxruntime.jsx)("p", {
+                        className: _showCasemodulescss.default.title,
+                        children: props.options.title
+                    }),
+                    hasTags ? (0, _jsxruntime.jsx)("p", {
+                        className: _showCasemodulescss.default.tags,
+                        children: props.options.tags?.join("/")
+                    }) : undefined
+                ]
+            }), [
+            props.options.title,
+            props.options.tags
+        ]);
+        const tabs = (0, _react.useMemo)(()=>props.options.code?.map((x)=>x.label), [
+            props.options.code
+        ]);
+        const [showCode, setShowCode] = (0, _react.useState)(false);
+        const onTabChange = (tab)=>{
+            if (!tab) {
+                setShowCode(false);
+                return;
+            }
+            setShowCode(true);
+            const targetCode = props.options.code?.find((x)=>x.label === tab);
+            if (!targetCode) {
+                return;
+            }
+            setCode({
+                text: targetCode.content,
+                language: targetCode.filetype
+            });
+        };
+        const [code, setCode] = (0, _react.useState)();
         return (0, _jsxruntime.jsxs)(_jsxruntime.Fragment, {
             children: [
-                dialogVisiable ? (0, _jsxruntime.jsx)(_dialog.Dialog, {
-                    header: (0, _jsxruntime.jsx)("p", {
-                        children: "hello"
-                    }),
+                dialogVisiable ? (0, _jsxruntime.jsxs)(_dialog.Dialog, {
                     onClickOutside: ()=>setDialogVisiable(false),
-                    children: (0, _jsxruntime.jsx)("span", {
-                        children: "hello"
-                    })
+                    className: _showCasemodulescss.default.dialog,
+                    children: [
+                        (0, _jsxruntime.jsx)("div", {
+                            className: _showCasemodulescss.default["dialog__header"],
+                            children: (0, _jsxruntime.jsx)(Info, {})
+                        }),
+                        tabs ? (0, _jsxruntime.jsx)(_tabs.Tabs, {
+                            tabs: tabs,
+                            className: _showCasemodulescss.default.tabs,
+                            onTabChange: onTabChange
+                        }) : undefined,
+                        (0, _jsxruntime.jsxs)("div", {
+                            className: _showCasemodulescss.default["dialog__body"],
+                            children: [
+                                showCode ? (0, _jsxruntime.jsx)("div", {
+                                    className: _showCasemodulescss.default["code__wrapper"],
+                                    children: (0, _jsxruntime.jsx)(_code.Code, {
+                                        code: code?.text ?? "",
+                                        language: code?.language ?? "txt"
+                                    })
+                                }) : undefined,
+                                (0, _jsxruntime.jsx)(_frame.Frame, {
+                                    className: _showCasemodulescss.default.frame,
+                                    html: props.options.html,
+                                    css: props.options.css,
+                                    js: props.options.js
+                                })
+                            ]
+                        })
+                    ]
                 }) : undefined,
                 (0, _jsxruntime.jsxs)("div", {
                     className: _showCasemodulescss.default["show-case"],
                     children: [
                         (0, _jsxruntime.jsxs)("div", {
-                            className: _showCasemodulescss.default["frame__wrapper"],
+                            className: [
+                                _showCasemodulescss.default["frame__wrapper"],
+                                dialogVisiable ? _showCasemodulescss.default["frame__wrapper--disactive"] : ""
+                            ].join(" "),
                             children: [
                                 (0, _jsxruntime.jsx)(_frame.Frame, {
                                     className: _showCasemodulescss.default.frame,
@@ -1358,20 +1548,14 @@
                                 }),
                                 (0, _jsxruntime.jsx)("div", {
                                     className: _showCasemodulescss.default["frame__btn"],
+                                    onClick: showDialog,
                                     children: (0, _jsxruntime.jsx)(_icon.Icon, {
                                         name: "expand"
                                     })
                                 })
                             ]
                         }),
-                        (0, _jsxruntime.jsx)("p", {
-                            className: _showCasemodulescss.default.title,
-                            children: props.options.title
-                        }),
-                        hasTags ? (0, _jsxruntime.jsx)("p", {
-                            className: _showCasemodulescss.default.tags,
-                            children: props.options.tags?.join("/")
-                        }) : undefined
+                        (0, _jsxruntime.jsx)(Info, {})
                     ]
                 })
             ]
@@ -1386,4 +1570,4 @@
     var _export_star = farmRequire("@swc/helpers/_/_export_star");
     _export_star._(farmRequire("2ea370be"), exports);
 },});
-//# sourceMappingURL=index_84f0.384b56d5.js.map
+//# sourceMappingURL=index_1ec3.c05130fb.js.map
