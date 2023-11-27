@@ -1,6 +1,6 @@
 (function (modules) {
             for (var key in modules) {
-              modules[key].__farm_resource_pot__ = 'index_9a21.js';
+              modules[key].__farm_resource_pot__ = 'index_84f0.js';
                 (globalThis || window || self || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(key, modules[key]);
             }
         })({"03887fe2": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -53,7 +53,6 @@
     var _showCase = farmRequire("786b7de5");
     var _csscomponents = _interop_require_default._(farmRequire("23ec4682"));
     var _mainmodulescss = _interop_require_default._(farmRequire("703aab8a"));
-    console.log(_csscomponents.default);
     const Main = ()=>{
         const searchChange = (value)=>{
             (0, _notify.notify)("success", value);
@@ -144,7 +143,7 @@
         }
     });
     farmRequire("87b95526");
-    farmRequire("41da0d88");
+    farmRequire("8a6fd474");
     !function(e) {
         for(var r in e)e[r].__farm_resource_pot__ = "index_a2a1.js", (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__.register(r, e[r]);
     }({
@@ -164,7 +163,7 @@
         }
     });
     (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__.setInitialLoadedResources([
-        "wavyUnderline.38cdb788.js"
+        "wavyUnderline.bd2c49bc.js"
     ]);
     (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__.setDynamicModuleResourcesMap({});
     var farmModuleSystem = (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__;
@@ -307,74 +306,6 @@
             ]
         });
     };
-},
-"41da0d88": function(module, exports, farmRequire, farmDynamicRequire) {
-    !function(e) {
-        for(var t in e)e[t].__farm_resource_pot__ = "wavyUnderline.js", (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__.register(t, e[t]);
-    }({
-        "1595ecfa": function(e, t, r, n) {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), Object.defineProperty(t, "default", {
-                enumerable: !0,
-                get: function() {
-                    return o;
-                }
-            });
-            var o = `.text {
-  color: red;
-}`;
-        },
-        "3650c57d": function(e, t, r, n) {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), function(e, t) {
-                for(var r in t)Object.defineProperty(e, r, {
-                    enumerable: !0,
-                    get: t[r]
-                });
-            }(t, {
-                css: function() {
-                    return l.default;
-                },
-                html: function() {
-                    return u.default;
-                }
-            });
-            var o = r("@swc/helpers/_/_interop_require_default"), u = o._(r("a9ddf789")), l = o._(r("1595ecfa")), f = o._(r("48c49032"));
-            console.log(u.default), console.log(f.default);
-        },
-        "48c49032": function(e, t, r, n) {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), Object.defineProperty(t, "default", {
-                enumerable: !0,
-                get: function() {
-                    return o;
-                }
-            });
-            var o = `.text {
-  color: red;
-}
-`;
-        },
-        a9ddf789: function(e, t, r, n) {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), Object.defineProperty(t, "default", {
-                enumerable: !0,
-                get: function() {
-                    return o;
-                }
-            });
-            var o = `<span class="text">hello</span>
-`;
-        }
-    });
 },
 "44f760a0": function(module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
@@ -1000,6 +931,58 @@
         }
     }, "78d37cf6");
 },
+"8a6fd474": function(module, exports, farmRequire, farmDynamicRequire) {
+    !function(e) {
+        for(var t in e)e[t].__farm_resource_pot__ = "wavyUnderline.js", (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__.register(t, e[t]);
+    }({
+        "1595ecfa": function(e, t, r, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return u;
+                }
+            });
+            var u = `.text {
+  color: red;
+}`;
+        },
+        "3650c57d": function(e, t, r, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), function(e, t) {
+                for(var r in t)Object.defineProperty(e, r, {
+                    enumerable: !0,
+                    get: t[r]
+                });
+            }(t, {
+                css: function() {
+                    return f.default;
+                },
+                html: function() {
+                    return a.default;
+                }
+            });
+            var u = r("@swc/helpers/_/_interop_require_default"), a = u._(r("a9ddf789")), f = u._(r("1595ecfa"));
+        },
+        a9ddf789: function(e, t, r, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return u;
+                }
+            });
+            var u = `<span class="text">hello</span>
+`;
+        }
+    });
+},
 "8c2a1c95": function(module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
@@ -1403,4 +1386,4 @@
     var _export_star = farmRequire("@swc/helpers/_/_export_star");
     _export_star._(farmRequire("2ea370be"), exports);
 },});
-//# sourceMappingURL=index_9a21.80085e51.js.map
+//# sourceMappingURL=index_84f0.384b56d5.js.map
