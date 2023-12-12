@@ -138,19 +138,19 @@ html {
   font-weight: normal;
   font-style: normal;
   font-family: JetBrainsMono;
-  src: url("JetBrainsMono-Regular.a9cb1cd8.woff2") format("woff2");
+  src: url("/JetBrainsMono-Regular.a9cb1cd8.woff2") format("woff2");
 }
 @font-face{
   font-weight: bold;
   font-style: normal;
   font-family: JetBrainsMono;
-  src: url("JetBrainsMono-Bold.c503cc5e.woff2") format("woff2");
+  src: url("/JetBrainsMono-Bold.c503cc5e.woff2") format("woff2");
 }
 @font-face{
   font-weight: bold;
   font-style: italic;
   font-family: JetBrainsMono;
-  src: url("JetBrainsMono-BoldItalic.3a013466.woff2") format("woff2");
+  src: url("/JetBrainsMono-BoldItalic.3a013466.woff2") format("woff2");
 }
 .icon-0b50c465 {
   vertical-align: -0.15em;
@@ -988,4 +988,4 @@ html {
   padding: calc(12 * var(--unit-length));
   background-color: var(--s-color-bg-dark-3);
 }
-/*# sourceMappingURL=index_0720.102502de.css.map */
+/*# sourceMappingURL=index_0720.9a427aac.css.map */
