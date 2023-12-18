@@ -1418,14 +1418,14 @@
             props.onClickOutside
         ]);
         (0, _react.useEffect)(()=>{
-            document.addEventListener("click", onClickOutside);
+            Promise.resolve().then(()=>document.addEventListener("click", onClickOutside));
             return ()=>document.removeEventListener("click", onClickOutside);
         }, []);
         return (0, _jsxruntime.jsx)("div", {
             className: [
-                props.className,
+                props.className ?? "",
                 _dialogmodulescss.default.dialog
-            ].filter((x)=>x).join(" "),
+            ].join(" "),
             children: (0, _jsxruntime.jsx)("div", {
                 ref: dialogRef,
                 className: [
@@ -1461,6 +1461,10 @@
         const hasTags = props.options.tags && props.options.tags.length > 0;
         const [dialogVisiable, setDialogVisiable] = (0, _react.useState)(false);
         const showDialog = ()=>setDialogVisiable(true);
+        const closeDialog = ()=>{
+            setDialogVisiable(false);
+            setShowCode(false);
+        };
         const Info = (0, _react.useCallback)(()=>(0, _jsxruntime.jsxs)(_jsxruntime.Fragment, {
                 children: [
                     (0, _jsxruntime.jsx)("p", {
@@ -1499,7 +1503,7 @@
         return (0, _jsxruntime.jsxs)(_jsxruntime.Fragment, {
             children: [
                 dialogVisiable ? (0, _jsxruntime.jsxs)(_dialog.Dialog, {
-                    onClickOutside: ()=>setDialogVisiable(false),
+                    onClickOutside: closeDialog,
                     className: _showCasemodulescss.default.dialog,
                     children: [
                         (0, _jsxruntime.jsx)("div", {
@@ -1570,4 +1574,4 @@
     var _export_star = farmRequire("@swc/helpers/_/_export_star");
     _export_star._(farmRequire("2ea370be"), exports);
 },});
-//# sourceMappingURL=index_8498.5ff2acd9.js.map
+//# sourceMappingURL=index_8498.22791a2f.js.map
