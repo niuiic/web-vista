@@ -1,6 +1,6 @@
 (function (modules) {
             for (var key in modules) {
-              modules[key].__farm_resource_pot__ = 'index_c803.js';
+              modules[key].__farm_resource_pot__ = 'index_a21f.js';
                 (globalThis || window || self || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(key, modules[key]);
             }
         })({"03887fe2": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -43,6 +43,122 @@
     var _export_star = farmRequire("@swc/helpers/_/_export_star");
     _export_star._(farmRequire("554343aa"), exports);
 },
+"1dc83505": function(module, exports, farmRequire, farmDynamicRequire) {
+    !function(e) {
+        for(var t in e)e[t].__farm_resource_pot__ = "wavyUnderline.js", (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__.register(t, e[t]);
+    }({
+        "1595ecfa": function(e, t, r, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return a;
+                }
+            });
+            var a = `@keyframes bg-wave-flow {
+  from {
+    background-position-x: -10px, 0;
+  }
+  to {
+    background-position-x: -30px, -20px;
+  }
+}
+.text {
+  display: inline-block;
+  background: radial-gradient(circle at 10px -7px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x, radial-gradient(circle at 10px 27px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x;
+  background-position: -10px calc(100% + 16px), 0 calc(100% - 4px);
+  background-size: 20px 20px;
+  line-height: 16px;
+  animation: bg-wave-flow 1s infinite linear;
+}`;
+        },
+        "3650c57d": function(e, t, r, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return l;
+                }
+            });
+            var a = r("@swc/helpers/_/_interop_require_default"), i = a._(r("a9ddf789")), o = a._(r("1595ecfa")), c = a._(r("48c49032")), l = {
+                title: "wavyUnderline",
+                desc: "Text wave underline implementated with background animation",
+                category: "css",
+                tags: [
+                    "background",
+                    "animation"
+                ],
+                html: i.default,
+                css: o.default,
+                code: [
+                    {
+                        label: "html",
+                        filetype: "html",
+                        content: i.default
+                    },
+                    {
+                        label: "scss",
+                        filetype: "scss",
+                        content: c.default
+                    }
+                ]
+            };
+        },
+        "48c49032": function(e, t, r, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return a;
+                }
+            });
+            var a = `@keyframes bg-wave-flow {
+  from {
+    background-position-x: -10px, 0;
+  }
+
+  to {
+    background-position-x:
+      -30px,
+      -20px;
+  }
+}
+
+.text {
+  display: inline-block;
+  background:
+    radial-gradient(circle at 10px -7px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x,
+    radial-gradient(circle at 10px 27px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x;
+  background-position:
+    -10px calc(100% + 16px),
+    0 calc(100% - 4px);
+  background-size: 20px 20px;
+  line-height: 16px;
+  animation: bg-wave-flow 1s infinite linear;
+}
+`;
+        },
+        a9ddf789: function(e, t, r, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return a;
+                }
+            });
+            var a = `<span class="text">wavyUnderline</span>
+`;
+        }
+    });
+},
 "1e81784d": function(module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
@@ -56,6 +172,7 @@
     });
     var _interop_require_default = farmRequire("@swc/helpers/_/_interop_require_default");
     var _jsxruntime = farmRequire("892c81fb");
+    var _id = farmRequire("f8d6a1d2");
     var _input = farmRequire("6e9a280b");
     var _notify = farmRequire("44f760a0");
     var _showCase = farmRequire("786b7de5");
@@ -65,32 +182,10 @@
         const searchChange = (value)=>{
             (0, _notify.notify)("success", value);
         };
-        const component = _csscomponents.default[0];
-        const options = {
-            id: "id",
-            title: "title",
-            desc: "desc",
-            category: "category",
-            tags: [
-                "tag1",
-                "tag2"
-            ],
-            html: component.html,
-            css: component.css,
-            js: undefined,
-            code: [
-                {
-                    label: "html",
-                    filetype: "html",
-                    content: component.html
-                },
-                {
-                    label: "css",
-                    filetype: "css",
-                    content: component.css
-                }
-            ]
-        };
+        const cases = _csscomponents.default.map((x)=>({
+                id: (0, _id.localUniqId)(),
+                ...x
+            }));
         return (0, _jsxruntime.jsxs)("div", {
             className: _mainmodulescss.default.main,
             children: [
@@ -100,9 +195,9 @@
                 }),
                 (0, _jsxruntime.jsx)("div", {
                     className: _mainmodulescss.default.showcases,
-                    children: (0, _jsxruntime.jsx)(_showCase.ShowCase, {
-                        options: options
-                    })
+                    children: cases.map((options, i)=>(0, _jsxruntime.jsx)(_showCase.ShowCase, {
+                            options: options
+                        }, i))
                 })
             ]
         });
@@ -154,7 +249,7 @@
         }
     });
     farmRequire("6bfee478");
-    farmRequire("8a6fd474");
+    farmRequire("1dc83505");
     !function(e) {
         for(var r in e)e[r].__farm_resource_pot__ = "index_a2a1.js", (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__.register(r, e[r]);
     }({
@@ -169,12 +264,12 @@
                 }
             });
             var a = [
-                _("@swc/helpers/_/_interop_require_wildcard")._(_("3650c57d"))
+                _("@swc/helpers/_/_interop_require_default")._(_("3650c57d")).default
             ];
         }
     });
     (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__.setInitialLoadedResources([
-        "wavyUnderline.bd2c49bc.js"
+        "wavyUnderline.802f0262.js"
     ]);
     (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__.setDynamicModuleResourcesMap({});
     var farmModuleSystem = (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__;
@@ -933,8 +1028,8 @@
     });
     "";
     var _default = {
-        "dialog": `dialog-6a937a09`,
-        "dialog__inner": `dialog__inner-6a937a09`
+        "dialog": `dialog-c2790066`,
+        "dialog__inner": `dialog__inner-c2790066`
     };
 },
 "786b7de5": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -1033,58 +1128,6 @@
         });
     };
 },
-"8a6fd474": function(module, exports, farmRequire, farmDynamicRequire) {
-    !function(e) {
-        for(var t in e)e[t].__farm_resource_pot__ = "wavyUnderline.js", (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__.register(t, e[t]);
-    }({
-        "1595ecfa": function(e, t, r, n) {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), Object.defineProperty(t, "default", {
-                enumerable: !0,
-                get: function() {
-                    return u;
-                }
-            });
-            var u = `.text {
-  color: red;
-}`;
-        },
-        "3650c57d": function(e, t, r, n) {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), function(e, t) {
-                for(var r in t)Object.defineProperty(e, r, {
-                    enumerable: !0,
-                    get: t[r]
-                });
-            }(t, {
-                css: function() {
-                    return f.default;
-                },
-                html: function() {
-                    return a.default;
-                }
-            });
-            var u = r("@swc/helpers/_/_interop_require_default"), a = u._(r("a9ddf789")), f = u._(r("1595ecfa"));
-        },
-        a9ddf789: function(e, t, r, n) {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), Object.defineProperty(t, "default", {
-                enumerable: !0,
-                get: function() {
-                    return u;
-                }
-            });
-            var u = `<span class="text">hello</span>
-`;
-        }
-    });
-},
 "8c2a1c95": function(module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
@@ -1121,8 +1164,8 @@
     var _Main = farmRequire("1e81784d");
     const App = ()=>{
         const entries = [
-            "webgl",
-            "css"
+            "css",
+            "webgl"
         ].map((x)=>({
                 label: x,
                 onClick: ()=>console.log(x)
@@ -1223,18 +1266,19 @@
     });
     "";
     var _default = {
-        "code__wrapper": `code__wrapper-2659e978`,
-        "dialog": `dialog-2659e978`,
-        "dialog__body": `dialog__body-2659e978`,
-        "dialog__header": `dialog__header-2659e978`,
-        "frame": `frame-2659e978`,
-        "frame__btn": `frame__btn-2659e978`,
-        "frame__wrapper": `frame__wrapper-2659e978`,
-        "frame__wrapper--disactive": `frame__wrapper--disactive-2659e978`,
-        "showcase": `showcase-2659e978`,
-        "tabs": `tabs-2659e978`,
-        "tags": `tags-2659e978`,
-        "title": `title-2659e978`
+        "code__wrapper": `code__wrapper-d00863d0`,
+        "desc": `desc-d00863d0`,
+        "dialog": `dialog-d00863d0`,
+        "dialog__body": `dialog__body-d00863d0`,
+        "dialog__header": `dialog__header-d00863d0`,
+        "frame": `frame-d00863d0`,
+        "frame__btn": `frame__btn-d00863d0`,
+        "frame__wrapper": `frame__wrapper-d00863d0`,
+        "frame__wrapper--disactive": `frame__wrapper--disactive-d00863d0`,
+        "showcase": `showcase-d00863d0`,
+        "tabs": `tabs-d00863d0`,
+        "tags": `tags-d00863d0`,
+        "title": `title-d00863d0`
     };
 },
 "9fd73c3e": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -1428,6 +1472,30 @@
         });
     };
 },
+"f8d6a1d2": function(module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    Object.defineProperty(exports, "localUniqId", {
+        enumerable: true,
+        get: function() {
+            return localUniqId;
+        }
+    });
+    let lastTime;
+    let count = 0;
+    const localUniqId = ()=>{
+        const now = new Date().getTime();
+        if (lastTime === now) {
+            count = count + 1;
+        } else {
+            lastTime = now;
+            count = 0;
+        }
+        return `${lastTime}${count}`;
+    };
+},
 "fa5afec0": function(module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
@@ -1498,9 +1566,15 @@
                     onClickOutside: closeDialog,
                     className: _showCasemodulescss.default.dialog,
                     children: [
-                        (0, _jsxruntime.jsx)("div", {
+                        (0, _jsxruntime.jsxs)("div", {
                             className: _showCasemodulescss.default["dialog__header"],
-                            children: (0, _jsxruntime.jsx)(Info, {})
+                            children: [
+                                (0, _jsxruntime.jsx)(Info, {}),
+                                (0, _jsxruntime.jsx)("p", {
+                                    className: _showCasemodulescss.default.desc,
+                                    children: props.options.desc
+                                })
+                            ]
                         }),
                         tabs ? (0, _jsxruntime.jsx)(_tabs.Tabs, {
                             tabs: tabs,
@@ -1563,4 +1637,4 @@
     var _export_star = farmRequire("@swc/helpers/_/_export_star");
     _export_star._(farmRequire("2ea370be"), exports);
 },});
-//# sourceMappingURL=index_c803.962a8e59.js.map
+//# sourceMappingURL=index_a21f.cc152407.js.map
