@@ -1068,9 +1068,9 @@
             props.code,
             props.language
         ]);
-        return (0, _jsxruntime.jsx)("code", {
-            className: _codemodulescss.default.code,
-            ref: codeRef
+        return (0, _jsxruntime.jsx)("pre", {
+            ref: codeRef,
+            className: _codemodulescss.default.code
         });
     };
 },
@@ -1266,19 +1266,19 @@
     });
     "";
     var _default = {
-        "code__wrapper": `code__wrapper-d00863d0`,
-        "desc": `desc-d00863d0`,
-        "dialog": `dialog-d00863d0`,
-        "dialog__body": `dialog__body-d00863d0`,
-        "dialog__header": `dialog__header-d00863d0`,
-        "frame": `frame-d00863d0`,
-        "frame__btn": `frame__btn-d00863d0`,
-        "frame__wrapper": `frame__wrapper-d00863d0`,
-        "frame__wrapper--disactive": `frame__wrapper--disactive-d00863d0`,
-        "showcase": `showcase-d00863d0`,
-        "tabs": `tabs-d00863d0`,
-        "tags": `tags-d00863d0`,
-        "title": `title-d00863d0`
+        "code__wrapper": `code__wrapper-d664df5e`,
+        "desc": `desc-d664df5e`,
+        "dialog": `dialog-d664df5e`,
+        "dialog__body": `dialog__body-d664df5e`,
+        "dialog__header": `dialog__header-d664df5e`,
+        "frame": `frame-d664df5e`,
+        "frame__btn": `frame__btn-d664df5e`,
+        "frame__wrapper": `frame__wrapper-d664df5e`,
+        "frame__wrapper--disactive": `frame__wrapper--disactive-d664df5e`,
+        "showcase": `showcase-d664df5e`,
+        "tabs": `tabs-d664df5e`,
+        "tags": `tags-d664df5e`,
+        "title": `title-d664df5e`
     };
 },
 "9fd73c3e": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -1637,4 +1637,4 @@
     var _export_star = farmRequire("@swc/helpers/_/_export_star");
     _export_star._(farmRequire("2ea370be"), exports);
 },});
-//# sourceMappingURL=index_a21f.cc152407.js.map
+//# sourceMappingURL=index_a21f.53070bad.js.map

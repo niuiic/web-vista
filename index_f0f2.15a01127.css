@@ -796,7 +796,7 @@ html {
   background: var(--s-color-text-light-2);
   color: unset;
 }
-.showcase-d00863d0 {
+.showcase-d664df5e {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -825,7 +825,7 @@ html {
   border-radius: calc(8 * var(--unit-length));
   background-color: var(--s-color-bg-dark-2);
 }
-.title-d00863d0 {
+.title-d664df5e {
   overflow: hidden;
   color: var(--s-color-text-light-1);
   font-weight: bold;
@@ -833,7 +833,7 @@ html {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.tags-d00863d0 {
+.tags-d664df5e {
   overflow: hidden;
   color: var(--s-color-text-light-2);
   font-size: var(--s-font-size-small);
@@ -841,7 +841,7 @@ html {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.desc-d00863d0 {
+.desc-d664df5e {
   overflow: hidden;
   color: var(--s-color-text-light-2);
   font-size: var(--s-font-size-small);
@@ -849,7 +849,7 @@ html {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.frame__wrapper-d00863d0 {
+.frame__wrapper-d664df5e {
   position: relative;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -866,7 +866,7 @@ html {
   border-radius: -moz-calc(8 * var(--unit-length));
   border-radius: calc(8 * var(--unit-length));
 }
-.frame__wrapper-d00863d0::after {
+.frame__wrapper-d664df5e::after {
   content: "";
   position: absolute;
   top: 0;
@@ -883,17 +883,17 @@ html {
   background: -o-linear-gradient(bottom left, transparent 50%, rgba(0, 0, 0, 0.5) 100%);
   background: linear-gradient(to top right, transparent 50%, rgba(0, 0, 0, 0.5) 100%);
 }
-.frame__wrapper-d00863d0:hover::after {
+.frame__wrapper-d664df5e:hover::after {
   display: block;
 }
-.frame__wrapper--disactive-d00863d0 {
+.frame__wrapper--disactive-d664df5e {
   pointer-events: none;
 }
-.frame-d00863d0 {
+.frame-d664df5e {
   height: 100%;
   background: var(--s-color-bg-light-1);
 }
-.frame__btn-d00863d0 {
+.frame__btn-d664df5e {
   position: absolute;
   top: -webkit-calc(20 * var(--unit-length));
   top: -moz-calc(20 * var(--unit-length));
@@ -927,7 +927,7 @@ html {
   -ms-user-select: none;
   user-select: none;
 }
-.frame__btn-d00863d0:hover {
+.frame__btn-d664df5e:hover {
   cursor: pointer;
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
@@ -935,10 +935,10 @@ html {
   -o-transform: scale(1.2);
   transform: scale(1.2);
 }
-.frame__wrapper-d00863d0:hover .frame__btn-d00863d0 {
+.frame__wrapper-d664df5e:hover .frame__btn-d664df5e {
   display: block;
 }
-.dialog__body-d00863d0 .frame-d00863d0 {
+.dialog__body-d664df5e .frame-d664df5e {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   -moz-box-flex: 1;
@@ -946,13 +946,13 @@ html {
   flex: 1;
   height: unset;
 }
-.dialog-d00863d0 {
+.dialog-d664df5e {
   overflow: auto;
 }
-.dialog-d00863d0 .dialog__inner {
-  width: -webkit-calc(800 * var(--unit-length));
-  width: -moz-calc(800 * var(--unit-length));
-  width: calc(800 * var(--unit-length));
+.dialog-d664df5e .dialog__inner {
+  width: -webkit-calc(1200 * var(--unit-length));
+  width: -moz-calc(1200 * var(--unit-length));
+  width: calc(1200 * var(--unit-length));
   max-width: 100%;
   -webkit-border-radius: -webkit-calc(8 * var(--unit-length));
   -moz-border-radius: -moz-calc(8 * var(--unit-length));
@@ -961,33 +961,36 @@ html {
   border-radius: calc(8 * var(--unit-length));
   background: var(--s-color-bg-dark-1);
 }
-.dialog__header-d00863d0 {
+.dialog__header-d664df5e {
   padding: -webkit-calc(8 * var(--unit-length));
   padding: -moz-calc(8 * var(--unit-length));
   padding: calc(8 * var(--unit-length));
 }
-.dialog__body-d00863d0 {
+.dialog__body-d664df5e {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: auto;
   min-height: -webkit-calc(240 * var(--unit-length));
   min-height: -moz-calc(240 * var(--unit-length));
   min-height: calc(240 * var(--unit-length));
+  max-height: 80vh;
 }
-.tabs-d00863d0 {
+.tabs-d664df5e {
   padding: -webkit-calc(8 * var(--unit-length));
   padding: -moz-calc(8 * var(--unit-length));
   padding: calc(8 * var(--unit-length));
   background: var(--s-color-bg-dark-3);
 }
-.code__wrapper-d00863d0 {
+.code__wrapper-d664df5e {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   -moz-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  overflow: auto;
   background: var(--s-color-bg-dark-4);
 }
 .main-b7917bb6 {
@@ -1016,4 +1019,4 @@ html {
   align-self: center;
   justify-self: center;
 }
-/*# sourceMappingURL=index_90f0.8ac4990c.css.map */
+/*# sourceMappingURL=index_f0f2.15a01127.css.map */
