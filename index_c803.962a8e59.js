@@ -1,6 +1,6 @@
 (function (modules) {
             for (var key in modules) {
-              modules[key].__farm_resource_pot__ = 'index_8498.js';
+              modules[key].__farm_resource_pot__ = 'index_c803.js';
                 (globalThis || window || self || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(key, modules[key]);
             }
         })({"03887fe2": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -98,8 +98,11 @@
                     onChange: searchChange,
                     placeholder: "Search Ideas"
                 }),
-                (0, _jsxruntime.jsx)(_showCase.ShowCase, {
-                    options: options
+                (0, _jsxruntime.jsx)("div", {
+                    className: _mainmodulescss.default.showcases,
+                    children: (0, _jsxruntime.jsx)(_showCase.ShowCase, {
+                        options: options
+                    })
                 })
             ]
         });
@@ -272,6 +275,19 @@
         });
     };
 },
+"3a2b0339": function(module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    Object.defineProperty(exports, "classes", {
+        enumerable: true,
+        get: function() {
+            return classes;
+        }
+    });
+    const classes = (...args)=>args.filter((x)=>typeof x === "string").join(" ");
+},
 "3ef60bee": function(module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
@@ -285,6 +301,7 @@
     });
     var _interop_require_default = farmRequire("@swc/helpers/_/_interop_require_default");
     var _jsxruntime = farmRequire("892c81fb");
+    var _class = farmRequire("3a2b0339");
     var _react = farmRequire("d9571927");
     var _icon = farmRequire("bc9e4543");
     var _layoutmodulescss = _interop_require_default._(farmRequire("5d89d03e"));
@@ -299,16 +316,10 @@
             setCollapseNav(true);
         };
         return (0, _jsxruntime.jsxs)("div", {
-            className: [
-                _layoutmodulescss.default.layout,
-                collapseNav ? _layoutmodulescss.default["layout--nav-collapsed"] : ""
-            ].join(" "),
+            className: (0, _class.classes)(_layoutmodulescss.default.layout, collapseNav ? _layoutmodulescss.default["layout--nav-collapsed"] : undefined),
             children: [
                 (0, _jsxruntime.jsxs)("nav", {
-                    className: [
-                        _layoutmodulescss.default.nav,
-                        collapseNav ? _layoutmodulescss.default["nav-collapsed"] : ""
-                    ].join(" "),
+                    className: (0, _class.classes)(_layoutmodulescss.default.nav, collapseNav ? _layoutmodulescss.default["nav-collapsed"] : undefined),
                     onClick: onClickNav,
                     children: [
                         collapseNav ? undefined : props.nav,
@@ -367,6 +378,7 @@
     });
     var _interop_require_default = farmRequire("@swc/helpers/_/_interop_require_default");
     var _jsxruntime = farmRequire("892c81fb");
+    var _class = farmRequire("3a2b0339");
     var _react = farmRequire("d9571927");
     var _tabsmodulescss = _interop_require_default._(farmRequire("2bcde850"));
     const Tabs = (props)=>{
@@ -381,15 +393,9 @@
             }
         };
         return (0, _jsxruntime.jsx)("div", {
-            className: [
-                _tabsmodulescss.default.tabs,
-                props.className ?? ""
-            ].join(" "),
+            className: (0, _class.classes)(_tabsmodulescss.default.tabs, props.className),
             children: props.tabs.map((x)=>(0, _jsxruntime.jsx)("span", {
-                    className: [
-                        _tabsmodulescss.default.tab,
-                        curTab === x ? _tabsmodulescss.default["tab--active"] : ""
-                    ].join(" "),
+                    className: (0, _class.classes)(_tabsmodulescss.default.tab, curTab === x ? _tabsmodulescss.default["tab--active"] : undefined),
                     onClick: ()=>onClickTab(x),
                     children: x
                 }, x))
@@ -409,6 +415,7 @@
     });
     var _interop_require_default = farmRequire("@swc/helpers/_/_interop_require_default");
     var _jsxruntime = farmRequire("892c81fb");
+    var _class = farmRequire("3a2b0339");
     var _footermodulescss = _interop_require_default._(farmRequire("67c07953"));
     const Footer = ()=>{
         const accessGithub = ()=>{
@@ -422,10 +429,7 @@
                     children: [
                         "View on ",
                         (0, _jsxruntime.jsx)("span", {
-                            className: [
-                                _footermodulescss.default.link,
-                                "o-btn"
-                            ].join(" "),
+                            className: (0, _class.classes)(_footermodulescss.default.link, "o-btn"),
                             onClick: accessGithub,
                             children: "github"
                         })
@@ -912,7 +916,8 @@
     });
     "";
     var _default = {
-        "main": `main-3d2210f3`
+        "main": `main-b7917bb6`,
+        "showcases": `showcases-b7917bb6`
     };
 },
 "779af01c": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -995,6 +1000,7 @@
     });
     var _interop_require_default = farmRequire("@swc/helpers/_/_interop_require_default");
     var _jsxruntime = farmRequire("892c81fb");
+    var _class = farmRequire("3a2b0339");
     var _navmodulescss = _interop_require_default._(farmRequire("a81951de"));
     const Nav = (props)=>{
         const goHome = ()=>{
@@ -1004,10 +1010,7 @@
             className: _navmodulescss.default.nav,
             children: [
                 (0, _jsxruntime.jsx)("h1", {
-                    className: [
-                        _navmodulescss.default.title,
-                        "o-btn"
-                    ].join(" "),
+                    className: (0, _class.classes)(_navmodulescss.default.title, "o-btn"),
                     onClick: goHome,
                     children: "Gallery"
                 }),
@@ -1021,10 +1024,7 @@
                 (0, _jsxruntime.jsx)("ul", {
                     className: _navmodulescss.default.entries,
                     children: props.entries.map((entry)=>(0, _jsxruntime.jsx)("li", {
-                            className: [
-                                _navmodulescss.default.entry,
-                                "o-btn"
-                            ].join(" "),
+                            className: (0, _class.classes)(_navmodulescss.default.entry, "o-btn"),
                             onClick: entry.onClick,
                             children: entry.label
                         }, entry.label))
@@ -1157,6 +1157,7 @@
     });
     var _interop_require_default = farmRequire("@swc/helpers/_/_interop_require_default");
     var _jsxruntime = farmRequire("892c81fb");
+    var _class = farmRequire("3a2b0339");
     var _client = farmRequire("b62921c1");
     var _notifymodulescss = _interop_require_default._(farmRequire("9a22db61"));
     const Notify = (props)=>{
@@ -1167,10 +1168,7 @@
             info: "notify--info"
         }[props.type];
         return (0, _jsxruntime.jsx)("div", {
-            className: [
-                _notifymodulescss.default["notify"],
-                _notifymodulescss.default[className]
-            ].join(" "),
+            className: (0, _class.classes)(_notifymodulescss.default["notify"], _notifymodulescss.default[className]),
             children: props.msg
         });
     };
@@ -1225,18 +1223,18 @@
     });
     "";
     var _default = {
-        "code__wrapper": `code__wrapper-c5778abd`,
-        "dialog": `dialog-c5778abd`,
-        "dialog__body": `dialog__body-c5778abd`,
-        "dialog__header": `dialog__header-c5778abd`,
-        "frame": `frame-c5778abd`,
-        "frame__btn": `frame__btn-c5778abd`,
-        "frame__wrapper": `frame__wrapper-c5778abd`,
-        "frame__wrapper--disactive": `frame__wrapper--disactive-c5778abd`,
-        "show-case": `show-case-c5778abd`,
-        "tabs": `tabs-c5778abd`,
-        "tags": `tags-c5778abd`,
-        "title": `title-c5778abd`
+        "code__wrapper": `code__wrapper-2659e978`,
+        "dialog": `dialog-2659e978`,
+        "dialog__body": `dialog__body-2659e978`,
+        "dialog__header": `dialog__header-2659e978`,
+        "frame": `frame-2659e978`,
+        "frame__btn": `frame__btn-2659e978`,
+        "frame__wrapper": `frame__wrapper-2659e978`,
+        "frame__wrapper--disactive": `frame__wrapper--disactive-2659e978`,
+        "showcase": `showcase-2659e978`,
+        "tabs": `tabs-2659e978`,
+        "tags": `tags-2659e978`,
+        "title": `title-2659e978`
     };
 },
 "9fd73c3e": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -1381,12 +1379,10 @@
     });
     var _interop_require_default = farmRequire("@swc/helpers/_/_interop_require_default");
     var _jsxruntime = farmRequire("892c81fb");
+    var _class = farmRequire("3a2b0339");
     var _iconmodulescss = _interop_require_default._(farmRequire("092f3b3b"));
     const Icon = (props)=>(0, _jsxruntime.jsx)("svg", {
-            className: [
-                _iconmodulescss.default.icon,
-                props.className ?? ""
-            ].join(" "),
+            className: (0, _class.classes)(_iconmodulescss.default.icon, props.className ?? ""),
             "aria-hidden": "true",
             children: (0, _jsxruntime.jsx)("use", {
                 xlinkHref: `#icon-${props.name}`
@@ -1406,6 +1402,7 @@
     });
     var _interop_require_default = farmRequire("@swc/helpers/_/_interop_require_default");
     var _jsxruntime = farmRequire("892c81fb");
+    var _class = farmRequire("3a2b0339");
     var _react = farmRequire("d9571927");
     var _dialogmodulescss = _interop_require_default._(farmRequire("779af01c"));
     const Dialog = (props)=>{
@@ -1418,20 +1415,14 @@
             props.onClickOutside
         ]);
         (0, _react.useEffect)(()=>{
-            Promise.resolve().then(()=>document.addEventListener("click", onClickOutside));
+            setTimeout(()=>document.addEventListener("click", onClickOutside), 0);
             return ()=>document.removeEventListener("click", onClickOutside);
         }, []);
         return (0, _jsxruntime.jsx)("div", {
-            className: [
-                props.className ?? "",
-                _dialogmodulescss.default.dialog
-            ].join(" "),
+            className: (0, _class.classes)(props.className, _dialogmodulescss.default.dialog),
             children: (0, _jsxruntime.jsx)("div", {
                 ref: dialogRef,
-                className: [
-                    _dialogmodulescss.default["dialog__inner"],
-                    "dialog__inner"
-                ].join(" "),
+                className: (0, _class.classes)(_dialogmodulescss.default["dialog__inner"], "dialog__inner"),
                 children: props.children
             })
         });
@@ -1450,6 +1441,7 @@
     });
     var _interop_require_default = farmRequire("@swc/helpers/_/_interop_require_default");
     var _jsxruntime = farmRequire("892c81fb");
+    var _class = farmRequire("3a2b0339");
     var _react = farmRequire("d9571927");
     var _code = farmRequire("ac0a0cbe");
     var _dialog = farmRequire("03887fe2");
@@ -1536,13 +1528,10 @@
                     ]
                 }) : undefined,
                 (0, _jsxruntime.jsxs)("div", {
-                    className: _showCasemodulescss.default["show-case"],
+                    className: (0, _class.classes)(_showCasemodulescss.default.showcase, "showcase"),
                     children: [
                         (0, _jsxruntime.jsxs)("div", {
-                            className: [
-                                _showCasemodulescss.default["frame__wrapper"],
-                                dialogVisiable ? _showCasemodulescss.default["frame__wrapper--disactive"] : ""
-                            ].join(" "),
+                            className: (0, _class.classes)(_showCasemodulescss.default["frame__wrapper"], dialogVisiable ? _showCasemodulescss.default["frame__wrapper--disactive"] : undefined),
                             children: [
                                 (0, _jsxruntime.jsx)(_frame.Frame, {
                                     className: _showCasemodulescss.default.frame,
@@ -1574,4 +1563,4 @@
     var _export_star = farmRequire("@swc/helpers/_/_export_star");
     _export_star._(farmRequire("2ea370be"), exports);
 },});
-//# sourceMappingURL=index_8498.22791a2f.js.map
+//# sourceMappingURL=index_c803.962a8e59.js.map
