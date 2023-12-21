@@ -1,6 +1,6 @@
 (function (modules) {
             for (var key in modules) {
-              modules[key].__farm_resource_pot__ = 'index_a21f.js';
+              modules[key].__farm_resource_pot__ = 'index_c10c.js';
                 (globalThis || window || self || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(key, modules[key]);
             }
         })({"03887fe2": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -34,6 +34,35 @@
     });
     var _export_star = farmRequire("@swc/helpers/_/_export_star");
     _export_star._(farmRequire("824607c6"), exports);
+},
+"11dd513f": function(module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    Object.defineProperty(exports, "useDebounce", {
+        enumerable: true,
+        get: function() {
+            return useDebounce;
+        }
+    });
+    const useDebounce = (fn, options)=>{
+        let lastTriggerTime;
+        let timer;
+        const fixedOptions = {
+            waitTime: 500,
+            ...options ?? {}
+        };
+        const debouncedFn = (...args)=>{
+            const now = new Date().getTime();
+            if (lastTriggerTime && lastTriggerTime + fixedOptions.waitTime > now) {
+                clearTimeout(timer);
+            }
+            timer = setTimeout(()=>fn(...args), fixedOptions.waitTime);
+            lastTriggerTime = now;
+        };
+        return debouncedFn;
+    };
 },
 "14a92e63": function(module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
@@ -172,6 +201,7 @@
     });
     var _interop_require_default = farmRequire("@swc/helpers/_/_interop_require_default");
     var _jsxruntime = farmRequire("892c81fb");
+    var _debounce = farmRequire("11dd513f");
     var _id = farmRequire("f8d6a1d2");
     var _input = farmRequire("6e9a280b");
     var _showCase = farmRequire("786b7de5");
@@ -179,9 +209,9 @@
     var _react = farmRequire("d9571927");
     var _mainmodulescss = _interop_require_default._(farmRequire("703aab8a"));
     const Main = ()=>{
-        const searchChange = (value)=>{
-            setCases(allCases.filter((x)=>x.title.includes(value)));
-        };
+        const searchChange = (0, _debounce.useDebounce)((value)=>{
+            setCases(allCases.filter((x)=>x.title.toLowerCase().includes(value.toLowerCase())));
+        });
         const allCases = _csscomponents.default.map((x)=>({
                 id: (0, _id.localUniqId)(),
                 category: "css",
@@ -1645,4 +1675,4 @@
     var _export_star = farmRequire("@swc/helpers/_/_export_star");
     _export_star._(farmRequire("2ea370be"), exports);
 },});
-//# sourceMappingURL=index_a21f.bb8d9e31.js.map
+//# sourceMappingURL=index_c10c.10a4c486.js.map
