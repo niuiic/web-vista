@@ -1185,22 +1185,22 @@
     });
     "";
     var _default = {
-        "category": `category-132165cc`,
-        "code__wrapper": `code__wrapper-132165cc`,
-        "desc": `desc-132165cc`,
-        "dialog": `dialog-132165cc`,
-        "dialog__body": `dialog__body-132165cc`,
-        "dialog__header": `dialog__header-132165cc`,
-        "frame": `frame-132165cc`,
-        "frame__btn": `frame__btn-132165cc`,
-        "frame__wrapper": `frame__wrapper-132165cc`,
-        "frame__wrapper--disactive": `frame__wrapper--disactive-132165cc`,
-        "info": `info-132165cc`,
-        "info__left": `info__left-132165cc`,
-        "showcase": `showcase-132165cc`,
-        "tabs": `tabs-132165cc`,
-        "tags": `tags-132165cc`,
-        "title": `title-132165cc`
+        "category": `category-824d7cdd`,
+        "code__wrapper": `code__wrapper-824d7cdd`,
+        "desc": `desc-824d7cdd`,
+        "dialog": `dialog-824d7cdd`,
+        "dialog__body": `dialog__body-824d7cdd`,
+        "dialog__header": `dialog__header-824d7cdd`,
+        "frame": `frame-824d7cdd`,
+        "frame__btn": `frame__btn-824d7cdd`,
+        "frame__wrapper": `frame__wrapper-824d7cdd`,
+        "frame__wrapper--disactive": `frame__wrapper--disactive-824d7cdd`,
+        "info": `info-824d7cdd`,
+        "info__left": `info__left-824d7cdd`,
+        "showcase": `showcase-824d7cdd`,
+        "tabs": `tabs-824d7cdd`,
+        "tags": `tags-824d7cdd`,
+        "title": `title-824d7cdd`
     };
 },
 "9fd73c3e": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -1687,4 +1687,4 @@
     var _export_star = farmRequire("@swc/helpers/_/_export_star");
     _export_star._(farmRequire("2ea370be"), exports);
 },});
-//# sourceMappingURL=index_996e.293060d0.js.map
+//# sourceMappingURL=index_996e.70666d7d.js.map
