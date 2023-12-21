@@ -1,6 +1,6 @@
 (function (modules) {
             for (var key in modules) {
-              modules[key].__farm_resource_pot__ = 'index_c10c.js';
+              modules[key].__farm_resource_pot__ = 'index_996e.js';
                 (globalThis || window || self || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(key, modules[key]);
             }
         })({"03887fe2": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -72,122 +72,6 @@
     var _export_star = farmRequire("@swc/helpers/_/_export_star");
     _export_star._(farmRequire("554343aa"), exports);
 },
-"1dc83505": function(module, exports, farmRequire, farmDynamicRequire) {
-    !function(e) {
-        for(var t in e)e[t].__farm_resource_pot__ = "wavyUnderline.js", (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__.register(t, e[t]);
-    }({
-        "1595ecfa": function(e, t, r, n) {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), Object.defineProperty(t, "default", {
-                enumerable: !0,
-                get: function() {
-                    return a;
-                }
-            });
-            var a = `@keyframes bg-wave-flow {
-  from {
-    background-position-x: -10px, 0;
-  }
-  to {
-    background-position-x: -30px, -20px;
-  }
-}
-.text {
-  display: inline-block;
-  background: radial-gradient(circle at 10px -7px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x, radial-gradient(circle at 10px 27px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x;
-  background-position: -10px calc(100% + 16px), 0 calc(100% - 4px);
-  background-size: 20px 20px;
-  line-height: 16px;
-  animation: bg-wave-flow 1s infinite linear;
-}`;
-        },
-        "3650c57d": function(e, t, r, n) {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), Object.defineProperty(t, "default", {
-                enumerable: !0,
-                get: function() {
-                    return l;
-                }
-            });
-            var a = r("@swc/helpers/_/_interop_require_default"), i = a._(r("a9ddf789")), o = a._(r("1595ecfa")), c = a._(r("48c49032")), l = {
-                title: "wavyUnderline",
-                desc: "Text wave underline implementated with background animation",
-                category: "css",
-                tags: [
-                    "background",
-                    "animation"
-                ],
-                html: i.default,
-                css: o.default,
-                code: [
-                    {
-                        label: "html",
-                        filetype: "html",
-                        content: i.default
-                    },
-                    {
-                        label: "scss",
-                        filetype: "scss",
-                        content: c.default
-                    }
-                ]
-            };
-        },
-        "48c49032": function(e, t, r, n) {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), Object.defineProperty(t, "default", {
-                enumerable: !0,
-                get: function() {
-                    return a;
-                }
-            });
-            var a = `@keyframes bg-wave-flow {
-  from {
-    background-position-x: -10px, 0;
-  }
-
-  to {
-    background-position-x:
-      -30px,
-      -20px;
-  }
-}
-
-.text {
-  display: inline-block;
-  background:
-    radial-gradient(circle at 10px -7px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x,
-    radial-gradient(circle at 10px 27px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x;
-  background-position:
-    -10px calc(100% + 16px),
-    0 calc(100% - 4px);
-  background-size: 20px 20px;
-  line-height: 16px;
-  animation: bg-wave-flow 1s infinite linear;
-}
-`;
-        },
-        a9ddf789: function(e, t, r, n) {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), Object.defineProperty(t, "default", {
-                enumerable: !0,
-                get: function() {
-                    return a;
-                }
-            });
-            var a = `<span class="text">wavyUnderline</span>
-`;
-        }
-    });
-},
 "1e81784d": function(module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
@@ -209,8 +93,20 @@
     var _react = farmRequire("d9571927");
     var _mainmodulescss = _interop_require_default._(farmRequire("703aab8a"));
     const Main = ()=>{
+        const match = (a, b)=>a.toLowerCase().includes(b.toLowerCase());
         const searchChange = (0, _debounce.useDebounce)((value)=>{
-            setCases(allCases.filter((x)=>x.title.toLowerCase().includes(value.toLowerCase())));
+            setCases(allCases.filter((x)=>{
+                if (match(x.title, value)) {
+                    return true;
+                }
+                if (x.tags?.find((x)=>match(x, value))) {
+                    return true;
+                }
+                if (match(x.category, value)) {
+                    return true;
+                }
+                return false;
+            }));
         });
         const allCases = _csscomponents.default.map((x)=>({
                 id: (0, _id.localUniqId)(),
@@ -223,7 +119,7 @@
             children: [
                 (0, _jsxruntime.jsx)(_input.Input, {
                     onChange: searchChange,
-                    placeholder: "Search Ideas"
+                    placeholder: "Name/Category/Tag"
                 }),
                 (0, _jsxruntime.jsx)("div", {
                     className: _mainmodulescss.default.showcases,
@@ -281,7 +177,7 @@
         }
     });
     farmRequire("6bfee478");
-    farmRequire("1dc83505");
+    farmRequire("c71e1c92");
     !function(e) {
         for(var r in e)e[r].__farm_resource_pot__ = "index_a2a1.js", (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__.register(r, e[r]);
     }({
@@ -301,7 +197,7 @@
         }
     });
     (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__.setInitialLoadedResources([
-        "wavyUnderline.802f0262.js"
+        "wavyUnderline.9a84677d.js"
     ]);
     (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__.setDynamicModuleResourcesMap({});
     var farmModuleSystem = (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__;
@@ -1289,22 +1185,22 @@
     });
     "";
     var _default = {
-        "category": `category-c722f211`,
-        "code__wrapper": `code__wrapper-c722f211`,
-        "desc": `desc-c722f211`,
-        "dialog": `dialog-c722f211`,
-        "dialog__body": `dialog__body-c722f211`,
-        "dialog__header": `dialog__header-c722f211`,
-        "frame": `frame-c722f211`,
-        "frame__btn": `frame__btn-c722f211`,
-        "frame__wrapper": `frame__wrapper-c722f211`,
-        "frame__wrapper--disactive": `frame__wrapper--disactive-c722f211`,
-        "info": `info-c722f211`,
-        "info__left": `info__left-c722f211`,
-        "showcase": `showcase-c722f211`,
-        "tabs": `tabs-c722f211`,
-        "tags": `tags-c722f211`,
-        "title": `title-c722f211`
+        "category": `category-132165cc`,
+        "code__wrapper": `code__wrapper-132165cc`,
+        "desc": `desc-132165cc`,
+        "dialog": `dialog-132165cc`,
+        "dialog__body": `dialog__body-132165cc`,
+        "dialog__header": `dialog__header-132165cc`,
+        "frame": `frame-132165cc`,
+        "frame__btn": `frame__btn-132165cc`,
+        "frame__wrapper": `frame__wrapper-132165cc`,
+        "frame__wrapper--disactive": `frame__wrapper--disactive-132165cc`,
+        "info": `info-132165cc`,
+        "info__left": `info__left-132165cc`,
+        "showcase": `showcase-132165cc`,
+        "tabs": `tabs-132165cc`,
+        "tags": `tags-132165cc`,
+        "title": `title-132165cc`
     };
 },
 "9fd73c3e": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -1419,6 +1315,122 @@
         }
     });
     var _default = "/JetBrainsMono-Bold.c503cc5e.woff2";
+},
+"c71e1c92": function(module, exports, farmRequire, farmDynamicRequire) {
+    !function(e) {
+        for(var t in e)e[t].__farm_resource_pot__ = "wavyUnderline.js", (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__.register(t, e[t]);
+    }({
+        "1595ecfa": function(e, t, r, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return a;
+                }
+            });
+            var a = `@keyframes bg-wave-flow {
+  from {
+    background-position-x: -10px, 0;
+  }
+  to {
+    background-position-x: -30px, -20px;
+  }
+}
+.text {
+  display: inline-block;
+  background: radial-gradient(circle at 10px -7px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x, radial-gradient(circle at 10px 27px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x;
+  background-position: -10px calc(100% + 16px), 0 calc(100% - 4px);
+  background-size: 20px 20px;
+  line-height: 16px;
+  animation: bg-wave-flow 1s infinite linear;
+}`;
+        },
+        "3650c57d": function(e, t, r, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return l;
+                }
+            });
+            var a = r("@swc/helpers/_/_interop_require_default"), i = a._(r("a9ddf789")), o = a._(r("1595ecfa")), c = a._(r("48c49032")), l = {
+                title: "wavy underline",
+                desc: "Text wave underline implementated with background animation",
+                category: "css",
+                tags: [
+                    "background",
+                    "animation"
+                ],
+                html: i.default,
+                css: o.default,
+                code: [
+                    {
+                        label: "html",
+                        filetype: "html",
+                        content: i.default
+                    },
+                    {
+                        label: "scss",
+                        filetype: "scss",
+                        content: c.default
+                    }
+                ]
+            };
+        },
+        "48c49032": function(e, t, r, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return a;
+                }
+            });
+            var a = `@keyframes bg-wave-flow {
+  from {
+    background-position-x: -10px, 0;
+  }
+
+  to {
+    background-position-x:
+      -30px,
+      -20px;
+  }
+}
+
+.text {
+  display: inline-block;
+  background:
+    radial-gradient(circle at 10px -7px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x,
+    radial-gradient(circle at 10px 27px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x;
+  background-position:
+    -10px calc(100% + 16px),
+    0 calc(100% - 4px);
+  background-size: 20px 20px;
+  line-height: 16px;
+  animation: bg-wave-flow 1s infinite linear;
+}
+`;
+        },
+        a9ddf789: function(e, t, r, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return a;
+                }
+            });
+            var a = `<span class="text">wavyUnderline</span>
+`;
+        }
+    });
 },
 "c86c3cd1": function(module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
@@ -1675,4 +1687,4 @@
     var _export_star = farmRequire("@swc/helpers/_/_export_star");
     _export_star._(farmRequire("2ea370be"), exports);
 },});
-//# sourceMappingURL=index_c10c.10a4c486.js.map
+//# sourceMappingURL=index_996e.293060d0.js.map
