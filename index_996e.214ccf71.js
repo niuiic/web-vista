@@ -188,11 +188,13 @@
             }), Object.defineProperty(r, "default", {
                 enumerable: !0,
                 get: function() {
-                    return a;
+                    return f;
                 }
             });
-            var a = [
-                _("@swc/helpers/_/_interop_require_default")._(_("3650c57d")).default
+            var a = _("@swc/helpers/_/_interop_require_default")._(_("3650c57d"));
+            a.default;
+            var f = [
+                a.default
             ];
         }
     });
@@ -1687,4 +1689,4 @@
     var _export_star = farmRequire("@swc/helpers/_/_export_star");
     _export_star._(farmRequire("2ea370be"), exports);
 },});
-//# sourceMappingURL=index_996e.70666d7d.js.map
+//# sourceMappingURL=index_996e.214ccf71.js.map
