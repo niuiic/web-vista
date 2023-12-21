@@ -174,18 +174,20 @@
     var _jsxruntime = farmRequire("892c81fb");
     var _id = farmRequire("f8d6a1d2");
     var _input = farmRequire("6e9a280b");
-    var _notify = farmRequire("44f760a0");
     var _showCase = farmRequire("786b7de5");
     var _csscomponents = _interop_require_default._(farmRequire("23ec4682"));
+    var _react = farmRequire("d9571927");
     var _mainmodulescss = _interop_require_default._(farmRequire("703aab8a"));
     const Main = ()=>{
         const searchChange = (value)=>{
-            (0, _notify.notify)("success", value);
+            setCases(allCases.filter((x)=>x.title.includes(value)));
         };
-        const cases = _csscomponents.default.map((x)=>({
+        const allCases = _csscomponents.default.map((x)=>({
                 id: (0, _id.localUniqId)(),
+                category: "css",
                 ...x
             }));
+        const [cases, setCases] = (0, _react.useState)(allCases);
         return (0, _jsxruntime.jsxs)("div", {
             className: _mainmodulescss.default.main,
             children: [
@@ -551,14 +553,14 @@
     });
     "";
     var _default = {
-        "collapse-btn": `collapse-btn-e21327f6`,
-        "dyn-bg": `dyn-bg-e21327f6`,
-        "footer": `footer-e21327f6`,
-        "layout": `layout-e21327f6`,
-        "layout--nav-collapsed": `layout--nav-collapsed-e21327f6`,
-        "main": `main-e21327f6`,
-        "nav": `nav-e21327f6`,
-        "nav-collapsed": `nav-collapsed-e21327f6`
+        "collapse-btn": `collapse-btn-8e52abf7`,
+        "dyn-bg": `dyn-bg-8e52abf7`,
+        "footer": `footer-8e52abf7`,
+        "layout": `layout-8e52abf7`,
+        "layout--nav-collapsed": `layout--nav-collapsed-8e52abf7`,
+        "main": `main-8e52abf7`,
+        "nav": `nav-8e52abf7`,
+        "nav-collapsed": `nav-collapsed-8e52abf7`
     };
 },
 "67c07953": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -1162,22 +1164,13 @@
     var _footer = farmRequire("9fd73c3e");
     var _nav = farmRequire("0c7ee846");
     var _Main = farmRequire("1e81784d");
-    const App = ()=>{
-        const entries = [
-            "css",
-            "webgl"
-        ].map((x)=>({
-                label: x,
-                onClick: ()=>console.log(x)
-            }));
-        return (0, _jsxruntime.jsx)(_layout.Layout, {
+    const App = ()=>(0, _jsxruntime.jsx)(_layout.Layout, {
             nav: (0, _jsxruntime.jsx)(_nav.Nav, {
-                entries: entries
+                entries: []
             }),
             main: (0, _jsxruntime.jsx)(_Main.Main, {}),
             footer: (0, _jsxruntime.jsx)(_footer.Footer, {})
         });
-    };
 },
 "945ecf99": function(module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
@@ -1266,19 +1259,22 @@
     });
     "";
     var _default = {
-        "code__wrapper": `code__wrapper-d664df5e`,
-        "desc": `desc-d664df5e`,
-        "dialog": `dialog-d664df5e`,
-        "dialog__body": `dialog__body-d664df5e`,
-        "dialog__header": `dialog__header-d664df5e`,
-        "frame": `frame-d664df5e`,
-        "frame__btn": `frame__btn-d664df5e`,
-        "frame__wrapper": `frame__wrapper-d664df5e`,
-        "frame__wrapper--disactive": `frame__wrapper--disactive-d664df5e`,
-        "showcase": `showcase-d664df5e`,
-        "tabs": `tabs-d664df5e`,
-        "tags": `tags-d664df5e`,
-        "title": `title-d664df5e`
+        "category": `category-c722f211`,
+        "code__wrapper": `code__wrapper-c722f211`,
+        "desc": `desc-c722f211`,
+        "dialog": `dialog-c722f211`,
+        "dialog__body": `dialog__body-c722f211`,
+        "dialog__header": `dialog__header-c722f211`,
+        "frame": `frame-c722f211`,
+        "frame__btn": `frame__btn-c722f211`,
+        "frame__wrapper": `frame__wrapper-c722f211`,
+        "frame__wrapper--disactive": `frame__wrapper--disactive-c722f211`,
+        "info": `info-c722f211`,
+        "info__left": `info__left-c722f211`,
+        "showcase": `showcase-c722f211`,
+        "tabs": `tabs-c722f211`,
+        "tags": `tags-c722f211`,
+        "title": `title-c722f211`
     };
 },
 "9fd73c3e": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -1525,20 +1521,38 @@
             setDialogVisiable(false);
             setShowCode(false);
         };
-        const Info = (0, _react.useCallback)(()=>(0, _jsxruntime.jsxs)(_jsxruntime.Fragment, {
+        const Info = (0, _react.useCallback)(()=>(0, _jsxruntime.jsxs)("div", {
+                className: _showCasemodulescss.default.info,
                 children: [
-                    (0, _jsxruntime.jsx)("p", {
-                        className: _showCasemodulescss.default.title,
-                        children: props.options.title
+                    (0, _jsxruntime.jsxs)("div", {
+                        className: _showCasemodulescss.default.info__left,
+                        children: [
+                            (0, _jsxruntime.jsx)("p", {
+                                className: _showCasemodulescss.default.title,
+                                title: props.options.title,
+                                children: props.options.title
+                            }),
+                            hasTags ? (0, _jsxruntime.jsx)("p", {
+                                className: _showCasemodulescss.default.tags,
+                                title: props.options.tags?.join("/"),
+                                children: props.options.tags?.join("/")
+                            }) : undefined,
+                            (0, _jsxruntime.jsx)("p", {
+                                className: _showCasemodulescss.default.desc,
+                                title: props.options.desc,
+                                children: props.options.desc
+                            })
+                        ]
                     }),
-                    hasTags ? (0, _jsxruntime.jsx)("p", {
-                        className: _showCasemodulescss.default.tags,
-                        children: props.options.tags?.join("/")
-                    }) : undefined
+                    (0, _jsxruntime.jsx)("p", {
+                        className: _showCasemodulescss.default.category,
+                        children: props.options.category
+                    })
                 ]
             }), [
             props.options.title,
-            props.options.tags
+            props.options.tags,
+            props.options.category
         ]);
         const tabs = (0, _react.useMemo)(()=>props.options.code?.map((x)=>x.label), [
             props.options.code
@@ -1566,15 +1580,9 @@
                     onClickOutside: closeDialog,
                     className: _showCasemodulescss.default.dialog,
                     children: [
-                        (0, _jsxruntime.jsxs)("div", {
+                        (0, _jsxruntime.jsx)("div", {
                             className: _showCasemodulescss.default["dialog__header"],
-                            children: [
-                                (0, _jsxruntime.jsx)(Info, {}),
-                                (0, _jsxruntime.jsx)("p", {
-                                    className: _showCasemodulescss.default.desc,
-                                    children: props.options.desc
-                                })
-                            ]
+                            children: (0, _jsxruntime.jsx)(Info, {})
                         }),
                         tabs ? (0, _jsxruntime.jsx)(_tabs.Tabs, {
                             tabs: tabs,
@@ -1637,4 +1645,4 @@
     var _export_star = farmRequire("@swc/helpers/_/_export_star");
     _export_star._(farmRequire("2ea370be"), exports);
 },});
-//# sourceMappingURL=index_a21f.53070bad.js.map
+//# sourceMappingURL=index_a21f.bb8d9e31.js.map
