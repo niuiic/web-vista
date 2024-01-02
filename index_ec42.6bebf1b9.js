@@ -1,6 +1,6 @@
 (function (modules) {
             for (var key in modules) {
-              modules[key].__farm_resource_pot__ = 'index_996e.js';
+              modules[key].__farm_resource_pot__ = 'index_ec42.js';
                 (globalThis || window || self || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(key, modules[key]);
             }
         })({"03887fe2": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -86,7 +86,6 @@
     var _interop_require_default = farmRequire("@swc/helpers/_/_interop_require_default");
     var _jsxruntime = farmRequire("892c81fb");
     var _debounce = farmRequire("11dd513f");
-    var _id = farmRequire("f8d6a1d2");
     var _input = farmRequire("6e9a280b");
     var _showCase = farmRequire("786b7de5");
     var _csscomponents = _interop_require_default._(farmRequire("23ec4682"));
@@ -108,11 +107,7 @@
                 return false;
             }));
         });
-        const allCases = _csscomponents.default.map((x)=>({
-                id: (0, _id.localUniqId)(),
-                category: "css",
-                ...x
-            }));
+        const allCases = _csscomponents.default;
         const [cases, setCases] = (0, _react.useState)(allCases);
         return (0, _jsxruntime.jsxs)("div", {
             className: _mainmodulescss.default.main,
@@ -1510,30 +1505,6 @@
         });
     };
 },
-"f8d6a1d2": function(module, exports, farmRequire, farmDynamicRequire) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    Object.defineProperty(exports, "localUniqId", {
-        enumerable: true,
-        get: function() {
-            return localUniqId;
-        }
-    });
-    let lastTime;
-    let count = 0;
-    const localUniqId = ()=>{
-        const now = new Date().getTime();
-        if (lastTime === now) {
-            count = count + 1;
-        } else {
-            lastTime = now;
-            count = 0;
-        }
-        return `${lastTime}${count}`;
-    };
-},
 "fa5afec0": function(module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
@@ -1687,4 +1658,4 @@
     var _export_star = farmRequire("@swc/helpers/_/_export_star");
     _export_star._(farmRequire("2ea370be"), exports);
 },});
-//# sourceMappingURL=index_996e.70666d7d.js.map
+//# sourceMappingURL=index_ec42.6bebf1b9.js.map
