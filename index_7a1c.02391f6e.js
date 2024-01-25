@@ -1,6 +1,6 @@
 (function (modules) {
             for (var key in modules) {
-              modules[key].__farm_resource_pot__ = 'index_ce05.js';
+              modules[key].__farm_resource_pot__ = 'index_7a1c.js';
                 (globalThis || window || self || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(key, modules[key]);
             }
         })({"03887fe2": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -26,6 +26,138 @@
     var _default = {
         "icon": `icon-0b50c465`
     };
+},
+"0aae4b4c": function(module, exports, farmRequire, farmDynamicRequire) {
+    !function(e) {
+        for(var t in e)e[t].__farm_resource_pot__ = "boxModel.js", (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__.register(t, e[t]);
+    }({
+        "181cd83d": function(e, t, n, r) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return i;
+                }
+            });
+            var i = `<h3>
+  'width: 100%;' represents the proportion of the content area of the child box to the content area of the parent box.
+  This would not be affected by box-sizing.
+</h3>
+<div class="parent">
+  <div class="child"></div>
+</div>
+<hr/>
+
+<h3>
+Padding, margin and border of the inline element would not push away surrounding elements vertically.
+</h3>
+<p class="p1">
+  <span class="inline-1">inline-1</span>
+  <span class="inline-2">inline-2</span>
+  <p class="p2">p2</p>
+</p>
+<hr/>
+`;
+        },
+        "2e3d6988": function(e, t, n, r) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return l;
+                }
+            });
+            var i = n("@swc/helpers/_/_interop_require_default"), d = i._(n("181cd83d")), o = i._(n("e0237797")), a = i._(n("919c7b78")), l = {
+                title: "box model",
+                desc: "css box model characterization",
+                category: "css",
+                tags: [
+                    "standard"
+                ],
+                html: d.default,
+                css: o.default,
+                code: [
+                    {
+                        label: "html",
+                        filetype: "html",
+                        content: d.default
+                    },
+                    {
+                        label: "scss",
+                        filetype: "scss",
+                        content: a.default
+                    }
+                ]
+            };
+        },
+        "919c7b78": function(e, t, n, r) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return i;
+                }
+            });
+            var i = `.parent {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  margin: 10px;
+  border: 10px solid black;
+  background-color: green;
+}
+
+.child {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
+.inline-1 {
+  padding: 10px;
+  margin: 10px;
+  border: 10px solid black;
+}
+`;
+        },
+        e0237797: function(e, t, n, r) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return i;
+                }
+            });
+            var i = `.parent {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  margin: 10px;
+  border: 10px solid black;
+  background-color: green;
+}
+
+.child {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
+.inline-1 {
+  padding: 10px;
+  margin: 10px;
+  border: 10px solid black;
+}`;
+        }
+    });
 },
 "0c7ee846": function(module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
@@ -172,26 +304,32 @@
         }
     });
     farmRequire("c800ed58");
+    farmRequire("0aae4b4c");
+    farmRequire("337cdc77");
     farmRequire("c71e1c92");
     !function(e) {
-        for(var r in e)e[r].__farm_resource_pot__ = "index_a2a1.js", (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__.register(r, e[r]);
+        for(var _ in e)e[_].__farm_resource_pot__ = "index_a2a1.js", (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__.register(_, e[_]);
     }({
-        "953dfae2": function(e, r, _, t) {
+        "953dfae2": function(e, _, a, r) {
             "use strict";
-            Object.defineProperty(r, "__esModule", {
+            Object.defineProperty(_, "__esModule", {
                 value: !0
-            }), Object.defineProperty(r, "default", {
+            }), Object.defineProperty(_, "default", {
                 enumerable: !0,
                 get: function() {
-                    return a;
+                    return l;
                 }
             });
-            var a = [
-                _("@swc/helpers/_/_interop_require_default")._(_("3650c57d")).default
+            var t = a("@swc/helpers/_/_interop_require_default"), f = t._(a("2e3d6988")), u = t._(a("4aa6b49a")), d = t._(a("3650c57d")), l = [
+                f.default,
+                u.default,
+                d.default
             ];
         }
     });
     (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__.setInitialLoadedResources([
+        "boxModel.7f8a759a.js",
+        "formattingContext.bdf88158.js",
         "wavyUnderline.9a84677d.js"
     ]);
     (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__.setDynamicModuleResourcesMap({});
@@ -199,6 +337,22 @@
     farmModuleSystem.bootstrap();
     var entry = farmModuleSystem.require("953dfae2");
     var _default = entry.default || entry;
+},
+"2856263c": function(module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    Object.defineProperty(exports, "default", {
+        enumerable: true,
+        get: function() {
+            return _default;
+        }
+    });
+    "";
+    var _default = {
+        "frame": `frame-5c14deab`
+    };
 },
 "2bcde850": function(module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
@@ -251,20 +405,26 @@
             return Frame;
         }
     });
+    var _interop_require_default = farmRequire("@swc/helpers/_/_interop_require_default");
     var _jsxruntime = farmRequire("892c81fb");
+    var _class = farmRequire("3a2b0339");
     var _react = farmRequire("d9571927");
+    var _framemodulescss = _interop_require_default._(farmRequire("2856263c"));
     const Frame = (props)=>{
         const containerRef = (0, _react.useRef)();
         let shadowRoot;
         (0, _react.useEffect)(()=>{
             if (!shadowRoot) {
-                const root = containerRef.current?.attachShadow({
-                    mode: "open"
-                });
-                if (!root) {
-                    return;
+                if (containerRef?.current?.shadowRoot) {
+                    shadowRoot = containerRef.current.shadowRoot;
+                } else {
+                    shadowRoot = containerRef.current?.attachShadow({
+                        mode: "open"
+                    });
                 }
-                shadowRoot = root;
+            }
+            if (!shadowRoot) {
+                return;
             }
             while(shadowRoot.firstChild){
                 shadowRoot.removeChild(shadowRoot.firstChild);
@@ -289,9 +449,231 @@
         ]);
         return (0, _jsxruntime.jsx)("div", {
             ref: containerRef,
-            className: props.className
+            className: (0, _class.classes)(_framemodulescss.default.frame, props.className)
         });
     };
+},
+"337cdc77": function(module, exports, farmRequire, farmDynamicRequire) {
+    !function(e) {
+        for(var t in e)e[t].__farm_resource_pot__ = "formattingContext.js", (globalThis || window || self || global)["9a630259e374223af4de8e088557eb01"].__farm_module_system__.register(t, e[t]);
+    }({
+        "1d8dbfe7": function(e, t, r, i) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return a;
+                }
+            });
+            var a = `<h3>When a formatting context is created, its boundary is at the border position of the corresponding element.</h3>
+
+<div class="parent1">
+  <div class="child1"></div>
+</div>
+<h3>
+  Creating BFC does not affect margin of the element. The margin of parent element and the margin of child element are
+  still in the same BFC.
+</h3>
+
+<div class="parent2">
+  <div class="child2"></div>
+</div>
+<h3>
+  The margin of parent element is in the outer BFC, and the margin of child element is in the BFC created by the parent
+  element.
+</h3>
+
+<div class="parent3">
+  <div class="child3"></div>
+  <div class="child4">
+    <div class="child5"></div>
+  </div>
+</div>
+<h3>BFC created by child4 isolates the margin of child3 and the margin of child5.</h3>
+
+<div class="parent4">
+  <div class="child6"></div>
+</div>
+<h3>BFC created by child6 isolates its block margins.</h3>
+`;
+        },
+        "38a47d65": function(e, t, r, i) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return a;
+                }
+            });
+            var a = `.parent1 {
+  margin-top: 100px;
+  background: red;
+}
+
+.child1 {
+  display: flow-root;
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: green;
+}
+
+.parent2 {
+  display: flow-root;
+  margin-top: 100px;
+  background: red;
+}
+
+.child2 {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: green;
+}
+
+.parent3 {
+  margin-top: 100px;
+  background: red;
+}
+
+.child3 {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  background: green;
+}
+
+.child4 {
+  display: flow-root;
+}
+
+.child5 {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: yellow;
+}
+
+.parent4 {
+  display: flow-root;
+  margin-top: 100px;
+  background: red;
+}
+
+.child6 {
+  display: flow-root;
+  margin-block: 10px;
+}
+`;
+        },
+        "4aa6b49a": function(e, t, r, i) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return l;
+                }
+            });
+            var a = r("@swc/helpers/_/_interop_require_default"), n = a._(r("1d8dbfe7")), d = a._(r("e6840e99")), o = a._(r("38a47d65")), l = {
+                title: "formatting context",
+                desc: "css formatting context characterization",
+                category: "css",
+                tags: [
+                    "standard"
+                ],
+                html: n.default,
+                css: d.default,
+                code: [
+                    {
+                        label: "html",
+                        filetype: "html",
+                        content: n.default
+                    },
+                    {
+                        label: "scss",
+                        filetype: "scss",
+                        content: o.default
+                    }
+                ]
+            };
+        },
+        e6840e99: function(e, t, r, i) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return a;
+                }
+            });
+            var a = `.parent1 {
+  margin-top: 100px;
+  background: red;
+}
+
+.child1 {
+  display: flow-root;
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: green;
+}
+
+.parent2 {
+  display: flow-root;
+  margin-top: 100px;
+  background: red;
+}
+
+.child2 {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: green;
+}
+
+.parent3 {
+  margin-top: 100px;
+  background: red;
+}
+
+.child3 {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  background: green;
+}
+
+.child4 {
+  display: flow-root;
+}
+
+.child5 {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: yellow;
+}
+
+.parent4 {
+  display: flow-root;
+  margin-top: 100px;
+  background: red;
+}
+
+.child6 {
+  display: flow-root;
+  margin-block: 10px;
+}`;
+        }
+    });
 },
 "3a2b0339": function(module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
@@ -1667,4 +2049,4 @@
     var _export_star = farmRequire("@swc/helpers/_/_export_star");
     _export_star._(farmRequire("2ea370be"), exports);
 },});
-//# sourceMappingURL=index_ce05.e6d1bc76.js.map
+//# sourceMappingURL=index_7a1c.02391f6e.js.map
