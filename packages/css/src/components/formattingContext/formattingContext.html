@@ -1,0 +1,30 @@
+<h3>When a formatting context is created, its boundary is at the border position of the corresponding element.</h3>
+
+<div class="parent1">
+  <div class="child1"></div>
+</div>
+<h3>
+  Creating BFC does not affect margin of the element. The margin of parent element and the margin of child element are
+  still in the same BFC.
+</h3>
+
+<div class="parent2">
+  <div class="child2"></div>
+</div>
+<h3>
+  The margin of parent element is in the outer BFC, and the margin of child element is in the BFC created by the parent
+  element.
+</h3>
+
+<div class="parent3">
+  <div class="child3"></div>
+  <div class="child4">
+    <div class="child5"></div>
+  </div>
+</div>
+<h3>BFC created by child4 isolates the margin of child3 and the margin of child5.</h3>
+
+<div class="parent4">
+  <div class="child6"></div>
+</div>
+<h3>BFC created by child6 isolates its block margins.</h3>
