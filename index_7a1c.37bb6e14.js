@@ -351,7 +351,7 @@ Padding, margin and border of the inline element would not push away surrounding
     });
     "";
     var _default = {
-        "frame": `frame-5c14deab`
+        "frame": `frame-c237e8f1`
     };
 },
 "2bcde850": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -1152,22 +1152,22 @@ Padding, margin and border of the inline element would not push away surrounding
     });
     "";
     var _default = {
-        "category": `category-824d7cdd`,
-        "code__wrapper": `code__wrapper-824d7cdd`,
-        "desc": `desc-824d7cdd`,
-        "dialog": `dialog-824d7cdd`,
-        "dialog__body": `dialog__body-824d7cdd`,
-        "dialog__header": `dialog__header-824d7cdd`,
-        "frame": `frame-824d7cdd`,
-        "frame__btn": `frame__btn-824d7cdd`,
-        "frame__wrapper": `frame__wrapper-824d7cdd`,
-        "frame__wrapper--disactive": `frame__wrapper--disactive-824d7cdd`,
-        "info": `info-824d7cdd`,
-        "info__left": `info__left-824d7cdd`,
-        "showcase": `showcase-824d7cdd`,
-        "tabs": `tabs-824d7cdd`,
-        "tags": `tags-824d7cdd`,
-        "title": `title-824d7cdd`
+        "category": `category-41456038`,
+        "code__wrapper": `code__wrapper-41456038`,
+        "desc": `desc-41456038`,
+        "dialog": `dialog-41456038`,
+        "dialog__body": `dialog__body-41456038`,
+        "dialog__header": `dialog__header-41456038`,
+        "frame": `frame-41456038`,
+        "frame__btn": `frame__btn-41456038`,
+        "frame__wrapper": `frame__wrapper-41456038`,
+        "frame__wrapper--disactive": `frame__wrapper--disactive-41456038`,
+        "info": `info-41456038`,
+        "info__left": `info__left-41456038`,
+        "showcase": `showcase-41456038`,
+        "tabs": `tabs-41456038`,
+        "tags": `tags-41456038`,
+        "title": `title-41456038`
     };
 },
 "9fd73c3e": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -2049,4 +2049,4 @@ Padding, margin and border of the inline element would not push away surrounding
     var _export_star = farmRequire("@swc/helpers/_/_export_star");
     _export_star._(farmRequire("2ea370be"), exports);
 },});
-//# sourceMappingURL=index_7a1c.02391f6e.js.map
+//# sourceMappingURL=index_7a1c.37bb6e14.js.map
