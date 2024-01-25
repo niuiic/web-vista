@@ -1,0 +1,20 @@
+.parent {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  margin: 10px;
+  border: 10px solid black;
+  background-color: green;
+}
+
+.child {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
+.inline-1 {
+  padding: 10px;
+  margin: 10px;
+  border: 10px solid black;
+}
