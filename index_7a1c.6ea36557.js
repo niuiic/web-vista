@@ -1191,13 +1191,13 @@ Padding, margin and border of the inline element would not push away surrounding
     });
     "";
     var _default = {
-        "change-color": `change-color-89509faa`,
-        "entries": `entries-89509faa`,
-        "entry": `entry-89509faa`,
-        "nav": `nav-89509faa`,
-        "slogan": `slogan-89509faa`,
-        "slogan__inner": `slogan__inner-89509faa`,
-        "title": `title-89509faa`
+        "change-color": `change-color-1914fb8f`,
+        "entries": `entries-1914fb8f`,
+        "entry": `entry-1914fb8f`,
+        "nav": `nav-1914fb8f`,
+        "slogan": `slogan-1914fb8f`,
+        "slogan__inner": `slogan__inner-1914fb8f`,
+        "title": `title-1914fb8f`
     };
 },
 "ac0a0cbe": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -2049,4 +2049,4 @@ Padding, margin and border of the inline element would not push away surrounding
     var _export_star = farmRequire("@swc/helpers/_/_export_star");
     _export_star._(farmRequire("2ea370be"), exports);
 },});
-//# sourceMappingURL=index_7a1c.6092c907.js.map
+//# sourceMappingURL=index_7a1c.6ea36557.js.map
