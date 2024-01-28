@@ -906,8 +906,8 @@ Padding, margin and border of the inline element would not push away surrounding
     });
     "";
     var _default = {
-        "main": `main-b7917bb6`,
-        "showcases": `showcases-b7917bb6`
+        "main": `main-d3f0215b`,
+        "showcases": `showcases-d3f0215b`
     };
 },
 "779af01c": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -1152,22 +1152,22 @@ Padding, margin and border of the inline element would not push away surrounding
     });
     "";
     var _default = {
-        "category": `category-41456038`,
-        "code__wrapper": `code__wrapper-41456038`,
-        "desc": `desc-41456038`,
-        "dialog": `dialog-41456038`,
-        "dialog__body": `dialog__body-41456038`,
-        "dialog__header": `dialog__header-41456038`,
-        "frame": `frame-41456038`,
-        "frame__btn": `frame__btn-41456038`,
-        "frame__wrapper": `frame__wrapper-41456038`,
-        "frame__wrapper--disactive": `frame__wrapper--disactive-41456038`,
-        "info": `info-41456038`,
-        "info__left": `info__left-41456038`,
-        "showcase": `showcase-41456038`,
-        "tabs": `tabs-41456038`,
-        "tags": `tags-41456038`,
-        "title": `title-41456038`
+        "category": `category-456e2bf0`,
+        "code__wrapper": `code__wrapper-456e2bf0`,
+        "desc": `desc-456e2bf0`,
+        "dialog": `dialog-456e2bf0`,
+        "dialog__body": `dialog__body-456e2bf0`,
+        "dialog__header": `dialog__header-456e2bf0`,
+        "frame": `frame-456e2bf0`,
+        "frame__btn": `frame__btn-456e2bf0`,
+        "frame__wrapper": `frame__wrapper-456e2bf0`,
+        "frame__wrapper--disactive": `frame__wrapper--disactive-456e2bf0`,
+        "info": `info-456e2bf0`,
+        "info__left": `info__left-456e2bf0`,
+        "showcase": `showcase-456e2bf0`,
+        "tabs": `tabs-456e2bf0`,
+        "tags": `tags-456e2bf0`,
+        "title": `title-456e2bf0`
     };
 },
 "9fd73c3e": function(module, exports, farmRequire, farmDynamicRequire) {
@@ -2049,4 +2049,4 @@ Padding, margin and border of the inline element would not push away surrounding
     var _export_star = farmRequire("@swc/helpers/_/_export_star");
     _export_star._(farmRequire("2ea370be"), exports);
 },});
-//# sourceMappingURL=index_7a1c.37bb6e14.js.map
+//# sourceMappingURL=index_7a1c.6092c907.js.map
