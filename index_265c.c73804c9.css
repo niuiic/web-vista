@@ -209,32 +209,32 @@ html {
 }
 @-webkit-keyframes dyn-bg-8e52abf7 {
   100% {
-    -webkit-transform: translatey(-webkit-calc(-17 * var(--unit-length)));
-    transform: translatey(-webkit-calc(-17 * var(--unit-length)));
-    transform: translatey(calc(-17 * var(--unit-length)));
+    -webkit-transform: translateY(-webkit-calc(-17 * var(--unit-length)));
+    transform: translateY(-webkit-calc(-17 * var(--unit-length)));
+    transform: translateY(calc(-17 * var(--unit-length)));
   }
 }
 @-moz-keyframes dyn-bg-8e52abf7 {
   100% {
-    -moz-transform: translatey(-moz-calc(-17 * var(--unit-length)));
-    transform: translatey(-moz-calc(-17 * var(--unit-length)));
-    transform: translatey(calc(-17 * var(--unit-length)));
+    -moz-transform: translateY(-moz-calc(-17 * var(--unit-length)));
+    transform: translateY(-moz-calc(-17 * var(--unit-length)));
+    transform: translateY(calc(-17 * var(--unit-length)));
   }
 }
 @-o-keyframes dyn-bg-8e52abf7 {
   100% {
-    -o-transform: translatey(calc(-17 * var(--unit-length)));
-    transform: translatey(calc(-17 * var(--unit-length)));
+    -o-transform: translateY(calc(-17 * var(--unit-length)));
+    transform: translateY(calc(-17 * var(--unit-length)));
   }
 }
 @keyframes dyn-bg-8e52abf7 {
   100% {
-    -webkit-transform: translatey(-webkit-calc(-17 * var(--unit-length)));
-    -moz-transform: translatey(-moz-calc(-17 * var(--unit-length)));
-    -o-transform: translatey(calc(-17 * var(--unit-length)));
-    transform: translatey(-webkit-calc(-17 * var(--unit-length)));
-    transform: translatey(-moz-calc(-17 * var(--unit-length)));
-    transform: translatey(calc(-17 * var(--unit-length)));
+    -webkit-transform: translateY(-webkit-calc(-17 * var(--unit-length)));
+    -moz-transform: translateY(-moz-calc(-17 * var(--unit-length)));
+    -o-transform: translateY(calc(-17 * var(--unit-length)));
+    transform: translateY(-webkit-calc(-17 * var(--unit-length)));
+    transform: translateY(-moz-calc(-17 * var(--unit-length)));
+    transform: translateY(calc(-17 * var(--unit-length)));
   }
 }
 .nav-collapsed-8e52abf7 {
@@ -1036,11 +1036,11 @@ html {
 .notify__wrapper-32c410d9 {
   position: fixed;
   left: 50%;
-  -webkit-transform: translatex(-50%);
-  -moz-transform: translatex(-50%);
-  -ms-transform: translatex(-50%);
-  -o-transform: translatex(-50%);
-  transform: translatex(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
   -webkit-animation: come-out-32c410d9 2s;
   -moz-animation: come-out-32c410d9 2s;
   -o-animation: come-out-32c410d9 2s;
@@ -1089,4 +1089,4 @@ html {
   background-color: #202121;
   color: #909399;
 }
-/*# sourceMappingURL=index_265c.c5d539bb.css.map */
+/*# sourceMappingURL=index_265c.c73804c9.css.map */
