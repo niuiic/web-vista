@@ -1,0 +1,29 @@
+<section>
+  <h1>
+    If a block container box has a box-level box inside it, then we force it to have only block-level boxes inside it.
+    <br />
+    There is an anonymous block box around inline box.
+  </h1>
+  <hr />
+
+  <div>
+    it's a block container box
+    <p>this is a block level box</p>
+    <span class="inline-level-box">this is a inline level box</span>
+  </div>
+</section>
+
+<section>
+  <h1>
+    An in-flow block-level box would break down the line box.
+    <br />
+    Disconnected first and second halves would be wrapped by an anonymous block box.
+  </h1>
+  <hr />
+
+  <p class="line-box">
+    <span class="inline-box">I'm in a line box</span>
+    <span class="in-flow-block-level-box">this is a block box</span>
+    <span class="inline-box">after</span>
+  </p>
+</section>
