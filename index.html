@@ -9,624 +9,596 @@
 (globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'] = {};
 (globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'] = {
   __FARM_TARGET_ENV__: 'browser',
-};</script><script data-farm-entry-script="true">(function (modules, entryModule) {
-            var cache = {};
-
-            function dynamicRequire(id) {
-              return Promise.resolve(require(id));
-            }
-          
-            function require(id) {
-              if (cache[id]) return cache[id].exports;
-          
-              var module = {
-                id: id,
-                exports: {}
-              };
-          
-              modules[id](module, module.exports, require, dynamicRequire);
-              cache[id] = module;
-              return module.exports;
-            }
-          
-            require(entryModule);
-          })({"087ea25c": function(module, exports, farmRequire, farmDynamicRequire) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-function _export(target, all) {
-    for(var name in all)Object.defineProperty(target, name, {
-        enumerable: true,
-        get: all[name]
+};</script><script data-farm-entry-script="true">(function(r,e){var t={};function n(r){return Promise.resolve(o(r))}function o(e){if(t[e])return t[e].exports;var i={id:e,exports:{}};r[e](i,i.exports,o,n);t[e]=i;return i.exports}o(e)})({"106acf78":function  (module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
     });
-}
-_export(exports, {
-    _: function() {
-        return _interop_require_wildcard;
-    },
-    _interop_require_wildcard: function() {
-        return _interop_require_wildcard;
-    }
-});
-function _getRequireWildcardCache(nodeInterop) {
-    if (typeof WeakMap !== "function") return null;
-    var cacheBabelInterop = new WeakMap();
-    var cacheNodeInterop = new WeakMap();
-    return (_getRequireWildcardCache = function(nodeInterop) {
-        return nodeInterop ? cacheNodeInterop : cacheBabelInterop;
-    })(nodeInterop);
-}
-function _interop_require_wildcard(obj, nodeInterop) {
-    if (!nodeInterop && obj && obj.__esModule) return obj;
-    if (obj === null || typeof obj !== "object" && typeof obj !== "function") return {
-        default: obj
-    };
-    var cache = _getRequireWildcardCache(nodeInterop);
-    if (cache && cache.has(obj)) return cache.get(obj);
-    var newObj = {
-        __proto__: null
-    };
-    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
-    for(var key in obj){
-        if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
-            var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
-            if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
-            else newObj[key] = obj[key];
-        }
-    }
-    newObj.default = obj;
-    if (cache) cache.set(obj, newObj);
-    return newObj;
-}
-
-},
-"258f3ea6": function(module, exports, farmRequire, farmDynamicRequire) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-Object.defineProperty(exports, "ModuleSystem", {
-    enumerable: true,
-    get: function() {
-        return ModuleSystem;
-    }
-});
-const _module = farmRequire("33673f22");
-const _plugin = farmRequire("c6a0451a");
-const _resourceloader = farmRequire("6591bae7");
-const _interop_require_default = farmRequire("4e94ae2f");
-const _interop_require_wildcard = farmRequire("087ea25c");
-const _export_star = farmRequire("6aab8aa5");
-const __global_this__ = globalThis || window;
-const INTERNAL_MODULE_MAP = {
-    '@swc/helpers/_/_interop_require_default': {
-        default: _interop_require_default._interop_require_default,
-        _: _interop_require_default._interop_require_default
-    },
-    '@swc/helpers/_/_interop_require_wildcard': {
-        default: _interop_require_wildcard._interop_require_wildcard,
-        _: _interop_require_wildcard._interop_require_wildcard
-    },
-    '@swc/helpers/_/_export_star': {
-        default: _export_star._export_star,
-        _: _export_star._export_star
-    }
-};
-class ModuleSystem {
-    // all modules registered
-    modules;
-    // module cache after module initialized
-    cache;
-    // external modules injected during compile
-    externalModules;
-    // available public paths, when loading resources, we will try each publicPath until it is available, this is so called `resource loading retry`
-    publicPaths;
-    // dynamic module entry and resources map
-    dynamicModuleResourcesMap;
-    // resources loader
-    resourceLoader;
-    // runtime plugin container
-    pluginContainer;
-    targetEnv;
-    constructor(){
-        this.modules = {};
-        this.cache = {};
-        this.publicPaths = [];
-        this.dynamicModuleResourcesMap = {};
-        this.resourceLoader = new _resourceloader.ResourceLoader(this.publicPaths);
-        this.pluginContainer = new _plugin.FarmRuntimePluginContainer([]);
-        this.targetEnv = _resourceloader.targetEnv;
-        this.externalModules = {};
-    }
-    // TODO require should be async as we support `top level await`, This feature requires Node 16 and higher
-    require(moduleId, isCJS = false) {
-        if (INTERNAL_MODULE_MAP[moduleId]) {
-            return INTERNAL_MODULE_MAP[moduleId];
-        }
-        // return the cached exports if cache exists
-        // console.log(`[Farm] require module "${moduleId}" from cache`);
-        if (this.cache[moduleId]) {
-            const shouldSkip = this.pluginContainer.hookBail('readModuleCache', this.cache[moduleId]);
-            // console.log(`[Farm] shouldSkip: ${shouldSkip} ${moduleId}`);
-            if (!shouldSkip) {
-                return this.cache[moduleId].exports;
-            }
-        }
-        const initializer = this.modules[moduleId];
-        if (!initializer) {
-            if (this.externalModules[moduleId]) {
-                const exports1 = this.externalModules[moduleId];
-                // fix `const assert = require('assert');` when assert is external. This leads to `assert is not a function` error caused by default export different from esm and cjs
-                if (isCJS) {
-                    return exports1.default || exports1;
-                }
-                return exports1;
-            }
-            // try node require if target Env is node
-            if ((this.targetEnv === 'node' || !_resourceloader.isBrowser) && nodeRequire) {
-                const externalModule = nodeRequire(moduleId);
-                return externalModule;
-            }
-            this.pluginContainer.hookSerial('moduleNotFound', moduleId);
-            // return a empty module if the module is not registered
-            console.debug(`[Farm] Module "${moduleId}" is not registered`);
-            return {};
-        // throw new Error(`Module "${moduleId}" is not registered`);
-        }
-        // create a full new module instance and store it in cache to avoid cyclic initializing
-        const module = new _module.Module(moduleId, this.require.bind(this));
-        module.resource_pot = initializer.__farm_resource_pot__;
-        // call the module created hook
-        this.pluginContainer.hookSerial('moduleCreated', module);
-        this.cache[moduleId] = module;
-        if (!(globalThis || global || window || {}).require) {
-            (globalThis || global || window || {
-                require: undefined
-            }).require = this.require.bind(this);
-        }
-        // initialize the new module
-        initializer(module, module.exports, this.require.bind(this), this.farmDynamicRequire.bind(this));
-        // call the module initialized hook
-        this.pluginContainer.hookSerial('moduleInitialized', module);
-        // return the exports of the module
-        return module.exports;
-    }
-    farmDynamicRequire(moduleId) {
-        if (this.modules[moduleId]) {
-            const exports1 = this.require(moduleId);
-            if (exports1.__farm_async) {
-                return exports1.default;
-            } else {
-                return Promise.resolve(exports1);
-            }
-        }
-        const resources = this.dynamicModuleResourcesMap[moduleId];
-        if (!resources || resources.length === 0) {
-            throw new Error(`Dynamic imported module "${moduleId}" does not belong to any resource`);
-        }
-        // loading all required resources, and return the exports of the entry module
-        return Promise.all(resources.map((resource)=>this.resourceLoader.load(resource))).then(()=>{
-            if (!this.modules[moduleId]) {
-                throw new Error(`Dynamic imported module "${moduleId}" is not registered.`);
-            }
-            const result = this.require(moduleId);
-            // if the module is async, return the default export, the default export should be a promise
-            if (result.__farm_async) {
-                return result.default;
-            } else {
-                return result;
-            }
-        }).catch((err)=>{
-            console.error(`[Farm] Error loading dynamic module "${moduleId}"`, err);
-            throw err;
+    function _export(target, all) {
+        for(var name in all)Object.defineProperty(target, name, {
+            enumerable: true,
+            get: all[name]
         });
     }
-    register(moduleId, initializer) {
-        // console.log(`[Farm] register module "${moduleId}"`, console.trace());
-        if (this.modules[moduleId]) {
-            // throw new Error(
-            //   `Module "${moduleId}" has registered! It should not be registered twice`
-            // );
-            console.warn(`Module "${moduleId}" has registered! It should not be registered twice`);
-            return;
-        }
-        this.modules[moduleId] = initializer;
-    }
-    update(moduleId, init) {
-        this.modules[moduleId] = init;
-        this.clearCache(moduleId);
-    }
-    delete(moduleId) {
-        if (this.modules[moduleId]) {
-            this.clearCache(moduleId);
-            delete this.modules[moduleId];
-            return true;
-        } else {
-            return false;
-        }
-    }
-    getModuleUrl(moduleId) {
-        const publicPath = this.publicPaths[0] ?? '';
-        if (__global_this__.location) {
-            const url = `${__global_this__.location.protocol}//${__global_this__.location.host}${publicPath.endsWith('/') ? publicPath.slice(0, -1) : publicPath}/${this.modules[moduleId].__farm_resource_pot__}`;
-            return url;
-        } else {
-            return this.modules[moduleId].__farm_resource_pot__;
-        }
-    }
-    getCache(moduleId) {
-        return this.cache[moduleId];
-    }
-    clearCache(moduleId) {
-        if (this.cache[moduleId]) {
-            delete this.cache[moduleId];
-            return true;
-        } else {
-            return false;
-        }
-    }
-    setInitialLoadedResources(resources) {
-        for (const resource of resources){
-            this.resourceLoader.setLoadedResource(resource);
-        }
-    }
-    // These two methods are used to support dynamic module loading, the dynamic module info is collected by the compiler and injected during compile time
-    // This method can also be called during runtime to add new dynamic modules
-    setDynamicModuleResourcesMap(dynamicModuleResourcesMap) {
-        this.dynamicModuleResourcesMap = dynamicModuleResourcesMap;
-    }
-    // The public paths are injected during compile time
-    setPublicPaths(publicPaths) {
-        this.publicPaths = publicPaths;
-        this.resourceLoader.publicPaths = this.publicPaths;
-    }
-    // The plugins are injected during compile time.
-    setPlugins(plugins) {
-        this.pluginContainer.plugins = plugins;
-    }
-    // This method can be called during runtime to add new plugins
-    addPlugin(plugin) {
-        if (this.pluginContainer.plugins.every((p)=>p.name !== plugin.name)) {
-            this.pluginContainer.plugins.push(plugin);
-        }
-    }
-    // This method can be called during runtime to remove plugins
-    removePlugin(pluginName) {
-        this.pluginContainer.plugins = this.pluginContainer.plugins.filter((p)=>p.name !== pluginName);
-    }
-    // The external modules are injected during compile time.
-    setExternalModules(externalModules) {
-        Object.assign(this.externalModules, externalModules || {});
-    }
-    // bootstrap should be called after all three methods above are called, and the bootstrap call is also injected during compile time
-    // This method should only be called once
-    bootstrap() {
-        this.pluginContainer.hookSerial('bootstrap', this);
-    }
-}
-
-},
-"33673f22": function(module, exports, farmRequire, farmDynamicRequire) {
-/* eslint-disable @typescript-eslint/no-explicit-any */ "use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-Object.defineProperty(exports, "Module", {
-    enumerable: true,
-    get: function() {
-        return Module;
-    }
-});
-class Module {
-    id;
-    exports;
-    resource_pot;
-    meta;
-    require;
-    constructor(id, require){
-        this.id = id;
-        this.exports = {};
-        this.meta = {
-            env: {}
-        };
-        this.require = require;
-    }
-}
-
-},
-"4e94ae2f": function(module, exports, farmRequire, farmDynamicRequire) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-function _export(target, all) {
-    for(var name in all)Object.defineProperty(target, name, {
-        enumerable: true,
-        get: all[name]
-    });
-}
-_export(exports, {
-    _: function() {
-        return _interop_require_default;
-    },
-    _interop_require_default: function() {
-        return _interop_require_default;
-    }
-});
-function _interop_require_default(obj) {
-    return obj && obj.__esModule ? obj : {
-        default: obj
-    };
-}
-
-},
-"6591bae7": function(module, exports, farmRequire, farmDynamicRequire) {
-// using native ability to load resources if target env is node.
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-function _export(target, all) {
-    for(var name in all)Object.defineProperty(target, name, {
-        enumerable: true,
-        get: all[name]
-    });
-}
-_export(exports, {
-    ResourceLoader: function() {
-        return ResourceLoader;
-    },
-    __farm_global_this__: function() {
-        return __farm_global_this__;
-    },
-    isBrowser: function() {
-        return isBrowser;
-    },
-    targetEnv: function() {
-        return targetEnv;
-    }
-});
-const __farm_global_this__ = eval("(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68']");
-const targetEnv = __farm_global_this__.__FARM_TARGET_ENV__ || 'node';
-const isBrowser = targetEnv === 'browser' && (globalThis || window).document;
-class ResourceLoader {
-    _loadedResources = {};
-    _loadingResources = {};
-    publicPaths;
-    constructor(publicPaths){
-        this.publicPaths = publicPaths;
-    }
-    load(resource, index = 0) {
-        // it's not running in browser
-        if (!isBrowser) {
-            if (resource.type === 'script') {
-                return this._loadScript(`./${resource.path}`);
-            } else if (resource.type === 'link') {
-                return this._loadLink(`./${resource.path}`);
-            }
-        }
-        const publicPath = this.publicPaths[index];
-        const url = `${publicPath.endsWith('/') ? publicPath.slice(0, -1) : publicPath}/${resource.path}`;
-        if (this._loadedResources[resource.path]) {
-            return;
-        } else if (this._loadingResources[resource.path]) {
-            return this._loadingResources[resource.path];
-        }
-        let promise = Promise.resolve();
-        if (resource.type === 'script') {
-            promise = this._loadScript(url);
-        } else if (resource.type === 'link') {
-            promise = this._loadLink(url);
-        }
-        this._loadingResources[resource.path] = promise;
-        promise.then(()=>{
-            this._loadedResources[resource.path] = true;
-        }).catch((e)=>{
-            console.warn(`[Farm] Failed to load resource "${url}" using publicPath: ${this.publicPaths[index]}`);
-            index++;
-            if (index < this.publicPaths.length) {
-                return this.load(resource, index);
-            } else {
-                throw new Error(`[Farm] Failed to load resource: "${resource.path}, type: ${resource.type}". ${e}`);
-            }
-        });
-        return promise;
-    }
-    setLoadedResource(path) {
-        this._loadedResources[path] = true;
-    }
-    _loadScript(path) {
-        if (!isBrowser) {
-            return import(path);
-        } else {
-            return new Promise((resolve, reject)=>{
-                const script = document.createElement('script');
-                script.src = path;
-                document.body.appendChild(script);
-                script.onload = ()=>{
-                    resolve();
-                };
-                script.onerror = (e)=>{
-                    reject(e);
-                };
-            });
-        }
-    }
-    _loadLink(path) {
-        if (!isBrowser) {
-            // return Promise.reject(new Error('Not support loading css in SSR'));
-            // ignore css loading in SSR
-            return Promise.resolve();
-        } else {
-            return new Promise((resolve, reject)=>{
-                const link = document.createElement('link');
-                link.rel = 'stylesheet';
-                link.href = path;
-                document.head.appendChild(link);
-                link.onload = ()=>{
-                    resolve();
-                };
-                link.onerror = (e)=>{
-                    reject(e);
-                };
-            });
-        }
-    }
-}
-
-},
-"6aab8aa5": function(module, exports, farmRequire, farmDynamicRequire) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-function _export(target, all) {
-    for(var name in all)Object.defineProperty(target, name, {
-        enumerable: true,
-        get: all[name]
-    });
-}
-_export(exports, {
-    _: function() {
-        return _export_star;
-    },
-    _export_star: function() {
-        return _export_star;
-    }
-});
-function _export_star(from, to) {
-    Object.keys(from).forEach(function(k) {
-        if (k !== "default" && !Object.prototype.hasOwnProperty.call(to, k)) {
-            Object.defineProperty(to, k, {
-                enumerable: true,
-                get: function() {
-                    return from[k];
-                }
-            });
+    _export(exports, {
+        ResourceLoader: function() {
+            return ResourceLoader;
+        },
+        __farm_global_this__: function() {
+            return __farm_global_this__;
+        },
+        isBrowser: function() {
+            return isBrowser;
+        },
+        targetEnv: function() {
+            return targetEnv;
         }
     });
-    return from;
-}
-
-},
-"c6a0451a": function(module, exports, farmRequire, farmDynamicRequire) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-Object.defineProperty(exports, "FarmRuntimePluginContainer", {
-    enumerable: true,
-    get: function() {
-        return FarmRuntimePluginContainer;
-    }
-});
-class FarmRuntimePluginContainer {
-    plugins = [];
-    constructor(plugins){
-        this.plugins = plugins;
-    }
-    // TODO support async later
-    // async hookSerial(
-    hookSerial(hookName, ...args) {
-        for (const plugin of this.plugins){
-            const hook = plugin[hookName];
-            if (hook) {
-                // await hook.apply(plugin, args);
-                hook.apply(plugin, args);
-            }
+    const __farm_global_this__ = eval("(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68']");
+    const targetEnv = __farm_global_this__.__FARM_TARGET_ENV__ || 'node';
+    const isBrowser = targetEnv === 'browser' && (globalThis || window).document;
+    class ResourceLoader {
+        moduleSystem;
+        _loadedResources;
+        _loadingResources;
+        publicPaths;
+        constructor(moduleSystem, publicPaths){
+            this.moduleSystem = moduleSystem;
+            this._loadedResources = {};
+            this._loadingResources = {};
+            this.publicPaths = publicPaths;
         }
-    }
-    // TODO support async later
-    // async hookBail<T = any>(
-    hookBail(hookName, ...args) {
-        for (const plugin of this.plugins){
-            const hook = plugin[hookName];
-            if (hook) {
-                // const result = await hook.apply(plugin, args);
-                const result = hook.apply(plugin, args);
+        load(resource, index = 0) {
+            if (!isBrowser) {
+                const result = this.moduleSystem.pluginContainer.hookBail('loadResource', resource);
                 if (result) {
+                    return result.then((res)=>{
+                        if (!res.success && res.retryWithDefaultResourceLoader) {
+                            if (resource.type === 'script') {
+                                return this._loadScript(`./${resource.path}`);
+                            } else if (resource.type === 'link') {
+                                return this._loadLink(`./${resource.path}`);
+                            }
+                        } else if (!res.success) {
+                            throw new Error(`[Farm] Failed to load resource: "${resource.path}, type: ${resource.type}". Original Error: ${res.err}`);
+                        }
+                    });
+                } else {
+                    if (resource.type === 'script') {
+                        return this._loadScript(`./${resource.path}`);
+                    } else if (resource.type === 'link') {
+                        return this._loadLink(`./${resource.path}`);
+                    }
+                }
+            }
+            const publicPath = this.publicPaths[index];
+            const url = `${publicPath.endsWith('/') ? publicPath.slice(0, -1) : publicPath}/${resource.path}`;
+            if (this._loadedResources[resource.path]) {
+                return;
+            } else if (this._loadingResources[resource.path]) {
+                return this._loadingResources[resource.path];
+            }
+            const result = this.moduleSystem.pluginContainer.hookBail('loadResource', resource);
+            if (result) {
+                return result.then((res)=>{
+                    if (res.success) {
+                        this.setLoadedResource(resource.path);
+                    } else if (res.retryWithDefaultResourceLoader) {
+                        return this._load(url, resource, index);
+                    } else {
+                        throw new Error(`[Farm] Failed to load resource: "${resource.path}, type: ${resource.type}". Original Error: ${res.err}`);
+                    }
+                });
+            } else {
+                return this._load(url, resource, index);
+            }
+        }
+        setLoadedResource(path) {
+            this._loadedResources[path] = true;
+        }
+        isResourceLoaded(path) {
+            return this._loadedResources[path];
+        }
+        _load(url, resource, index) {
+            let promise = Promise.resolve();
+            if (resource.type === 'script') {
+                promise = this._loadScript(url);
+            } else if (resource.type === 'link') {
+                promise = this._loadLink(url);
+            }
+            this._loadingResources[resource.path] = promise;
+            promise.then(()=>{
+                this._loadedResources[resource.path] = true;
+            }).catch((e)=>{
+                console.warn(`[Farm] Failed to load resource "${url}" using publicPath: ${this.publicPaths[index]}`);
+                index++;
+                if (index < this.publicPaths.length) {
+                    return this._load(url, resource, index);
+                } else {
+                    throw new Error(`[Farm] Failed to load resource: "${resource.path}, type: ${resource.type}". ${e}`);
+                }
+            });
+            return promise;
+        }
+        _loadScript(path) {
+            if (!isBrowser) {
+                return import(path);
+            } else {
+                return new Promise((resolve, reject)=>{
+                    const script = document.createElement('script');
+                    script.src = path;
+                    document.body.appendChild(script);
+                    script.onload = ()=>{
+                        resolve();
+                    };
+                    script.onerror = (e)=>{
+                        reject(e);
+                    };
+                });
+            }
+        }
+        _loadLink(path) {
+            if (!isBrowser) {
+                return Promise.resolve();
+            } else {
+                return new Promise((resolve, reject)=>{
+                    const link = document.createElement('link');
+                    link.rel = 'stylesheet';
+                    link.href = path;
+                    document.head.appendChild(link);
+                    link.onload = ()=>{
+                        resolve();
+                    };
+                    link.onerror = (e)=>{
+                        reject(e);
+                    };
+                });
+            }
+        }
+    }
+}
+,
+"1d6aa25d":function  (module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    Object.defineProperty(exports, "FarmRuntimePluginContainer", {
+        enumerable: true,
+        get: function() {
+            return FarmRuntimePluginContainer;
+        }
+    });
+    class FarmRuntimePluginContainer {
+        plugins = [];
+        constructor(plugins){
+            this.plugins = plugins;
+        }
+        hookSerial(hookName, ...args) {
+            for (const plugin of this.plugins){
+                const hook = plugin[hookName];
+                if (hook) {
+                    hook.apply(plugin, args);
+                }
+            }
+        }
+        hookBail(hookName, ...args) {
+            for (const plugin of this.plugins){
+                const hook = plugin[hookName];
+                if (hook) {
+                    const result = hook.apply(plugin, args);
+                    if (result) {
+                        return result;
+                    }
+                }
+            }
+        }
+    }
+}
+,
+"22685227":function  (module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    function _export(target, all) {
+        for(var name in all)Object.defineProperty(target, name, {
+            enumerable: true,
+            get: all[name]
+        });
+    }
+    _export(exports, {
+        ModuleSystem: function() {
+            return _modulesystem.ModuleSystem;
+        },
+        Plugin: function() {
+            return _plugin.FarmRuntimePlugin;
+        }
+    });
+    const _interop_require_default = farmRequire("d30e4b5a");
+    const _indexts = _interop_require_default._(farmRequire("688d37b3"));
+    const _modulesystem = farmRequire("f0e62833");
+    const _plugin = farmRequire("1d6aa25d");
+    const _resourceloader = farmRequire("106acf78");
+    _resourceloader.__farm_global_this__.__farm_module_system__ = (function() {
+        const moduleSystem = new _modulesystem.ModuleSystem();
+        return function() {
+            return moduleSystem;
+        };
+    })()();
+    (globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.setPlugins([
+        _indexts.default
+    ]);
+}
+,
+"31e19113":function  (module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    Object.defineProperty(exports, "Module", {
+        enumerable: true,
+        get: function() {
+            return Module;
+        }
+    });
+    class Module {
+        id;
+        exports;
+        resource_pot;
+        meta;
+        require;
+        constructor(id, require){
+            this.id = id;
+            this.exports = {};
+            this.meta = {
+                env: {}
+            };
+            this.require = require;
+        }
+    }
+}
+,
+"341af280":function  (module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    function _export(target, all) {
+        for(var name in all)Object.defineProperty(target, name, {
+            enumerable: true,
+            get: all[name]
+        });
+    }
+    _export(exports, {
+        _: function() {
+            return _interop_require_wildcard;
+        },
+        _interop_require_wildcard: function() {
+            return _interop_require_wildcard;
+        }
+    });
+    function _getRequireWildcardCache(nodeInterop) {
+        if (typeof WeakMap !== "function") return null;
+        var cacheBabelInterop = new WeakMap();
+        var cacheNodeInterop = new WeakMap();
+        return (_getRequireWildcardCache = function(nodeInterop) {
+            return nodeInterop ? cacheNodeInterop : cacheBabelInterop;
+        })(nodeInterop);
+    }
+    function _interop_require_wildcard(obj, nodeInterop) {
+        if (!nodeInterop && obj && obj.__esModule) return obj;
+        if (obj === null || typeof obj !== "object" && typeof obj !== "function") return {
+            default: obj
+        };
+        var cache = _getRequireWildcardCache(nodeInterop);
+        if (cache && cache.has(obj)) return cache.get(obj);
+        var newObj = {
+            __proto__: null
+        };
+        var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
+        for(var key in obj){
+            if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
+                var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
+                if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
+                else newObj[key] = obj[key];
+            }
+        }
+        newObj.default = obj;
+        if (cache) cache.set(obj, newObj);
+        return newObj;
+    }
+}
+,
+"688d37b3":function  (module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    Object.defineProperty(exports, "default", {
+        enumerable: true,
+        get: function() {
+            return _default;
+        }
+    });
+    const __global_this__ = typeof globalThis !== 'undefined' ? globalThis : window;
+    const _default = {
+        name: 'farm-runtime-import-meta',
+        _moduleSystem: {},
+        bootstrap (system) {
+            this._moduleSystem = system;
+        },
+        moduleCreated (module) {
+            module.meta.env = {
+                ...{
+                    "NODE_ENV": "production"
+                } ?? {},
+                mode: "production",
+                dev: "production" === 'development',
+                prod: "production" === 'production'
+            };
+            const publicPath = this._moduleSystem.publicPaths?.[0] || '';
+            const { location } = __global_this__;
+            const url = location ? `${location.protocol}//${location.host}${publicPath.replace(/\/$/, '')}/${module.id}?t=${Date.now()}` : module.resource_pot;
+            module.meta.url = url;
+        }
+    };
+}
+,
+"784427c8":function  (module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    function _export(target, all) {
+        for(var name in all)Object.defineProperty(target, name, {
+            enumerable: true,
+            get: all[name]
+        });
+    }
+    _export(exports, {
+        _: function() {
+            return _export_star;
+        },
+        _export_star: function() {
+            return _export_star;
+        }
+    });
+    function _export_star(from, to) {
+        Object.keys(from).forEach(function(k) {
+            if (k !== "default" && !Object.prototype.hasOwnProperty.call(to, k)) {
+                Object.defineProperty(to, k, {
+                    enumerable: true,
+                    get: function() {
+                        return from[k];
+                    }
+                });
+            }
+        });
+        return from;
+    }
+}
+,
+"d30e4b5a":function  (module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    function _export(target, all) {
+        for(var name in all)Object.defineProperty(target, name, {
+            enumerable: true,
+            get: all[name]
+        });
+    }
+    _export(exports, {
+        _: function() {
+            return _interop_require_default;
+        },
+        _interop_require_default: function() {
+            return _interop_require_default;
+        }
+    });
+    function _interop_require_default(obj) {
+        return obj && obj.__esModule ? obj : {
+            default: obj
+        };
+    }
+}
+,
+"f0e62833":function  (module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    Object.defineProperty(exports, "ModuleSystem", {
+        enumerable: true,
+        get: function() {
+            return ModuleSystem;
+        }
+    });
+    const _module = farmRequire("31e19113");
+    const _plugin = farmRequire("1d6aa25d");
+    const _resourceloader = farmRequire("106acf78");
+    const _interop_require_default = farmRequire("d30e4b5a");
+    const _interop_require_wildcard = farmRequire("341af280");
+    const _export_star = farmRequire("784427c8");
+    const __global_this__ = globalThis || window;
+    const INTERNAL_MODULE_MAP = {
+        '@swc/helpers/_/_interop_require_default': {
+            default: _interop_require_default._interop_require_default,
+            _: _interop_require_default._interop_require_default
+        },
+        '@swc/helpers/_/_interop_require_wildcard': {
+            default: _interop_require_wildcard._interop_require_wildcard,
+            _: _interop_require_wildcard._interop_require_wildcard
+        },
+        '@swc/helpers/_/_export_star': {
+            default: _export_star._export_star,
+            _: _export_star._export_star
+        }
+    };
+    class ModuleSystem {
+        modules;
+        cache;
+        externalModules;
+        publicPaths;
+        dynamicModuleResourcesMap;
+        resourceLoader;
+        pluginContainer;
+        targetEnv;
+        constructor(){
+            this.modules = {};
+            this.cache = {};
+            this.publicPaths = [];
+            this.dynamicModuleResourcesMap = {};
+            this.resourceLoader = new _resourceloader.ResourceLoader(this, this.publicPaths);
+            this.pluginContainer = new _plugin.FarmRuntimePluginContainer([]);
+            this.targetEnv = _resourceloader.targetEnv;
+            this.externalModules = {};
+        }
+        require(moduleId, isCJS = false) {
+            if (INTERNAL_MODULE_MAP[moduleId]) {
+                return INTERNAL_MODULE_MAP[moduleId];
+            }
+            if (this.cache[moduleId]) {
+                const shouldSkip = this.pluginContainer.hookBail('readModuleCache', this.cache[moduleId]);
+                if (!shouldSkip) {
+                    return this.cache[moduleId].exports;
+                }
+            }
+            const initializer = this.modules[moduleId];
+            if (!initializer) {
+                if (this.externalModules[moduleId]) {
+                    const exports1 = this.externalModules[moduleId];
+                    if (isCJS) {
+                        return exports1.default || exports1;
+                    }
+                    return exports1;
+                }
+                if ((this.targetEnv === 'node' || !_resourceloader.isBrowser) && nodeRequire) {
+                    const externalModule = nodeRequire(moduleId);
+                    return externalModule;
+                }
+                this.pluginContainer.hookSerial('moduleNotFound', moduleId);
+                console.debug(`[Farm] Module "${moduleId}" is not registered`);
+                return {};
+            }
+            const module = new _module.Module(moduleId, this.require.bind(this));
+            module.resource_pot = initializer.__farm_resource_pot__;
+            this.pluginContainer.hookSerial('moduleCreated', module);
+            this.cache[moduleId] = module;
+            if (!(globalThis || global || window || {}).require) {
+                (globalThis || global || window || {
+                    require: undefined
+                }).require = this.require.bind(this);
+            }
+            initializer(module, module.exports, this.require.bind(this), this.farmDynamicRequire.bind(this));
+            this.pluginContainer.hookSerial('moduleInitialized', module);
+            return module.exports;
+        }
+        farmDynamicRequire(moduleId) {
+            if (this.modules[moduleId]) {
+                const exports1 = this.require(moduleId);
+                if (exports1.__farm_async) {
+                    return exports1.default;
+                } else {
+                    return Promise.resolve(exports1);
+                }
+            }
+            const resources = this.dynamicModuleResourcesMap[moduleId];
+            if (!resources || resources.length === 0) {
+                throw new Error(`Dynamic imported module "${moduleId}" does not belong to any resource`);
+            }
+            return Promise.all(resources.map((resource)=>this.resourceLoader.load(resource))).then(()=>{
+                if (!this.modules[moduleId]) {
+                    throw new Error(`Dynamic imported module "${moduleId}" is not registered.`);
+                }
+                const result = this.require(moduleId);
+                if (result.__farm_async) {
+                    return result.default;
+                } else {
                     return result;
                 }
+            }).catch((err)=>{
+                console.error(`[Farm] Error loading dynamic module "${moduleId}"`, err);
+                throw err;
+            });
+        }
+        register(moduleId, initializer) {
+            if (this.modules[moduleId]) {
+                console.warn(`Module "${moduleId}" has registered! It should not be registered twice`);
+                return;
             }
+            this.modules[moduleId] = initializer;
+        }
+        update(moduleId, init) {
+            this.modules[moduleId] = init;
+            this.clearCache(moduleId);
+        }
+        delete(moduleId) {
+            if (this.modules[moduleId]) {
+                this.clearCache(moduleId);
+                delete this.modules[moduleId];
+                return true;
+            } else {
+                return false;
+            }
+        }
+        getModuleUrl(moduleId) {
+            const publicPath = this.publicPaths[0] ?? '';
+            if (__global_this__.location) {
+                const url = `${__global_this__.location.protocol}//${__global_this__.location.host}${publicPath.endsWith('/') ? publicPath.slice(0, -1) : publicPath}/${this.modules[moduleId].__farm_resource_pot__}`;
+                return url;
+            } else {
+                return this.modules[moduleId].__farm_resource_pot__;
+            }
+        }
+        getCache(moduleId) {
+            return this.cache[moduleId];
+        }
+        clearCache(moduleId) {
+            if (this.cache[moduleId]) {
+                delete this.cache[moduleId];
+                return true;
+            } else {
+                return false;
+            }
+        }
+        setInitialLoadedResources(resources) {
+            for (const resource of resources){
+                this.resourceLoader.setLoadedResource(resource);
+            }
+        }
+        setDynamicModuleResourcesMap(dynamicModuleResourcesMap) {
+            this.dynamicModuleResourcesMap = dynamicModuleResourcesMap;
+        }
+        setPublicPaths(publicPaths) {
+            this.publicPaths = publicPaths;
+            this.resourceLoader.publicPaths = this.publicPaths;
+        }
+        setPlugins(plugins) {
+            this.pluginContainer.plugins = plugins;
+        }
+        addPlugin(plugin) {
+            if (this.pluginContainer.plugins.every((p)=>p.name !== plugin.name)) {
+                this.pluginContainer.plugins.push(plugin);
+            }
+        }
+        removePlugin(pluginName) {
+            this.pluginContainer.plugins = this.pluginContainer.plugins.filter((p)=>p.name !== pluginName);
+        }
+        setExternalModules(externalModules) {
+            Object.assign(this.externalModules, externalModules || {});
+        }
+        bootstrap() {
+            this.pluginContainer.hookSerial('bootstrap', this);
         }
     }
 }
-
-},
-"e015072a": function(module, exports, farmRequire, farmDynamicRequire) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-function _export(target, all) {
-    for(var name in all)Object.defineProperty(target, name, {
-        enumerable: true,
-        get: all[name]
-    });
-}
-_export(exports, {
-    FarmRuntimePlugin: function() {
-        return _plugin.FarmRuntimePlugin;
-    },
-    ModuleSystem: function() {
-        return _modulesystem.ModuleSystem;
-    }
-});
-const _interop_require_default = farmRequire("4e94ae2f");
-const _indexts = /*#__PURE__*/ _interop_require_default._(farmRequire("f6db9e75"));
-const _modulesystem = farmRequire("258f3ea6");
-const _plugin = farmRequire("c6a0451a");
-const _resourceloader = farmRequire("6591bae7");
-_resourceloader.__farm_global_this__.__farm_module_system__ = (function() {
-    const moduleSystem = new _modulesystem.ModuleSystem();
-    return function() {
-        return moduleSystem;
-    };
-})()();
-(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.setPlugins([
-    _indexts.default
-]);
-
-},
-"f6db9e75": function(module, exports, farmRequire, farmDynamicRequire) {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-Object.defineProperty(exports, "default", {
-    enumerable: true,
-    get: function() {
-        return _default;
-    }
-});
-const __global_this__ = typeof globalThis !== 'undefined' ? globalThis : window;
-const _default = {
-    name: 'farm-runtime-import-meta',
-    _moduleSystem: {},
-    bootstrap (system) {
-        this._moduleSystem = system;
-    },
-    moduleCreated (module) {
-        module.meta.env = {
-            ...{
-                "NODE_ENV": "production"
-            } ?? {},
-            mode: "production",
-            dev: "production" === 'development',
-            prod: "production" === 'production'
-        };
-        const publicPath = this._moduleSystem.publicPaths?.[0] || '';
-        const { location } = __global_this__;
-        const url = location ? `${location.protocol}//${location.host}${publicPath.replace(/\/$/, '')}/${module.id}?t=${Date.now()}` : module.resource_pot;
-        module.meta.url = url;
-    }
-};
-
-},}, "e015072a");</script></head>
+,},"22685227");</script></head>
   <body>
     <div id="app"></div>
     
   
 
-<script src="/index_f819.76decd9b.js" data-farm-resource="true"></script><script src="/index_ed28.1c7e538f.js" data-farm-resource="true"></script><script src="/index_c47f.2b546679.js" data-farm-resource="true"></script><script src="/index_b950.1e08d0fa.js" data-farm-resource="true"></script><script src="/index_0dc6.4d54a844.js" data-farm-resource="true"></script><script data-farm-entry-script="true">(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.setInitialLoadedResources(['index_077f.5ec76618.css','index_0dc6.4d54a844.js','index_b5ef.5694fa11.css','index_b950.1e08d0fa.js','index_c47f.2b546679.js','index_ed28.1c7e538f.js','index_f819.76decd9b.js']);</script><script data-farm-entry-script="true">(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.setDynamicModuleResourcesMap({  });</script><script data-farm-entry-script="true">(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.setPublicPaths(['/']);</script><script data-farm-entry-script="true">(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.bootstrap();</script><script data-farm-entry-script="true">(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.require("2c6e69f1")</script></body></html>
+<script src="/index_f819.87eec712.js" data-farm-resource="true"></script><script src="/index_fdf0.2cc501a9.js" data-farm-resource="true"></script><script src="/index_c47f.d05ae172.js" data-farm-resource="true"></script><script src="/index_b950.a6d47cc4.js" data-farm-resource="true"></script><script src="/index_0dc6.5473c923.js" data-farm-resource="true"></script><script data-farm-entry-script="true">(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.setInitialLoadedResources(['index_077f.5ec76618.css','index_0dc6.5473c923.js','index_b5ef.5694fa11.css','index_b950.a6d47cc4.js','index_c47f.d05ae172.js','index_f819.87eec712.js','index_fdf0.2cc501a9.js']);</script><script data-farm-entry-script="true">(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.setDynamicModuleResourcesMap({  });</script><script data-farm-entry-script="true">(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.setPublicPaths(['/']);</script><script data-farm-entry-script="true">(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.bootstrap();</script><script data-farm-entry-script="true">(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.require("2c6e69f1")</script></body></html>
