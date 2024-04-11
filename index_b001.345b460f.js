@@ -1,4 +1,4 @@
-(function(_){for(var r in _){_[r].__farm_resource_pot__='index_fdf0.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"03887fe2":function  (module, exports, farmRequire, farmDynamicRequire) {
+(function(_){for(var r in _){_[r].__farm_resource_pot__='index_b001.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"03887fe2":function  (module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -192,142 +192,6 @@
     });
 }
 ,
-"19c74bf6":function  (module, exports, farmRequire, farmDynamicRequire) {
-    (function(_) {
-        for(var r in _){
-            _[r].__farm_resource_pot__ = 'boxModel.js';
-            (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.register(r, _[r]);
-        }
-    })({
-        "181cd83d": function(e, n, t, i) {
-            "use strict";
-            Object.defineProperty(n, "__esModule", {
-                value: !0
-            }), Object.defineProperty(n, "default", {
-                enumerable: !0,
-                get: function() {
-                    return a;
-                }
-            });
-            let a = `<h3>
-  'width: 100%;' represents the proportion of the content area of the child box to the content area of the parent box.
-  This would not be affected by box-sizing.
-</h3>
-<div class="parent">
-  <div class="child"></div>
-</div>
-<hr/>
-
-<h3>
-Padding, margin and border of the inline element would not push away surrounding elements vertically.
-</h3>
-<p class="p1">
-  <span class="inline-1">inline-1</span>
-  <span class="inline-2">inline-2</span>
-  <p class="p2">p2</p>
-</p>
-<hr/>
-`;
-        },
-        "2e3d6988": function(e, t, l, c) {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), Object.defineProperty(t, "default", {
-                enumerable: !0,
-                get: function() {
-                    return n;
-                }
-            });
-            let s = l("@swc/helpers/_/_interop_require_default"), a = s._(l("181cd83d")), d = s._(l("e0237797")), r = s._(l("919c7b78")), n = {
-                title: "box model",
-                desc: "css box model characterization",
-                category: "css",
-                tags: [
-                    "standard"
-                ],
-                html: a.default,
-                css: d.default,
-                code: [
-                    {
-                        label: "html",
-                        filetype: "html",
-                        content: a.default
-                    },
-                    {
-                        label: "scss",
-                        filetype: "scss",
-                        content: r.default
-                    }
-                ]
-            };
-        },
-        "919c7b78": function(e, r, d, i) {
-            "use strict";
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            }), Object.defineProperty(r, "default", {
-                enumerable: !0,
-                get: function() {
-                    return n;
-                }
-            });
-            let n = `.parent {
-  width: 100px;
-  height: 100px;
-  padding: 10px;
-  margin: 10px;
-  border: 10px solid black;
-  background-color: green;
-}
-
-.child {
-  width: 100%;
-  height: 100%;
-  background-color: red;
-}
-
-.inline-1 {
-  padding: 10px;
-  margin: 10px;
-  border: 10px solid black;
-}
-`;
-        },
-        "e0237797": function(e, r, d, i) {
-            "use strict";
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            }), Object.defineProperty(r, "default", {
-                enumerable: !0,
-                get: function() {
-                    return n;
-                }
-            });
-            let n = `.parent {
-  width: 100px;
-  height: 100px;
-  padding: 10px;
-  margin: 10px;
-  border: 10px solid black;
-  background-color: green;
-}
-
-.child {
-  width: 100%;
-  height: 100%;
-  background-color: red;
-}
-
-.inline-1 {
-  padding: 10px;
-  margin: 10px;
-  border: 10px solid black;
-}`;
-        }
-    });
-}
-,
 "1e81784d":function  (module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
@@ -418,6 +282,244 @@ Padding, margin and border of the inline element would not push away surrounding
     };
 }
 ,
+"202dd6e0":function  (module, exports, farmRequire, farmDynamicRequire) {
+    (function(_) {
+        for(var r in _){
+            _[r].__farm_resource_pot__ = 'formattingContext.js';
+            (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.register(r, _[r]);
+        }
+    })({
+        "1d8dbfe7": function(e, i, t, n) {
+            "use strict";
+            Object.defineProperty(i, "__esModule", {
+                value: !0
+            }), Object.defineProperty(i, "default", {
+                enumerable: !0,
+                get: function() {
+                    return d;
+                }
+            });
+            let d = `<section>
+  <h3>
+    When a formatting context is created, its boundary is at the border position of the corresponding element.
+    <br />
+    Creating BFC does not affect margin of the element. The margin of parent element and the margin of child element are
+    still in the same BFC.
+  </h3>
+  <hr />
+
+  <div class="parent1">
+    <div class="child1"></div>
+  </div>
+</section>
+
+<section>
+  <h1>
+    The margin of parent element is in the outer BFC, and the margin of child element is in the BFC created by the
+    parent element.
+  </h1>
+  <hr />
+
+  <div class="parent2">
+    <div class="child2"></div>
+  </div>
+</section>
+
+<section>
+  <h1>BFC created by child4 isolates the margin of child3 and the margin of child5.</h1>
+  <hr />
+
+  <div class="parent3">
+    <div class="child3"></div>
+    <div class="child4">
+      <div class="child5"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h1>BFC created by child6 isolates its block margins.</h1>
+  <hr />
+
+  <div class="parent4">
+    <div class="child6"></div>
+  </div>
+</section>
+`;
+        },
+        "38a47d65": function(r, e, o, t) {
+            "use strict";
+            Object.defineProperty(e, "__esModule", {
+                value: !0
+            }), Object.defineProperty(e, "default", {
+                enumerable: !0,
+                get: function() {
+                    return d;
+                }
+            });
+            let d = `.parent1 {
+  margin-top: 10px;
+  background: red;
+}
+
+.child1 {
+  display: flow-root;
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: green;
+}
+
+.parent2 {
+  display: flow-root;
+  margin-top: 10px;
+  background: red;
+}
+
+.child2 {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: green;
+}
+
+.parent3 {
+  background: red;
+}
+
+.child3 {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  background: green;
+}
+
+.child4 {
+  display: flow-root;
+}
+
+.child5 {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: yellow;
+}
+
+.parent4 {
+  display: flow-root;
+  background: red;
+}
+
+.child6 {
+  display: flow-root;
+  margin-block: 10px;
+}
+`;
+        },
+        "4aa6b49a": function(e, t, l, a) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return f;
+                }
+            });
+            let c = l("@swc/helpers/_/_interop_require_default"), s = c._(l("d82e6e42")), n = c._(l("1d8dbfe7")), d = c._(l("e6840e99")), r = c._(l("38a47d65")), f = {
+                title: "formatting context",
+                desc: "css formatting context characterization",
+                category: "css",
+                tags: [
+                    "standard"
+                ],
+                html: n.default,
+                css: d.default + s.default,
+                code: [
+                    {
+                        label: "html",
+                        filetype: "html",
+                        content: n.default
+                    },
+                    {
+                        label: "scss",
+                        filetype: "scss",
+                        content: r.default
+                    }
+                ]
+            };
+        },
+        "e6840e99": function(r, e, o, t) {
+            "use strict";
+            Object.defineProperty(e, "__esModule", {
+                value: !0
+            }), Object.defineProperty(e, "default", {
+                enumerable: !0,
+                get: function() {
+                    return d;
+                }
+            });
+            let d = `.parent1 {
+  margin-top: 10px;
+  background: red;
+}
+
+.child1 {
+  display: flow-root;
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: green;
+}
+
+.parent2 {
+  display: flow-root;
+  margin-top: 10px;
+  background: red;
+}
+
+.child2 {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: green;
+}
+
+.parent3 {
+  background: red;
+}
+
+.child3 {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  background: green;
+}
+
+.child4 {
+  display: flow-root;
+}
+
+.child5 {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: yellow;
+}
+
+.parent4 {
+  display: flow-root;
+  background: red;
+}
+
+.child6 {
+  display: flow-root;
+  margin-block: 10px;
+}`;
+        }
+    });
+}
+,
 "23ec4682":function  (module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
@@ -430,16 +532,17 @@ Padding, margin and border of the inline element would not push away surrounding
         }
     });
     farmRequire("5384d819");
-    farmRequire("19c74bf6");
-    farmRequire("d87e40df");
+    farmRequire("8a642416");
+    farmRequire("d773b1ad");
+    farmRequire("202dd6e0");
     farmRequire("175ac098");
     (function(_) {
         for(var r in _){
-            _[r].__farm_resource_pot__ = 'index_a2a1.js';
+            _[r].__farm_resource_pot__ = 'index_03e9.js';
             (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.register(r, _[r]);
         }
     })({
-        "953dfae2": function(e, t, u, r) {
+        "953dfae2": function(e, t, u, a) {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
@@ -449,16 +552,45 @@ Padding, margin and border of the inline element would not push away surrounding
                     return n;
                 }
             });
-            let a = u("@swc/helpers/_/_interop_require_default"), d = a._(u("2e3d6988")), l = a._(u("4aa6b49a")), f = a._(u("3650c57d")), n = [
-                d.default,
+            let d = u("@swc/helpers/_/_interop_require_default"), r = d._(u("d9ee3aa5")), l = d._(u("2e3d6988")), f = d._(u("4aa6b49a")), _ = d._(u("3650c57d")), n = [
+                r.default,
                 l.default,
-                f.default
+                f.default,
+                _.default
             ];
+        },
+        "d82e6e42": function(e, t, i, o) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return n;
+                }
+            });
+            let n = `section {
+  position: relative;
+  padding: 16px;
+  margin: 2px;
+  border: 1px solid black;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+section + section {
+  margin-top: 24px;
+}
+
+section h1 {
+  font-size: 18px;
+}`;
         }
     });
     (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.setInitialLoadedResources([
-        'boxModel.f0966652.js',
-        'formattingContext.982dc39a.js',
+        'anonymousBlockBox.4d7ecf1d.js',
+        'boxModel.286afa67.js',
+        'formattingContext.920fb69e.js',
         'wavyUnderline.2f6bbe47.js'
     ]);
     (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.setDynamicModuleResourcesMap({});
@@ -1386,6 +1518,135 @@ Padding, margin and border of the inline element would not push away surrounding
     };
 }
 ,
+"8a642416":function  (module, exports, farmRequire, farmDynamicRequire) {
+    (function(_) {
+        for(var r in _){
+            _[r].__farm_resource_pot__ = 'anonymousBlockBox.js';
+            (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.register(r, _[r]);
+        }
+    })({
+        "049848c8": function(e, l, i, n) {
+            "use strict";
+            Object.defineProperty(l, "__esModule", {
+                value: !0
+            }), Object.defineProperty(l, "default", {
+                enumerable: !0,
+                get: function() {
+                    return o;
+                }
+            });
+            let o = `.inline-level-box {
+  border: 1px solid red;
+}
+
+.in-flow-block-level-box {
+  display: inline-block;
+}
+
+.inline-box {
+  border: 1px solid red;
+}
+`;
+        },
+        "47dfd3a1": function(e, n, o, i) {
+            "use strict";
+            Object.defineProperty(n, "__esModule", {
+                value: !0
+            }), Object.defineProperty(n, "default", {
+                enumerable: !0,
+                get: function() {
+                    return l;
+                }
+            });
+            let l = `<section>
+  <h1>
+    If a block container box has a box-level box inside it, then we force it to have only block-level boxes inside it.
+    <br />
+    There is an anonymous block box around inline box.
+  </h1>
+  <hr />
+
+  <div>
+    it's a block container box
+    <p>this is a block level box</p>
+    <span class="inline-level-box">this is a inline level box</span>
+  </div>
+</section>
+
+<section>
+  <h1>
+    An in-flow block-level box would break down the line box.
+    <br />
+    Disconnected first and second halves would be wrapped by an anonymous block box.
+  </h1>
+  <hr />
+
+  <p>
+    <span class="inline-box">I'm in a line box</span>
+    <span class="in-flow-block-level-box">this is a inline-block box</span>
+    <span class="inline-box">after</span>
+  </p>
+</section>
+`;
+        },
+        "cd960ec7": function(e, l, i, n) {
+            "use strict";
+            Object.defineProperty(l, "__esModule", {
+                value: !0
+            }), Object.defineProperty(l, "default", {
+                enumerable: !0,
+                get: function() {
+                    return o;
+                }
+            });
+            let o = `.inline-level-box {
+  border: 1px solid red;
+}
+
+.in-flow-block-level-box {
+  display: inline-block;
+}
+
+.inline-box {
+  border: 1px solid red;
+}`;
+        },
+        "d9ee3aa5": function(e, t, l, s) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return u;
+                }
+            });
+            let a = l("@swc/helpers/_/_interop_require_default"), c = a._(l("d82e6e42")), d = a._(l("47dfd3a1")), n = a._(l("cd960ec7")), o = a._(l("049848c8")), u = {
+                title: "anonymous block box",
+                desc: "how anonymous boxes are generated",
+                category: "css",
+                tags: [
+                    "standard"
+                ],
+                html: d.default,
+                css: n.default + c.default,
+                code: [
+                    {
+                        label: "html",
+                        filetype: "html",
+                        content: d.default
+                    },
+                    {
+                        label: "scss",
+                        filetype: "scss",
+                        content: o.default
+                    }
+                ]
+            };
+        }
+    });
+}
+,
 "8c2a1c95":function  (module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
@@ -1675,227 +1936,143 @@ Padding, margin and border of the inline element would not push away surrounding
     };
 }
 ,
-"d87e40df":function  (module, exports, farmRequire, farmDynamicRequire) {
+"d773b1ad":function  (module, exports, farmRequire, farmDynamicRequire) {
     (function(_) {
         for(var r in _){
-            _[r].__farm_resource_pot__ = 'formattingContext.js';
+            _[r].__farm_resource_pot__ = 'boxModel.js';
             (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.register(r, _[r]);
         }
     })({
-        "1d8dbfe7": function(e, i, t, d) {
+        "181cd83d": function(e, n, t, i) {
             "use strict";
-            Object.defineProperty(i, "__esModule", {
+            Object.defineProperty(n, "__esModule", {
                 value: !0
-            }), Object.defineProperty(i, "default", {
+            }), Object.defineProperty(n, "default", {
                 enumerable: !0,
                 get: function() {
-                    return a;
+                    return s;
                 }
             });
-            let a = `<h3>When a formatting context is created, its boundary is at the border position of the corresponding element.</h3>
+            let s = `<section>
+<h1>
+  'width: 100%;' represents the proportion of the content area of the child box to the content area of the parent box.
+  This would not be affected by box-sizing.
+</h1>
+<hr/>
 
-<div class="parent1">
-  <div class="child1"></div>
+<div class="parent">
+  <div class="child"></div>
 </div>
-<h3>
-  Creating BFC does not affect margin of the element. The margin of parent element and the margin of child element are
-  still in the same BFC.
-</h3>
+</section>
 
-<div class="parent2">
-  <div class="child2"></div>
-</div>
-<h3>
-  The margin of parent element is in the outer BFC, and the margin of child element is in the BFC created by the parent
-  element.
-</h3>
+<section>
+<h1>
+Padding, margin and border of the inline element would not push away surrounding elements vertically.
+</h1>
+<hr/>
 
-<div class="parent3">
-  <div class="child3"></div>
-  <div class="child4">
-    <div class="child5"></div>
-  </div>
-</div>
-<h3>BFC created by child4 isolates the margin of child3 and the margin of child5.</h3>
-
-<div class="parent4">
-  <div class="child6"></div>
-</div>
-<h3>BFC created by child6 isolates its block margins.</h3>
+<p class="p1">
+  <span class="inline-1">inline-1</span>
+  <span class="inline-2">inline-2</span>
+  <p class="p2">p2</p>
+</p>
+</section>
 `;
         },
-        "38a47d65": function(r, o, e, t) {
-            "use strict";
-            Object.defineProperty(o, "__esModule", {
-                value: !0
-            }), Object.defineProperty(o, "default", {
-                enumerable: !0,
-                get: function() {
-                    return p;
-                }
-            });
-            let p = `.parent1 {
-  margin-top: 100px;
-  background: red;
-}
-
-.child1 {
-  display: flow-root;
-  width: 100px;
-  height: 100px;
-  margin-top: 10px;
-  background: green;
-}
-
-.parent2 {
-  display: flow-root;
-  margin-top: 100px;
-  background: red;
-}
-
-.child2 {
-  width: 100px;
-  height: 100px;
-  margin-top: 10px;
-  background: green;
-}
-
-.parent3 {
-  margin-top: 100px;
-  background: red;
-}
-
-.child3 {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 20px;
-  background: green;
-}
-
-.child4 {
-  display: flow-root;
-}
-
-.child5 {
-  width: 100px;
-  height: 100px;
-  margin-top: 10px;
-  background: yellow;
-}
-
-.parent4 {
-  display: flow-root;
-  margin-top: 100px;
-  background: red;
-}
-
-.child6 {
-  display: flow-root;
-  margin-block: 10px;
-}
-`;
-        },
-        "4aa6b49a": function(e, t, l, a) {
+        "2e3d6988": function(e, t, l, c) {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), Object.defineProperty(t, "default", {
                 enumerable: !0,
                 get: function() {
-                    return d;
+                    return o;
                 }
             });
-            let c = l("@swc/helpers/_/_interop_require_default"), s = c._(l("1d8dbfe7")), n = c._(l("e6840e99")), r = c._(l("38a47d65")), d = {
-                title: "formatting context",
-                desc: "css formatting context characterization",
+            let s = l("@swc/helpers/_/_interop_require_default"), d = s._(l("d82e6e42")), a = s._(l("181cd83d")), r = s._(l("e0237797")), n = s._(l("919c7b78")), o = {
+                title: "box model",
+                desc: "css box model characterization",
                 category: "css",
                 tags: [
                     "standard"
                 ],
-                html: s.default,
-                css: n.default,
+                html: a.default,
+                css: r.default + d.default,
                 code: [
                     {
                         label: "html",
                         filetype: "html",
-                        content: s.default
+                        content: a.default
                     },
                     {
                         label: "scss",
                         filetype: "scss",
-                        content: r.default
+                        content: n.default
                     }
                 ]
             };
         },
-        "e6840e99": function(r, o, e, t) {
+        "919c7b78": function(e, r, d, i) {
             "use strict";
-            Object.defineProperty(o, "__esModule", {
+            Object.defineProperty(r, "__esModule", {
                 value: !0
-            }), Object.defineProperty(o, "default", {
+            }), Object.defineProperty(r, "default", {
                 enumerable: !0,
                 get: function() {
-                    return p;
+                    return n;
                 }
             });
-            let p = `.parent1 {
-  margin-top: 100px;
-  background: red;
-}
-
-.child1 {
-  display: flow-root;
+            let n = `.parent {
   width: 100px;
   height: 100px;
-  margin-top: 10px;
-  background: green;
+  padding: 10px;
+  margin: 10px;
+  border: 10px solid black;
+  background-color: green;
 }
 
-.parent2 {
-  display: flow-root;
-  margin-top: 100px;
-  background: red;
+.child {
+  width: 100%;
+  height: 100%;
+  background-color: red;
 }
 
-.child2 {
+.inline-1 {
+  padding: 10px;
+  margin: 10px;
+  border: 10px solid black;
+}
+`;
+        },
+        "e0237797": function(e, r, d, i) {
+            "use strict";
+            Object.defineProperty(r, "__esModule", {
+                value: !0
+            }), Object.defineProperty(r, "default", {
+                enumerable: !0,
+                get: function() {
+                    return n;
+                }
+            });
+            let n = `.parent {
   width: 100px;
   height: 100px;
-  margin-top: 10px;
-  background: green;
+  padding: 10px;
+  margin: 10px;
+  border: 10px solid black;
+  background-color: green;
 }
 
-.parent3 {
-  margin-top: 100px;
-  background: red;
+.child {
+  width: 100%;
+  height: 100%;
+  background-color: red;
 }
 
-.child3 {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 20px;
-  background: green;
-}
-
-.child4 {
-  display: flow-root;
-}
-
-.child5 {
-  width: 100px;
-  height: 100px;
-  margin-top: 10px;
-  background: yellow;
-}
-
-.parent4 {
-  display: flow-root;
-  margin-top: 100px;
-  background: red;
-}
-
-.child6 {
-  display: flow-root;
-  margin-block: 10px;
+.inline-1 {
+  padding: 10px;
+  margin: 10px;
+  border: 10px solid black;
 }`;
         }
     });
@@ -2120,4 +2297,4 @@ Padding, margin and border of the inline element would not push away surrounding
     _export_star._(farmRequire("2ea370be"), exports);
 }
 ,});
-//# sourceMappingURL=index_fdf0.2cc501a9.js.map
+//# sourceMappingURL=index_b001.345b460f.js.map
