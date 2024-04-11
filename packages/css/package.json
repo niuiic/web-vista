@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "farm start",
-    "build": "tsx cli/build.ts",
+    "build": "tsx build.ts",
     "preview": "farm preview"
   },
   "devDependencies": {

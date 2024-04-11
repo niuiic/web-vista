@@ -26,6 +26,8 @@ indexTemplate = indexTemplate + `export default [${components.join(', ')}] as Co
 
 writeFileSync(join(process.cwd(), 'src/index.ts'), indexTemplate)
 
-execSync('pnpm farm build -c farm.config.build.ts')
+execSync('pnpm farm build -c farm.config.build.ts', {
+  stdio: 'inherit'
+})
 
 unlinkSync(join(process.cwd(), 'src/index.ts'))
