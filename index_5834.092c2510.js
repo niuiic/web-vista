@@ -1,4 +1,4 @@
-(function(_){for(var r in _){_[r].__farm_resource_pot__='index_b001.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"03887fe2":function  (module, exports, farmRequire, farmDynamicRequire) {
+(function(_){for(var r in _){_[r].__farm_resource_pot__='index_5834.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"03887fe2":function  (module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -22,6 +22,143 @@
     const _default = {
         "icon": `icon-63d13a8c`
     };
+}
+,
+"0973f9af":function  (module, exports, farmRequire, farmDynamicRequire) {
+    (function(_) {
+        for(var r in _){
+            _[r].__farm_resource_pot__ = 'anonymousBlockBox.js';
+            (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.register(r, _[r]);
+        }
+    })({
+        "049848c8": function(e, l, i, n) {
+            "use strict";
+            Object.defineProperty(l, "__esModule", {
+                value: !0
+            }), Object.defineProperty(l, "default", {
+                enumerable: !0,
+                get: function() {
+                    return o;
+                }
+            });
+            let o = `.inline-level-box {
+  border: 1px solid red;
+}
+
+.in-flow-block-level-box {
+  display: block;
+}
+
+.inline-box {
+  border: 1px solid red;
+}
+
+.line-box {
+  display: inline;
+}
+`;
+        },
+        "47dfd3a1": function(e, n, o, i) {
+            "use strict";
+            Object.defineProperty(n, "__esModule", {
+                value: !0
+            }), Object.defineProperty(n, "default", {
+                enumerable: !0,
+                get: function() {
+                    return l;
+                }
+            });
+            let l = `<section>
+  <h1>
+    If a block container box has a box-level box inside it, then we force it to have only block-level boxes inside it.
+    <br />
+    There is an anonymous block box around inline box.
+  </h1>
+  <hr />
+
+  <div>
+    it's a block container box
+    <p>this is a block level box</p>
+    <span class="inline-level-box">this is a inline level box</span>
+  </div>
+</section>
+
+<section>
+  <h1>
+    An in-flow block-level box would break down the line box.
+    <br />
+    Disconnected first and second halves would be wrapped by an anonymous block box.
+  </h1>
+  <hr />
+
+  <p class="line-box">
+    <span class="inline-box">I'm in a line box</span>
+    <span class="in-flow-block-level-box">this is a inline-block box</span>
+    <span class="inline-box">after</span>
+  </p>
+</section>
+`;
+        },
+        "cd960ec7": function(e, l, i, n) {
+            "use strict";
+            Object.defineProperty(l, "__esModule", {
+                value: !0
+            }), Object.defineProperty(l, "default", {
+                enumerable: !0,
+                get: function() {
+                    return o;
+                }
+            });
+            let o = `.inline-level-box {
+  border: 1px solid red;
+}
+
+.in-flow-block-level-box {
+  display: block;
+}
+
+.inline-box {
+  border: 1px solid red;
+}
+
+.line-box {
+  display: inline;
+}`;
+        },
+        "d9ee3aa5": function(e, t, l, s) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return u;
+                }
+            });
+            let a = l("@swc/helpers/_/_interop_require_default"), c = a._(l("d82e6e42")), d = a._(l("47dfd3a1")), n = a._(l("cd960ec7")), o = a._(l("049848c8")), u = {
+                title: "anonymous block box",
+                desc: "how anonymous boxes are generated",
+                category: "css",
+                tags: [
+                    "standard"
+                ],
+                html: d.default,
+                css: n.default + c.default,
+                code: [
+                    {
+                        label: "html",
+                        filetype: "html",
+                        content: d.default
+                    },
+                    {
+                        label: "scss",
+                        filetype: "scss",
+                        content: o.default
+                    }
+                ]
+            };
+        }
+    });
 }
 ,
 "0c7ee846":function  (module, exports, farmRequire, farmDynamicRequire) {
@@ -532,7 +669,7 @@
         }
     });
     farmRequire("5384d819");
-    farmRequire("8a642416");
+    farmRequire("0973f9af");
     farmRequire("d773b1ad");
     farmRequire("202dd6e0");
     farmRequire("175ac098");
@@ -588,7 +725,7 @@ section h1 {
         }
     });
     (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.setInitialLoadedResources([
-        'anonymousBlockBox.4d7ecf1d.js',
+        'anonymousBlockBox.eac77363.js',
         'boxModel.286afa67.js',
         'formattingContext.920fb69e.js',
         'wavyUnderline.2f6bbe47.js'
@@ -1518,135 +1655,6 @@ section h1 {
     };
 }
 ,
-"8a642416":function  (module, exports, farmRequire, farmDynamicRequire) {
-    (function(_) {
-        for(var r in _){
-            _[r].__farm_resource_pot__ = 'anonymousBlockBox.js';
-            (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.register(r, _[r]);
-        }
-    })({
-        "049848c8": function(e, l, i, n) {
-            "use strict";
-            Object.defineProperty(l, "__esModule", {
-                value: !0
-            }), Object.defineProperty(l, "default", {
-                enumerable: !0,
-                get: function() {
-                    return o;
-                }
-            });
-            let o = `.inline-level-box {
-  border: 1px solid red;
-}
-
-.in-flow-block-level-box {
-  display: inline-block;
-}
-
-.inline-box {
-  border: 1px solid red;
-}
-`;
-        },
-        "47dfd3a1": function(e, n, o, i) {
-            "use strict";
-            Object.defineProperty(n, "__esModule", {
-                value: !0
-            }), Object.defineProperty(n, "default", {
-                enumerable: !0,
-                get: function() {
-                    return l;
-                }
-            });
-            let l = `<section>
-  <h1>
-    If a block container box has a box-level box inside it, then we force it to have only block-level boxes inside it.
-    <br />
-    There is an anonymous block box around inline box.
-  </h1>
-  <hr />
-
-  <div>
-    it's a block container box
-    <p>this is a block level box</p>
-    <span class="inline-level-box">this is a inline level box</span>
-  </div>
-</section>
-
-<section>
-  <h1>
-    An in-flow block-level box would break down the line box.
-    <br />
-    Disconnected first and second halves would be wrapped by an anonymous block box.
-  </h1>
-  <hr />
-
-  <p>
-    <span class="inline-box">I'm in a line box</span>
-    <span class="in-flow-block-level-box">this is a inline-block box</span>
-    <span class="inline-box">after</span>
-  </p>
-</section>
-`;
-        },
-        "cd960ec7": function(e, l, i, n) {
-            "use strict";
-            Object.defineProperty(l, "__esModule", {
-                value: !0
-            }), Object.defineProperty(l, "default", {
-                enumerable: !0,
-                get: function() {
-                    return o;
-                }
-            });
-            let o = `.inline-level-box {
-  border: 1px solid red;
-}
-
-.in-flow-block-level-box {
-  display: inline-block;
-}
-
-.inline-box {
-  border: 1px solid red;
-}`;
-        },
-        "d9ee3aa5": function(e, t, l, s) {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), Object.defineProperty(t, "default", {
-                enumerable: !0,
-                get: function() {
-                    return u;
-                }
-            });
-            let a = l("@swc/helpers/_/_interop_require_default"), c = a._(l("d82e6e42")), d = a._(l("47dfd3a1")), n = a._(l("cd960ec7")), o = a._(l("049848c8")), u = {
-                title: "anonymous block box",
-                desc: "how anonymous boxes are generated",
-                category: "css",
-                tags: [
-                    "standard"
-                ],
-                html: d.default,
-                css: n.default + c.default,
-                code: [
-                    {
-                        label: "html",
-                        filetype: "html",
-                        content: d.default
-                    },
-                    {
-                        label: "scss",
-                        filetype: "scss",
-                        content: o.default
-                    }
-                ]
-            };
-        }
-    });
-}
-,
 "8c2a1c95":function  (module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
@@ -2297,4 +2305,4 @@ Padding, margin and border of the inline element would not push away surrounding
     _export_star._(farmRequire("2ea370be"), exports);
 }
 ,});
-//# sourceMappingURL=index_b001.345b460f.js.map
+//# sourceMappingURL=index_5834.092c2510.js.map
