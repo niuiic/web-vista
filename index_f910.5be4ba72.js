@@ -1,4 +1,4 @@
-(function(_){for(var r in _){_[r].__farm_resource_pot__='index_5834.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"03887fe2":function  (module, exports, farmRequire, farmDynamicRequire) {
+(function(_){for(var r in _){_[r].__farm_resource_pot__='index_f910.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"03887fe2":function  (module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -24,7 +24,55 @@
     };
 }
 ,
-"0973f9af":function  (module, exports, farmRequire, farmDynamicRequire) {
+"0c7ee846":function  (module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    const _export_star = farmRequire("@swc/helpers/_/_export_star");
+    _export_star._(farmRequire("824607c6"), exports);
+}
+,
+"11dd513f":function  (module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    Object.defineProperty(exports, "useDebounce", {
+        enumerable: true,
+        get: function() {
+            return useDebounce;
+        }
+    });
+    const useDebounce = (fn, options)=>{
+        let lastTriggerTime;
+        let timer;
+        const fixedOptions = {
+            waitTime: 500,
+            ...options ?? {}
+        };
+        const debouncedFn = (...args)=>{
+            const now = new Date().getTime();
+            if (lastTriggerTime && lastTriggerTime + fixedOptions.waitTime > now) {
+                clearTimeout(timer);
+            }
+            timer = setTimeout(()=>fn(...args), fixedOptions.waitTime);
+            lastTriggerTime = now;
+        };
+        return debouncedFn;
+    };
+}
+,
+"14a92e63":function  (module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    const _export_star = farmRequire("@swc/helpers/_/_export_star");
+    _export_star._(farmRequire("554343aa"), exports);
+}
+,
+"14b9579b":function  (module, exports, farmRequire, farmDynamicRequire) {
     (function(_) {
         for(var r in _){
             _[r].__farm_resource_pot__ = 'anonymousBlockBox.js';
@@ -58,17 +106,17 @@
 }
 `;
         },
-        "47dfd3a1": function(e, n, o, i) {
+        "47dfd3a1": function(e, n, o, l) {
             "use strict";
             Object.defineProperty(n, "__esModule", {
                 value: !0
             }), Object.defineProperty(n, "default", {
                 enumerable: !0,
                 get: function() {
-                    return l;
+                    return i;
                 }
             });
-            let l = `<section>
+            let i = `<section>
   <h1>
     If a block container box has a box-level box inside it, then we force it to have only block-level boxes inside it.
     <br />
@@ -93,7 +141,7 @@
 
   <p class="line-box">
     <span class="inline-box">I'm in a line box</span>
-    <span class="in-flow-block-level-box">this is a inline-block box</span>
+    <span class="in-flow-block-level-box">this is a block box</span>
     <span class="inline-box">after</span>
   </p>
 </section>
@@ -159,54 +207,6 @@
             };
         }
     });
-}
-,
-"0c7ee846":function  (module, exports, farmRequire, farmDynamicRequire) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    const _export_star = farmRequire("@swc/helpers/_/_export_star");
-    _export_star._(farmRequire("824607c6"), exports);
-}
-,
-"11dd513f":function  (module, exports, farmRequire, farmDynamicRequire) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    Object.defineProperty(exports, "useDebounce", {
-        enumerable: true,
-        get: function() {
-            return useDebounce;
-        }
-    });
-    const useDebounce = (fn, options)=>{
-        let lastTriggerTime;
-        let timer;
-        const fixedOptions = {
-            waitTime: 500,
-            ...options ?? {}
-        };
-        const debouncedFn = (...args)=>{
-            const now = new Date().getTime();
-            if (lastTriggerTime && lastTriggerTime + fixedOptions.waitTime > now) {
-                clearTimeout(timer);
-            }
-            timer = setTimeout(()=>fn(...args), fixedOptions.waitTime);
-            lastTriggerTime = now;
-        };
-        return debouncedFn;
-    };
-}
-,
-"14a92e63":function  (module, exports, farmRequire, farmDynamicRequire) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    const _export_star = farmRequire("@swc/helpers/_/_export_star");
-    _export_star._(farmRequire("554343aa"), exports);
 }
 ,
 "175ac098":function  (module, exports, farmRequire, farmDynamicRequire) {
@@ -669,7 +669,7 @@
         }
     });
     farmRequire("5384d819");
-    farmRequire("0973f9af");
+    farmRequire("14b9579b");
     farmRequire("d773b1ad");
     farmRequire("202dd6e0");
     farmRequire("175ac098");
@@ -725,7 +725,7 @@ section h1 {
         }
     });
     (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.setInitialLoadedResources([
-        'anonymousBlockBox.eac77363.js',
+        'anonymousBlockBox.fae34d9d.js',
         'boxModel.286afa67.js',
         'formattingContext.920fb69e.js',
         'wavyUnderline.2f6bbe47.js'
@@ -2305,4 +2305,4 @@ Padding, margin and border of the inline element would not push away surrounding
     _export_star._(farmRequire("2ea370be"), exports);
 }
 ,});
-//# sourceMappingURL=index_5834.092c2510.js.map
+//# sourceMappingURL=index_f910.5be4ba72.js.map
