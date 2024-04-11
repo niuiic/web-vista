@@ -1,0 +1,16 @@
+section {
+  position: relative;
+  padding: 16px;
+  margin: 2px;
+  border: 1px solid black;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 10%);
+}
+
+section + section {
+  margin-top: 24px;
+}
+
+section h1 {
+  font-size: 18px;
+}

@@ -1,3 +1,4 @@
+import sectionCss from '@/styles/section.scss'
 import html from './boxModel.html?raw'
 import css from './boxModel.scss'
 import scss from './boxModel.scss?raw'
@@ -8,7 +9,7 @@ const component = {
   category: 'css',
   tags: ['standard'],
   html,
-  css,
+  css: css + sectionCss,
   code: [
     {
       label: 'html',
