@@ -1,4 +1,146 @@
-(function(_){for(var r in _){_[r].__farm_resource_pot__='index_f910.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"03887fe2":function  (module, exports, farmRequire, farmDynamicRequire) {
+(function(_){for(var r in _){_[r].__farm_resource_pot__='index_ebf1.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"016f013b":function  (module, exports, farmRequire, farmDynamicRequire) {
+    (function(_) {
+        for(var r in _){
+            _[r].__farm_resource_pot__ = 'boxModel.js';
+            (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.register(r, _[r]);
+        }
+    })({
+        "253673e4": function(e, n, t, i) {
+            "use strict";
+            Object.defineProperty(n, "__esModule", {
+                value: !0
+            }), Object.defineProperty(n, "default", {
+                enumerable: !0,
+                get: function() {
+                    return s;
+                }
+            });
+            let s = `<section>
+<h1>
+  'width: 100%;' represents the proportion of the content area of the child box to the content area of the parent box.
+  This would not be affected by box-sizing.
+</h1>
+<hr/>
+
+<div class="parent">
+  <div class="child"></div>
+</div>
+</section>
+
+<section>
+<h1>
+Padding, margin and border of the inline element would not push away surrounding elements vertically.
+</h1>
+<hr/>
+
+<p class="p1">
+  <span class="inline-1">inline-1</span>
+  <span class="inline-2">inline-2</span>
+  <p class="p2">p2</p>
+</p>
+</section>
+`;
+        },
+        "2e3d6988": function(e, t, l, c) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return o;
+                }
+            });
+            let s = l("@swc/helpers/_/_interop_require_default"), a = s._(l("d82e6e42")), d = s._(l("253673e4")), r = s._(l("abd82204")), n = s._(l("92cc28ef")), o = {
+                title: "box model",
+                desc: "css box model characterization",
+                category: "css",
+                tags: [
+                    "standard"
+                ],
+                html: d.default,
+                css: r.default + a.default,
+                code: [
+                    {
+                        label: "html",
+                        filetype: "html",
+                        content: d.default
+                    },
+                    {
+                        label: "scss",
+                        filetype: "scss",
+                        content: n.default
+                    }
+                ]
+            };
+        },
+        "92cc28ef": function(e, r, d, i) {
+            "use strict";
+            Object.defineProperty(r, "__esModule", {
+                value: !0
+            }), Object.defineProperty(r, "default", {
+                enumerable: !0,
+                get: function() {
+                    return n;
+                }
+            });
+            let n = `.parent {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  margin: 10px;
+  border: 10px solid black;
+  background-color: green;
+}
+
+.child {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
+.inline-1 {
+  padding: 10px;
+  margin: 10px;
+  border: 10px solid black;
+}
+`;
+        },
+        "abd82204": function(e, r, d, i) {
+            "use strict";
+            Object.defineProperty(r, "__esModule", {
+                value: !0
+            }), Object.defineProperty(r, "default", {
+                enumerable: !0,
+                get: function() {
+                    return n;
+                }
+            });
+            let n = `.parent {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  margin: 10px;
+  border: 10px solid black;
+  background-color: green;
+}
+
+.child {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
+.inline-1 {
+  padding: 10px;
+  margin: 10px;
+  border: 10px solid black;
+}`;
+        }
+    });
+}
+,
+"03887fe2":function  (module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -70,263 +212,6 @@
     });
     const _export_star = farmRequire("@swc/helpers/_/_export_star");
     _export_star._(farmRequire("554343aa"), exports);
-}
-,
-"14b9579b":function  (module, exports, farmRequire, farmDynamicRequire) {
-    (function(_) {
-        for(var r in _){
-            _[r].__farm_resource_pot__ = 'anonymousBlockBox.js';
-            (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.register(r, _[r]);
-        }
-    })({
-        "049848c8": function(e, l, i, n) {
-            "use strict";
-            Object.defineProperty(l, "__esModule", {
-                value: !0
-            }), Object.defineProperty(l, "default", {
-                enumerable: !0,
-                get: function() {
-                    return o;
-                }
-            });
-            let o = `.inline-level-box {
-  border: 1px solid red;
-}
-
-.in-flow-block-level-box {
-  display: block;
-}
-
-.inline-box {
-  border: 1px solid red;
-}
-
-.line-box {
-  display: inline;
-}
-`;
-        },
-        "47dfd3a1": function(e, n, o, l) {
-            "use strict";
-            Object.defineProperty(n, "__esModule", {
-                value: !0
-            }), Object.defineProperty(n, "default", {
-                enumerable: !0,
-                get: function() {
-                    return i;
-                }
-            });
-            let i = `<section>
-  <h1>
-    If a block container box has a box-level box inside it, then we force it to have only block-level boxes inside it.
-    <br />
-    There is an anonymous block box around inline box.
-  </h1>
-  <hr />
-
-  <div>
-    it's a block container box
-    <p>this is a block level box</p>
-    <span class="inline-level-box">this is a inline level box</span>
-  </div>
-</section>
-
-<section>
-  <h1>
-    An in-flow block-level box would break down the line box.
-    <br />
-    Disconnected first and second halves would be wrapped by an anonymous block box.
-  </h1>
-  <hr />
-
-  <p class="line-box">
-    <span class="inline-box">I'm in a line box</span>
-    <span class="in-flow-block-level-box">this is a block box</span>
-    <span class="inline-box">after</span>
-  </p>
-</section>
-`;
-        },
-        "cd960ec7": function(e, l, i, n) {
-            "use strict";
-            Object.defineProperty(l, "__esModule", {
-                value: !0
-            }), Object.defineProperty(l, "default", {
-                enumerable: !0,
-                get: function() {
-                    return o;
-                }
-            });
-            let o = `.inline-level-box {
-  border: 1px solid red;
-}
-
-.in-flow-block-level-box {
-  display: block;
-}
-
-.inline-box {
-  border: 1px solid red;
-}
-
-.line-box {
-  display: inline;
-}`;
-        },
-        "d9ee3aa5": function(e, t, l, s) {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), Object.defineProperty(t, "default", {
-                enumerable: !0,
-                get: function() {
-                    return u;
-                }
-            });
-            let a = l("@swc/helpers/_/_interop_require_default"), c = a._(l("d82e6e42")), d = a._(l("47dfd3a1")), n = a._(l("cd960ec7")), o = a._(l("049848c8")), u = {
-                title: "anonymous block box",
-                desc: "how anonymous boxes are generated",
-                category: "css",
-                tags: [
-                    "standard"
-                ],
-                html: d.default,
-                css: n.default + c.default,
-                code: [
-                    {
-                        label: "html",
-                        filetype: "html",
-                        content: d.default
-                    },
-                    {
-                        label: "scss",
-                        filetype: "scss",
-                        content: o.default
-                    }
-                ]
-            };
-        }
-    });
-}
-,
-"175ac098":function  (module, exports, farmRequire, farmDynamicRequire) {
-    (function(_) {
-        for(var r in _){
-            _[r].__farm_resource_pot__ = 'wavyUnderline.js';
-            (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.register(r, _[r]);
-        }
-    })({
-        "1595ecfa": function(e, r, t, n) {
-            "use strict";
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            }), Object.defineProperty(r, "default", {
-                enumerable: !0,
-                get: function() {
-                    return a;
-                }
-            });
-            let a = `@keyframes bg-wave-flow {
-  from {
-    background-position-x: -10px, 0;
-  }
-  to {
-    background-position-x: -30px, -20px;
-  }
-}
-.text {
-  display: inline-block;
-  background: radial-gradient(circle at 10px -7px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x, radial-gradient(circle at 10px 27px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x;
-  background-position: -10px calc(100% + 16px), 0 calc(100% - 4px);
-  background-size: 20px 20px;
-  line-height: 16px;
-  animation: bg-wave-flow 1s infinite linear;
-}`;
-        },
-        "3650c57d": function(e, t, l, n) {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), Object.defineProperty(t, "default", {
-                enumerable: !0,
-                get: function() {
-                    return u;
-                }
-            });
-            let a = l("@swc/helpers/_/_interop_require_default"), c = a._(l("a9ddf789")), d = a._(l("1595ecfa")), i = a._(l("48c49032")), u = {
-                title: "wavy underline",
-                desc: "Text wave underline implementated with background animation",
-                category: "css",
-                tags: [
-                    "background",
-                    "animation"
-                ],
-                html: c.default,
-                css: d.default,
-                code: [
-                    {
-                        label: "html",
-                        filetype: "html",
-                        content: c.default
-                    },
-                    {
-                        label: "scss",
-                        filetype: "scss",
-                        content: i.default
-                    }
-                ]
-            };
-        },
-        "48c49032": function(e, r, t, n) {
-            "use strict";
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            }), Object.defineProperty(r, "default", {
-                enumerable: !0,
-                get: function() {
-                    return a;
-                }
-            });
-            let a = `@keyframes bg-wave-flow {
-  from {
-    background-position-x: -10px, 0;
-  }
-
-  to {
-    background-position-x:
-      -30px,
-      -20px;
-  }
-}
-
-.text {
-  display: inline-block;
-  background:
-    radial-gradient(circle at 10px -7px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x,
-    radial-gradient(circle at 10px 27px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x;
-  background-position:
-    -10px calc(100% + 16px),
-    0 calc(100% - 4px);
-  background-size: 20px 20px;
-  line-height: 16px;
-  animation: bg-wave-flow 1s infinite linear;
-}
-`;
-        },
-        "a9ddf789": function(e, t, n, r) {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), Object.defineProperty(t, "default", {
-                enumerable: !0,
-                get: function() {
-                    return u;
-                }
-            });
-            let u = `<span class="text">wavyUnderline</span>
-`;
-        }
-    });
 }
 ,
 "1e81784d":function  (module, exports, farmRequire, farmDynamicRequire) {
@@ -419,244 +304,6 @@
     };
 }
 ,
-"202dd6e0":function  (module, exports, farmRequire, farmDynamicRequire) {
-    (function(_) {
-        for(var r in _){
-            _[r].__farm_resource_pot__ = 'formattingContext.js';
-            (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.register(r, _[r]);
-        }
-    })({
-        "1d8dbfe7": function(e, i, t, n) {
-            "use strict";
-            Object.defineProperty(i, "__esModule", {
-                value: !0
-            }), Object.defineProperty(i, "default", {
-                enumerable: !0,
-                get: function() {
-                    return d;
-                }
-            });
-            let d = `<section>
-  <h3>
-    When a formatting context is created, its boundary is at the border position of the corresponding element.
-    <br />
-    Creating BFC does not affect margin of the element. The margin of parent element and the margin of child element are
-    still in the same BFC.
-  </h3>
-  <hr />
-
-  <div class="parent1">
-    <div class="child1"></div>
-  </div>
-</section>
-
-<section>
-  <h1>
-    The margin of parent element is in the outer BFC, and the margin of child element is in the BFC created by the
-    parent element.
-  </h1>
-  <hr />
-
-  <div class="parent2">
-    <div class="child2"></div>
-  </div>
-</section>
-
-<section>
-  <h1>BFC created by child4 isolates the margin of child3 and the margin of child5.</h1>
-  <hr />
-
-  <div class="parent3">
-    <div class="child3"></div>
-    <div class="child4">
-      <div class="child5"></div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h1>BFC created by child6 isolates its block margins.</h1>
-  <hr />
-
-  <div class="parent4">
-    <div class="child6"></div>
-  </div>
-</section>
-`;
-        },
-        "38a47d65": function(r, e, o, t) {
-            "use strict";
-            Object.defineProperty(e, "__esModule", {
-                value: !0
-            }), Object.defineProperty(e, "default", {
-                enumerable: !0,
-                get: function() {
-                    return d;
-                }
-            });
-            let d = `.parent1 {
-  margin-top: 10px;
-  background: red;
-}
-
-.child1 {
-  display: flow-root;
-  width: 100px;
-  height: 100px;
-  margin-top: 10px;
-  background: green;
-}
-
-.parent2 {
-  display: flow-root;
-  margin-top: 10px;
-  background: red;
-}
-
-.child2 {
-  width: 100px;
-  height: 100px;
-  margin-top: 10px;
-  background: green;
-}
-
-.parent3 {
-  background: red;
-}
-
-.child3 {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 20px;
-  background: green;
-}
-
-.child4 {
-  display: flow-root;
-}
-
-.child5 {
-  width: 100px;
-  height: 100px;
-  margin-top: 10px;
-  background: yellow;
-}
-
-.parent4 {
-  display: flow-root;
-  background: red;
-}
-
-.child6 {
-  display: flow-root;
-  margin-block: 10px;
-}
-`;
-        },
-        "4aa6b49a": function(e, t, l, a) {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), Object.defineProperty(t, "default", {
-                enumerable: !0,
-                get: function() {
-                    return f;
-                }
-            });
-            let c = l("@swc/helpers/_/_interop_require_default"), s = c._(l("d82e6e42")), n = c._(l("1d8dbfe7")), d = c._(l("e6840e99")), r = c._(l("38a47d65")), f = {
-                title: "formatting context",
-                desc: "css formatting context characterization",
-                category: "css",
-                tags: [
-                    "standard"
-                ],
-                html: n.default,
-                css: d.default + s.default,
-                code: [
-                    {
-                        label: "html",
-                        filetype: "html",
-                        content: n.default
-                    },
-                    {
-                        label: "scss",
-                        filetype: "scss",
-                        content: r.default
-                    }
-                ]
-            };
-        },
-        "e6840e99": function(r, e, o, t) {
-            "use strict";
-            Object.defineProperty(e, "__esModule", {
-                value: !0
-            }), Object.defineProperty(e, "default", {
-                enumerable: !0,
-                get: function() {
-                    return d;
-                }
-            });
-            let d = `.parent1 {
-  margin-top: 10px;
-  background: red;
-}
-
-.child1 {
-  display: flow-root;
-  width: 100px;
-  height: 100px;
-  margin-top: 10px;
-  background: green;
-}
-
-.parent2 {
-  display: flow-root;
-  margin-top: 10px;
-  background: red;
-}
-
-.child2 {
-  width: 100px;
-  height: 100px;
-  margin-top: 10px;
-  background: green;
-}
-
-.parent3 {
-  background: red;
-}
-
-.child3 {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 20px;
-  background: green;
-}
-
-.child4 {
-  display: flow-root;
-}
-
-.child5 {
-  width: 100px;
-  height: 100px;
-  margin-top: 10px;
-  background: yellow;
-}
-
-.parent4 {
-  display: flow-root;
-  background: red;
-}
-
-.child6 {
-  display: flow-root;
-  margin-block: 10px;
-}`;
-        }
-    });
-}
-,
 "23ec4682":function  (module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
@@ -669,10 +316,10 @@
         }
     });
     farmRequire("5384d819");
-    farmRequire("14b9579b");
-    farmRequire("d773b1ad");
-    farmRequire("202dd6e0");
-    farmRequire("175ac098");
+    farmRequire("cf963046");
+    farmRequire("016f013b");
+    farmRequire("b96493c0");
+    farmRequire("8e4d7570");
     (function(_) {
         for(var r in _){
             _[r].__farm_resource_pot__ = 'index_03e9.js';
@@ -725,10 +372,10 @@ section h1 {
         }
     });
     (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.setInitialLoadedResources([
-        'anonymousBlockBox.fae34d9d.js',
-        'boxModel.286afa67.js',
-        'formattingContext.920fb69e.js',
-        'wavyUnderline.2f6bbe47.js'
+        'anonymousBlockBox.4b7cb13e.js',
+        'boxModel.35d8e581.js',
+        'formattingContext.135e603f.js',
+        'wavyUnderline.13f8857c.js'
     ]);
     (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.setDynamicModuleResourcesMap({});
     var farmModuleSystem = (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__;
@@ -1674,6 +1321,126 @@ section h1 {
     };
 }
 ,
+"8e4d7570":function  (module, exports, farmRequire, farmDynamicRequire) {
+    (function(_) {
+        for(var r in _){
+            _[r].__farm_resource_pot__ = 'wavyUnderline.js';
+            (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.register(r, _[r]);
+        }
+    })({
+        "2e9047b6": function(e, r, t, n) {
+            "use strict";
+            Object.defineProperty(r, "__esModule", {
+                value: !0
+            }), Object.defineProperty(r, "default", {
+                enumerable: !0,
+                get: function() {
+                    return a;
+                }
+            });
+            let a = `@keyframes bg-wave-flow {
+  from {
+    background-position-x: -10px, 0;
+  }
+
+  to {
+    background-position-x:
+      -30px,
+      -20px;
+  }
+}
+
+.text {
+  display: inline-block;
+  background:
+    radial-gradient(circle at 10px -7px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x,
+    radial-gradient(circle at 10px 27px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x;
+  background-position:
+    -10px calc(100% + 16px),
+    0 calc(100% - 4px);
+  background-size: 20px 20px;
+  line-height: 16px;
+  animation: bg-wave-flow 1s infinite linear;
+}
+`;
+        },
+        "3650c57d": function(e, t, l, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return r;
+                }
+            });
+            let a = l("@swc/helpers/_/_interop_require_default"), i = a._(l("5a4fa45f")), u = a._(l("3bff51e1")), c = a._(l("2e9047b6")), r = {
+                title: "wavy underline",
+                desc: "Text wave underline implementated with background animation",
+                category: "css",
+                tags: [
+                    "background",
+                    "animation"
+                ],
+                html: i.default,
+                css: u.default,
+                code: [
+                    {
+                        label: "html",
+                        filetype: "html",
+                        content: i.default
+                    },
+                    {
+                        label: "scss",
+                        filetype: "scss",
+                        content: c.default
+                    }
+                ]
+            };
+        },
+        "3bff51e1": function(e, r, t, n) {
+            "use strict";
+            Object.defineProperty(r, "__esModule", {
+                value: !0
+            }), Object.defineProperty(r, "default", {
+                enumerable: !0,
+                get: function() {
+                    return a;
+                }
+            });
+            let a = `@keyframes bg-wave-flow {
+  from {
+    background-position-x: -10px, 0;
+  }
+  to {
+    background-position-x: -30px, -20px;
+  }
+}
+.text {
+  display: inline-block;
+  background: radial-gradient(circle at 10px -7px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x, radial-gradient(circle at 10px 27px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x;
+  background-position: -10px calc(100% + 16px), 0 calc(100% - 4px);
+  background-size: 20px 20px;
+  line-height: 16px;
+  animation: bg-wave-flow 1s infinite linear;
+}`;
+        },
+        "5a4fa45f": function(e, t, n, r) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return u;
+                }
+            });
+            let u = `<span class="text">wavyUnderline</span>
+`;
+        }
+    });
+}
+,
 "93843902":function  (module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
@@ -1862,6 +1629,244 @@ section h1 {
     const _default = "/JetBrainsMono-Regular.a9cb1cd8-9bdcf2.woff2";
 }
 ,
+"b96493c0":function  (module, exports, farmRequire, farmDynamicRequire) {
+    (function(_) {
+        for(var r in _){
+            _[r].__farm_resource_pot__ = 'formattingContext.js';
+            (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.register(r, _[r]);
+        }
+    })({
+        "3d6ac7fd": function(e, i, t, n) {
+            "use strict";
+            Object.defineProperty(i, "__esModule", {
+                value: !0
+            }), Object.defineProperty(i, "default", {
+                enumerable: !0,
+                get: function() {
+                    return d;
+                }
+            });
+            let d = `<section>
+  <h3>
+    When a formatting context is created, its boundary is at the border position of the corresponding element.
+    <br />
+    Creating BFC does not affect margin of the element. The margin of parent element and the margin of child element are
+    still in the same BFC.
+  </h3>
+  <hr />
+
+  <div class="parent1">
+    <div class="child1"></div>
+  </div>
+</section>
+
+<section>
+  <h1>
+    The margin of parent element is in the outer BFC, and the margin of child element is in the BFC created by the
+    parent element.
+  </h1>
+  <hr />
+
+  <div class="parent2">
+    <div class="child2"></div>
+  </div>
+</section>
+
+<section>
+  <h1>BFC created by child4 isolates the margin of child3 and the margin of child5.</h1>
+  <hr />
+
+  <div class="parent3">
+    <div class="child3"></div>
+    <div class="child4">
+      <div class="child5"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h1>BFC created by child6 isolates its block margins.</h1>
+  <hr />
+
+  <div class="parent4">
+    <div class="child6"></div>
+  </div>
+</section>
+`;
+        },
+        "4aa6b49a": function(e, t, c, a) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return f;
+                }
+            });
+            let l = c("@swc/helpers/_/_interop_require_default"), d = l._(c("d82e6e42")), s = l._(c("3d6ac7fd")), n = l._(c("b4fd3cbd")), r = l._(c("6d7accd3")), f = {
+                title: "formatting context",
+                desc: "css formatting context characterization",
+                category: "css",
+                tags: [
+                    "standard"
+                ],
+                html: s.default,
+                css: n.default + d.default,
+                code: [
+                    {
+                        label: "html",
+                        filetype: "html",
+                        content: s.default
+                    },
+                    {
+                        label: "scss",
+                        filetype: "scss",
+                        content: r.default
+                    }
+                ]
+            };
+        },
+        "6d7accd3": function(r, e, o, t) {
+            "use strict";
+            Object.defineProperty(e, "__esModule", {
+                value: !0
+            }), Object.defineProperty(e, "default", {
+                enumerable: !0,
+                get: function() {
+                    return d;
+                }
+            });
+            let d = `.parent1 {
+  margin-top: 10px;
+  background: red;
+}
+
+.child1 {
+  display: flow-root;
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: green;
+}
+
+.parent2 {
+  display: flow-root;
+  margin-top: 10px;
+  background: red;
+}
+
+.child2 {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: green;
+}
+
+.parent3 {
+  background: red;
+}
+
+.child3 {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  background: green;
+}
+
+.child4 {
+  display: flow-root;
+}
+
+.child5 {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: yellow;
+}
+
+.parent4 {
+  display: flow-root;
+  background: red;
+}
+
+.child6 {
+  display: flow-root;
+  margin-block: 10px;
+}
+`;
+        },
+        "b4fd3cbd": function(r, e, o, t) {
+            "use strict";
+            Object.defineProperty(e, "__esModule", {
+                value: !0
+            }), Object.defineProperty(e, "default", {
+                enumerable: !0,
+                get: function() {
+                    return d;
+                }
+            });
+            let d = `.parent1 {
+  margin-top: 10px;
+  background: red;
+}
+
+.child1 {
+  display: flow-root;
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: green;
+}
+
+.parent2 {
+  display: flow-root;
+  margin-top: 10px;
+  background: red;
+}
+
+.child2 {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: green;
+}
+
+.parent3 {
+  background: red;
+}
+
+.child3 {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  background: green;
+}
+
+.child4 {
+  display: flow-root;
+}
+
+.child5 {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: yellow;
+}
+
+.parent4 {
+  display: flow-root;
+  background: red;
+}
+
+.child6 {
+  display: flow-root;
+  margin-block: 10px;
+}`;
+        }
+    });
+}
+,
 "bc9e4543":function  (module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
@@ -1944,144 +1949,139 @@ section h1 {
     };
 }
 ,
-"d773b1ad":function  (module, exports, farmRequire, farmDynamicRequire) {
+"cf963046":function  (module, exports, farmRequire, farmDynamicRequire) {
     (function(_) {
         for(var r in _){
-            _[r].__farm_resource_pot__ = 'boxModel.js';
+            _[r].__farm_resource_pot__ = 'anonymousBlockBox.js';
             (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.register(r, _[r]);
         }
     })({
-        "181cd83d": function(e, n, t, i) {
+        "4386746a": function(e, n, o, l) {
             "use strict";
             Object.defineProperty(n, "__esModule", {
                 value: !0
             }), Object.defineProperty(n, "default", {
                 enumerable: !0,
                 get: function() {
-                    return s;
+                    return i;
                 }
             });
-            let s = `<section>
-<h1>
-  'width: 100%;' represents the proportion of the content area of the child box to the content area of the parent box.
-  This would not be affected by box-sizing.
-</h1>
-<hr/>
+            let i = `<section>
+  <h1>
+    If a block container box has a box-level box inside it, then we force it to have only block-level boxes inside it.
+    <br />
+    There is an anonymous block box around inline box.
+  </h1>
+  <hr />
 
-<div class="parent">
-  <div class="child"></div>
-</div>
+  <div>
+    it's a block container box
+    <p>this is a block level box</p>
+    <span class="inline-level-box">this is a inline level box</span>
+  </div>
 </section>
 
 <section>
-<h1>
-Padding, margin and border of the inline element would not push away surrounding elements vertically.
-</h1>
-<hr/>
+  <h1>
+    An in-flow block-level box would break down the line box.
+    <br />
+    Disconnected first and second halves would be wrapped by an anonymous block box.
+  </h1>
+  <hr />
 
-<p class="p1">
-  <span class="inline-1">inline-1</span>
-  <span class="inline-2">inline-2</span>
-  <p class="p2">p2</p>
-</p>
+  <p class="line-box">
+    <span class="inline-box">I'm in a line box</span>
+    <span class="in-flow-block-level-box">this is a block box</span>
+    <span class="inline-box">after</span>
+  </p>
 </section>
 `;
         },
-        "2e3d6988": function(e, t, l, c) {
+        "9370d78c": function(e, l, i, n) {
+            "use strict";
+            Object.defineProperty(l, "__esModule", {
+                value: !0
+            }), Object.defineProperty(l, "default", {
+                enumerable: !0,
+                get: function() {
+                    return o;
+                }
+            });
+            let o = `.inline-level-box {
+  border: 1px solid red;
+}
+
+.in-flow-block-level-box {
+  display: block;
+}
+
+.inline-box {
+  border: 1px solid red;
+}
+
+.line-box {
+  display: inline;
+}
+`;
+        },
+        "9c741c8f": function(e, l, i, n) {
+            "use strict";
+            Object.defineProperty(l, "__esModule", {
+                value: !0
+            }), Object.defineProperty(l, "default", {
+                enumerable: !0,
+                get: function() {
+                    return o;
+                }
+            });
+            let o = `.inline-level-box {
+  border: 1px solid red;
+}
+
+.in-flow-block-level-box {
+  display: block;
+}
+
+.inline-box {
+  border: 1px solid red;
+}
+
+.line-box {
+  display: inline;
+}`;
+        },
+        "d9ee3aa5": function(e, t, l, s) {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), Object.defineProperty(t, "default", {
                 enumerable: !0,
                 get: function() {
-                    return o;
+                    return u;
                 }
             });
-            let s = l("@swc/helpers/_/_interop_require_default"), d = s._(l("d82e6e42")), a = s._(l("181cd83d")), r = s._(l("e0237797")), n = s._(l("919c7b78")), o = {
-                title: "box model",
-                desc: "css box model characterization",
+            let a = l("@swc/helpers/_/_interop_require_default"), c = a._(l("d82e6e42")), n = a._(l("4386746a")), o = a._(l("9c741c8f")), d = a._(l("9370d78c")), u = {
+                title: "anonymous block box",
+                desc: "how anonymous boxes are generated",
                 category: "css",
                 tags: [
                     "standard"
                 ],
-                html: a.default,
-                css: r.default + d.default,
+                html: n.default,
+                css: o.default + c.default,
                 code: [
                     {
                         label: "html",
                         filetype: "html",
-                        content: a.default
+                        content: n.default
                     },
                     {
                         label: "scss",
                         filetype: "scss",
-                        content: n.default
+                        content: d.default
                     }
                 ]
             };
-        },
-        "919c7b78": function(e, r, d, i) {
-            "use strict";
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            }), Object.defineProperty(r, "default", {
-                enumerable: !0,
-                get: function() {
-                    return n;
-                }
-            });
-            let n = `.parent {
-  width: 100px;
-  height: 100px;
-  padding: 10px;
-  margin: 10px;
-  border: 10px solid black;
-  background-color: green;
-}
-
-.child {
-  width: 100%;
-  height: 100%;
-  background-color: red;
-}
-
-.inline-1 {
-  padding: 10px;
-  margin: 10px;
-  border: 10px solid black;
-}
-`;
-        },
-        "e0237797": function(e, r, d, i) {
-            "use strict";
-            Object.defineProperty(r, "__esModule", {
-                value: !0
-            }), Object.defineProperty(r, "default", {
-                enumerable: !0,
-                get: function() {
-                    return n;
-                }
-            });
-            let n = `.parent {
-  width: 100px;
-  height: 100px;
-  padding: 10px;
-  margin: 10px;
-  border: 10px solid black;
-  background-color: green;
-}
-
-.child {
-  width: 100%;
-  height: 100%;
-  background-color: red;
-}
-
-.inline-1 {
-  padding: 10px;
-  margin: 10px;
-  border: 10px solid black;
-}`;
         }
     });
 }
@@ -2305,4 +2305,4 @@ Padding, margin and border of the inline element would not push away surrounding
     _export_star._(farmRequire("2ea370be"), exports);
 }
 ,});
-//# sourceMappingURL=index_f910.5be4ba72.js.map
+//# sourceMappingURL=index_ebf1.9abcea42.js.map
