@@ -1,7 +1,7 @@
 import sectionCss from '@/styles/section.scss'
-import html from './anonymousBlockBox.html?raw'
-import css from './anonymousBlockBox.scss'
-import scss from './anonymousBlockBox.scss?raw'
+import html from './index.html?raw'
+import css from './index.scss'
+import scss from './index.scss?raw'
 
 const component = {
   title: 'anonymous block box',

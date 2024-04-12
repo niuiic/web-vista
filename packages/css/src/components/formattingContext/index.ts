@@ -1,7 +1,7 @@
 import sectionCss from '@/styles/section.scss'
-import html from './formattingContext.html?raw'
-import css from './formattingContext.scss'
-import scss from './formattingContext.scss?raw'
+import html from './index.html?raw'
+import css from './index.scss'
+import scss from './index.scss?raw'
 
 const component = {
   title: 'formatting context',

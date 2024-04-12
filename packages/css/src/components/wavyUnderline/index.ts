@@ -1,6 +1,6 @@
-import html from './wavyUnderline.html?raw'
-import css from './wavyUnderline.scss'
-import scss from './wavyUnderline.scss?raw'
+import html from './index.html?raw'
+import css from './index.scss'
+import scss from './index.scss?raw'
 
 const component = {
   title: 'wavy underline',

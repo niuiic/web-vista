@@ -1,7 +1,7 @@
 import sectionCss from '@/styles/section.scss'
-import html from './boxModel.html?raw'
-import css from './boxModel.scss'
-import scss from './boxModel.scss?raw'
+import html from './index.html?raw'
+import css from './index.scss'
+import scss from './index.scss?raw'
 
 const component = {
   title: 'box model',
