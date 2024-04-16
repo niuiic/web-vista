@@ -1,4 +1,4 @@
-(function(_){for(var r in _){_[r].__farm_resource_pot__='index_02dc.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"016f013b":function  (module, exports, farmRequire, farmDynamicRequire) {
+(function(_){for(var r in _){_[r].__farm_resource_pot__='index_33b8.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"016f013b":function  (module, exports, farmRequire, farmDynamicRequire) {
     (function(_) {
         for(var r in _){
             _[r].__farm_resource_pot__ = 'boxModel.js';
@@ -769,10 +769,12 @@ Padding, margin and border of the inline element would not push away surrounding
         }
     });
     farmRequire("5384d819");
+    farmRequire("b89b35c3");
     farmRequire("cf963046");
     farmRequire("016f013b");
     farmRequire("23110aaf");
     farmRequire("4aa01c51");
+    farmRequire("a1aa61fc");
     farmRequire("b96493c0");
     farmRequire("0980581d");
     farmRequire("63d7ee65");
@@ -791,19 +793,21 @@ Padding, margin and border of the inline element would not push away surrounding
             }), Object.defineProperty(t, "default", {
                 enumerable: !0,
                 get: function() {
-                    return s;
+                    return j;
                 }
             });
-            let u = a("@swc/helpers/_/_interop_require_default"), d = u._(a("d9ee3aa5")), l = u._(a("2e3d6988")), _ = u._(a("f3e012b0")), r = u._(a("1bee128a")), n = u._(a("4aa6b49a")), c = u._(a("cb8aa143")), b = u._(a("5f78ff55")), i = u._(a("8a844209")), o = u._(a("3650c57d")), s = [
+            let u = a("@swc/helpers/_/_interop_require_default"), d = u._(a("b3908126")), l = u._(a("d9ee3aa5")), _ = u._(a("2e3d6988")), r = u._(a("f3e012b0")), b = u._(a("1bee128a")), c = u._(a("8c0b1759")), n = u._(a("4aa6b49a")), i = u._(a("cb8aa143")), o = u._(a("5f78ff55")), s = u._(a("8a844209")), p = u._(a("3650c57d")), j = [
                 d.default,
                 l.default,
                 _.default,
                 r.default,
-                n.default,
-                c.default,
                 b.default,
+                c.default,
+                n.default,
                 i.default,
-                o.default
+                o.default,
+                s.default,
+                p.default
             ];
         },
         "d82e6e42": function(e, t, i, o) {
@@ -835,10 +839,12 @@ section h1 {
         }
     });
     (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.setInitialLoadedResources([
+        'absolute.424fad09.js',
         'anonymousBlockBox.4b7cb13e.js',
         'boxModel.35d8e581.js',
         'boxSize.64b771e8.js',
         'counter.74b3988d.js',
+        'float.50e9ca9a.js',
         'formattingContext.135e603f.js',
         'lineHeight.06324214.js',
         'minContent.6d845daf.js',
@@ -2388,6 +2394,157 @@ section h1 {
     _export_star._(farmRequire("56fdf8a1"), exports);
 }
 ,
+"a1aa61fc":function  (module, exports, farmRequire, farmDynamicRequire) {
+    (function(_) {
+        for(var r in _){
+            _[r].__farm_resource_pot__ = 'float.js';
+            (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.register(r, _[r]);
+        }
+    })({
+        "5b9b2f6d": function(e, t, l, r) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return o;
+                }
+            });
+            let o = `.parent {
+  background-color: red;
+}
+
+.line2 {
+  float: right;
+}
+
+.float1,
+.float2 {
+  float: left;
+}
+
+li {
+  float: left;
+}
+
+.parent3 > :nth-child(3) {
+  clear: both;
+}
+`;
+        },
+        "6dd6dd16": function(e, l, t, i) {
+            "use strict";
+            Object.defineProperty(l, "__esModule", {
+                value: !0
+            }), Object.defineProperty(l, "default", {
+                enumerable: !0,
+                get: function() {
+                    return n;
+                }
+            });
+            let n = `<section>
+  <h1>The offset reference for the float is the current line box.</h1>
+  <hr />
+
+  <div class="parent">
+    <span class="line1">line1</span>
+    <br />
+    <span class="line2">line2</span>
+  </div>
+</section>
+
+<section>
+  <h1>Multiple floats in the same row will be aligned next to each other.</h1>
+  <hr />
+
+  <div class="parent2">
+    <span class="float1">float1</span>
+    <span class="float2">float2</span>
+  </div>
+</section>
+
+<section>
+  <h1>The clear attribute will disable elements from being adjacent to floated elements.</h1>
+  <hr />
+
+  <ul class="parent3">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul>
+</section>
+`;
+        },
+        "8c0b1759": function(e, t, l, a) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return n;
+                }
+            });
+            let d = l("@swc/helpers/_/_interop_require_default"), s = d._(l("d82e6e42")), c = d._(l("6dd6dd16")), f = d._(l("ca8bbf13")), r = d._(l("5b9b2f6d")), n = {
+                title: "float",
+                desc: "css float characterization",
+                category: "css",
+                tags: [
+                    "standard"
+                ],
+                html: c.default,
+                css: f.default + s.default,
+                code: [
+                    {
+                        label: "html",
+                        filetype: "html",
+                        content: c.default
+                    },
+                    {
+                        label: "scss",
+                        filetype: "scss",
+                        content: r.default
+                    }
+                ]
+            };
+        },
+        "ca8bbf13": function(e, t, l, r) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return o;
+                }
+            });
+            let o = `.parent {
+  background-color: red;
+}
+
+.line2 {
+  float: right;
+}
+
+.float1,
+.float2 {
+  float: left;
+}
+
+li {
+  float: left;
+}
+
+.parent3 > :nth-child(3) {
+  clear: both;
+}`;
+        }
+    });
+}
+,
 "a81951de":function  (module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
@@ -2641,6 +2798,114 @@ section h1 {
 .child6 {
   display: inline-block;
   vertical-align: 100px;
+  background-color: red;
+}`;
+        }
+    });
+}
+,
+"b89b35c3":function  (module, exports, farmRequire, farmDynamicRequire) {
+    (function(_) {
+        for(var r in _){
+            _[r].__farm_resource_pot__ = 'absolute.js';
+            (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.register(r, _[r]);
+        }
+    })({
+        "1b6d9e9a": function(e, t, n, i) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return s;
+                }
+            });
+            let s = `<section>
+  <h1>Setting absolute positioning changes the element's display value to the corresponding block type.</h1>
+  <hr />
+
+  <div class="parent">
+    <span class="child">child</span>
+  </div>
+</section>
+`;
+        },
+        "b3908126": function(e, t, l, s) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return n;
+                }
+            });
+            let a = l("@swc/helpers/_/_interop_require_default"), c = a._(l("d82e6e42")), d = a._(l("1b6d9e9a")), u = a._(l("d9edd1bb")), r = a._(l("bc14077e")), n = {
+                title: "absolute",
+                desc: "css absolute characterization",
+                category: "css",
+                tags: [
+                    "standard"
+                ],
+                html: d.default,
+                css: u.default + c.default,
+                code: [
+                    {
+                        label: "html",
+                        filetype: "html",
+                        content: d.default
+                    },
+                    {
+                        label: "scss",
+                        filetype: "scss",
+                        content: r.default
+                    }
+                ]
+            };
+        },
+        "bc14077e": function(e, t, i, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return r;
+                }
+            });
+            let r = `.parent {
+  height: 100px;
+}
+
+.child {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  height: 50px;
+  background-color: red;
+}
+`;
+        },
+        "d9edd1bb": function(e, t, i, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return r;
+                }
+            });
+            let r = `.parent {
+  height: 100px;
+}
+
+.child {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  height: 50px;
   background-color: red;
 }`;
         }
@@ -3323,4 +3588,4 @@ section h1 {
     _export_star._(farmRequire("2ea370be"), exports);
 }
 ,});
-//# sourceMappingURL=index_02dc.d79f21d6.js.map
+//# sourceMappingURL=index_33b8.141b6522.js.map
