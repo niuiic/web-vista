@@ -1,4 +1,4 @@
-(function(_){for(var r in _){_[r].__farm_resource_pot__='index_c200.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"016f013b":function  (module, exports, farmRequire, farmDynamicRequire) {
+(function(_){for(var r in _){_[r].__farm_resource_pot__='index_02dc.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"016f013b":function  (module, exports, farmRequire, farmDynamicRequire) {
     (function(_) {
         for(var r in _){
             _[r].__farm_resource_pot__ = 'boxModel.js';
@@ -776,7 +776,7 @@ Padding, margin and border of the inline element would not push away surrounding
     farmRequire("b96493c0");
     farmRequire("0980581d");
     farmRequire("63d7ee65");
-    farmRequire("abde628b");
+    farmRequire("b1e4d71f");
     farmRequire("8e4d7570");
     (function(_) {
         for(var r in _){
@@ -842,7 +842,7 @@ section h1 {
         'formattingContext.135e603f.js',
         'lineHeight.06324214.js',
         'minContent.6d845daf.js',
-        'verticalAlign.1c485733.js',
+        'verticalAlign.692874ae.js',
         'wavyUnderline.13f8857c.js'
     ]);
     (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.setDynamicModuleResourcesMap({});
@@ -2411,7 +2411,30 @@ section h1 {
     };
 }
 ,
-"abde628b":function  (module, exports, farmRequire, farmDynamicRequire) {
+"ac0a0cbe":function  (module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    const _export_star = farmRequire("@swc/helpers/_/_export_star");
+    _export_star._(farmRequire("7955362b"), exports);
+}
+,
+"aedc679a":function  (module, exports, farmRequire, farmDynamicRequire) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    Object.defineProperty(exports, "default", {
+        enumerable: true,
+        get: function() {
+            return _default;
+        }
+    });
+    const _default = "/JetBrainsMono-Regular.a9cb1cd8-9bdcf2.woff2";
+}
+,
+"b1e4d71f":function  (module, exports, farmRequire, farmDynamicRequire) {
     (function(_) {
         for(var r in _){
             _[r].__farm_resource_pot__ = 'verticalAlign.js';
@@ -2467,6 +2490,22 @@ section h1 {
   font-size: 40px;
   line-height: 2;
 }
+
+.parent3 {
+  background-color: green;
+  line-height: 100px;
+}
+
+.child5 {
+  display: inline-block;
+  background-color: yellow;
+}
+
+.child6 {
+  display: inline-block;
+  vertical-align: 100px;
+  background-color: red;
+}
 `;
         },
         "8a844209": function(e, t, l, a) {
@@ -2502,11 +2541,11 @@ section h1 {
                 ]
             };
         },
-        "d2b1118f": function(e, a, n, i) {
+        "d2b1118f": function(a, e, i, n) {
             "use strict";
-            Object.defineProperty(a, "__esModule", {
+            Object.defineProperty(e, "__esModule", {
                 value: !0
-            }), Object.defineProperty(a, "default", {
+            }), Object.defineProperty(e, "default", {
                 enumerable: !0,
                 get: function() {
                     return s;
@@ -2524,6 +2563,17 @@ section h1 {
   <div class="parent2">
     <span class="child3">vertical-align < 0</span>
     <span class="child4">vertical-align = 0</span>
+  </div>
+</section>
+
+<section>
+  <h1>'vertical-align' does not allow line boxes to overlap.</h1>
+  <hr />
+
+  <div class="parent3">
+    <span class="child5">vertical-align > 0</span>
+    <br />
+    <span class="child6">vertical-align = 0</span>
   </div>
 </section>
 `;
@@ -2576,32 +2626,25 @@ section h1 {
   background-color: yellow;
   font-size: 40px;
   line-height: 2;
+}
+
+.parent3 {
+  background-color: green;
+  line-height: 100px;
+}
+
+.child5 {
+  display: inline-block;
+  background-color: yellow;
+}
+
+.child6 {
+  display: inline-block;
+  vertical-align: 100px;
+  background-color: red;
 }`;
         }
     });
-}
-,
-"ac0a0cbe":function  (module, exports, farmRequire, farmDynamicRequire) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    const _export_star = farmRequire("@swc/helpers/_/_export_star");
-    _export_star._(farmRequire("7955362b"), exports);
-}
-,
-"aedc679a":function  (module, exports, farmRequire, farmDynamicRequire) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    Object.defineProperty(exports, "default", {
-        enumerable: true,
-        get: function() {
-            return _default;
-        }
-    });
-    const _default = "/JetBrainsMono-Regular.a9cb1cd8-9bdcf2.woff2";
 }
 ,
 "b96493c0":function  (module, exports, farmRequire, farmDynamicRequire) {
@@ -3280,4 +3323,4 @@ section h1 {
     _export_star._(farmRequire("2ea370be"), exports);
 }
 ,});
-//# sourceMappingURL=index_c200.c41327d3.js.map
+//# sourceMappingURL=index_02dc.d79f21d6.js.map
