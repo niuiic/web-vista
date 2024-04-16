@@ -9,3 +9,17 @@
   height: 50px;
   background-color: red;
 }
+
+.parent2 {
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.child2 {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-color: blue;
+}
