@@ -1,4 +1,4 @@
-(function(_){for(var r in _){_[r].__farm_resource_pot__='index_2228.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"016f013b":function  (module, exports, farmRequire, farmDynamicRequire) {
+(function(_){for(var r in _){_[r].__farm_resource_pot__='index_b062.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"016f013b":function  (module, exports, farmRequire, farmDynamicRequire) {
     (function(_) {
         for(var r in _){
             _[r].__farm_resource_pot__ = 'boxModel.js';
@@ -319,6 +319,7 @@ Padding, margin and border of the inline element would not push away surrounding
     farmRequire("cf963046");
     farmRequire("016f013b");
     farmRequire("b48914d1");
+    farmRequire("4aa01c51");
     farmRequire("b96493c0");
     farmRequire("63d7ee65");
     farmRequire("8e4d7570");
@@ -328,23 +329,24 @@ Padding, margin and border of the inline element would not push away surrounding
             (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.register(r, _[r]);
         }
     })({
-        "953dfae2": function(e, t, f, u) {
+        "953dfae2": function(e, t, a, f) {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), Object.defineProperty(t, "default", {
                 enumerable: !0,
                 get: function() {
-                    return i;
+                    return b;
                 }
             });
-            let a = f("@swc/helpers/_/_interop_require_default"), d = a._(f("d9ee3aa5")), l = a._(f("2e3d6988")), r = a._(f("f3e012b0")), _ = a._(f("4aa6b49a")), n = a._(f("5f78ff55")), c = a._(f("3650c57d")), i = [
+            let u = a("@swc/helpers/_/_interop_require_default"), d = u._(a("d9ee3aa5")), l = u._(a("2e3d6988")), _ = u._(a("f3e012b0")), r = u._(a("1bee128a")), n = u._(a("4aa6b49a")), c = u._(a("5f78ff55")), i = u._(a("3650c57d")), b = [
                 d.default,
                 l.default,
-                r.default,
                 _.default,
+                r.default,
                 n.default,
-                c.default
+                c.default,
+                i.default
             ];
         },
         "d82e6e42": function(e, t, i, o) {
@@ -379,6 +381,7 @@ section h1 {
         'anonymousBlockBox.4b7cb13e.js',
         'boxModel.35d8e581.js',
         'boxSize.e26d4008.js',
+        'counter.74b3988d.js',
         'formattingContext.135e603f.js',
         'minContent.6d845daf.js',
         'wavyUnderline.13f8857c.js'
@@ -601,6 +604,217 @@ section h1 {
         }
     });
     const _default = "/JetBrainsMono-BoldItalic.3a013466-65790d.woff2";
+}
+,
+"4aa01c51":function  (module, exports, farmRequire, farmDynamicRequire) {
+    (function(_) {
+        for(var r in _){
+            _[r].__farm_resource_pot__ = 'counter.js';
+            (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.register(r, _[r]);
+        }
+    })({
+        "1bee128a": function(e, t, l, c) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return u;
+                }
+            });
+            let s = l("@swc/helpers/_/_interop_require_default"), a = s._(l("d82e6e42")), d = s._(l("de6ffd56")), r = s._(l("6197a48d")), n = s._(l("b58e7079")), u = {
+                title: "counter",
+                desc: "css counter characterization",
+                category: "css",
+                tags: [
+                    "standard"
+                ],
+                html: d.default,
+                css: r.default + a.default,
+                code: [
+                    {
+                        label: "html",
+                        filetype: "html",
+                        content: d.default
+                    },
+                    {
+                        label: "scss",
+                        filetype: "scss",
+                        content: n.default
+                    }
+                ]
+            };
+        },
+        "6197a48d": function(e, t, n, r) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return c;
+                }
+            });
+            let c = `.parent {
+  counter-reset: counter1 0;
+}
+
+.child {
+  counter-increment: counter1 1;
+}
+
+.child::before {
+  content: counter(counter1, upper-roman);
+}
+
+.parent2 {
+  counter-reset: counter2 0 counter3 0;
+}
+
+.child1 {
+  counter-increment: counter2 1;
+  counter-reset: counter3 0;
+}
+
+.child2 {
+  counter-increment: counter3 1;
+}
+
+.child1::before {
+  content: counter(counter2);
+}
+
+.child2::before {
+  content: counter(counter3);
+}
+
+.parent3 {
+  counter-reset: counter4 0;
+}
+
+.child3 {
+  counter-increment: counter4 1;
+}
+
+.child3::before {
+  content: counters(counter4, "-", decimal);
+}`;
+        },
+        "b58e7079": function(e, t, n, r) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return c;
+                }
+            });
+            let c = `.parent {
+  counter-reset: counter1 0;
+}
+
+.child {
+  counter-increment: counter1 1;
+}
+
+.child::before {
+  content: counter(counter1, upper-roman);
+}
+
+.parent2 {
+  counter-reset: counter2 0 counter3 0;
+}
+
+.child1 {
+  counter-increment: counter2 1;
+  counter-reset: counter3 0;
+}
+
+.child2 {
+  counter-increment: counter3 1;
+}
+
+.child1::before {
+  content: counter(counter2);
+}
+
+.child2::before {
+  content: counter(counter3);
+}
+
+.parent3 {
+  counter-reset: counter4 0;
+}
+
+.child3 {
+  counter-increment: counter4 1;
+}
+
+.child3::before {
+  content: counters(counter4, '-', decimal);
+}
+`;
+        },
+        "de6ffd56": function(l, i, c, s) {
+            "use strict";
+            Object.defineProperty(i, "__esModule", {
+                value: !0
+            }), Object.defineProperty(i, "default", {
+                enumerable: !0,
+                get: function() {
+                    return h;
+                }
+            });
+            let h = `<section>
+  <h1>Basic usage</h1>
+  <hr />
+
+  <ul class="parent">
+    <li class="child">child</li>
+    <li>
+      <span class="child">child</span>
+    </li>
+    <li class="child">child</li>
+    <li class="child">child</li>
+  </ul>
+</section>
+
+<section>
+  <h1>Multiple counters</h1>
+  <hr />
+
+  <ul class="parent2">
+    <li class="child1">child1</li>
+    <li class="child2">child2</li>
+    <li class="child2">child2</li>
+    <li class="child2">child2</li>
+    <li class="child1">child1</li>
+    <li class="parent2">parent2</li>
+    <li class="child2">child2</li>
+  </ul>
+</section>
+
+<section>
+  <h1>Nested counters</h1>
+  <hr />
+
+  <ul class="parent3">
+    <li class="child3">child3</li>
+    <li class="child3">child3</li>
+    <li class="child3">
+      <ul class="parent3">
+        <li class="child3">child3</li>
+        <li class="child3">child3</li>
+      </ul>
+    </li>
+    <li class="child3">child3</li>
+  </ul>
+</section>
+`;
+        }
+    });
 }
 ,
 "5384d819":function  (module, exports, farmRequire, farmDynamicRequire) {
@@ -2697,4 +2911,4 @@ section h1 {
     _export_star._(farmRequire("2ea370be"), exports);
 }
 ,});
-//# sourceMappingURL=index_2228.9d6030fb.js.map
+//# sourceMappingURL=index_b062.eacbfd6f.js.map
