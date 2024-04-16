@@ -1,4 +1,4 @@
-(function(_){for(var r in _){_[r].__farm_resource_pot__='index_ebf1.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"016f013b":function  (module, exports, farmRequire, farmDynamicRequire) {
+(function(_){for(var r in _){_[r].__farm_resource_pot__='index_d121.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"016f013b":function  (module, exports, farmRequire, farmDynamicRequire) {
     (function(_) {
         for(var r in _){
             _[r].__farm_resource_pot__ = 'boxModel.js';
@@ -318,7 +318,9 @@ Padding, margin and border of the inline element would not push away surrounding
     farmRequire("5384d819");
     farmRequire("cf963046");
     farmRequire("016f013b");
+    farmRequire("d1a3929f");
     farmRequire("b96493c0");
+    farmRequire("63d7ee65");
     farmRequire("8e4d7570");
     (function(_) {
         for(var r in _){
@@ -326,21 +328,23 @@ Padding, margin and border of the inline element would not push away surrounding
             (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.register(r, _[r]);
         }
     })({
-        "953dfae2": function(e, t, u, a) {
+        "953dfae2": function(e, t, f, u) {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), Object.defineProperty(t, "default", {
                 enumerable: !0,
                 get: function() {
-                    return n;
+                    return i;
                 }
             });
-            let d = u("@swc/helpers/_/_interop_require_default"), r = d._(u("d9ee3aa5")), l = d._(u("2e3d6988")), f = d._(u("4aa6b49a")), _ = d._(u("3650c57d")), n = [
-                r.default,
+            let a = f("@swc/helpers/_/_interop_require_default"), d = a._(f("d9ee3aa5")), l = a._(f("2e3d6988")), r = a._(f("f3e012b0")), _ = a._(f("4aa6b49a")), n = a._(f("5f78ff55")), c = a._(f("3650c57d")), i = [
+                d.default,
                 l.default,
-                f.default,
-                _.default
+                r.default,
+                _.default,
+                n.default,
+                c.default
             ];
         },
         "d82e6e42": function(e, t, i, o) {
@@ -374,7 +378,9 @@ section h1 {
     (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.setInitialLoadedResources([
         'anonymousBlockBox.4b7cb13e.js',
         'boxModel.35d8e581.js',
+        'boxSize.703c980d.js',
         'formattingContext.135e603f.js',
+        'minContent.6d845daf.js',
         'wavyUnderline.13f8857c.js'
     ]);
     (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.setDynamicModuleResourcesMap({});
@@ -1135,6 +1141,132 @@ section h1 {
         "nav": `nav-4122cc82`,
         "nav-collapsed": `nav-collapsed-4122cc82`
     };
+}
+,
+"63d7ee65":function  (module, exports, farmRequire, farmDynamicRequire) {
+    (function(_) {
+        for(var r in _){
+            _[r].__farm_resource_pot__ = 'minContent.js';
+            (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.register(r, _[r]);
+        }
+    })({
+        "533e8601": function(e, t, n, i) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return d;
+                }
+            });
+            let d = `.box {
+  width: min-content;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.defined-width {
+  width: max-content;
+}`;
+        },
+        "5f78ff55": function(e, t, l, c) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return f;
+                }
+            });
+            let n = l("@swc/helpers/_/_interop_require_default"), s = n._(l("d82e6e42")), a = n._(l("fe19a1e4")), d = n._(l("533e8601")), r = n._(l("e8ed8fc5")), f = {
+                title: "min-content",
+                desc: "css width min-content characterization",
+                category: "css",
+                tags: [
+                    "standard"
+                ],
+                html: a.default,
+                css: d.default + s.default,
+                code: [
+                    {
+                        label: "html",
+                        filetype: "html",
+                        content: a.default
+                    },
+                    {
+                        label: "scss",
+                        filetype: "scss",
+                        content: r.default
+                    }
+                ]
+            };
+        },
+        "e8ed8fc5": function(e, t, n, i) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return d;
+                }
+            });
+            let d = `.box {
+  width: min-content;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.defined-width {
+  width: max-content;
+}
+`;
+        },
+        "fe19a1e4": function(e, n, s, i) {
+            "use strict";
+            Object.defineProperty(n, "__esModule", {
+                value: !0
+            }), Object.defineProperty(n, "default", {
+                enumerable: !0,
+                get: function() {
+                    return l;
+                }
+            });
+            let l = `<section>
+  <h1>The English language is divided into words, and the cjk text is a single character.</h1>
+  <hr />
+
+  <div class="box">
+    <span>hello world</span>
+  </div>
+
+  <div class="box">
+    <span>中文</span>
+  </div>
+</section>
+
+<section>
+  <h1>Inline-block elements with defined widths are not split. Also works for inline-flex, inline-grid, etc.</h1>
+  <hr />
+
+  <div class="box">
+    <span class="inline-block">中文</span>
+    <span>中文</span>
+  </div>
+  <div class="box">
+    <span class="inline-block defined-width">中文</span>
+    <span>中文</span>
+  </div>
+</section>
+`;
+        }
+    });
 }
 ,
 "67c07953":function  (module, exports, farmRequire, farmDynamicRequire) {
@@ -2086,6 +2218,265 @@ section h1 {
     });
 }
 ,
+"d1a3929f":function  (module, exports, farmRequire, farmDynamicRequire) {
+    (function(_) {
+        for(var r in _){
+            _[r].__farm_resource_pot__ = 'boxSize.js';
+            (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.register(r, _[r]);
+        }
+    })({
+        "0878149f": function(o, e, d, i) {
+            "use strict";
+            Object.defineProperty(e, "__esModule", {
+                value: !0
+            }), Object.defineProperty(e, "default", {
+                enumerable: !0,
+                get: function() {
+                    return t;
+                }
+            });
+            let t = `.parent {
+  box-sizing: padding-box;
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  background-color: red;
+}
+
+.child {
+  width: 100%;
+  height: 100%;
+  background-color: yellow;
+}
+
+.parent2 {
+  width: auto;
+  height: 100px;
+  padding: 20px;
+  background-color: red;
+}
+
+.child2 {
+  width: 100%;
+  height: 100%;
+  background-color: yellow;
+}
+
+.parent3 {
+  height: auto;
+  padding: 20px;
+  background-color: red;
+}
+
+.child3 {
+  width: 100%;
+  height: 100%;
+  background-color: yellow;
+}
+
+.parent4 {
+  height: 0;
+  min-height: 100px;
+  padding: 20px;
+  background-color: red;
+}
+
+.child4 {
+  width: 100%;
+  height: 100%;
+  background-color: yellow;
+}
+
+.parent5 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  background-color: red;
+}
+
+.child5 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: yellow;
+}`;
+        },
+        "992f9bd0": function(e, t, i, o) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return s;
+                }
+            });
+            let s = `<section>
+  <h1>
+    'width: 100%;' normally represents the proportion of the content area of the child box to the content area of the
+    container block. This would not be affected by box-sizing.
+  </h1>
+  <hr />
+
+  <div class="parent">
+    <div class="child"></div>
+  </div>
+</section>
+
+<section>
+  <h1>'width: 100%;' works even the value of width property of the container block is auto.</h1>
+  <hr />
+
+  <div class="parent2">
+    <div class="child2"></div>
+  </div>
+</section>
+
+<section>
+  <h1>'height: 100%;' does not work if the value of height property of the container block is auto.</h1>
+  <hr />
+
+  <div class="parent3">
+    <div class="child3"></div>
+    <span>block3</span>
+  </div>
+</section>
+
+<section>
+  <h1>'height: 100%;' is based on actual values, not set values.</h1>
+  <hr />
+
+  <div class="parent4">
+    <div class="child4"></div>
+    <span>block4</span>
+  </div>
+</section>
+
+<section>
+  <h1>In absolute positioning, the reference is the padding box.</h1>
+  <hr />
+
+  <div class="parent5">
+    <div class="child5"></div>
+  </div>
+</section>
+`;
+        },
+        "e78c92ad": function(o, e, d, i) {
+            "use strict";
+            Object.defineProperty(e, "__esModule", {
+                value: !0
+            }), Object.defineProperty(e, "default", {
+                enumerable: !0,
+                get: function() {
+                    return t;
+                }
+            });
+            let t = `.parent {
+  box-sizing: padding-box;
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  background-color: red;
+}
+
+.child {
+  width: 100%;
+  height: 100%;
+  background-color: yellow;
+}
+
+.parent2 {
+  width: auto;
+  height: 100px;
+  padding: 20px;
+  background-color: red;
+}
+
+.child2 {
+  width: 100%;
+  height: 100%;
+  background-color: yellow;
+}
+
+.parent3 {
+  height: auto;
+  padding: 20px;
+  background-color: red;
+}
+
+.child3 {
+  width: 100%;
+  height: 100%;
+  background-color: yellow;
+}
+
+.parent4 {
+  height: 0;
+  min-height: 100px;
+  padding: 20px;
+  background-color: red;
+}
+
+.child4 {
+  width: 100%;
+  height: 100%;
+  background-color: yellow;
+}
+
+.parent5 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  background-color: red;
+}
+
+.child5 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: yellow;
+}
+`;
+        },
+        "f3e012b0": function(e, t, l, s) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return n;
+                }
+            });
+            let a = l("@swc/helpers/_/_interop_require_default"), c = a._(l("d82e6e42")), d = a._(l("992f9bd0")), r = a._(l("0878149f")), f = a._(l("e78c92ad")), n = {
+                title: "box size",
+                desc: "css box size characterization",
+                category: "css",
+                tags: [
+                    "standard"
+                ],
+                html: d.default,
+                css: r.default + c.default,
+                code: [
+                    {
+                        label: "html",
+                        filetype: "html",
+                        content: d.default
+                    },
+                    {
+                        label: "scss",
+                        filetype: "scss",
+                        content: f.default
+                    }
+                ]
+            };
+        }
+    });
+}
+,
 "e8703c4f":function  (module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
@@ -2305,4 +2696,4 @@ section h1 {
     _export_star._(farmRequire("2ea370be"), exports);
 }
 ,});
-//# sourceMappingURL=index_ebf1.9abcea42.js.map
+//# sourceMappingURL=index_d121.2f1731a4.js.map
