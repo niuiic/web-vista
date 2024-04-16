@@ -37,3 +37,19 @@
   font-size: 40px;
   line-height: 2;
 }
+
+.parent3 {
+  background-color: green;
+  line-height: 100px;
+}
+
+.child5 {
+  display: inline-block;
+  background-color: yellow;
+}
+
+.child6 {
+  display: inline-block;
+  vertical-align: 100px;
+  background-color: red;
+}
