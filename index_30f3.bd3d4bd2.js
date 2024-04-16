@@ -1,4 +1,4 @@
-(function(_){for(var r in _){_[r].__farm_resource_pot__='index_33b8.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"016f013b":function  (module, exports, farmRequire, farmDynamicRequire) {
+(function(_){for(var r in _){_[r].__farm_resource_pot__='index_30f3.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"016f013b":function  (module, exports, farmRequire, farmDynamicRequire) {
     (function(_) {
         for(var r in _){
             _[r].__farm_resource_pot__ = 'boxModel.js';
@@ -769,7 +769,7 @@ Padding, margin and border of the inline element would not push away surrounding
         }
     });
     farmRequire("5384d819");
-    farmRequire("b89b35c3");
+    farmRequire("33849d82");
     farmRequire("cf963046");
     farmRequire("016f013b");
     farmRequire("23110aaf");
@@ -780,6 +780,7 @@ Padding, margin and border of the inline element would not push away surrounding
     farmRequire("63d7ee65");
     farmRequire("b1e4d71f");
     farmRequire("8e4d7570");
+    farmRequire("665b419a");
     (function(_) {
         for(var r in _){
             _[r].__farm_resource_pot__ = 'index_03e9.js';
@@ -793,10 +794,10 @@ Padding, margin and border of the inline element would not push away surrounding
             }), Object.defineProperty(t, "default", {
                 enumerable: !0,
                 get: function() {
-                    return j;
+                    return y;
                 }
             });
-            let u = a("@swc/helpers/_/_interop_require_default"), d = u._(a("b3908126")), l = u._(a("d9ee3aa5")), _ = u._(a("2e3d6988")), r = u._(a("f3e012b0")), b = u._(a("1bee128a")), c = u._(a("8c0b1759")), n = u._(a("4aa6b49a")), i = u._(a("cb8aa143")), o = u._(a("5f78ff55")), s = u._(a("8a844209")), p = u._(a("3650c57d")), j = [
+            let u = a("@swc/helpers/_/_interop_require_default"), d = u._(a("b3908126")), l = u._(a("d9ee3aa5")), _ = u._(a("2e3d6988")), r = u._(a("f3e012b0")), b = u._(a("1bee128a")), c = u._(a("8c0b1759")), n = u._(a("4aa6b49a")), i = u._(a("cb8aa143")), o = u._(a("5f78ff55")), s = u._(a("8a844209")), p = u._(a("3650c57d")), j = u._(a("f83ec78b")), y = [
                 d.default,
                 l.default,
                 _.default,
@@ -807,7 +808,8 @@ Padding, margin and border of the inline element would not push away surrounding
                 i.default,
                 o.default,
                 s.default,
-                p.default
+                p.default,
+                j.default
             ];
         },
         "d82e6e42": function(e, t, i, o) {
@@ -839,7 +841,7 @@ section h1 {
         }
     });
     (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.setInitialLoadedResources([
-        'absolute.424fad09.js',
+        'absolute.b0b0930b.js',
         'anonymousBlockBox.4b7cb13e.js',
         'boxModel.35d8e581.js',
         'boxSize.64b771e8.js',
@@ -849,7 +851,8 @@ section h1 {
         'lineHeight.06324214.js',
         'minContent.6d845daf.js',
         'verticalAlign.692874ae.js',
-        'wavyUnderline.13f8857c.js'
+        'wavyUnderline.13f8857c.js',
+        'zIndex.97f281d3.js'
     ]);
     (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.setDynamicModuleResourcesMap({});
     var farmModuleSystem = (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__;
@@ -975,6 +978,155 @@ section h1 {
             className: (0, _class.classes)(_framemodulescss.default.frame, props.className)
         });
     };
+}
+,
+"33849d82":function  (module, exports, farmRequire, farmDynamicRequire) {
+    (function(_) {
+        for(var r in _){
+            _[r].__farm_resource_pot__ = 'absolute.js';
+            (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.register(r, _[r]);
+        }
+    })({
+        "1b6d9e9a": function(e, t, n, o) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return i;
+                }
+            });
+            let i = `<section>
+  <h1>Setting absolute positioning changes the element's display value to the corresponding block type.</h1>
+  <hr />
+
+  <div class="parent">
+    <span class="child">child</span>
+  </div>
+</section>
+
+<section>
+  <h1>
+    If the element on which overflow is set is not a containment block of an absolutely positioned element and does not
+    contain a containment block of the absolutely positioned element within it, overflow does not take effect on that
+    absolutely positioned element.
+  </h1>
+  <hr />
+
+  <div class="parent2">
+    <span class="child2">child2</span>
+  </div>
+</section>
+`;
+        },
+        "b3908126": function(e, t, l, s) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return n;
+                }
+            });
+            let a = l("@swc/helpers/_/_interop_require_default"), c = a._(l("d82e6e42")), d = a._(l("1b6d9e9a")), u = a._(l("d9edd1bb")), r = a._(l("bc14077e")), n = {
+                title: "absolute",
+                desc: "css absolute characterization",
+                category: "css",
+                tags: [
+                    "standard"
+                ],
+                html: d.default,
+                css: u.default + c.default,
+                code: [
+                    {
+                        label: "html",
+                        filetype: "html",
+                        content: d.default
+                    },
+                    {
+                        label: "scss",
+                        filetype: "scss",
+                        content: r.default
+                    }
+                ]
+            };
+        },
+        "bc14077e": function(e, t, i, o) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return n;
+                }
+            });
+            let n = `.parent {
+  height: 100px;
+}
+
+.child {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  height: 50px;
+  background-color: red;
+}
+
+.parent2 {
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.child2 {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-color: blue;
+}
+`;
+        },
+        "d9edd1bb": function(e, t, i, o) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return n;
+                }
+            });
+            let n = `.parent {
+  height: 100px;
+}
+
+.child {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  height: 50px;
+  background-color: red;
+}
+
+.parent2 {
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.child2 {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-color: blue;
+}`;
+        }
+    });
 }
 ,
 "3a2b0339":function  (module, exports, farmRequire, farmDynamicRequire) {
@@ -1948,6 +2100,134 @@ section h1 {
     });
 }
 ,
+"665b419a":function  (module, exports, farmRequire, farmDynamicRequire) {
+    (function(_) {
+        for(var r in _){
+            _[r].__farm_resource_pot__ = 'zIndex.js';
+            (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.register(r, _[r]);
+        }
+    })({
+        "7a9ba8dd": function(e, t, i, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return o;
+                }
+            });
+            let o = `.parent {
+  height: 100px;
+}
+
+.child1 {
+  position: absolute;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.child2 {
+  position: relative;
+  z-index: 2;
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}`;
+        },
+        "d77c119d": function(e, t, i, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return c;
+                }
+            });
+            let c = `<section>
+  <h1>
+    The z-index of an element is only valid in the current cascading context. If an element itself generates a new
+    cascading context, its z-index is for the cascading context outside of it
+  </h1>
+  <hr />
+
+  <div class="parent">
+    <div class="child1"></div>
+    <div class="child2"></div>
+  </div>
+</section>
+`;
+        },
+        "ddc10d6f": function(e, t, i, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return o;
+                }
+            });
+            let o = `.parent {
+  height: 100px;
+}
+
+.child1 {
+  position: absolute;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.child2 {
+  position: relative;
+  z-index: 2;
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+`;
+        },
+        "f83ec78b": function(e, t, d, l) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return u;
+                }
+            });
+            let a = d("@swc/helpers/_/_interop_require_default"), c = a._(d("d82e6e42")), s = a._(d("d77c119d")), n = a._(d("7a9ba8dd")), r = a._(d("ddc10d6f")), u = {
+                title: "z-index",
+                desc: "css z-index characterization",
+                category: "css",
+                tags: [
+                    "standard"
+                ],
+                html: s.default,
+                css: n.default + c.default,
+                code: [
+                    {
+                        label: "html",
+                        filetype: "html",
+                        content: s.default
+                    },
+                    {
+                        label: "scss",
+                        filetype: "scss",
+                        content: r.default
+                    }
+                ]
+            };
+        }
+    });
+}
+,
 "67c07953":function  (module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
@@ -2804,114 +3084,6 @@ li {
     });
 }
 ,
-"b89b35c3":function  (module, exports, farmRequire, farmDynamicRequire) {
-    (function(_) {
-        for(var r in _){
-            _[r].__farm_resource_pot__ = 'absolute.js';
-            (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.register(r, _[r]);
-        }
-    })({
-        "1b6d9e9a": function(e, t, n, i) {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), Object.defineProperty(t, "default", {
-                enumerable: !0,
-                get: function() {
-                    return s;
-                }
-            });
-            let s = `<section>
-  <h1>Setting absolute positioning changes the element's display value to the corresponding block type.</h1>
-  <hr />
-
-  <div class="parent">
-    <span class="child">child</span>
-  </div>
-</section>
-`;
-        },
-        "b3908126": function(e, t, l, s) {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), Object.defineProperty(t, "default", {
-                enumerable: !0,
-                get: function() {
-                    return n;
-                }
-            });
-            let a = l("@swc/helpers/_/_interop_require_default"), c = a._(l("d82e6e42")), d = a._(l("1b6d9e9a")), u = a._(l("d9edd1bb")), r = a._(l("bc14077e")), n = {
-                title: "absolute",
-                desc: "css absolute characterization",
-                category: "css",
-                tags: [
-                    "standard"
-                ],
-                html: d.default,
-                css: u.default + c.default,
-                code: [
-                    {
-                        label: "html",
-                        filetype: "html",
-                        content: d.default
-                    },
-                    {
-                        label: "scss",
-                        filetype: "scss",
-                        content: r.default
-                    }
-                ]
-            };
-        },
-        "bc14077e": function(e, t, i, n) {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), Object.defineProperty(t, "default", {
-                enumerable: !0,
-                get: function() {
-                    return r;
-                }
-            });
-            let r = `.parent {
-  height: 100px;
-}
-
-.child {
-  position: absolute;
-  display: inline-flex;
-  align-items: center;
-  height: 50px;
-  background-color: red;
-}
-`;
-        },
-        "d9edd1bb": function(e, t, i, n) {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), Object.defineProperty(t, "default", {
-                enumerable: !0,
-                get: function() {
-                    return r;
-                }
-            });
-            let r = `.parent {
-  height: 100px;
-}
-
-.child {
-  position: absolute;
-  display: inline-flex;
-  align-items: center;
-  height: 50px;
-  background-color: red;
-}`;
-        }
-    });
-}
-,
 "b96493c0":function  (module, exports, farmRequire, farmDynamicRequire) {
     (function(_) {
         for(var r in _){
@@ -3588,4 +3760,4 @@ li {
     _export_star._(farmRequire("2ea370be"), exports);
 }
 ,});
-//# sourceMappingURL=index_33b8.141b6522.js.map
+//# sourceMappingURL=index_30f3.bd3d4bd2.js.map
