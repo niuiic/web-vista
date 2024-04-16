@@ -1,0 +1,11 @@
+.parent {
+  height: 100px;
+}
+
+.child {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  height: 50px;
+  background-color: red;
+}
