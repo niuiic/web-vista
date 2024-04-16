@@ -1,4 +1,4 @@
-(function(_){for(var r in _){_[r].__farm_resource_pot__='index_c861.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"016f013b":function  (module, exports, farmRequire, farmDynamicRequire) {
+(function(_){for(var r in _){_[r].__farm_resource_pot__='index_c200.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"016f013b":function  (module, exports, farmRequire, farmDynamicRequire) {
     (function(_) {
         for(var r in _){
             _[r].__farm_resource_pot__ = 'boxModel.js';
@@ -164,6 +164,157 @@ Padding, margin and border of the inline element would not push away surrounding
     const _default = {
         "icon": `icon-63d13a8c`
     };
+}
+,
+"0980581d":function  (module, exports, farmRequire, farmDynamicRequire) {
+    (function(_) {
+        for(var r in _){
+            _[r].__farm_resource_pot__ = 'lineHeight.js';
+            (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.register(r, _[r]);
+        }
+    })({
+        "19fa51aa": function(e, t, i, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return l;
+                }
+            });
+            let l = `.parent {
+  background-color: red;
+  line-height: 20px;
+}
+
+.child {
+  font-size: 40px;
+  line-height: 1.5;
+}
+
+.child2 {
+  font-size: 60px;
+  line-height: 2;
+}
+
+.parent2 {
+  background-color: yellow;
+  line-height: 150px;
+}
+
+.parent3 {
+  background-color: red;
+  line-height: 100px;
+}
+
+.child3 {
+  font-size: 20px;
+  line-height: 1.5;
+}
+`;
+        },
+        "4ac3a9dc": function(e, t, i, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return l;
+                }
+            });
+            let l = `.parent {
+  background-color: red;
+  line-height: 20px;
+}
+
+.child {
+  font-size: 40px;
+  line-height: 1.5;
+}
+
+.child2 {
+  font-size: 60px;
+  line-height: 2;
+}
+
+.parent2 {
+  background-color: yellow;
+  line-height: 150px;
+}
+
+.parent3 {
+  background-color: red;
+  line-height: 100px;
+}
+
+.child3 {
+  font-size: 20px;
+  line-height: 1.5;
+}`;
+        },
+        "aa837ab3": function(e, i, n, s) {
+            "use strict";
+            Object.defineProperty(i, "__esModule", {
+                value: !0
+            }), Object.defineProperty(i, "default", {
+                enumerable: !0,
+                get: function() {
+                    return t;
+                }
+            });
+            let t = `<section>
+  <h1>The height of a line box is determined by the highest content within it, including the empty node.</h1>
+  <hr />
+
+  <div class="parent">
+    <span class="child">child</span>
+    <br />
+    <span class="child2">child2</span>
+  </div>
+
+  <div class="parent2">
+    <span class="child">child</span>
+    <span class="child2">child2</span>
+  </div>
+</section>
+`;
+        },
+        "cb8aa143": function(e, t, a, l) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return r;
+                }
+            });
+            let c = a("@swc/helpers/_/_interop_require_default"), s = c._(a("d82e6e42")), n = c._(a("aa837ab3")), d = c._(a("4ac3a9dc")), i = c._(a("19fa51aa")), r = {
+                title: "line-height",
+                desc: "css line-height characterization",
+                category: "css",
+                tags: [
+                    "standard"
+                ],
+                html: n.default,
+                css: d.default + s.default,
+                code: [
+                    {
+                        label: "html",
+                        filetype: "html",
+                        content: n.default
+                    },
+                    {
+                        label: "scss",
+                        filetype: "scss",
+                        content: i.default
+                    }
+                ]
+            };
+        }
+    });
 }
 ,
 "0c7ee846":function  (module, exports, farmRequire, farmDynamicRequire) {
@@ -623,7 +774,9 @@ Padding, margin and border of the inline element would not push away surrounding
     farmRequire("23110aaf");
     farmRequire("4aa01c51");
     farmRequire("b96493c0");
+    farmRequire("0980581d");
     farmRequire("63d7ee65");
+    farmRequire("abde628b");
     farmRequire("8e4d7570");
     (function(_) {
         for(var r in _){
@@ -638,17 +791,19 @@ Padding, margin and border of the inline element would not push away surrounding
             }), Object.defineProperty(t, "default", {
                 enumerable: !0,
                 get: function() {
-                    return b;
+                    return s;
                 }
             });
-            let u = a("@swc/helpers/_/_interop_require_default"), d = u._(a("d9ee3aa5")), l = u._(a("2e3d6988")), _ = u._(a("f3e012b0")), r = u._(a("1bee128a")), n = u._(a("4aa6b49a")), c = u._(a("5f78ff55")), i = u._(a("3650c57d")), b = [
+            let u = a("@swc/helpers/_/_interop_require_default"), d = u._(a("d9ee3aa5")), l = u._(a("2e3d6988")), _ = u._(a("f3e012b0")), r = u._(a("1bee128a")), n = u._(a("4aa6b49a")), c = u._(a("cb8aa143")), b = u._(a("5f78ff55")), i = u._(a("8a844209")), o = u._(a("3650c57d")), s = [
                 d.default,
                 l.default,
                 _.default,
                 r.default,
                 n.default,
                 c.default,
-                i.default
+                b.default,
+                i.default,
+                o.default
             ];
         },
         "d82e6e42": function(e, t, i, o) {
@@ -685,7 +840,9 @@ section h1 {
         'boxSize.64b771e8.js',
         'counter.74b3988d.js',
         'formattingContext.135e603f.js',
+        'lineHeight.06324214.js',
         'minContent.6d845daf.js',
+        'verticalAlign.1c485733.js',
         'wavyUnderline.13f8857c.js'
     ]);
     (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.setDynamicModuleResourcesMap({});
@@ -2254,6 +2411,176 @@ section h1 {
     };
 }
 ,
+"abde628b":function  (module, exports, farmRequire, farmDynamicRequire) {
+    (function(_) {
+        for(var r in _){
+            _[r].__farm_resource_pot__ = 'verticalAlign.js';
+            (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.register(r, _[r]);
+        }
+    })({
+        "5068ea6d": function(e, l, i, n) {
+            "use strict";
+            Object.defineProperty(l, "__esModule", {
+                value: !0
+            }), Object.defineProperty(l, "default", {
+                enumerable: !0,
+                get: function() {
+                    return o;
+                }
+            });
+            let o = `.parent {
+  background-color: green;
+  line-height: 100px;
+}
+
+.child1 {
+  display: inline-block;
+  vertical-align: 100%;
+  background-color: red;
+  font-size: 40px;
+  line-height: 2;
+}
+
+.child2 {
+  display: inline-block;
+  background-color: yellow;
+  font-size: 40px;
+  line-height: 2;
+}
+
+.parent2 {
+  background-color: purple;
+  line-height: 100px;
+}
+
+.child3 {
+  display: inline-block;
+  vertical-align: -100px;
+  background-color: red;
+  font-size: 40px;
+  line-height: 2;
+}
+
+.child4 {
+  display: inline-block;
+  background-color: yellow;
+  font-size: 40px;
+  line-height: 2;
+}
+`;
+        },
+        "8a844209": function(e, t, l, a) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return i;
+                }
+            });
+            let c = l("@swc/helpers/_/_interop_require_default"), s = c._(l("d82e6e42")), r = c._(l("d2b1118f")), d = c._(l("f71696c5")), n = c._(l("5068ea6d")), i = {
+                title: "vertical-align",
+                desc: "css vertical-align characterization",
+                category: "css",
+                tags: [
+                    "standard"
+                ],
+                html: r.default,
+                css: d.default + s.default,
+                code: [
+                    {
+                        label: "html",
+                        filetype: "html",
+                        content: r.default
+                    },
+                    {
+                        label: "scss",
+                        filetype: "scss",
+                        content: n.default
+                    }
+                ]
+            };
+        },
+        "d2b1118f": function(e, a, n, i) {
+            "use strict";
+            Object.defineProperty(a, "__esModule", {
+                value: !0
+            }), Object.defineProperty(a, "default", {
+                enumerable: !0,
+                get: function() {
+                    return s;
+                }
+            });
+            let s = `<section>
+  <h1>If there is not enough space available, extend the line-height and offset it again.</h1>
+  <hr />
+
+  <div class="parent">
+    <span class="child1">vertical-align > 0</span>
+    <span class="child2">vertical-align = 0</span>
+  </div>
+
+  <div class="parent2">
+    <span class="child3">vertical-align < 0</span>
+    <span class="child4">vertical-align = 0</span>
+  </div>
+</section>
+`;
+        },
+        "f71696c5": function(e, l, i, n) {
+            "use strict";
+            Object.defineProperty(l, "__esModule", {
+                value: !0
+            }), Object.defineProperty(l, "default", {
+                enumerable: !0,
+                get: function() {
+                    return o;
+                }
+            });
+            let o = `.parent {
+  background-color: green;
+  line-height: 100px;
+}
+
+.child1 {
+  display: inline-block;
+  vertical-align: 100%;
+  background-color: red;
+  font-size: 40px;
+  line-height: 2;
+}
+
+.child2 {
+  display: inline-block;
+  background-color: yellow;
+  font-size: 40px;
+  line-height: 2;
+}
+
+.parent2 {
+  background-color: purple;
+  line-height: 100px;
+}
+
+.child3 {
+  display: inline-block;
+  vertical-align: -100px;
+  background-color: red;
+  font-size: 40px;
+  line-height: 2;
+}
+
+.child4 {
+  display: inline-block;
+  background-color: yellow;
+  font-size: 40px;
+  line-height: 2;
+}`;
+        }
+    });
+}
+,
 "ac0a0cbe":function  (module, exports, farmRequire, farmDynamicRequire) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
@@ -2953,4 +3280,4 @@ section h1 {
     _export_star._(farmRequire("2ea370be"), exports);
 }
 ,});
-//# sourceMappingURL=index_c861.3d2ae254.js.map
+//# sourceMappingURL=index_c200.c41327d3.js.map
