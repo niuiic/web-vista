@@ -1,4 +1,4 @@
-(function(_){for(var r in _){_[r].__farm_resource_pot__='index_3347.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"016f013b":function  (module, exports, farmRequire, farmDynamicRequire) {
+(function(_){for(var r in _){_[r].__farm_resource_pot__='index_ccaa.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"016f013b":function  (module, exports, farmRequire, farmDynamicRequire) {
     (function(_) {
         for(var r in _){
             _[r].__farm_resource_pot__ = 'boxModel.js';
@@ -774,6 +774,7 @@ Padding, margin and border of the inline element would not push away surrounding
     farmRequire("016f013b");
     farmRequire("23110aaf");
     farmRequire("4aa01c51");
+    farmRequire("5a6a86fa");
     farmRequire("a1aa61fc");
     farmRequire("b96493c0");
     farmRequire("0980581d");
@@ -787,17 +788,17 @@ Padding, margin and border of the inline element would not push away surrounding
             (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.register(r, _[r]);
         }
     })({
-        "953dfae2": function(e, t, a, f) {
+        "953dfae2": function(e, a, t, f) {
             "use strict";
-            Object.defineProperty(t, "__esModule", {
+            Object.defineProperty(a, "__esModule", {
                 value: !0
-            }), Object.defineProperty(t, "default", {
+            }), Object.defineProperty(a, "default", {
                 enumerable: !0,
                 get: function() {
-                    return y;
+                    return O;
                 }
             });
-            let u = a("@swc/helpers/_/_interop_require_default"), d = u._(a("b3908126")), l = u._(a("d9ee3aa5")), _ = u._(a("2e3d6988")), r = u._(a("f3e012b0")), b = u._(a("1bee128a")), c = u._(a("8c0b1759")), n = u._(a("4aa6b49a")), i = u._(a("cb8aa143")), o = u._(a("5f78ff55")), s = u._(a("8a844209")), p = u._(a("3650c57d")), j = u._(a("f83ec78b")), y = [
+            let u = t("@swc/helpers/_/_interop_require_default"), d = u._(t("b3908126")), l = u._(t("d9ee3aa5")), _ = u._(t("2e3d6988")), r = u._(t("f3e012b0")), b = u._(t("1bee128a")), c = u._(t("03a0d524")), n = u._(t("8c0b1759")), i = u._(t("4aa6b49a")), o = u._(t("cb8aa143")), s = u._(t("5f78ff55")), p = u._(t("8a844209")), j = u._(t("3650c57d")), y = u._(t("f83ec78b")), O = [
                 d.default,
                 l.default,
                 _.default,
@@ -809,7 +810,8 @@ Padding, margin and border of the inline element would not push away surrounding
                 o.default,
                 s.default,
                 p.default,
-                j.default
+                j.default,
+                y.default
             ];
         },
         "d82e6e42": function(e, t, i, o) {
@@ -846,6 +848,7 @@ section h1 {
         'boxModel.35d8e581.js',
         'boxSize.64b771e8.js',
         'counter.74b3988d.js',
+        'flex.f782b454.js',
         'float.50e9ca9a.js',
         'formattingContext.135e603f.js',
         'lineHeight.06324214.js',
@@ -1512,6 +1515,115 @@ section h1 {
             ]
         });
     };
+}
+,
+"5a6a86fa":function  (module, exports, farmRequire, farmDynamicRequire) {
+    (function(_) {
+        for(var r in _){
+            _[r].__farm_resource_pot__ = 'flex.js';
+            (globalThis || window || global)['9a630259e374223af4de8e088557eb01'].__farm_module_system__.register(r, _[r]);
+        }
+    })({
+        "03a0d524": function(e, t, l, s) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return n;
+                }
+            });
+            let a = l("@swc/helpers/_/_interop_require_default"), c = a._(l("d82e6e42")), f = a._(l("592f58e5")), d = a._(l("faf30963")), r = a._(l("edc1dd7f")), n = {
+                title: "flex",
+                desc: "css flex characterization",
+                category: "css",
+                tags: [
+                    "standard"
+                ],
+                html: f.default,
+                css: d.default + c.default,
+                code: [
+                    {
+                        label: "html",
+                        filetype: "html",
+                        content: f.default
+                    },
+                    {
+                        label: "scss",
+                        filetype: "scss",
+                        content: r.default
+                    }
+                ]
+            };
+        },
+        "592f58e5": function(e, t, i, l) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), Object.defineProperty(t, "default", {
+                enumerable: !0,
+                get: function() {
+                    return n;
+                }
+            });
+            let n = `<section>
+  <h1>If the sum of the flex-grow of a flex item is less than 1, the flex container may not be filled.</h1>
+  <hr />
+
+  <div class="parent">
+    <div class="child"></div>
+    <div class="child"></div>
+  </div>
+</section>
+`;
+        },
+        "edc1dd7f": function(e, r, t, n) {
+            "use strict";
+            Object.defineProperty(r, "__esModule", {
+                value: !0
+            }), Object.defineProperty(r, "default", {
+                enumerable: !0,
+                get: function() {
+                    return l;
+                }
+            });
+            let l = `.parent {
+  display: flex;
+  width: 300px;
+  height: 50px;
+  background-color: red;
+}
+
+.child {
+  flex: 0.4 1 100px;
+  background-color: green;
+}
+`;
+        },
+        "faf30963": function(e, r, t, n) {
+            "use strict";
+            Object.defineProperty(r, "__esModule", {
+                value: !0
+            }), Object.defineProperty(r, "default", {
+                enumerable: !0,
+                get: function() {
+                    return l;
+                }
+            });
+            let l = `.parent {
+  display: flex;
+  width: 300px;
+  height: 50px;
+  background-color: red;
+}
+
+.child {
+  flex: 0.4 1 100px;
+  background-color: green;
+}`;
+        }
+    });
 }
 ,
 "5d89d03e":function  (module, exports, farmRequire, farmDynamicRequire) {
@@ -3760,4 +3872,4 @@ li {
     _export_star._(farmRequire("2ea370be"), exports);
 }
 ,});
-//# sourceMappingURL=index_3347.3d0fa062.js.map
+//# sourceMappingURL=index_ccaa.e4e1d4df.js.map
