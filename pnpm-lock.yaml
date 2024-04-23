@@ -83,7 +83,7 @@ importers:
 
   apps/website:
     dependencies:
-      css-components:
+      css:
         specifier: workspace:*
         version: link:../../packages/css
       highlight.js:
@@ -95,6 +95,9 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
+      webgl:
+        specifier: workspace:*
+        version: link:../../packages/webgl
     devDependencies:
       '@babel/core':
         specifier: ^7.24.4

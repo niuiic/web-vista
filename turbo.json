@@ -2,14 +2,24 @@
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
     "farm-plugins#build": {},
-    "postcss-plugins#build": {},
-    "website#build": {
-      "dependsOn": ["postcss-plugins#build", "css-components#build", "webgl#build"]
+    "website#dev": {
+      "dependsOn": ["css#build", "webgl#build"]
     },
-    "css-components#build": {
+    "website#build": {
+      "dependsOn": ["css#build", "webgl#build"]
+    },
+    "css#dev": {
       "dependsOn": ["farm-plugins#build"]
     },
-    "webgl#build": {},
+    "css#build": {
+      "dependsOn": ["farm-plugins#build"]
+    },
+    "webgl#dev": {
+      "dependsOn": ["farm-plugins#build"]
+    },
+    "webgl#build": {
+      "dependsOn": ["farm-plugins#build"]
+    },
     "dev": {
       "cache": false,
       "persistent": true
