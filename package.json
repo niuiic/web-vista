@@ -8,8 +8,8 @@
   },
   "packageManager": "pnpm",
   "devDependencies": {
-    "@farmfe/cli": "^1.0.0",
-    "@farmfe/core": "^1.0.20",
+    "@farmfe/cli": "^1.0.1",
+    "@farmfe/core": "^1.1.0",
     "@farmfe/js-plugin-dts": "^0.5.1",
     "@farmfe/plugin-sass": "^1.0.4",
     "@types/node": "^20.12.7",

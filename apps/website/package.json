@@ -11,7 +11,7 @@
     "@babel/core": "^7.24.4",
     "@babel/eslint-parser": "^7.24.1",
     "@babel/preset-react": "^7.24.1",
-    "@farmfe/js-plugin-postcss": "^1.5.3",
+    "@farmfe/js-plugin-postcss": "^1.6.0",
     "@farmfe/plugin-react": "^1.0.1",
     "@types/highlightjs": "^9.12.6",
     "@types/react": "^18.2.79",
