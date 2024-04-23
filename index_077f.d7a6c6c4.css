@@ -103,20 +103,17 @@ body {
   font-size: var(--s-font-size-normal);
   font-family: JetBrainsMono, "Microsoft YaHei", "PingFang SC";
 }
-html {
-  font-size: 75pt;
-}
 ::-webkit-scrollbar {
-  width: 0.1rem;
-  height: 0.1rem;
+  width: 0.625rem;
+  height: 0.625rem;
 }
 ::-webkit-scrollbar-track {
   background-color: var(--s-color-bg-dark-1);
 }
 ::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 0.05rem;
-  -moz-border-radius: 0.05rem;
-  border-radius: 0.05rem;
+  -webkit-border-radius: 0.3125rem;
+  -moz-border-radius: 0.3125rem;
+  border-radius: 0.3125rem;
   background-color: var(--s-color-text-light-2);
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -141,11 +138,11 @@ html {
   --s-color-text-dark: #000000;
 }
 html {
-  --s-font-size-large: 0.45rem;
-  --s-font-size-middle: 0.27rem;
-  --s-font-size-normal: 0.16rem;
-  --s-font-size-small: 0.14rem;
-  --s-font-size-tiny: 0.12rem;
+  --s-font-size-large: 2.8125rem;
+  --s-font-size-middle: 1.6875rem;
+  --s-font-size-normal: 1rem;
+  --s-font-size-small: 0.875rem;
+  --s-font-size-tiny: 0.75rem;
 }
 @font-face{
   font-weight: normal;
@@ -175,13 +172,13 @@ html {
 .layout-4122cc82 {
   display: grid;
   grid-template-areas: "nav main" "nav footer";
-  grid-template-rows: 1fr 1rem;
-  grid-template-columns: 1.8rem 1fr;
+  grid-template-rows: 1fr 6.25rem;
+  grid-template-columns: 11.25rem 1fr;
   overflow: hidden;
-  min-height: max(100vh, 8.4rem);
+  min-height: max(100vh, 52.5rem);
 }
 .layout--nav-collapsed-4122cc82 {
-  grid-template-columns: 0.16rem 1fr;
+  grid-template-columns: 1rem 1fr;
 }
 .main-4122cc82 {
   grid-area: main;
@@ -195,35 +192,35 @@ html {
 }
 @-webkit-keyframes dyn-bg-4122cc82 {
   100% {
-    -webkit-transform: translateY(-0.17rem);
-    transform: translateY(-0.17rem);
+    -webkit-transform: translateY(-1.0625rem);
+    transform: translateY(-1.0625rem);
   }
 }
 @-moz-keyframes dyn-bg-4122cc82 {
   100% {
-    -moz-transform: translateY(-0.17rem);
-    transform: translateY(-0.17rem);
+    -moz-transform: translateY(-1.0625rem);
+    transform: translateY(-1.0625rem);
   }
 }
 @-o-keyframes dyn-bg-4122cc82 {
   100% {
-    -o-transform: translateY(-0.17rem);
-    transform: translateY(-0.17rem);
+    -o-transform: translateY(-1.0625rem);
+    transform: translateY(-1.0625rem);
   }
 }
 @keyframes dyn-bg-4122cc82 {
   100% {
-    -webkit-transform: translateY(-0.17rem);
-    -moz-transform: translateY(-0.17rem);
-    -o-transform: translateY(-0.17rem);
-    transform: translateY(-0.17rem);
+    -webkit-transform: translateY(-1.0625rem);
+    -moz-transform: translateY(-1.0625rem);
+    -o-transform: translateY(-1.0625rem);
+    transform: translateY(-1.0625rem);
   }
 }
 .nav-collapsed-4122cc82 {
-  background-image: -webkit-repeating-linear-gradient(45deg, var(--s-color-bg-dark-1), var(--s-color-bg-dark-1) 0.02rem, var(--s-color-bg-dark-3) 0, var(--s-color-bg-dark-3) 0.04rem);
-  background-image: -moz-repeating-linear-gradient(45deg, var(--s-color-bg-dark-1), var(--s-color-bg-dark-1) 0.02rem, var(--s-color-bg-dark-3) 0, var(--s-color-bg-dark-3) 0.04rem);
-  background-image: -o-repeating-linear-gradient(45deg, var(--s-color-bg-dark-1), var(--s-color-bg-dark-1) 0.02rem, var(--s-color-bg-dark-3) 0, var(--s-color-bg-dark-3) 0.04rem);
-  background-image: repeating-linear-gradient(45deg, var(--s-color-bg-dark-1), var(--s-color-bg-dark-1) 0.02rem, var(--s-color-bg-dark-3) 0, var(--s-color-bg-dark-3) 0.04rem);
+  background-image: -webkit-repeating-linear-gradient(45deg, var(--s-color-bg-dark-1), var(--s-color-bg-dark-1) 0.125rem, var(--s-color-bg-dark-3) 0, var(--s-color-bg-dark-3) 0.25rem);
+  background-image: -moz-repeating-linear-gradient(45deg, var(--s-color-bg-dark-1), var(--s-color-bg-dark-1) 0.125rem, var(--s-color-bg-dark-3) 0, var(--s-color-bg-dark-3) 0.25rem);
+  background-image: -o-repeating-linear-gradient(45deg, var(--s-color-bg-dark-1), var(--s-color-bg-dark-1) 0.125rem, var(--s-color-bg-dark-3) 0, var(--s-color-bg-dark-3) 0.25rem);
+  background-image: repeating-linear-gradient(45deg, var(--s-color-bg-dark-1), var(--s-color-bg-dark-1) 0.125rem, var(--s-color-bg-dark-3) 0, var(--s-color-bg-dark-3) 0.25rem);
   cursor: pointer;
   -webkit-transition: opacity 0.6s ease;
   -moz-transition: opacity 0.6s ease;
@@ -231,9 +228,9 @@ html {
   transition: opacity 0.6s ease;
 }
 .nav-collapsed-4122cc82:hover {
-  height: -webkit-calc(100% + 0.17rem);
-  height: -moz-calc(100% + 0.17rem);
-  height: calc(100% + 0.17rem);
+  height: -webkit-calc(100% + 1.0625rem);
+  height: -moz-calc(100% + 1.0625rem);
+  height: calc(100% + 1.0625rem);
   opacity: 0.8;
   -webkit-animation: dyn-bg-4122cc82 0.6s infinite linear;
   -moz-animation: dyn-bg-4122cc82 0.6s infinite linear;
@@ -243,15 +240,15 @@ html {
 .collapse-btn-4122cc82 {
   position: absolute;
   top: 5%;
-  right: -0.3rem;
-  width: 0.3rem;
-  height: 0.3rem;
-  -webkit-border-radius: 0.04rem;
-  -moz-border-radius: 0.04rem;
-  border-radius: 0.04rem;
+  right: -1.875rem;
+  width: 1.875rem;
+  height: 1.875rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
   background-color: var(--s-color-bg-dark-1);
-  font-size: 0.2rem;
-  line-height: 0.3rem;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
   text-align: center;
   visibility: hidden;
   cursor: pointer;
@@ -279,7 +276,7 @@ html {
   -moz-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 0.08rem;
+  gap: 0.5rem;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -moz-box-pack: center;
@@ -304,50 +301,50 @@ html {
 }
 @-webkit-keyframes bg-wave-flow-adf5cea1 {
   from {
-    background-position-x: -0.1rem, 0;
+    background-position-x: -0.625rem, 0;
   }
   to {
-    background-position-x: -0.3rem, -0.2rem;
+    background-position-x: -1.875rem, -1.25rem;
   }
 }
 @-moz-keyframes bg-wave-flow-adf5cea1 {
   from {
-    background-position-x: -0.1rem, 0;
+    background-position-x: -0.625rem, 0;
   }
   to {
-    background-position-x: -0.3rem, -0.2rem;
+    background-position-x: -1.875rem, -1.25rem;
   }
 }
 @-o-keyframes bg-wave-flow-adf5cea1 {
   from {
-    background-position-x: -0.1rem, 0;
+    background-position-x: -0.625rem, 0;
   }
   to {
-    background-position-x: -0.3rem, -0.2rem;
+    background-position-x: -1.875rem, -1.25rem;
   }
 }
 @keyframes bg-wave-flow-adf5cea1 {
   from {
-    background-position-x: -0.1rem, 0;
+    background-position-x: -0.625rem, 0;
   }
   to {
-    background-position-x: -0.3rem, -0.2rem;
+    background-position-x: -1.875rem, -1.25rem;
   }
 }
 .link-adf5cea1 {
   display: inline-block;
-  background: -webkit-radial-gradient(0.1rem -0.07rem, circle, transparent 0.08rem, currentcolor 0.08rem, currentcolor 0.09rem, transparent 0.09rem) repeat-x, -webkit-radial-gradient(0.1rem 0.27rem, circle, transparent 0.08rem, currentcolor 0.08rem, currentcolor 0.09rem, transparent 0.09rem) repeat-x;
-  background: -moz-radial-gradient(0.1rem -0.07rem, circle, transparent 0.08rem, currentcolor 0.08rem, currentcolor 0.09rem, transparent 0.09rem) repeat-x, -moz-radial-gradient(0.1rem 0.27rem, circle, transparent 0.08rem, currentcolor 0.08rem, currentcolor 0.09rem, transparent 0.09rem) repeat-x;
-  background: -o-radial-gradient(0.1rem -0.07rem, circle, transparent 0.08rem, currentcolor 0.08rem, currentcolor 0.09rem, transparent 0.09rem) repeat-x, -o-radial-gradient(0.1rem 0.27rem, circle, transparent 0.08rem, currentcolor 0.08rem, currentcolor 0.09rem, transparent 0.09rem) repeat-x;
-  background: radial-gradient(circle at 0.1rem -0.07rem, transparent 0.08rem, currentcolor 0.08rem, currentcolor 0.09rem, transparent 0.09rem) repeat-x, radial-gradient(circle at 0.1rem 0.27rem, transparent 0.08rem, currentcolor 0.08rem, currentcolor 0.09rem, transparent 0.09rem) repeat-x;
-  background-position: -0.1rem -webkit-calc(100% + 0.16rem), 0 -webkit-calc(100% - 0.04rem);
-  background-position: -0.1rem -moz-calc(100% + 0.16rem), 0 -moz-calc(100% - 0.04rem);
-  background-position: -0.1rem calc(100% + 0.16rem), 0 calc(100% - 0.04rem);
-  -webkit-background-size: 0.2rem 0.2rem;
-  -moz-background-size: 0.2rem 0.2rem;
-  -o-background-size: 0.2rem 0.2rem;
-  background-size: 0.2rem 0.2rem;
-  line-height: 0.16rem;
+  background: -webkit-radial-gradient(0.625rem -0.4375rem, circle, transparent 0.5rem, currentcolor 0.5rem, currentcolor 0.5625rem, transparent 0.5625rem) repeat-x, -webkit-radial-gradient(0.625rem 1.6875rem, circle, transparent 0.5rem, currentcolor 0.5rem, currentcolor 0.5625rem, transparent 0.5625rem) repeat-x;
+  background: -moz-radial-gradient(0.625rem -0.4375rem, circle, transparent 0.5rem, currentcolor 0.5rem, currentcolor 0.5625rem, transparent 0.5625rem) repeat-x, -moz-radial-gradient(0.625rem 1.6875rem, circle, transparent 0.5rem, currentcolor 0.5rem, currentcolor 0.5625rem, transparent 0.5625rem) repeat-x;
+  background: -o-radial-gradient(0.625rem -0.4375rem, circle, transparent 0.5rem, currentcolor 0.5rem, currentcolor 0.5625rem, transparent 0.5625rem) repeat-x, -o-radial-gradient(0.625rem 1.6875rem, circle, transparent 0.5rem, currentcolor 0.5rem, currentcolor 0.5625rem, transparent 0.5625rem) repeat-x;
+  background: radial-gradient(circle at 0.625rem -0.4375rem, transparent 0.5rem, currentcolor 0.5rem, currentcolor 0.5625rem, transparent 0.5625rem) repeat-x, radial-gradient(circle at 0.625rem 1.6875rem, transparent 0.5rem, currentcolor 0.5rem, currentcolor 0.5625rem, transparent 0.5625rem) repeat-x;
+  background-position: -0.625rem -webkit-calc(100% + 1rem), 0 -webkit-calc(100% - 0.25rem);
+  background-position: -0.625rem -moz-calc(100% + 1rem), 0 -moz-calc(100% - 0.25rem);
+  background-position: -0.625rem calc(100% + 1rem), 0 calc(100% - 0.25rem);
+  -webkit-background-size: 1.25rem 1.25rem;
+  -moz-background-size: 1.25rem 1.25rem;
+  -o-background-size: 1.25rem 1.25rem;
+  background-size: 1.25rem 1.25rem;
+  line-height: 1rem;
   -webkit-animation: bg-wave-flow-adf5cea1 1s infinite linear;
   -moz-animation: bg-wave-flow-adf5cea1 1s infinite linear;
   -o-animation: bg-wave-flow-adf5cea1 1s infinite linear;
@@ -358,7 +355,7 @@ html {
   background: var(--s-color-bg-dark-2);
 }
 .title-52cf36f0 {
-  padding-block: 0.2rem;
+  padding-block: 1.25rem;
   background: -webkit-linear-gradient(45deg, #00f260 0%, #0575e6 100%);
   background: -moz-linear-gradient(45deg, #00f260 0%, #0575e6 100%);
   background: -o-linear-gradient(45deg, #00f260 0%, #0575e6 100%);
@@ -474,12 +471,12 @@ html {
   }
 }
 .slogan-52cf36f0 {
-  width: 1.4rem;
-  height: 0.5rem;
+  width: 8.75rem;
+  height: 3.125rem;
   margin-inline: auto;
-  -webkit-border-radius: 0.04rem;
-  -moz-border-radius: 0.04rem;
-  border-radius: 0.04rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
   font-size: var(--s-font-size-small);
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -508,41 +505,41 @@ html {
 }
 .slogan__inner-52cf36f0 {
   display: inline-block;
-  width: -webkit-calc(100% - 0.06rem);
-  width: -moz-calc(100% - 0.06rem);
-  width: calc(100% - 0.06rem);
-  height: -webkit-calc(100% - 0.06rem);
-  height: -moz-calc(100% - 0.06rem);
-  height: calc(100% - 0.06rem);
-  margin: 0.03rem;
+  width: -webkit-calc(100% - 0.375rem);
+  width: -moz-calc(100% - 0.375rem);
+  width: calc(100% - 0.375rem);
+  height: -webkit-calc(100% - 0.375rem);
+  height: -moz-calc(100% - 0.375rem);
+  height: calc(100% - 0.375rem);
+  margin: 0.1875rem;
   background-color: var(--s-color-bg-dark-4);
   color: var(--s-color-text-light-1);
-  line-height: 0.46rem;
+  line-height: 2.875rem;
   text-align: center;
 }
 .entries-52cf36f0 {
-  margin-top: 0.2rem;
+  margin-top: 1.25rem;
 }
 .entry-52cf36f0 {
-  height: 0.36rem;
-  padding-inline: 0.2rem;
+  height: 2.25rem;
+  padding-inline: 1.25rem;
   color: var(--s-color-text-light-1);
-  line-height: 0.36rem;
+  line-height: 2.25rem;
 }
 .entry-52cf36f0:hover {
   background-color: var(--s-color-bg-dark-3);
 }
 .input-8e0b9421 {
-  padding: 0.08rem 0.2rem;
-  -webkit-border-radius: 0.04rem;
-  -moz-border-radius: 0.04rem;
-  border-radius: 0.04rem;
+  padding: 0.5rem 1.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
   background-color: var(--s-color-bg-dark-1);
 }
 .input__inner-8e0b9421 {
-  width: -webkit-calc(100% - 0.4rem);
-  width: -moz-calc(100% - 0.4rem);
-  width: calc(100% - 0.4rem);
+  width: -webkit-calc(100% - 2.5rem);
+  width: -moz-calc(100% - 2.5rem);
+  width: calc(100% - 2.5rem);
   color: var(--s-color-text-light-1);
   font-size: var(--s-font-size-small);
 }
@@ -565,7 +562,7 @@ html {
   color: var(--s-color-text-light-2);
 }
 .input__prefix-8e0b9421 {
-  margin-right: 0.1rem;
+  margin-right: 0.625rem;
 }
 .code-deed1b03 {
   color: var(--s-color-text-light-2);
@@ -580,8 +577,8 @@ html {
   display: -ms-flexbox;
   display: flex;
   background: rgba(0, 0, 0, 0.2);
-  -webkit-backdrop-filter: blur(0.01rem);
-  backdrop-filter: blur(0.01rem);
+  -webkit-backdrop-filter: blur(0.0625rem);
+  backdrop-filter: blur(0.0625rem);
   pointer-events: all;
 }
 .dialog__inner-4ca616de {
@@ -599,17 +596,17 @@ html {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.02rem;
-  -webkit-border-radius: 0.02rem;
-  -moz-border-radius: 0.02rem;
-  border-radius: 0.02rem;
+  gap: 0.125rem;
+  -webkit-border-radius: 0.125rem;
+  -moz-border-radius: 0.125rem;
+  border-radius: 0.125rem;
 }
 .tab-a966ba4c {
-  height: 0.36rem;
-  padding-inline: 0.08rem;
+  height: 2.25rem;
+  padding-inline: 0.5rem;
   background: var(--s-color-bg-dark-1);
   color: var(--s-color-text-light-1);
-  line-height: 0.36rem;
+  line-height: 2.25rem;
   text-align: center;
   cursor: pointer;
   -webkit-user-select: none;
@@ -638,11 +635,11 @@ html {
   -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
-  height: 3rem;
-  padding: 0.16rem;
-  -webkit-border-radius: 0.08rem;
-  -moz-border-radius: 0.08rem;
-  border-radius: 0.08rem;
+  height: 18.75rem;
+  padding: 1rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  border-radius: 0.5rem;
   background-color: var(--s-color-bg-dark-2);
 }
 .info-26443954 {
@@ -696,10 +693,10 @@ html {
   white-space: nowrap;
 }
 .category-26443954 {
-  padding: 0.04rem 0.1rem;
-  -webkit-border-radius: 0.04rem;
-  -moz-border-radius: 0.04rem;
-  border-radius: 0.04rem;
+  padding: 0.25rem 0.625rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
   background: #40e0d0;
   text-align: center;
 }
@@ -719,10 +716,10 @@ html {
   -ms-flex: 1;
   flex: 1;
   overflow: hidden;
-  margin-bottom: 0.08rem;
-  -webkit-border-radius: 0.08rem;
-  -moz-border-radius: 0.08rem;
-  border-radius: 0.08rem;
+  margin-bottom: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  border-radius: 0.5rem;
 }
 .frame__wrapper-26443954::after {
   content: "";
@@ -730,8 +727,8 @@ html {
   top: 0;
   right: 0;
   display: none;
-  width: 2rem;
-  height: 1.5rem;
+  width: 12.5rem;
+  height: 9.375rem;
   background: -webkit-linear-gradient(bottom left, transparent 50%, rgba(0, 0, 0, 0.5) 100%);
   background: -moz-linear-gradient(bottom left, transparent 50%, rgba(0, 0, 0, 0.5) 100%);
   background: -o-linear-gradient(bottom left, transparent 50%, rgba(0, 0, 0, 0.5) 100%);
@@ -749,18 +746,18 @@ html {
 }
 .frame__btn-26443954 {
   position: absolute;
-  top: 0.2rem;
-  right: 0.2rem;
+  top: 1.25rem;
+  right: 1.25rem;
   z-index: 10;
   display: none;
-  width: 0.28rem;
-  height: 0.28rem;
-  -webkit-border-radius: 0.06rem;
-  -moz-border-radius: 0.06rem;
-  border-radius: 0.06rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  -webkit-border-radius: 0.375rem;
+  -moz-border-radius: 0.375rem;
+  border-radius: 0.375rem;
   background: var(--s-color-bg-dark-5);
-  font-size: 0.24rem;
-  line-height: 0.28rem;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
   text-align: center;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -792,15 +789,15 @@ html {
   overflow: auto;
 }
 .dialog-26443954 .dialog__inner {
-  width: 12rem;
+  width: 75rem;
   max-width: 100%;
-  -webkit-border-radius: 0.08rem;
-  -moz-border-radius: 0.08rem;
-  border-radius: 0.08rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  border-radius: 0.5rem;
   background: var(--s-color-bg-dark-1);
 }
 .dialog__header-26443954 {
-  padding: 0.08rem;
+  padding: 0.5rem;
 }
 .dialog__body-26443954 {
   display: -webkit-box;
@@ -811,7 +808,7 @@ html {
   height: 80vh;
 }
 .tabs-26443954 {
-  padding: 0.08rem;
+  padding: 0.5rem;
   background: var(--s-color-bg-dark-3);
 }
 .code__wrapper-26443954 {
@@ -827,14 +824,14 @@ html {
 }
 .main-1c51b40e {
   height: 100%;
-  padding: 0.12rem;
+  padding: 0.75rem;
   background-color: var(--s-color-bg-dark-3);
 }
 .showcases-1c51b40e {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(4rem, 1fr));
-  gap: 0.2rem;
-  margin: 0.2rem 0;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  gap: 1.25rem;
+  margin: 1.25rem 0;
 }
 .showcase {
   -webkit-align-self: center;
@@ -844,46 +841,46 @@ html {
 }
 @-webkit-keyframes come-out-e1ba72d4 {
   0% {
-    top: 0.2rem;
+    top: 1.25rem;
   }
   80% {
-    top: 0.2rem;
+    top: 1.25rem;
   }
   100% {
-    top: -0.3rem;
+    top: -1.875rem;
   }
 }
 @-moz-keyframes come-out-e1ba72d4 {
   0% {
-    top: 0.2rem;
+    top: 1.25rem;
   }
   80% {
-    top: 0.2rem;
+    top: 1.25rem;
   }
   100% {
-    top: -0.3rem;
+    top: -1.875rem;
   }
 }
 @-o-keyframes come-out-e1ba72d4 {
   0% {
-    top: 0.2rem;
+    top: 1.25rem;
   }
   80% {
-    top: 0.2rem;
+    top: 1.25rem;
   }
   100% {
-    top: -0.3rem;
+    top: -1.875rem;
   }
 }
 @keyframes come-out-e1ba72d4 {
   0% {
-    top: 0.2rem;
+    top: 1.25rem;
   }
   80% {
-    top: 0.2rem;
+    top: 1.25rem;
   }
   100% {
-    top: -0.3rem;
+    top: -1.875rem;
   }
 }
 .notify__wrapper-e1ba72d4 {
@@ -903,13 +900,13 @@ html {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  min-width: 1.6rem;
-  max-width: 6rem;
-  padding: 0.08rem 0.12rem;
-  border: 0.01rem solid;
-  -webkit-border-radius: 0.02rem;
-  -moz-border-radius: 0.02rem;
-  border-radius: 0.02rem;
+  min-width: 10rem;
+  max-width: 37.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 0.0625rem solid;
+  -webkit-border-radius: 0.125rem;
+  -moz-border-radius: 0.125rem;
+  border-radius: 0.125rem;
   text-align: center;
 }
 .notify--success-e1ba72d4 {
@@ -932,4 +929,4 @@ html {
   background-color: #202121;
   color: #909399;
 }
-/*# sourceMappingURL=index_077f.9f7253c4.css.map */
+/*# sourceMappingURL=index_077f.d7a6c6c4.css.map */
