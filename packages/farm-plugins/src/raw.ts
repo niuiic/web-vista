@@ -1,9 +1,8 @@
-import type { JsPlugin, Server, UserConfig } from '@farmfe/core'
+import type { JsPlugin, UserConfig } from '@farmfe/core'
 import { readFileSync } from 'fs'
 
 export const farmRawPlugin = (): JsPlugin[] => {
   let farmConfig: UserConfig['compilation']
-  let devServer: Server
 
   return [
     {
@@ -19,15 +18,16 @@ export const farmRawPlugin = (): JsPlugin[] => {
     {
       name: 'farm-raw-plugin-transform',
       priority: -1000,
-      config: (args) => (farmConfig = args.compilation),
-      configDevServer: (args) => (devServer = args),
+      configResolved: (args) => {
+        farmConfig = args.compilation
+      },
       transform: {
         filters: {
           moduleTypes: ['raw']
         },
-        executor: (args) => {
+        executor: async (args, ctx) => {
           if (farmConfig?.mode === 'development') {
-            devServer?.addWatchFile(args.resolvedPath, [])
+            ctx?.addWatchFile(args.resolvedPath, args.resolvedPath)
           }
 
           return { content: 'export default ' + '`' + args.content + '`', moduleType: 'js' }
