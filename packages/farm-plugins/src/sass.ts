@@ -15,10 +15,11 @@ export const farmSassPlugin = (): JsPlugin => {
       filters: {
         resolvedPaths: ['\\.scss$', '\\.sass$']
       },
-      executor: async (args) => ({
-        content: (await sassImpl).compile(args.resolvedPath).css as string,
-        moduleType: 'sass-css'
-      })
+      executor: async (args) => {
+        const content = await sassImpl.then((x) => x.compile(args.resolvedPath).css).catch(() => '')
+
+        return { content, moduleType: 'sass-css' }
+      }
     },
     transform: {
       filters: {
