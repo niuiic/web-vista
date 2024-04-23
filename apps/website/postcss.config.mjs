@@ -1,5 +1,10 @@
-import { transPx } from 'postcss-plugins'
+import pxtorem from 'postcss-pxtorem'
 
 export default {
-  plugins: [transPx('var(--unit-length)')]
+  plugins: [
+    pxtorem({
+      rootValue: 100,
+      propList: ['*']
+    })
+  ]
 }

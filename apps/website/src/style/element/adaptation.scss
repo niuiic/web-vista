@@ -1,3 +1,9 @@
+@use 'sass:math';
+
+@function px($num) {
+  @return $num * math.div(72, 96) * 1pt;
+}
+
 html {
-  --unit-length: calc(1rem / 16);
+  font-size: px(100);
 }
