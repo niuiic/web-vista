@@ -12,7 +12,8 @@ const config: UserConfig = {
     minify: false,
     sourcemap: true,
     presetEnv: false,
-    lazyCompilation: true
+    lazyCompilation: true,
+    persistentCache: false
   },
   plugins: [farmSassPlugin(), farmRawPlugin()]
 }
