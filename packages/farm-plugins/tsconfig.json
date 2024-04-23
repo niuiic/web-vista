@@ -2,8 +2,20 @@
   "compilerOptions": {
     "outDir": "dist",
     "baseUrl": ".",
-    "declaration": true
+    "declaration": true,
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"],
+    "skipLibCheck": true,
+    "noErrorTruncation": true,
+    "noEmit": true
   },
-  "extends": "tsconfig/farm.json",
   "include": ["src/**/*.ts", "farm.config.ts"]
 }

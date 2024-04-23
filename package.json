@@ -21,6 +21,15 @@
     "stylelint": "^16.3.1",
     "tsx": "^4.7.2",
     "turbo": "^1.13.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "@typescript-eslint/eslint-plugin": "^7.7.1",
+    "@typescript-eslint/parser": "^7.7.1",
+    "eslint-config-alloy": "^5.1.2",
+    "postcss": "^8.4.38",
+    "postcss-html": "^1.6.0",
+    "postcss-scss": "^4.0.9",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-order": "^6.0.4",
+    "stylelint-scss": "^6.2.1"
   }
 }

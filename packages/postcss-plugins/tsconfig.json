@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "outDir": "dist",
-    "baseUrl": ".",
-    "declaration": true
-  },
-  "extends": "tsconfig/farm.json",
-  "include": ["src/**/*.ts", "farm.config.ts"]
-}

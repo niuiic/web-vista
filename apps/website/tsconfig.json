@@ -4,8 +4,20 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"],
+    "skipLibCheck": true,
+    "noErrorTruncation": true,
+    "noEmit": true
   },
-  "extends": "tsconfig/farm.json",
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts", "declare/**/*.d.ts", "farm.config.ts"]
 }
