@@ -4,9 +4,7 @@ pre code.hljs {
   padding: 1em;
 }
 code.hljs {
-  padding: -webkit-calc(3 * var(--unit-length)) -webkit-calc(5 * var(--unit-length));
-  padding: -moz-calc(3 * var(--unit-length)) -moz-calc(5 * var(--unit-length));
-  padding: calc(3 * var(--unit-length)) calc(5 * var(--unit-length));
+  padding: 0.03rem 0.05rem;
 }
 .hljs-comment, 
 .hljs-meta {
