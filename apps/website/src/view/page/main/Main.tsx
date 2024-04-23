@@ -2,7 +2,7 @@ import { useDebounce } from '@/util/debounce'
 import { Input } from '@/view/component/input'
 import type { ShowCaseOptions } from '@/view/component/showCase'
 import { ShowCase } from '@/view/component/showCase'
-import cssComponents from 'css-components'
+import cssComponents from 'css'
 import { useState } from 'react'
 import cls from './main.module.scss'
 
