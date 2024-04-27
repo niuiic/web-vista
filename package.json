@@ -6,10 +6,9 @@
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
-  "packageManager": "pnpm",
   "devDependencies": {
     "@farmfe/cli": "^1.0.1",
-    "@farmfe/core": "^1.1.0",
+    "@farmfe/core": "^1.1.2",
     "@farmfe/js-plugin-dts": "^0.5.1",
     "@farmfe/plugin-sass": "^1.0.4",
     "@types/node": "^20.12.7",
@@ -25,12 +24,12 @@
     "prettier-plugin-glsl": "^0.2.0",
     "prettier-plugin-organize-imports": "^3.2.4",
     "sass-embedded": "^1.75.0",
-    "stylelint": "^16.3.1",
+    "stylelint": "^16.4.0",
     "stylelint-config-standard-scss": "^13.1.0",
     "stylelint-order": "^6.0.4",
     "stylelint-scss": "^6.2.1",
-    "tsx": "^4.7.2",
-    "turbo": "^1.13.2",
+    "tsx": "^4.7.3",
+    "turbo": "^1.13.3",
     "typescript": "^5.4.5"
   }
 }
