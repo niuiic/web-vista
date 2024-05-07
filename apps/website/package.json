@@ -8,15 +8,11 @@
     "preview": "farm preview"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.4",
-    "@babel/eslint-parser": "^7.24.1",
-    "@babel/preset-react": "^7.24.1",
     "@farmfe/js-plugin-postcss": "^1.6.0",
-    "@farmfe/plugin-react": "^1.0.1",
+    "@farmfe/plugin-react": "^1.1.0",
     "@types/highlightjs": "^9.12.6",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.0",
-    "eslint-plugin-react": "^7.34.1",
     "postcss": "^8.4.38",
     "react-refresh": "^0.14.2"
   },
