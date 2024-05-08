@@ -1,1 +1,1 @@
-export const classes = (...args: any[]) => args.filter((x) => typeof x === 'string').join(' ')
+export const classes = (...args: unknown[]) => args.filter((x) => typeof x === 'string').join(' ')

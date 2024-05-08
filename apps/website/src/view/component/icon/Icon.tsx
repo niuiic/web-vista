@@ -7,7 +7,7 @@ interface Props {
 }
 
 export const Icon = (props: Props) => (
-  <svg className={classes(cls.icon, props.className ?? '')} aria-hidden="true">
+  <svg className={classes(cls.icon, props.className)} aria-hidden="true">
     <use xlinkHref={`#icon-${props.name}`} />
   </svg>
 )
