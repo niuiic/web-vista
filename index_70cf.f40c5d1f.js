@@ -780,7 +780,7 @@ Padding, margin and border of the inline element would not push away surrounding
   padding: 10px;
   margin: 10px;
   border: 10px solid black;
-}`;}});},"e8703c4f":function  (e,n,r,s){"use strict";Object.defineProperty(n,"__esModule",{value:!0}),Object.defineProperty(n,"Icon",{enumerable:!0,get:function(){return u;}});let t=r("@swc/helpers/_/_interop_require_default"),c=r("31a222cd"),i=r("3a2b0339"),l=t._(r("092f3b3b")),u=e=>(0,c.jsx)("svg",{className:(0,i.classes)(l.default.icon,e.className??""),"aria-hidden":"true",children:(0,c.jsx)("use",{xlinkHref:`#icon-${e.name}`})});},"edca384b":function  (e,t,i,r){!function(e){for(var t in e)e[t].__farm_resource_pot__="formattingContext.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"3d6ac7fd":function(e,t,i,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`<section>
+}`;}});},"e8703c4f":function  (e,n,r,s){"use strict";Object.defineProperty(n,"__esModule",{value:!0}),Object.defineProperty(n,"Icon",{enumerable:!0,get:function(){return u;}});let t=r("@swc/helpers/_/_interop_require_default"),c=r("31a222cd"),i=r("3a2b0339"),l=t._(r("092f3b3b")),u=e=>(0,c.jsx)("svg",{className:(0,i.classes)(l.default.icon,e.className),"aria-hidden":"true",children:(0,c.jsx)("use",{xlinkHref:`#icon-${e.name}`})});},"edca384b":function  (e,t,i,r){!function(e){for(var t in e)e[t].__farm_resource_pot__="formattingContext.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"3d6ac7fd":function(e,t,i,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`<section>
   <h3>
     When a formatting context is created, its boundary is at the border position of the corresponding element.
     <br />
@@ -1163,4 +1163,4 @@ Padding, margin and border of the inline element would not push away surrounding
   background-color: yellow;
 }
 `;},f3e012b0:function(e,o,t,i){"use strict";Object.defineProperty(o,"__esModule",{value:!0}),Object.defineProperty(o,"default",{enumerable:!0,get:function(){return h;}});let d=t("@swc/helpers/_/_interop_require_default"),n=d._(t("d82e6e42")),r=d._(t("992f9bd0")),c=d._(t("0878149f")),l=d._(t("e78c92ad")),h={title:"box size",desc:"css box size characterization",category:"css",tags:["standard"],html:r.default,css:c.default+n.default,code:[{label:"html",filetype:"html",content:r.default},{label:"scss",filetype:"scss",content:l.default}]};}});},});
-//# sourceMappingURL=index_70cf.d64f41bd.js.map
+//# sourceMappingURL=index_70cf.f40c5d1f.js.map
