@@ -1,21 +1,14 @@
-import type { UserConfig } from '@farmfe/core'
+import { defineConfig } from '@farmfe/core'
 import { farmRawPlugin, farmSassPlugin } from 'farm-plugins'
 import path from 'path'
 
-const config: UserConfig = {
+export default defineConfig({
   compilation: {
     resolve: {
       alias: {
         '@/': path.join(process.cwd(), 'src')
       }
-    },
-    minify: false,
-    sourcemap: true,
-    presetEnv: false,
-    lazyCompilation: true,
-    persistentCache: false
+    }
   },
   plugins: [farmSassPlugin(), farmRawPlugin()]
-}
-
-export default config
+})

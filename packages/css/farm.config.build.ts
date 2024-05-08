@@ -1,4 +1,4 @@
-import type { UserConfig } from '@farmfe/core'
+import { defineConfig } from '@farmfe/core'
 import dts from '@farmfe/js-plugin-dts'
 import { farmRawPlugin, farmSassPlugin } from 'farm-plugins'
 import { readdirSync } from 'fs'
@@ -9,7 +9,7 @@ const chunks = readdirSync(join(process.cwd(), 'src/components')).map((x) => ({
   test: [`src/components/${x}/.*`]
 }))
 
-const config: UserConfig = {
+export default defineConfig({
   compilation: {
     input: {
       index: './src/index.ts'
@@ -27,8 +27,6 @@ const config: UserConfig = {
     partialBundling: {
       enforceResources: chunks
     },
-    minify: true,
-    sourcemap: false,
     presetEnv: false
   },
   plugins: [
@@ -38,6 +36,4 @@ const config: UserConfig = {
       tsConfigPath: './tsconfig.json'
     })
   ]
-}
-
-export default config
+})

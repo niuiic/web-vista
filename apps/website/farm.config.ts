@@ -1,18 +1,15 @@
-import type { UserConfig } from '@farmfe/core'
+import { defineConfig } from '@farmfe/core'
 import postcss from '@farmfe/js-plugin-postcss'
 import path from 'path'
 
-const config: UserConfig = {
+export default defineConfig({
   compilation: {
     resolve: {
       alias: {
         '@/': path.join(process.cwd(), 'src')
       }
     },
-    minify: false,
-    sourcemap: true,
-    presetEnv: false,
-    lazyCompilation: true
+    presetEnv: false
   },
   plugins: [
     [
@@ -24,6 +21,4 @@ const config: UserConfig = {
     '@farmfe/plugin-sass',
     postcss()
   ]
-}
-
-export default config
+})

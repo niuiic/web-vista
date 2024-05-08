@@ -1,8 +1,8 @@
-import type { UserConfig } from '@farmfe/core'
+import { defineConfig } from '@farmfe/core'
 import farmDtsPlugin from '@farmfe/js-plugin-dts'
 import { builtinModules } from 'node:module'
 
-const config: UserConfig = {
+export default defineConfig({
   compilation: {
     input: {
       index: 'src/index.ts'
@@ -14,16 +14,6 @@ const config: UserConfig = {
       format: 'cjs'
     },
     external: [...builtinModules.map((x) => `^${x}$`), ...builtinModules.map((x) => `^node:${x}$`)],
-    partialBundling: {
-      enforceResources: [
-        {
-          name: 'index',
-          test: ['.+']
-        }
-      ]
-    },
-    minify: false,
-    sourcemap: false,
     presetEnv: false
   },
   plugins: [
@@ -31,6 +21,4 @@ const config: UserConfig = {
       tsConfigPath: './tsconfig.json'
     })
   ]
-}
-
-export default config
+})
