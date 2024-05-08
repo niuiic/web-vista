@@ -29,7 +29,7 @@ jobs:
         run: pnpm build
 
       - name: Config
-        run: echo 'gallery.niuiic.com' > apps/website/dist/CNAME
+        run: echo 'web-vista.niuiic.com' > apps/website/dist/CNAME
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4

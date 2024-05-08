@@ -14,7 +14,7 @@ export const Nav = (props: Props) => {
   return (
     <div className={cls.nav}>
       <h1 className={classes(cls.title, 'o-btn')} onClick={goHome}>
-        Gallery
+        Web Vista
       </h1>
 
       <h2 className={cls.slogan}>

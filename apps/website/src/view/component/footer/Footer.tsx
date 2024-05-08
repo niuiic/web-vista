@@ -3,7 +3,7 @@ import cls from './footer.module.scss'
 
 export const Footer = () => {
   const accessGithub = () => {
-    window.open('https://github.com/niuiic/gallery', '_blank')
+    window.open('https://github.com/niuiic/web-vista', '_blank')
   }
 
   return (
