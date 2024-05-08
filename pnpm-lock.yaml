@@ -518,12 +518,14 @@ packages:
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
   '@farmfe/core-linux-x64-musl@1.1.4':
     resolution: {integrity: sha512-rRK0Aw/Lk7k6be/5k6IlHb4rTbK7IgIonwsKAvxAnpp3CcMncVLb5uaON1t9O239AGjgw11RB/ij0W9lS0DQ5Q==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
   '@farmfe/core-win32-arm64-msvc@1.1.4':
     resolution: {integrity: sha512-fZ0lDgJa0YStC7/g+MbyyNS4qb3puJi2A0/KluSjt0Arm/XXDEaXM6UlG+iWYaKF6MBJ8LA3R7cXU5ZJtbUnVg==}
@@ -573,18 +575,21 @@ packages:
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
   '@farmfe/plugin-react-linux-arm64-musl@1.1.0':
     resolution: {integrity: sha512-FPBikgThprfQylLEKtM04N843u6WRlS+Fdbu1QwbiT1MDsjAdk9ULLPP3KIj/D9gBsX7efle7F312WJGwpBkqA==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
   '@farmfe/plugin-react-linux-x64-gnu@1.1.0':
     resolution: {integrity: sha512-Bu9Rcwgp/ifm+i0iDwO9zQ5MFksE8zBGqQZvGpRmlB5W9zFe5iMhnqGgs7cvcq/BcHmj4gdymSLToh7dkcGJrg==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
   '@farmfe/plugin-react-linux-x64-musl@1.1.0':
     resolution: {integrity: sha512-vDElYVNwKLvFVdNUkF2BlslZuZxZCgcZqZfujmaOd2E4BMUpiU8iXOl3jaH1BWjF/WTQKtUyWkfoWA33BXlIhg==}
@@ -630,18 +635,21 @@ packages:
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
   '@farmfe/plugin-sass-linux-arm64-musl@1.0.5':
     resolution: {integrity: sha512-uOjnGp9fxMaIbRo3CPBtH2EivpSHhB1nje+f40JFcbiklPhcEs41/W62ZgSg6NOq2ocNbUbv1sdp1/6eBt0v7Q==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
   '@farmfe/plugin-sass-linux-x64-gnu@1.0.5':
     resolution: {integrity: sha512-29uzHgjLt0ZdWwthr+VmcWXAj1M9SGMbrt9j4UdPxJcnTdfSKNhrIPkfaQOWOHNvpy4IF2HRb3bdLVC3Nm3qyw==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
   '@farmfe/plugin-sass-linux-x64-musl@1.0.5':
     resolution: {integrity: sha512-FDLnfXk6oGjVbsA4/9ddgpSlAOfC6b+iK5ZlfiN83q4D2twviTQ+/iFLXOlz+U5Wdz8oa250O694iRYEV8qwBA==}
@@ -724,8 +732,8 @@ packages:
     resolution: {integrity: sha512-/gKJun8NNiWGZJkGzI/Ragc53cOdcLNdzjLaIa+GEjguQs0ulsurx8WN0jijdK9yPqDvziX995sMRLyLt1uZMQ==}
     engines: {node: '>= 0.4'}
 
-  '@mdn/browser-compat-data@5.5.25':
-    resolution: {integrity: sha512-0AobSA9fCuAoJnBSIIWWpoAEuyWC3gCG5u2TshSDHzMOAO4/ef2Lv6Qma+u/wMnH3oPP3tOWsNeZMbazgkiuDg==}
+  '@mdn/browser-compat-data@5.5.26':
+    resolution: {integrity: sha512-S2tqS5ElUyKhTNKIutzWkBDriFbyFJ+MQJfGA4l5UPMP6PgTBQxCkgGeh0Rb+nKbrzhxaXyBh2Zatjn9k2JKlQ==}
 
   '@netflix/nerror@1.1.3':
     resolution: {integrity: sha512-b+MGNyP9/LXkapreJzNUzcvuzZslj/RGgdVVJ16P2wSlYatfLycPObImqVJSmNAdyeShvNeM/pl3sVZsObFueg==}
@@ -1964,10 +1972,6 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
-  lru-cache@6.0.0:
-    resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
-    engines: {node: '>=10'}
-
   mathml-tag-names@2.1.3:
     resolution: {integrity: sha512-APMBEanjybaPzUrfqU0IMU5I0AswKMH7k8OTLs0vvV4KZpExkTkY87nR/zpbuTPj+gARop7aGUbl11pnDfW6xg==}
 
@@ -2388,13 +2392,6 @@ packages:
     os: [android]
     hasBin: true
 
-  sass-embedded-android-arm@1.77.0:
-    resolution: {integrity: sha512-T/7CXMrRyvb+9FHwXNL53tAnj2z8KqQXpo3XkPXzgB+RFqXhSWsnkfehcefDGm81EsggyYXnkLo6f4xcapZvYw==}
-    engines: {node: '>=14.0.0'}
-    cpu: [arm]
-    os: [android]
-    hasBin: true
-
   sass-embedded-android-ia32@1.77.0:
     resolution: {integrity: sha512-T12iRF3sZ/gRgsEBH6y+eSn12+3VokL6n1+VVlwJ9pYz8Q8iE9gALyvy71Cvm9j130LV4X+pxq53xQl5GA6VQg==}
     engines: {node: '>=14.0.0'}
@@ -2549,8 +2546,8 @@ packages:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
     hasBin: true
 
-  semver@7.6.0:
-    resolution: {integrity: sha512-EnwXhrlwXMk9gKu5/flx5sv/an57AkRplG3hTK68W7FRDN+k+OWBj65M7719OkA82XLBxrcX0KSHj+X5COhOVg==}
+  semver@7.6.1:
+    resolution: {integrity: sha512-f/vbBsu+fOiYt+lmwZV0rVwJScl46HppnOA1ZvIuBWKOTlllpyJ3bfVax76/OrhCH38dyxoDIA8K7uB963IYgA==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -2939,9 +2936,6 @@ packages:
   yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
 
-  yallist@4.0.0:
-    resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
-
   ylru@1.4.0:
     resolution: {integrity: sha512-2OQsPNEmBCvXuFlIni/a+Rn+R2pHW9INm0BxXJ4hVDA8TirqMj+J/Rp9ItLatT/5pZqWwefVrTQcHpixsxnVlA==}
     engines: {node: '>= 4.0.0'}
@@ -2956,8 +2950,8 @@ packages:
     peerDependencies:
       zod: ^3.18.0
 
-  zod@3.23.6:
-    resolution: {integrity: sha512-RTHJlZhsRbuA8Hmp/iNL7jnfc4nZishjsanDAfEY1QpDQZCahUp3xDzl+zfweE9BklxMUcgBgS1b7Lvie/ZVwA==}
+  zod@3.23.7:
+    resolution: {integrity: sha512-NBeIoqbtOiUMomACV/y+V3Qfs9+Okr18vR5c/5pHClPpufWOrsx8TENboDPe265lFdfewX2yBtNTLPvnmCxwog==}
 
 snapshots:
 
@@ -3333,8 +3327,8 @@ snapshots:
       open: 9.1.0
       slashes: 3.0.12
       ws: 8.17.0
-      zod: 3.23.6
-      zod-validation-error: 1.5.0(zod@3.23.6)
+      zod: 3.23.7
+      zod-validation-error: 1.5.0(zod@3.23.7)
     optionalDependencies:
       '@farmfe/core-darwin-arm64': 1.1.4
       '@farmfe/core-darwin-x64': 1.1.4
@@ -3501,7 +3495,7 @@ snapshots:
     dependencies:
       call-bind: 1.0.7
 
-  '@mdn/browser-compat-data@5.5.25': {}
+  '@mdn/browser-compat-data@5.5.26': {}
 
   '@netflix/nerror@1.1.3':
     dependencies:
@@ -3574,7 +3568,7 @@ snapshots:
       graphemer: 1.4.0
       ignore: 5.3.1
       natural-compare: 1.4.0
-      semver: 7.6.0
+      semver: 7.6.1
       ts-api-utils: 1.3.0(typescript@5.4.5)
     optionalDependencies:
       typescript: 5.4.5
@@ -3621,7 +3615,7 @@ snapshots:
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.4
-      semver: 7.6.0
+      semver: 7.6.1
       ts-api-utils: 1.3.0(typescript@5.4.5)
     optionalDependencies:
       typescript: 5.4.5
@@ -3637,7 +3631,7 @@ snapshots:
       '@typescript-eslint/types': 7.8.0
       '@typescript-eslint/typescript-estree': 7.8.0(typescript@5.4.5)
       eslint: 8.57.0
-      semver: 7.6.0
+      semver: 7.6.1
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -3805,7 +3799,7 @@ snapshots:
 
   browserslist-generator@2.1.0:
     dependencies:
-      '@mdn/browser-compat-data': 5.5.25
+      '@mdn/browser-compat-data': 5.5.26
       '@types/object-path': 0.11.4
       '@types/semver': 7.5.8
       '@types/ua-parser-js': 0.7.39
@@ -3813,7 +3807,7 @@ snapshots:
       caniuse-lite: 1.0.30001616
       isbot: 3.8.0
       object-path: 0.11.8
-      semver: 7.6.0
+      semver: 7.6.1
       ua-parser-js: 1.0.37
 
   browserslist@4.23.0:
@@ -4926,10 +4920,6 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
-  lru-cache@6.0.0:
-    dependencies:
-      yallist: 4.0.0
-
   mathml-tag-names@2.1.3: {}
 
   mdn-data@2.0.30: {}
@@ -5312,9 +5302,6 @@ snapshots:
   sass-embedded-android-arm64@1.77.0:
     optional: true
 
-  sass-embedded-android-arm@1.77.0:
-    optional: true
-
   sass-embedded-android-ia32@1.77.0:
     optional: true
 
@@ -5390,7 +5377,6 @@ snapshots:
       supports-color: 8.1.1
       varint: 6.0.0
     optionalDependencies:
-      sass-embedded-android-arm: 1.77.0
       sass-embedded-android-arm64: 1.77.0
       sass-embedded-android-ia32: 1.77.0
       sass-embedded-android-x64: 1.77.0
@@ -5414,9 +5400,7 @@ snapshots:
 
   semver@6.3.1: {}
 
-  semver@7.6.0:
-    dependencies:
-      lru-cache: 6.0.0
+  semver@7.6.1: {}
 
   set-function-length@1.2.2:
     dependencies:
@@ -5856,14 +5840,12 @@ snapshots:
 
   yallist@3.1.1: {}
 
-  yallist@4.0.0: {}
-
   ylru@1.4.0: {}
 
   yocto-queue@0.1.0: {}
 
-  zod-validation-error@1.5.0(zod@3.23.6):
+  zod-validation-error@1.5.0(zod@3.23.7):
     dependencies:
-      zod: 3.23.6
+      zod: 3.23.7
 
-  zod@3.23.6: {}
+  zod@3.23.7: {}
