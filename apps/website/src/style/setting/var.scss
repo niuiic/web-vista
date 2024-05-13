@@ -45,7 +45,8 @@ $footer: (
 $nav: (
   bg-color: get-css-var('color', 'primary-light'),
   bg-color-collapsed: get-css-var('color', 'primary'),
-  bg-color-collapsed-light: get-css-var('color', 'primary-light2')
+  bg-color-collapsed-light: get-css-var('color', 'primary-light2'),
+  btn-shadow-color: get-css-var('color', 'secondary')
 );
 
 /* ## main */

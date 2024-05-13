@@ -8,6 +8,7 @@
   grid-template-columns: 180px 1fr;
   overflow: hidden;
   height: max(100vh, 640px);
+  transition: grid-template-columns 1s;
 }
 
 .layout--nav-collapsed {
@@ -57,44 +58,20 @@
   }
 }
 
-@keyframes show {
-  from {
-    display: initial;
-    transform: translateX(180px - 24px);
-  }
-
-  to {
-    transform: translateX(180px + 24px);
-  }
-}
-
-@keyframes hide {
-  from {
-    transform: translateX(180px + 24px);
-  }
-
-  to {
-    display: none;
-    transform: translateX(180px - 24px);
-  }
-}
-
 .collapse-btn {
   position: absolute;
-  top: 120px;
+  top: 48px;
   width: 24px;
   height: 24px;
-  border: 1px red solid;
-  animation: hide 0.5s ease-in;
-  animation-delay: 1s;
-  animation-fill-mode: backwards;
-}
-
-.collapse-btn.collapse-btn.collapse-btn:hover {
-  animation-play-state: paused;
+  border-radius: 50%;
+  transition:
+    transform 0.5s ease-in 1s,
+    box-shadow 0.5s ease-in 1s;
+  transform: translateX(180px - 24px);
 }
 
 .nav:hover .collapse-btn {
-  animation: show 1s;
-  animation-fill-mode: forwards;
+  box-shadow: 0 0 5px 12px get-css-var('nav', 'btn-shadow-color') inset;
+  transition: transform 0.2s;
+  transform: translateX(180px + 24px);
 }
