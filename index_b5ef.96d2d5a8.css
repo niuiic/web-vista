@@ -4,7 +4,7 @@ pre code.hljs {
   padding: 1em;
 }
 code.hljs {
-  padding: 0.1875rem 0.3125rem;
+  padding: 3px 5px;
 }
 .hljs-comment, 
 .hljs-meta {
