@@ -1,0 +1,11 @@
+@function get-css-var($name...) {
+  $var: s;
+
+  @each $x in $name {
+    @if $x != '' {
+      $var: #{$var}-#{$x};
+    }
+  }
+
+  @return var(--#{$var});
+}

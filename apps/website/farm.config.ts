@@ -9,7 +9,8 @@ export default defineConfig({
         '@/': path.join(process.cwd(), 'src')
       }
     },
-    presetEnv: false
+    presetEnv: false,
+    persistentCache: false
   },
   plugins: [
     [

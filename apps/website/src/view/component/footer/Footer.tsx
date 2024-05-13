@@ -2,17 +2,15 @@ import { classes } from '@/util/class'
 import cls from './footer.module.scss'
 
 export const Footer = () => {
-  const accessGithub = () => {
-    window.open('https://github.com/niuiic/web-vista', '_blank')
-  }
+  const githubRepoUrl = 'https://github.com/niuiic/web-vista'
 
   return (
     <div className={cls.footer}>
       <p className={cls.text}>
         {'View on '}
-        <span className={classes(cls.link, 'o-btn')} onClick={accessGithub}>
+        <a className={classes('wavy-underline', 'o-btn')} href={githubRepoUrl} target="_blank">
           github
-        </span>
+        </a>
       </p>
       <p className={cls.text}>Copyright © 2023-present niuiic</p>
     </div>

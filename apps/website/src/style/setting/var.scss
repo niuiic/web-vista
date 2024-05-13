@@ -1,0 +1,70 @@
+@use '@/style/tool/mixin' as *;
+@use '@/style/tool/function' as *;
+
+/* # base */
+
+/* ## color */
+$color: (
+  primary: #131417,
+  primary-light: #1e1f26,
+  primary-light2: #2c303b,
+  primary-dark: #74829a,
+  primary-dark2: #000000,
+  secondary: #c7c9d3,
+  secondary-light: #ffffff,
+  success: #00f260,
+  success-light: #40e0d0
+);
+
+/* ## font-size */
+$font-size: (
+  large-extra: 45px,
+  large: 27px,
+  normal: 16px,
+  small: 14px,
+  small-extra: 12px
+);
+
+/* # component */
+
+/* ## text */
+$text: (
+  color-primary: get-css-var('color', 'secondary'),
+  color-secondary: get-css-var('color', 'secondary-light'),
+  bg-color-success: get-css-var('color', 'success-light')
+);
+
+/* ## footer */
+$footer: (
+  bg-color: get-css-var('color', 'primary-dark2'),
+  color: get-css-var('text', 'color-primary'),
+  font-size: get-css-var('font-size', 'small-extra')
+);
+
+/* ## nav */
+$nav: (
+  bg-color: get-css-var('color', 'primary-light')
+);
+
+/* ## main */
+$main: (
+  bg-color: get-css-var('color', 'primary')
+);
+
+/* # set */
+$vars: (
+  color: $color,
+  font-size: $font-size,
+  text: $text,
+  footer: $footer,
+  nav: $nav,
+  main: $main
+);
+
+:root {
+  @each $property, $property-value in $vars {
+    @each $name, $value in $property-value {
+      @include set-css-var($property, $name, $value);
+    }
+  }
+}

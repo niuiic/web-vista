@@ -33,3 +33,7 @@
 - 加上contribute的方式
   - 设置一个按钮
   - 跳转到某个md文件上
+
+## Edited
+
+- footer

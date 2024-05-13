@@ -1,0 +1,3 @@
+@mixin set-css-var($property, $name, $value) {
+  --s-#{$property}-#{$name}: #{$value};
+}
