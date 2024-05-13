@@ -17,9 +17,11 @@ export const Nav = (props: Props) => {
         Web Vista
       </h1>
 
-      <h2 className={cls.slogan}>
-        <span className={cls['slogan__inner']}>Sharing Ideas</span>
-      </h2>
+      <svg className={cls.slogan}>
+        <text x={0} y={0} color="currentColor" textAnchor="middle" dominantBaseline="middle">
+          Sharing Ideas
+        </text>
+      </svg>
 
       <ul className={cls.entries}>
         {props.entries.map((entry) => (

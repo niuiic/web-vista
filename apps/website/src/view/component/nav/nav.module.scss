@@ -1,101 +1,49 @@
+@use '@/style/tool/function' as *;
+
+/* # nav */
 .nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 100%;
-  background: var(--s-color-bg-dark-2);
 }
 
-.title {
-  padding-block: 20px;
-  background: linear-gradient(45deg, #00f260 0%, #0575e6 100%);
-  background-clip: text;
-  color: transparent;
-  font-weight: bold;
-  font-size: var(--s-font-size-middle);
-  text-align: center;
-}
-
-@property --color-stop1 {
-  syntax: '<color>';
-  inherits: false;
-  initial-value: #40e0d0;
-}
-
-@property --color-stop2 {
-  syntax: '<color>';
-  inherits: false;
-  initial-value: #ff8c00;
-}
-
-@property --color-stop3 {
-  syntax: '<color>';
-  inherits: false;
-  initial-value: #ff0080;
-}
-
-@keyframes change-color {
+/* # title */
+@keyframes title-bg {
   0% {
-    --color-stop1: #40e0d0;
-    --color-stop2: #ff8c00;
-    --color-stop3: #ff0080;
-  }
-
-  33% {
-    --color-stop1: #ff0080;
-    --color-stop2: #40e0d0;
-    --color-stop3: #ff8c00;
-  }
-
-  66% {
-    --color-stop1: #ff8c00;
-    --color-stop2: #ff0080;
-    --color-stop3: #40e0d0;
+    background-position: 0 0;
   }
 
   100% {
-    --color-stop1: #40e0d0;
-    --color-stop2: #ff8c00;
-    --color-stop3: #ff0080;
+    background-position: 100% 0;
   }
 }
+
+.title {
+  margin-block: 36px;
+  background: linear-gradient(to right, #00f260 0%, #0575e6 33%, #00f260 66%, #0575e6 100%);
+  background-clip: text;
+  background-size: 300% 100%;
+  color: transparent;
+  font-weight: bold;
+  font-size: get-css-var(font-size, large);
+  text-align: center;
+  white-space: nowrap;
+  animation: title-bg 4s linear infinite;
+}
+
+/* # slogan */
 
 .slogan {
   width: 140px;
   height: 50px;
-  margin-inline: auto;
-  border-radius: 4px;
-  font-size: var(--s-font-size-small);
-  user-select: none;
+  /* background-color: get-css-var('color', 'primary-dark2'); */
+  background-color: get-css-var('color', 'primary-light2');
+  color: get-css-var(text, color-secondary);
+  font-size: get-css-var(font-size, small);
 }
 
-@supports (--css: variable) {
-  .slogan {
-    background-image: radial-gradient(
-        circle at 50% 50%,
-        var(--color-stop1) 0%,
-        var(--color-stop2) 50%,
-        var(--color-stop3) 100%
-      ),
-      linear-gradient(90deg, var(--color-stop1) 0%, var(--color-stop2) 50%, var(--color-stop3) 100%);
-    animation: change-color 4s linear infinite;
-  }
-}
-
-@supports not (--css: variable) {
-  .slogan {
-    background-image: linear-gradient(90deg, #40e0d0 0%, #ff8c00 50%, #ff0080 100%);
-  }
-}
-
-.slogan__inner {
-  display: inline-block;
-  width: calc(100% - 6px);
-  height: calc(100% - 6px);
-  margin: 3px;
-  background-color: var(--s-color-bg-dark-4);
-  color: var(--s-color-text-light-1);
-  line-height: 46px;
-  text-align: center;
-}
-
+/* # entry */
 .entries {
   margin-top: 20px;
 }

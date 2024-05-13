@@ -12,6 +12,6 @@
 }
 
 .text {
-  color: get-css-var('footer', 'color');
-  font-size: get-css-var('footer', 'font-size');
+  color: get-css-var(footer, color);
+  font-size: get-css-var(font-size, small-extra);
 }

@@ -19,19 +19,19 @@
 .main {
   grid-area: main;
   overflow: auto;
-  background-color: get-css-var('main', 'bg-color');
+  background-color: get-css-var(main, bg-color);
 }
 
 /* # footer */
 .footer {
   grid-area: footer;
-  background-color: get-css-var('footer', 'bg-color');
+  background-color: get-css-var(footer, bg-color);
 }
 
 /* # nav */
 .nav {
   grid-area: nav;
-  background-color: get-css-var('nav', 'bg-color');
+  background-color: get-css-var(nav, bg-color);
 }
 
 @keyframes nav-collapsed-bg {
@@ -43,10 +43,10 @@
 .nav-collapsed {
   background-image: repeating-linear-gradient(
     45deg,
-    get-css-var('nav', 'bg-color-collapsed') 0,
-    get-css-var('nav', 'bg-color-collapsed') 2px,
-    get-css-var('nav', 'bg-color-collapsed-light') 2px,
-    get-css-var('nav', 'bg-color-collapsed-light') 4px
+    get-css-var(nav, bg-color-collapsed) 0,
+    get-css-var(nav, bg-color-collapsed) 2px,
+    get-css-var(nav, bg-color-collapsed-light) 2px,
+    get-css-var(nav, bg-color-collapsed-light) 4px
   );
   cursor: pointer;
   transition: opacity 0.6s ease;
@@ -71,7 +71,7 @@
 }
 
 .nav:hover .collapse-btn {
-  box-shadow: 0 0 5px 12px get-css-var('nav', 'btn-shadow-color') inset;
+  box-shadow: 0 0 5px 12px get-css-var(nav, btn-shadow-color) inset;
   transition: transform 0.2s;
   transform: translateX(180px + 24px);
 }

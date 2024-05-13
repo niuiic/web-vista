@@ -18,8 +18,8 @@ $color: (
 
 /* ## font-size */
 $font-size: (
-  large-extra: 45px,
-  large: 27px,
+  large-extra: 36px,
+  large: 24px,
   normal: 16px,
   small: 14px,
   small-extra: 12px
@@ -29,29 +29,28 @@ $font-size: (
 
 /* ## text */
 $text: (
-  color-primary: get-css-var('color', 'secondary'),
-  color-secondary: get-css-var('color', 'secondary-light'),
-  bg-color-success: get-css-var('color', 'success-light')
+  color-primary: get-css-var(color, secondary),
+  color-secondary: get-css-var(color, secondary-light),
+  bg-color-success: get-css-var(color, success-light)
 );
 
 /* ## footer */
 $footer: (
-  bg-color: get-css-var('color', 'primary-dark2'),
-  color: get-css-var('text', 'color-primary'),
-  font-size: get-css-var('font-size', 'small-extra')
+  bg-color: get-css-var(color, primary-dark2),
+  color: get-css-var(text, color-primary)
 );
 
 /* ## nav */
 $nav: (
-  bg-color: get-css-var('color', 'primary-light'),
-  bg-color-collapsed: get-css-var('color', 'primary'),
-  bg-color-collapsed-light: get-css-var('color', 'primary-light2'),
-  btn-shadow-color: get-css-var('color', 'secondary')
+  bg-color: get-css-var(color, primary-light),
+  bg-color-collapsed: get-css-var(color, primary),
+  bg-color-collapsed-light: get-css-var(color, primary-light2),
+  btn-shadow-color: get-css-var(color, secondary)
 );
 
 /* ## main */
 $main: (
-  bg-color: get-css-var('color', 'primary')
+  bg-color: get-css-var(color, primary)
 );
 
 /* # set */

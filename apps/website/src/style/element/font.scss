@@ -1,5 +1,7 @@
+@use '@/style/tool/function' as *;
+
 body {
   font-weight: normal;
-  font-size: var(--s-font-size-normal);
+  font-size: get-css-var(font-size, normal);
   font-family: JetBrainsMono, 'Microsoft YaHei', 'PingFang SC';
 }
