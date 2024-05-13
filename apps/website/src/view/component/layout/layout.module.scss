@@ -81,13 +81,20 @@
 
 .collapse-btn {
   position: absolute;
-  top: 36px;
+  top: 120px;
   width: 24px;
   height: 24px;
   border: 1px red solid;
-  animation: hide 0.2s linear 1s 1 forwards;
+  animation: hide 0.5s ease-in;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+
+.collapse-btn.collapse-btn.collapse-btn:hover {
+  animation-play-state: paused;
 }
 
 .nav:hover .collapse-btn {
-  animation: show 0.2s linear 1 backwards;
+  animation: show 1s;
+  animation-fill-mode: forwards;
 }

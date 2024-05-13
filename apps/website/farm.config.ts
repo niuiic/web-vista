@@ -1,5 +1,4 @@
 import { defineConfig } from '@farmfe/core'
-import postcss from '@farmfe/js-plugin-postcss'
 import path from 'path'
 
 export default defineConfig({
@@ -19,7 +18,6 @@ export default defineConfig({
         runtime: 'automatic'
       }
     ],
-    '@farmfe/plugin-sass',
-    postcss()
+    '@farmfe/plugin-sass'
   ]
 })
