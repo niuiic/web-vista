@@ -1,30 +1,39 @@
+@use '@/style/tool/function' as *;
+
+/* # layout */
 .layout {
   display: grid;
   grid-template-areas: 'nav main' 'nav footer';
   grid-template-rows: 1fr 100px;
   grid-template-columns: 180px 1fr;
   overflow: hidden;
-  min-height: max(100vh, 840px);
+  height: max(100vh, 640px);
 }
 
 .layout--nav-collapsed {
   grid-template-columns: 16px 1fr;
 }
 
+/* # main */
 .main {
   grid-area: main;
+  overflow: auto;
+  background-color: get-css-var('main', 'bg-color');
 }
 
+/* # footer */
 .footer {
   grid-area: footer;
+  background-color: get-css-var('footer', 'bg-color');
 }
 
+/* # nav */
 .nav {
-  position: relative;
   grid-area: nav;
+  background-color: get-css-var('nav', 'bg-color');
 }
 
-@keyframes dyn-bg {
+@keyframes nav-collapsed-bg {
   100% {
     transform: translateY(-17px);
   }
@@ -33,10 +42,10 @@
 .nav-collapsed {
   background-image: repeating-linear-gradient(
     45deg,
-    var(--s-color-bg-dark-1),
-    var(--s-color-bg-dark-1) 2px,
-    var(--s-color-bg-dark-3) 0,
-    var(--s-color-bg-dark-3) 4px
+    get-css-var('nav', 'bg-color-collapsed') 0,
+    get-css-var('nav', 'bg-color-collapsed') 2px,
+    get-css-var('nav', 'bg-color-collapsed-light') 2px,
+    get-css-var('nav', 'bg-color-collapsed-light') 4px
   );
   cursor: pointer;
   transition: opacity 0.6s ease;
@@ -44,30 +53,41 @@
   &:hover {
     height: calc(100% + 17px);
     opacity: 0.8;
-    animation: dyn-bg 0.6s infinite linear;
+    animation: nav-collapsed-bg 0.6s infinite linear;
+  }
+}
+
+@keyframes show {
+  from {
+    display: initial;
+    transform: translateX(180px - 24px);
+  }
+
+  to {
+    transform: translateX(180px + 24px);
+  }
+}
+
+@keyframes hide {
+  from {
+    transform: translateX(180px + 24px);
+  }
+
+  to {
+    display: none;
+    transform: translateX(180px - 24px);
   }
 }
 
 .collapse-btn {
   position: absolute;
-  top: 5%;
-  right: -30px;
-  width: 30px;
-  height: 30px;
-  border-radius: 4px;
-  background-color: var(--s-color-bg-dark-1);
-  font-size: 20px;
-  line-height: 30px;
-  text-align: center;
-  visibility: hidden;
-  cursor: pointer;
-  transition: visibility 0.6s ease;
-
-  &:hover {
-    opacity: 0.8;
-  }
+  top: 36px;
+  width: 24px;
+  height: 24px;
+  border: 1px red solid;
+  animation: hide 0.2s linear 1s 1 forwards;
 }
 
 .nav:hover .collapse-btn {
-  visibility: visible;
+  animation: show 0.2s linear 1 backwards;
 }

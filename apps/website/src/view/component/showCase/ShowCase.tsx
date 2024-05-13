@@ -3,7 +3,7 @@ import { useCallback, useMemo, useState } from 'react'
 import { Code } from '../code'
 import { Dialog } from '../dialog'
 import { Frame } from '../frame'
-import { Icon } from '../icon'
+// import { Icon } from '../icon'
 import { Tabs } from '../tabs'
 import type { ShowCaseOptions } from './nonBusiness'
 import cls from './showCase.module.scss'
@@ -88,7 +88,7 @@ export const ShowCase = (props: Props) => {
         <div className={classes(cls['frame__wrapper'], dialogVisiable ? cls['frame__wrapper--disactive'] : undefined)}>
           <Frame className={cls.frame} html={props.options.html} css={props.options.css} js={props.options.js} />
           <div className={cls['frame__btn']} onClick={showDialog}>
-            <Icon name="expand" />
+            {/* <Icon name="expand" /> */}
           </div>
         </div>
         <Info />

@@ -43,7 +43,9 @@ $footer: (
 
 /* ## nav */
 $nav: (
-  bg-color: get-css-var('color', 'primary-light')
+  bg-color: get-css-var('color', 'primary-light'),
+  bg-color-collapsed: get-css-var('color', 'primary'),
+  bg-color-collapsed-light: get-css-var('color', 'primary-light2')
 );
 
 /* ## main */

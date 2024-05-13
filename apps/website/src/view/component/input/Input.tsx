@@ -1,5 +1,5 @@
 import type { ChangeEvent } from 'react'
-import { Icon } from '../icon'
+// import { Icon } from '../icon'
 import cls from './input.module.scss'
 
 interface Props {
@@ -13,7 +13,7 @@ export const Input = (props: Props) => {
 
   return (
     <div className={cls.input}>
-      <Icon className={cls['input__prefix']} name="search" />
+      {/* <Icon className={cls['input__prefix']} name="search" /> */}
       <input className={cls['input__inner']} type="text" placeholder={props.placeholder} onChange={onChange} />
     </div>
   )

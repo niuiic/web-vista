@@ -1,6 +1,7 @@
+import { useAsset } from '@/util/asset'
 import { classes } from '@/util/class'
 import { useState, type ReactNode } from 'react'
-import { Icon } from '../icon'
+import { Image } from '../image'
 import cls from './layout.module.scss'
 
 interface Props {
@@ -25,9 +26,11 @@ export const Layout = (props: Props) => {
       <nav className={classes(cls.nav, collapseNav ? cls['nav-collapsed'] : undefined)} onClick={onClickNav}>
         {collapseNav ? undefined : props.nav}
         {collapseNav ? undefined : (
-          <div className={cls['collapse-btn']} onClick={onClickCollapseBtn}>
-            <Icon name="collapse" />
-          </div>
+          <Image
+            src={useAsset('image/collapse.svg')}
+            className={classes(cls['collapse-btn'], 'o-btn')}
+            onClick={onClickCollapseBtn}
+          />
         )}
       </nav>
       <main className={cls.main}>{props.main}</main>
