@@ -38,9 +38,11 @@ export const Frame = (props: Props) => {
       shadowRoot.appendChild(style)
     }
     if (props.js) {
-      const queryShadowRoot = `var shadowRoot = document.getElementById('${id}').shadowRoot\n`
+      const queryShadowRoot = `const shadowRoot = document.getElementById('${id}').shadowRoot\n`
       const script = document.createElement('script')
-      script.textContent = queryShadowRoot + props.js.replaceAll('document.', 'shadowRoot.')
+      const js = queryShadowRoot + props.js.replaceAll('document.', 'shadowRoot.')
+      script.textContent = `(function() {${js}})()`
+
       shadowRoot.appendChild(script)
     }
   }, [props.js, props.html, props.css])
