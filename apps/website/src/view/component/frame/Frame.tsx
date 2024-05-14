@@ -41,7 +41,7 @@ export const Frame = (props: Props) => {
       const queryShadowRoot = `const shadowRoot = document.getElementById('${id}').shadowRoot\n`
       const script = document.createElement('script')
       const js = queryShadowRoot + props.js.replaceAll('document.', 'shadowRoot.')
-      script.textContent = `(function() {${js}})()`
+      script.textContent = `(() => {${js}})()`
 
       shadowRoot.appendChild(script)
     }

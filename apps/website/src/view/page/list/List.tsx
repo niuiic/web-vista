@@ -4,12 +4,11 @@ import { Input } from '@/view/component/input'
 import { Selection } from '@/view/component/selection/Selection'
 import type { ShowCaseOptions } from '@/view/component/showCase'
 import { ShowCase } from '@/view/component/showCase'
-import cssComponents from 'css'
 import { useEffect, useState } from 'react'
 import cls from './list.module.scss'
 
 interface Props {
-  isStandard: boolean
+  cases: ShowCaseOptions[]
 }
 
 export const List = (props: Props) => {
@@ -19,18 +18,13 @@ export const List = (props: Props) => {
   const [items, setItems] = useState<string[]>([])
   useEffect(() => {
     const itemSet = new Set<string>()
-    allCases.forEach((x) => {
-      if (Boolean(x.isStandard) === props.isStandard) {
-        itemSet.add(x.category)
-      }
-    })
+    props.cases.forEach((x) => itemSet.add(x.category))
     const newItems: string[] = []
     itemSet.forEach((x) => newItems.push(x))
     setItems(newItems)
-  }, [props.isStandard])
+  }, [props.cases])
 
   // # cases
-  const allCases = cssComponents as ShowCaseOptions[]
   const [cases, setCases] = useState<ShowCaseOptions[]>([])
   let prevInput: string
   let prevSelected: string[]
@@ -44,10 +38,7 @@ export const List = (props: Props) => {
   }
   const updateCases = () => {
     setCases(
-      allCases.filter((x) => {
-        if (Boolean(x.isStandard) !== props.isStandard) {
-          return false
-        }
+      props.cases.filter((x) => {
         if (!prevInput && (!prevSelected || prevSelected.length === 0)) {
           return true
         }
@@ -65,8 +56,7 @@ export const List = (props: Props) => {
     )
   }
   const debounceedUpdateCases = useDebounce(updateCases)
-
-  useEffect(updateCases, [props.isStandard])
+  useEffect(updateCases, [props.cases])
 
   return (
     <div className={cls.main}>
