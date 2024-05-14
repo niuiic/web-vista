@@ -8,6 +8,7 @@ const component = {
   desc: 'css z-index characterization',
   category: 'css',
   tags: ['standard'],
+  isStandard: true,
   html,
   css: css + sectionCss,
   code: [

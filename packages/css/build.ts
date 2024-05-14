@@ -8,6 +8,7 @@ interface Component {
   desc: string
   category: string,
   tags?: string[]
+  isStandard?: boolean
 
   html: string
   css?: string

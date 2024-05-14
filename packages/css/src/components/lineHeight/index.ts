@@ -8,6 +8,7 @@ const component = {
   desc: 'css line-height characterization',
   category: 'css',
   tags: ['standard'],
+  isStandard: true,
   html,
   css: css + sectionCss,
   code: [

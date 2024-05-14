@@ -8,6 +8,7 @@ const component = {
   desc: 'how anonymous boxes are generated',
   category: 'css',
   tags: ['standard'],
+  isStandard: true,
   html,
   css: css + sectionCss,
   code: [

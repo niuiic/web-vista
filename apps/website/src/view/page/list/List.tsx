@@ -19,7 +19,11 @@ export const List = (props: Props) => {
   const [items, setItems] = useState<string[]>([])
   useEffect(() => {
     const itemSet = new Set<string>()
-    allCases.forEach((x) => itemSet.add(x.category))
+    allCases.forEach((x) => {
+      if (Boolean(x.isStandard) === props.isStandard) {
+        itemSet.add(x.category)
+      }
+    })
     const newItems: string[] = []
     itemSet.forEach((x) => newItems.push(x))
     setItems(newItems)
@@ -27,20 +31,23 @@ export const List = (props: Props) => {
 
   // # cases
   const allCases = cssComponents as ShowCaseOptions[]
-  const [cases, setCases] = useState<ShowCaseOptions[]>(allCases)
+  const [cases, setCases] = useState<ShowCaseOptions[]>([])
   let prevInput: string
   let prevSelected: string[]
   const onInputChange = (input: string) => {
     prevInput = input
-    updateCases()
+    debounceedUpdateCases()
   }
   const onSelectionChange = (selected: string[]) => {
     prevSelected = selected
-    updateCases()
+    debounceedUpdateCases()
   }
-  const updateCases = useDebounce(() => {
+  const updateCases = () => {
     setCases(
       allCases.filter((x) => {
+        if (Boolean(x.isStandard) !== props.isStandard) {
+          return false
+        }
         if (!prevInput && (!prevSelected || prevSelected.length === 0)) {
           return true
         }
@@ -56,7 +63,10 @@ export const List = (props: Props) => {
         return false
       })
     )
-  })
+  }
+  const debounceedUpdateCases = useDebounce(updateCases)
+
+  useEffect(updateCases, [props.isStandard])
 
   return (
     <div className={cls.main}>

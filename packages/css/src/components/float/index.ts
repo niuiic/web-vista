@@ -8,6 +8,7 @@ const component = {
   desc: 'css float characterization',
   category: 'css',
   tags: ['standard'],
+  isStandard: true,
   html,
   css: css + sectionCss,
   code: [

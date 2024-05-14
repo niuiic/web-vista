@@ -8,6 +8,7 @@ const component = {
   desc: 'css width min-content characterization',
   category: 'css',
   tags: ['standard'],
+  isStandard: true,
   html,
   css: css + sectionCss,
   code: [

@@ -8,6 +8,7 @@ const component = {
   desc: 'css counter characterization',
   category: 'css',
   tags: ['standard'],
+  isStandard: true,
   html,
   css: css + sectionCss,
   code: [

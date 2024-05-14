@@ -3,6 +3,7 @@ export interface ShowCaseOptions {
   desc: string
   category: string
   tags?: string[]
+  isStandard?: boolean
 
   html: string
   css?: string

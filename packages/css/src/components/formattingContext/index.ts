@@ -8,6 +8,7 @@ const component = {
   desc: 'css formatting context characterization',
   category: 'css',
   tags: ['standard'],
+  isStandard: true,
   html,
   css: css + sectionCss,
   code: [
