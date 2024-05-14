@@ -1,6 +1,5 @@
-import { classes } from '@/util/class'
+import { localUniqId } from '@/util/id'
 import { useEffect, useRef } from 'react'
-import cls from './frame.module.scss'
 
 interface Props {
   css?: string
@@ -12,6 +11,7 @@ interface Props {
 export const Frame = (props: Props) => {
   const containerRef = useRef<HTMLDivElement>()
   let shadowRoot: ShadowRoot | undefined
+  const id = localUniqId()
 
   useEffect(() => {
     if (!shadowRoot) {
@@ -38,11 +38,12 @@ export const Frame = (props: Props) => {
       shadowRoot.appendChild(style)
     }
     if (props.js) {
+      const queryShadowRoot = `var shadowRoot = document.getElementById('${id}').shadowRoot\n`
       const script = document.createElement('script')
-      script.textContent = props.js
+      script.textContent = queryShadowRoot + props.js.replaceAll('document.', 'shadowRoot.')
       shadowRoot.appendChild(script)
     }
   }, [props.js, props.html, props.css])
 
-  return <div ref={containerRef} className={classes(cls.frame, props.className)} />
+  return <div id={id} ref={containerRef} className={props.className} />
 }

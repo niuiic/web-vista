@@ -11,5 +11,5 @@ export const localUniqId = (): string => {
     count = 0
   }
 
-  return `${lastTime}${count}`
+  return `uid-${lastTime}${count}`
 }
