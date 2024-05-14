@@ -24,7 +24,7 @@ export const App = () => {
       onClick: () => navigate('/standard')
     }
   ]
-  const [currentEntry, setCurrentEntry] = useState<string | undefined>(entries[0].label)
+  const [currentEntry, setCurrentEntry] = useState<string>()
   useEffect(() => {
     const targetEntry = entries.find((x) => location.pathname.startsWith('/' + x.label.toLowerCase()))
     if (!targetEntry) {
