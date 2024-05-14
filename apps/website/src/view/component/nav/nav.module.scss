@@ -23,10 +23,10 @@
   margin-block: 36px;
   background: linear-gradient(
     to right,
-    get-css-var('color', 'success') 0%,
-    get-css-var('color', 'info') 33%,
-    get-css-var('color', 'success') 66%,
-    get-css-var('color', 'info') 100%
+    get-css-var(color, success) 0%,
+    get-css-var(color, info) 33%,
+    get-css-var(color, success) 66%,
+    get-css-var(color, info) 100%
   );
   background-clip: text;
   background-size: 300% 100%;
@@ -43,7 +43,7 @@
   width: 140px;
   height: 60px;
   border-radius: 4px;
-  background-color: get-css-var('color', 'primary-dark2');
+  background-color: get-css-var(color, primary-dark2);
   color: get-css-var(text, color-secondary);
   user-select: none;
 }
@@ -51,12 +51,12 @@
 @keyframes slogan-border {
   from {
     stroke-dashoffset: 0;
-    stroke: get-css-var('color', 'success');
+    stroke: get-css-var(color, success);
   }
 
   to {
     stroke-dashoffset: 400;
-    stroke: get-css-var('color', 'info');
+    stroke: get-css-var(color, info);
   }
 }
 
@@ -73,17 +73,17 @@
   height: 36px;
   padding-inline: 20px;
   border-radius: 5px;
-  color: get-css-var('text', 'color-secondary');
+  color: get-css-var(text, color-secondary);
   line-height: 36px;
   text-align: center;
 
   &:hover {
-    box-shadow: 0 0 5px 5px get-css-var('color', 'primary');
+    box-shadow: 0 0 5px 5px get-css-var(color, primary);
   }
 }
 
 .entry--active {
-  box-shadow: 0 0 5px 5px get-css-var('color', 'primary');
+  box-shadow: 0 0 5px 5px get-css-var(color, primary);
 }
 
 .entry + .entry {

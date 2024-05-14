@@ -1,6 +1,6 @@
 import { Layout } from '@/view/component/layout'
-import { useState } from 'react'
-import { Route, Routes, useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 import { Footer } from './view/component/footer'
 import { Entry, Nav } from './view/component/nav'
 import { Detail } from './view/page/detail/Detail'
@@ -10,6 +10,7 @@ import { List } from './view/page/list/List'
 
 export const App = () => {
   const navigate = useNavigate()
+  const location = useLocation()
 
   const entries: Entry[] = [
     {
@@ -21,12 +22,19 @@ export const App = () => {
       onClick: () => navigate('/standard')
     }
   ]
-  const [currentEntry, setCurrentEntry] = useState(entries[0].label)
-  window.addEventListener('popstate', (e) => console.log(e))
+  const [currentEntry, setCurrentEntry] = useState<string | undefined>(entries[0].label)
+  useEffect(() => {
+    const targetEntry = entries.find((x) => location.pathname.startsWith('/' + x.label))
+    if (!targetEntry) {
+      setCurrentEntry(undefined)
+      return
+    }
+    setCurrentEntry(targetEntry.label)
+  }, [location])
 
   return (
     <Layout
-      nav={<Nav entries={entries} currentEntry={currentEntry} setCurrentEntry={setCurrentEntry} />}
+      nav={<Nav entries={entries} currentEntry={currentEntry} />}
       main={
         <Routes>
           <Route path="/" element={<Home />}></Route>

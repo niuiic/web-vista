@@ -5,8 +5,7 @@ import type { Entry } from './nonBusiness'
 
 interface Props {
   entries: Entry[]
-  currentEntry: Entry['label']
-  setCurrentEntry: (label: Entry['label']) => void
+  currentEntry?: Entry['label']
 }
 
 export const Nav = (props: Props) => {
@@ -42,7 +41,15 @@ export const Nav = (props: Props) => {
 
       <ul className={cls.entries}>
         {props.entries.map((entry) => (
-          <li key={entry.label} className={classes(cls.entry, 'o-btn')} onClick={entry.onClick}>
+          <li
+            key={entry.label}
+            className={classes(
+              cls.entry,
+              'o-btn',
+              entry.label === props.currentEntry ? cls['entry--active'] : undefined
+            )}
+            onClick={entry.onClick}
+          >
             {entry.label}
           </li>
         ))}
