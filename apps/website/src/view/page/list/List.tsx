@@ -2,13 +2,13 @@ import searchSvgUrl from '@/asset/image/search.svg'
 import { useDebounce } from '@/util/debounce'
 import { Input } from '@/view/component/input'
 import { Selection } from '@/view/component/selection/Selection'
-import type { ShowCaseOptions } from '@/view/component/showCase'
-import { ShowCase } from '@/view/component/showCase'
+import type { ShowcaseOptions } from '@/view/component/showcase'
+import { Showcase } from '@/view/component/showcase'
 import { useEffect, useState } from 'react'
 import cls from './list.module.scss'
 
 interface Props {
-  cases: ShowCaseOptions[]
+  cases: ShowcaseOptions[]
 }
 
 export const List = (props: Props) => {
@@ -25,7 +25,7 @@ export const List = (props: Props) => {
   }, [props.cases])
 
   // # cases
-  const [cases, setCases] = useState<ShowCaseOptions[]>([])
+  const [cases, setCases] = useState<ShowcaseOptions[]>([])
   let prevInput: string
   let prevSelected: string[]
   const onInputChange = (input: string) => {
@@ -68,7 +68,7 @@ export const List = (props: Props) => {
       </div>
       <div className={cls.showcases}>
         {cases.map((options, i) => (
-          <ShowCase options={options} key={i} />
+          <Showcase options={options} key={i} />
         ))}
       </div>
     </div>

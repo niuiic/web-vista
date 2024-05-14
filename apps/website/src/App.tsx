@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 import { Footer } from './view/component/footer'
 import { Entry, Nav } from './view/component/nav'
-import { ShowCaseOptions } from './view/component/showCase'
+import { ShowcaseOptions } from './view/component/showcase'
 import { Detail } from './view/page/detail/Detail'
 import { Error } from './view/page/error/Error'
 import { Home } from './view/page/home/Home'
@@ -16,17 +16,17 @@ export const App = () => {
   // # entries
   const entries: Entry[] = [
     {
-      label: 'showcase',
+      label: 'Showcase',
       onClick: () => navigate('/showcase')
     },
     {
-      label: 'standard',
+      label: 'Standard',
       onClick: () => navigate('/standard')
     }
   ]
   const [currentEntry, setCurrentEntry] = useState<string | undefined>(entries[0].label)
   useEffect(() => {
-    const targetEntry = entries.find((x) => location.pathname.startsWith('/' + x.label))
+    const targetEntry = entries.find((x) => location.pathname.startsWith('/' + x.label.toLowerCase()))
     if (!targetEntry) {
       setCurrentEntry(undefined)
       return
@@ -35,7 +35,7 @@ export const App = () => {
   }, [location])
 
   // # cases
-  const [cases, setCases] = useState<ShowCaseOptions[]>([])
+  const [cases, setCases] = useState<ShowcaseOptions[]>([])
   useEffect(() => {
     import('css').then((x) => setCases(x.default))
   }, [])

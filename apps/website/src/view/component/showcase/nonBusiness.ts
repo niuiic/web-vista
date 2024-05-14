@@ -1,4 +1,4 @@
-export interface ShowCaseOptions {
+export interface ShowcaseOptions {
   title: string
   desc: string
   category: string
