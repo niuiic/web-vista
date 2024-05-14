@@ -4,9 +4,11 @@
   display: flex;
   gap: 16px;
   align-items: center;
-  padding: 8px 20px;
+  height: 36px;
+  padding-inline: 20px;
   border-radius: 4px;
   background-color: get-css-var(input, bg-color);
+  line-height: 36px;
 }
 
 .input__inner {

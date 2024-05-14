@@ -1,13 +1,33 @@
+@use '@/style/tool/function' as *;
+
 .main {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   padding: 12px;
-  background-color: var(--s-color-bg-dark-3);
+}
+
+.filter {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 16px 32px;
+  align-items: center;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px 0 get-css-var(color, primary-dark);
+}
+
+.filter__label {
+  color: get-css-var(input, placeholder-color);
+  font-weight: bold;
 }
 
 .showcases {
   display: grid;
+  flex: 1;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 20px;
+  overflow: auto;
   margin: 20px 0;
 }
 

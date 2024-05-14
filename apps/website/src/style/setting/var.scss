@@ -32,6 +32,7 @@ $font-size: (
 $text: (
   color-primary: get-css-var(color, secondary),
   color-secondary: get-css-var(color, secondary-light),
+  color-success: get-css-var(color, success),
   bg-color-success: get-css-var(color, success-light)
 );
 
@@ -40,6 +41,15 @@ $input: (
   bg-color: get-css-var(color, primary-light2),
   placeholder-color: get-css-var(color, secondary),
   color: get-css-var(color, secondary-light)
+);
+
+/* ## selection */
+$selection: (
+  color: get-css-var(text, color-primary),
+  color--selected: get-css-var(text, color-success),
+  bg-color: get-css-var(color, primary-light2),
+  bg-color-selected: get-css-var(text, bg-color-success),
+  hover-box-shadow-color: get-css-var(color, primary-dark)
 );
 
 /* ## footer */
@@ -69,7 +79,8 @@ $vars: (
   footer: $footer,
   nav: $nav,
   main: $main,
-  input: $input
+  input: $input,
+  selection: $selection
 );
 
 :root {
