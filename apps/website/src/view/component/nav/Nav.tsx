@@ -1,14 +1,18 @@
 import { classes } from '@/util/class'
+import { useNavigate } from 'react-router-dom'
 import cls from './nav.module.scss'
 import type { Entry } from './nonBusiness'
 
 interface Props {
   entries: Entry[]
+  currentEntry: Entry['label']
+  setCurrentEntry: (label: Entry['label']) => void
 }
 
 export const Nav = (props: Props) => {
+  const navigate = useNavigate()
   const goHome = () => {
-    window.location.href = window.location.protocol + '//' + window.location.host
+    navigate('/')
   }
 
   return (
@@ -17,9 +21,22 @@ export const Nav = (props: Props) => {
         Web Vista
       </h1>
 
-      <svg className={cls.slogan}>
-        <text x={0} y={0} color="currentColor" textAnchor="middle" dominantBaseline="middle">
-          Sharing Ideas
+      <svg className={cls.slogan} viewBox="0 0 140 60">
+        <defs>
+          <path id="circle" d="M 10 25 Q 70 60 130 25"></path>
+        </defs>
+        <rect
+          className={cls.slogan__inner}
+          width={140}
+          height={60}
+          fill="none"
+          strokeWidth={5}
+          strokeDasharray="100 100"
+        ></rect>
+        <text>
+          <textPath xlinkHref="#circle" stroke="currentcolor" fill="currentcolor">
+            Sharing Ideas
+          </textPath>
         </text>
       </svg>
 

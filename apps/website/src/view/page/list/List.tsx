@@ -4,9 +4,13 @@ import type { ShowCaseOptions } from '@/view/component/showCase'
 import { ShowCase } from '@/view/component/showCase'
 import cssComponents from 'css'
 import { useState } from 'react'
-import cls from './main.module.scss'
+import cls from './list.module.scss'
 
-export const Main = () => {
+interface Props {
+  isStandard: boolean
+}
+
+export const List = (props: Props) => {
   const match = (a: string, b: string) => a.toLowerCase().includes(b.toLowerCase())
 
   const searchChange = useDebounce((value: string) => {

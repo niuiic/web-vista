@@ -21,7 +21,13 @@
 
 .title {
   margin-block: 36px;
-  background: linear-gradient(to right, #00f260 0%, #0575e6 33%, #00f260 66%, #0575e6 100%);
+  background: linear-gradient(
+    to right,
+    get-css-var('color', 'success') 0%,
+    get-css-var('color', 'info') 33%,
+    get-css-var('color', 'success') 66%,
+    get-css-var('color', 'info') 100%
+  );
   background-clip: text;
   background-size: 300% 100%;
   color: transparent;
@@ -33,28 +39,53 @@
 }
 
 /* # slogan */
-
 .slogan {
   width: 140px;
-  height: 50px;
-  /* background-color: get-css-var('color', 'primary-dark2'); */
-  background-color: get-css-var('color', 'primary-light2');
+  height: 60px;
+  border-radius: 4px;
+  background-color: get-css-var('color', 'primary-dark2');
   color: get-css-var(text, color-secondary);
-  font-size: get-css-var(font-size, small);
+  user-select: none;
+}
+
+@keyframes slogan-border {
+  from {
+    stroke-dashoffset: 0;
+    stroke: get-css-var('color', 'success');
+  }
+
+  to {
+    stroke-dashoffset: 400;
+    stroke: get-css-var('color', 'info');
+  }
+}
+
+.slogan__inner {
+  animation: slogan-border 2s infinite ease-in-out;
 }
 
 /* # entry */
 .entries {
-  margin-top: 20px;
+  margin-top: 36px;
 }
 
 .entry {
   height: 36px;
   padding-inline: 20px;
-  color: var(--s-color-text-light-1);
+  border-radius: 5px;
+  color: get-css-var('text', 'color-secondary');
   line-height: 36px;
+  text-align: center;
 
   &:hover {
-    background-color: var(--s-color-bg-dark-3);
+    box-shadow: 0 0 5px 5px get-css-var('color', 'primary');
   }
+}
+
+.entry--active {
+  box-shadow: 0 0 5px 5px get-css-var('color', 'primary');
+}
+
+.entry + .entry {
+  margin-top: 5px;
 }

@@ -1,1 +1,3 @@
-export const Detail = () => {}
+export const Detail = () => {
+  return <div>detail</div>
+}
