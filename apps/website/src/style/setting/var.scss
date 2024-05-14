@@ -35,6 +35,13 @@ $text: (
   bg-color-success: get-css-var(color, success-light)
 );
 
+/* ## input */
+$input: (
+  bg-color: get-css-var(color, primary-light2),
+  placeholder-color: get-css-var(color, secondary),
+  color: get-css-var(color, secondary-light)
+);
+
 /* ## footer */
 $footer: (
   bg-color: get-css-var(color, primary-dark2),
@@ -61,7 +68,8 @@ $vars: (
   text: $text,
   footer: $footer,
   nav: $nav,
-  main: $main
+  main: $main,
+  input: $input
 );
 
 :root {
