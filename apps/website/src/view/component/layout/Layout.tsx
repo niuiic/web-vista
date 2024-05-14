@@ -1,4 +1,4 @@
-import { useAsset } from '@/util/asset'
+import collapseSvgUrl from '@/asset/image/collapse.svg'
 import { classes } from '@/util/class'
 import { useState, type ReactNode } from 'react'
 import { Image } from '../image'
@@ -26,11 +26,7 @@ export const Layout = (props: Props) => {
       <nav className={classes(cls.nav, collapseNav ? cls['nav-collapsed'] : undefined)} onClick={onClickNav}>
         {collapseNav ? undefined : props.nav}
         {collapseNav ? undefined : (
-          <Image
-            src={useAsset('image/collapse.svg')}
-            className={classes(cls['collapse-btn'], 'o-btn')}
-            onClick={onClickCollapseBtn}
-          />
+          <Image src={collapseSvgUrl} className={classes(cls['collapse-btn'], 'o-btn')} onClick={onClickCollapseBtn} />
         )}
       </nav>
       <main className={cls.main}>{props.main}</main>

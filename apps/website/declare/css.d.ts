@@ -1,4 +1,3 @@
 declare module '*.module.scss' {
-  const mod: Record<string, string>
-  export default mod
+  export default Record<string, string>
 }

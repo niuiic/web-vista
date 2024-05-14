@@ -1,4 +1,4 @@
-import { useAsset } from '@/util/asset'
+import searchSvgUrl from '@/asset/image/search.svg'
 import { useDebounce } from '@/util/debounce'
 import { Input } from '@/view/component/input'
 import { Selection } from '@/view/component/selection/Selection'
@@ -62,7 +62,7 @@ export const List = (props: Props) => {
     <div className={cls.main}>
       <div className={cls.filter}>
         <span className={cls['filter__label']}>Title/Tag</span>
-        <Input onChange={onInputChange} iconUrl={useAsset('image/search.svg')} />
+        <Input onChange={onInputChange} iconUrl={searchSvgUrl} />
         <span className={cls['filter__label']}>Category</span>
         <Selection onChange={onSelectionChange} items={items}></Selection>
       </div>
