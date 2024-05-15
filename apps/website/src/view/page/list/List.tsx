@@ -1,5 +1,4 @@
 import searchSvgUrl from '@/asset/image/search.svg'
-import { useDebounce } from '@/util/debounce'
 import { Input } from '@/view/component/input'
 import { Selection } from '@/view/component/selection/Selection'
 import type { ShowcaseOptions } from '@/view/component/showcase'
@@ -34,7 +33,6 @@ export const List = (props: Props) => {
     const search = match ? JSON.parse(decode(match[1])) : {}
     setInput(search.input ?? '')
     setSelected(search.selected ?? [])
-    updateCases()
   }, [location])
 
   // # cases
@@ -58,8 +56,7 @@ export const List = (props: Props) => {
       })
     )
   }
-  const debounceedUpdateCases = useDebounce(updateCases)
-  useEffect(updateCases, [props.cases])
+  useEffect(updateCases, [props.cases, input, selected])
 
   const checkDetail = (showcase: ShowcaseOptions) => {
     const search = { input, selected }
@@ -70,14 +67,9 @@ export const List = (props: Props) => {
     <div className={cls.main}>
       <div className={cls.filter}>
         <span className={cls['filter__label']}>Title/Tag</span>
-        <Input value={input} setValue={setInput} onChange={debounceedUpdateCases} iconUrl={searchSvgUrl} />
+        <Input value={input} setValue={setInput} iconUrl={searchSvgUrl} />
         <span className={cls['filter__label']}>Category</span>
-        <Selection
-          selected={selected}
-          setSelected={setSelected}
-          onChange={debounceedUpdateCases}
-          items={items}
-        ></Selection>
+        <Selection selected={selected} setSelected={setSelected} items={items}></Selection>
       </div>
       <div className={cls.showcases}>
         {cases.map((options, i) => (

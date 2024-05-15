@@ -1,3 +1,12 @@
+import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 export const Error = () => {
-  return <div>发生错误</div>
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    navigate('/')
+  }, [])
+
+  return <div>Something went wrong</div>
 }
