@@ -1,6 +1,7 @@
 import { Layout } from '@/view/component/layout'
 import { useEffect, useState } from 'react'
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom'
+import { localUniqId } from './util/id'
 import { Footer } from './view/component/footer'
 import { Entry, Nav } from './view/component/nav'
 import { ShowcaseOptions } from './view/component/showcase'
@@ -37,7 +38,7 @@ export const App = () => {
   // # cases
   const [cases, setCases] = useState<ShowcaseOptions[]>([])
   useEffect(() => {
-    import('css').then((x) => setCases(x.default))
+    import('css').then((x) => setCases(x.default.map((x) => ({ ...x, id: localUniqId() }))))
   }, [])
 
   return (

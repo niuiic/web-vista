@@ -5,6 +5,7 @@ import { Selection } from '@/view/component/selection/Selection'
 import type { ShowcaseOptions } from '@/view/component/showcase'
 import { Showcase } from '@/view/component/showcase'
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import cls from './list.module.scss'
 
 interface Props {
@@ -12,6 +13,7 @@ interface Props {
 }
 
 export const List = (props: Props) => {
+  const navigate = useNavigate()
   const match = (a: string, b: string) => a.toLowerCase().includes(b.toLowerCase())
 
   // # filter
@@ -58,6 +60,10 @@ export const List = (props: Props) => {
   const debounceedUpdateCases = useDebounce(updateCases)
   useEffect(updateCases, [props.cases])
 
+  const checkDetail = (showcase: ShowcaseOptions) => {
+    navigate(`/detail?id=${showcase.id}`)
+  }
+
   return (
     <div className={cls.main}>
       <div className={cls.filter}>
@@ -68,7 +74,7 @@ export const List = (props: Props) => {
       </div>
       <div className={cls.showcases}>
         {cases.map((options, i) => (
-          <Showcase options={options} key={i} />
+          <Showcase options={options} key={i} onClick={checkDetail} />
         ))}
       </div>
     </div>

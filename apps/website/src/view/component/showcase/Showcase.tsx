@@ -1,10 +1,13 @@
+import expandSvgUrl from '@/asset/image/expand.svg'
 import { classes } from '@/util/class'
 import { Frame } from '../frame'
+import { Image } from '../image'
 import type { ShowcaseOptions } from './nonBusiness'
 import cls from './showcase.module.scss'
 
 interface Props {
   options: ShowcaseOptions
+  onClick: (showcase: ShowcaseOptions) => void
 }
 
 export const Showcase = (props: Props) => {
@@ -14,7 +17,7 @@ export const Showcase = (props: Props) => {
     <div className={classes(cls.showcase, 'showcase')}>
       <div className={classes(cls['frame__wrapper'])}>
         <Frame className={cls.frame} html={props.options.html} css={props.options.css} js={props.options.js} />
-        <div className={cls['frame__btn']}>{/* <Icon name="expand" /> */}</div>
+        <Image className={cls['frame__btn']} src={expandSvgUrl} onClick={() => props.onClick(props.options)}></Image>
       </div>
       <div className={cls.info}>
         <div className={cls.info__left}>

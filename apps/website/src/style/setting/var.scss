@@ -52,6 +52,15 @@ $selection: (
   hover-box-shadow-color: get-css-var(color, primary-dark)
 );
 
+/* ## showcase */
+$showcase: (
+  bg-color: get-css-var(color, primary-light),
+  title-color: get-css-var(text, color-secondary),
+  desc-color: get-css-var(text, color-primary),
+  category-bg-color: get-css-var(color, success-light),
+  frame-bg-color: get-css-var(color, secondary-light)
+);
+
 /* ## footer */
 $footer: (
   bg-color: get-css-var(color, primary-dark2),
@@ -80,7 +89,8 @@ $vars: (
   nav: $nav,
   main: $main,
   input: $input,
-  selection: $selection
+  selection: $selection,
+  showcase: $showcase
 );
 
 :root {

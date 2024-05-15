@@ -39,3 +39,7 @@
 - footer
 - layout
 - nav
+- frame
+- input
+- selection
+- showcase
