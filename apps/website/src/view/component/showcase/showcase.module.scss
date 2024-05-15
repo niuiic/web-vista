@@ -8,6 +8,11 @@
   padding: 16px;
   border-radius: 8px;
   background-color: get-css-var(showcase, bg-color);
+  transition: box-shadow 0.5s;
+
+  &:hover {
+    box-shadow: 10px 10px 10px 0 get-css-var(showcase, box-shadow-color);
+  }
 }
 
 /* # info */
@@ -59,48 +64,9 @@
 }
 
 /* # frame */
-.frame__wrapper {
-  position: relative;
-  flex: 1;
-  overflow: hidden;
-  border-radius: 8px;
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: none;
-    width: 80%;
-    height: 80%;
-    background: linear-gradient(to top right, transparent 50%, rgb(0 0 0 / 50%) 100%);
-  }
-
-  &:hover::after {
-    display: block;
-  }
-}
-
 .frame {
+  overflow: hidden;
   height: 100%;
+  border-radius: 4px;
   background: get-css-var(showcase, frame-bg-color);
-}
-
-.frame__btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 1;
-  display: none;
-  width: 24px;
-  height: 24px;
-
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.2);
-  }
-}
-
-.frame__wrapper:hover .frame__btn {
-  display: block;
 }

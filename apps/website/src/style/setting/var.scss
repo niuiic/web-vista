@@ -58,7 +58,8 @@ $showcase: (
   title-color: get-css-var(text, color-secondary),
   desc-color: get-css-var(text, color-primary),
   category-bg-color: get-css-var(color, success-light),
-  frame-bg-color: get-css-var(color, secondary-light)
+  frame-bg-color: get-css-var(color, secondary-light),
+  box-shadow-color: get-css-var(color, primary-dark)
 );
 
 /* ## detail */
