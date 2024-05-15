@@ -1,6 +1,6 @@
 @use '@/style/tool/function' as *;
 
-.main {
+.list {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -29,10 +29,4 @@
   gap: 20px;
   overflow: auto;
   margin: 20px 0;
-}
-
-:global(.showcase) {
-  align-self: center;
-  justify-self: center;
-  width: 100%;
 }

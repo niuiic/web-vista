@@ -64,7 +64,7 @@ export const List = (props: Props) => {
   }
 
   return (
-    <div className={cls.main}>
+    <div className={cls.list}>
       <div className={cls.filter}>
         <span className={cls['filter__label']}>Title/Tag</span>
         <Input value={input} setValue={setInput} iconUrl={searchSvgUrl} />
