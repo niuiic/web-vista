@@ -4,6 +4,7 @@ import css from './index.scss'
 import scss from './index.scss?raw'
 
 const component = {
+  id: 'lineHeight',
   title: 'line-height',
   desc: 'css line-height characterization',
   category: 'css',

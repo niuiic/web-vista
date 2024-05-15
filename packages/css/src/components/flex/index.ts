@@ -4,6 +4,7 @@ import css from './index.scss'
 import scss from './index.scss?raw'
 
 const component = {
+  id: 'flex',
   title: 'flex',
   desc: 'css flex characterization',
   category: 'css',

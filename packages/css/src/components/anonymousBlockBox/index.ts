@@ -4,6 +4,7 @@ import css from './index.scss'
 import scss from './index.scss?raw'
 
 const component = {
+  id: 'anonymousBlockBox',
   title: 'anonymous block box',
   desc: 'how anonymous boxes are generated',
   category: 'css',

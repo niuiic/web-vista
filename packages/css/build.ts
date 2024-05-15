@@ -4,6 +4,7 @@ import { join } from 'path'
 
 let indexTemplate = `
 interface Component {
+  id: string
   title: string
   desc: string
   category: string,

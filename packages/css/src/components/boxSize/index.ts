@@ -4,6 +4,7 @@ import css from './index.scss'
 import scss from './index.scss?raw'
 
 const component = {
+  id: 'boxSize',
   title: 'box size',
   desc: 'css box size characterization',
   category: 'css',

@@ -3,6 +3,7 @@ import css from './index.scss'
 import scss from './index.scss?raw'
 
 const component = {
+  id: 'wavyUnderline',
   title: 'wavy underline',
   desc: 'Text wave underline implementated with background animation',
   category: 'css',

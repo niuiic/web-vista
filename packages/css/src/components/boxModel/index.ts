@@ -4,6 +4,7 @@ import css from './index.scss'
 import scss from './index.scss?raw'
 
 const component = {
+  id: 'boxModel',
   title: 'box model',
   desc: 'css box model characterization',
   category: 'css',

@@ -4,6 +4,7 @@ import css from './index.scss'
 import scss from './index.scss?raw'
 
 const component = {
+  id: 'absolute',
   title: 'absolute',
   desc: 'css absolute characterization',
   category: 'css',

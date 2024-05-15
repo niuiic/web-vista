@@ -4,6 +4,7 @@ import css from './index.scss'
 import scss from './index.scss?raw'
 
 const component = {
+  id: 'verticalAlign',
   title: 'vertical-align',
   desc: 'css vertical-align characterization',
   category: 'css',
