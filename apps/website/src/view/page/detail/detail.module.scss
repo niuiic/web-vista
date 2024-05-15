@@ -51,21 +51,33 @@
   white-space: nowrap;
 }
 
+.info__right {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
 .category {
+  display: inline-block;
   padding: 4px 10px;
   border-radius: 4px;
   background: get-css-var(showcase, category-bg-color);
   text-align: center;
 }
 
+.return {
+  width: 24px;
+  height: 24px;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
 /* # sources */
 .sources {
   grid-area: sources;
   overflow: auto;
-}
-
-.source + .source {
-  margin-top: 16px;
 }
 
 /* # frame */
