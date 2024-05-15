@@ -66,6 +66,13 @@ $detail: (
   frame-bg-color: get-css-var(color, secondary-light)
 );
 
+/* ## scrollbar */
+$scrollbar: (
+  track-bg-color: get-css-var(color, primary-light2),
+  thumb-bg-color: get-css-var(color, primary-dark),
+  thumb-bg-color-hover: get-css-var(color, secondary)
+);
+
 /* ## code */
 $code: (
   color: get-css-var(text, color-secondary),
@@ -104,7 +111,8 @@ $vars: (
   selection: $selection,
   showcase: $showcase,
   detail: $detail,
-  code: $code
+  code: $code,
+  scrollbar: $scrollbar
 );
 
 :root {
