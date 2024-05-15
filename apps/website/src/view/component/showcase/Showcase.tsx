@@ -6,13 +6,14 @@ import cls from './showcase.module.scss'
 interface Props {
   options: ShowcaseOptions
   onClick: (showcase: ShowcaseOptions) => void
+  className?: string
 }
 
 export const Showcase = (props: Props) => {
   const hasTags = () => props.options.tags && props.options.tags.length > 0
 
   return (
-    <div className={classes(cls.showcase, 'showcase', 'o-btn')} onClick={() => props.onClick(props.options)}>
+    <div className={classes(cls.showcase, props.className, 'o-btn')} onClick={() => props.onClick(props.options)}>
       <Frame className={cls.frame} html={props.options.html} css={props.options.css} js={props.options.js} />
       <div className={cls.info}>
         <div className={cls.info__left}>

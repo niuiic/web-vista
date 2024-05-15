@@ -52,6 +52,15 @@ $selection: (
   hover-box-shadow-color: get-css-var(color, primary-dark)
 );
 
+/* ## pagination */
+$pagination: (
+  color: get-css-var(text, color-primary),
+  color--selected: get-css-var(text, color-success),
+  bg-color: get-css-var(color, primary-light2),
+  bg-color-selected: get-css-var(text, bg-color-success),
+  hover-box-shadow-color: get-css-var(color, primary-dark)
+);
+
 /* ## showcase */
 $showcase: (
   bg-color: get-css-var(color, primary-light),
@@ -113,7 +122,8 @@ $vars: (
   showcase: $showcase,
   detail: $detail,
   code: $code,
-  scrollbar: $scrollbar
+  scrollbar: $scrollbar,
+  pagination: $pagination
 );
 
 :root {

@@ -1,5 +1,6 @@
 import searchSvgUrl from '@/asset/image/search.svg'
 import { Input } from '@/view/component/input'
+import { Pagination } from '@/view/component/pagination'
 import { Selection } from '@/view/component/selection/Selection'
 import type { ShowcaseOptions } from '@/view/component/showcase'
 import { Showcase } from '@/view/component/showcase'
@@ -21,6 +22,8 @@ export const List = (props: Props) => {
   const [input, setInput] = useState<string>('')
   const [selected, setSelected] = useState<string[]>([])
   const [items, setItems] = useState<string[]>([])
+  const [pageNum, setPageNum] = useState<number>(1)
+  const pageSize = 6
   useEffect(() => {
     const itemSet = new Set<string>()
     props.cases.forEach((x) => itemSet.add(x.category))
@@ -33,6 +36,7 @@ export const List = (props: Props) => {
     const search = match ? JSON.parse(decode(match[1])) : {}
     setInput(search.input ?? '')
     setSelected(search.selected ?? [])
+    setPageNum(search.pageNum ?? 1)
   }, [location])
 
   // # cases
@@ -59,7 +63,7 @@ export const List = (props: Props) => {
   useEffect(updateCases, [props.cases, input, selected])
 
   const checkDetail = (showcase: ShowcaseOptions) => {
-    const search = { input, selected }
+    const search = { input, selected, pageNum }
     navigate(`/detail?id=${showcase.id}&return=${location.pathname}&search=${encode(JSON.stringify(search), true)}`)
   }
 
@@ -70,10 +74,18 @@ export const List = (props: Props) => {
         <Input value={input} setValue={setInput} iconUrl={searchSvgUrl} />
         <span className={cls['filter__label']}>Category</span>
         <Selection selected={selected} setSelected={setSelected} items={items}></Selection>
+        <span className={cls['filter__label']}>Page</span>
+        <Pagination
+          className={cls.pagination}
+          pageNum={pageNum}
+          setPageNum={setPageNum}
+          pageSize={pageSize}
+          count={cases.length}
+        ></Pagination>
       </div>
       <div className={cls.showcases}>
-        {cases.map((options, i) => (
-          <Showcase options={options} key={i} onClick={checkDetail} />
+        {cases.slice((pageNum - 1) * pageSize, pageNum * pageSize).map((options, i) => (
+          <Showcase className={cls.showcase} options={options} key={i} onClick={checkDetail} />
         ))}
       </div>
     </div>

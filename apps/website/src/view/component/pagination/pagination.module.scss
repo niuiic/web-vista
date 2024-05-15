@@ -1,0 +1,27 @@
+@use '@/style/tool/function' as *;
+
+.pagination {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.item {
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  background-color: get-css-var(pagination, bg-color);
+  color: get-css-var(pagination, color);
+  line-height: 36px;
+  text-align: center;
+
+  &:hover {
+    box-shadow: 0 0 5px 0 get-css-var(pagination, hover-box-shadow-color);
+    transform: scale(1.05);
+  }
+}
+
+.item--selected {
+  background-color: get-css-var(pagination, bg-color-selected);
+  color: get-css-var(pagination, color-selected);
+}
