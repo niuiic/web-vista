@@ -11,7 +11,7 @@ interface Props {
 }
 
 export const Showcase = (props: Props) => {
-  const hasTags = props.options.tags && props.options.tags.length > 0
+  const hasTags = () => props.options.tags && props.options.tags.length > 0
 
   return (
     <div className={classes(cls.showcase, 'showcase')}>
@@ -24,7 +24,7 @@ export const Showcase = (props: Props) => {
           <p className={cls.title} title={props.options.title}>
             {props.options.title}
           </p>
-          {hasTags ? (
+          {hasTags() ? (
             <p className={cls.tags} title={props.options.tags?.join('/')}>
               {props.options.tags?.join('/')}
             </p>

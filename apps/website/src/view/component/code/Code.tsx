@@ -1,3 +1,4 @@
+import { classes } from '@/util/class'
 import hljs from 'highlight.js'
 import { useEffect, useRef } from 'react'
 import cls from './code.module.scss'
@@ -5,6 +6,8 @@ import cls from './code.module.scss'
 interface Props {
   code: string
   language: string
+  label: string
+  className?: string
 }
 
 export const Code = (props: Props) => {
@@ -16,5 +19,10 @@ export const Code = (props: Props) => {
     }
   }, [props.code, props.language])
 
-  return <pre ref={codeRef} className={cls.code} />
+  return (
+    <div className={classes(cls.code, props.className)}>
+      <p className={cls.label}>{props.label}</p>
+      <pre ref={codeRef} />
+    </div>
+  )
 }

@@ -1,3 +1,12 @@
+@use '@/style/tool/function' as *;
+
 .code {
-  color: var(--s-color-text-light-2);
+  color: get-css-var(code, color);
+}
+
+.label {
+  background-color: get-css-var(code, label-bg-color);
+  box-shadow: 0 0 5px 0 get-css-var(code, label-box-shadow-color);
+  line-height: 36px;
+  text-align: center;
 }

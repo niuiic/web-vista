@@ -1,0 +1,76 @@
+@use '@/style/tool/function' as *;
+
+/* # detail */
+.detail {
+  display: grid;
+  grid-template-areas: 'info sources' 'frame sources';
+  grid-template-rows: 100px 1fr;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+}
+
+/* # info */
+.info {
+  display: flex;
+  grid-area: info;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 16px;
+}
+
+.info__left {
+  flex: 1;
+  overflow: hidden;
+}
+
+.title {
+  overflow: hidden;
+  color: get-css-var(showcase, title-color);
+  font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tags {
+  overflow: hidden;
+  width: fit-content;
+  background: linear-gradient(90deg, get-css-var(color, success) 0%, get-css-var(color, success-light) 100%);
+  background-clip: text;
+  color: transparent;
+  font-size: get-css-var(font-size, small);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.desc {
+  overflow: hidden;
+  color: get-css-var(showcase, desc-color);
+  font-size: get-css-var(font-size, small);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.category {
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: get-css-var(showcase, category-bg-color);
+  text-align: center;
+}
+
+/* # sources */
+.sources {
+  grid-area: sources;
+  overflow: auto;
+}
+
+.source + .source {
+  margin-top: 16px;
+}
+
+/* # frame */
+.frame {
+  grid-area: frame;
+  overflow: auto;
+  background-color: get-css-var(detail, frame-bg-color);
+}

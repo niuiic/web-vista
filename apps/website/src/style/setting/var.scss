@@ -61,6 +61,18 @@ $showcase: (
   frame-bg-color: get-css-var(color, secondary-light)
 );
 
+/* ## detail */
+$detail: (
+  frame-bg-color: get-css-var(color, secondary-light)
+);
+
+/* ## code */
+$code: (
+  color: get-css-var(text, color-secondary),
+  label-bg-color: get-css-var(color, primary-light),
+  label-box-shadow-color: get-css-var(color, primary-dark)
+);
+
 /* ## footer */
 $footer: (
   bg-color: get-css-var(color, primary-dark2),
@@ -90,7 +102,9 @@ $vars: (
   main: $main,
   input: $input,
   selection: $selection,
-  showcase: $showcase
+  showcase: $showcase,
+  detail: $detail,
+  code: $code
 );
 
 :root {
