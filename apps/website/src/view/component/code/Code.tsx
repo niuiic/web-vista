@@ -1,6 +1,9 @@
+import downSvgUrl from '@/asset/image/down.svg'
+import upSvgUrl from '@/asset/image/up.svg'
 import { classes } from '@/util/class'
 import hljs from 'highlight.js'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { Image } from '../image'
 import cls from './code.module.scss'
 
 interface Props {
@@ -12,17 +15,38 @@ interface Props {
 
 export const Code = (props: Props) => {
   const codeRef = useRef<HTMLPreElement>()
+  const [collapsed, setCollapsed] = useState(false)
+  const [bodyStyle, setBodyStyle] = useState({})
+  const onClick = () => setCollapsed(!collapsed)
 
   useEffect(() => {
     if (codeRef.current) {
       codeRef.current.innerHTML = hljs.highlight(props.code, { language: props.language }).value
     }
+    setTimeout(() => {
+      setBodyStyle({})
+      setTimeout(() => {
+        if (!codeRef.current) {
+          return
+        }
+        setBodyStyle({
+          maxHeight: codeRef.current.getBoundingClientRect().height
+        })
+      }, 100)
+    }, 100)
   }, [props.code, props.language])
 
   return (
-    <div className={classes(cls.code, props.className)}>
-      <p className={cls.label}>{props.label}</p>
-      <pre ref={codeRef} />
+    <div className={classes(cls.code, props.className, collapsed ? cls['code--collapsed'] : undefined)}>
+      <div className={cls.header}>
+        <span>{props.label}</span>
+        <Image
+          src={collapsed ? downSvgUrl : upSvgUrl}
+          className={classes(cls['collapse-btn'], 'o-btn')}
+          onClick={onClick}
+        ></Image>
+      </div>
+      <pre className={cls.body} style={bodyStyle} ref={codeRef} />
     </div>
   )
 }

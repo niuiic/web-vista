@@ -18,6 +18,8 @@ export const Home = () => {
     if (homeRef.current) {
       observer.observe(homeRef.current)
     }
+
+    return () => observer.disconnect()
   }, [])
 
   return (

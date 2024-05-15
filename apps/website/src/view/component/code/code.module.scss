@@ -4,9 +4,30 @@
   color: get-css-var(code, color);
 }
 
-.label {
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 36px;
+  padding-inline: 16px;
   background-color: get-css-var(code, label-bg-color);
   box-shadow: 0 0 5px 0 get-css-var(code, label-box-shadow-color);
-  line-height: 36px;
-  text-align: center;
+}
+
+.collapse-btn {
+  width: 24px;
+  height: 24px;
+
+  &:hover {
+    scale: 1.2;
+  }
+}
+
+.body {
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+.code--collapsed .body {
+  max-height: 0 !important;
 }
