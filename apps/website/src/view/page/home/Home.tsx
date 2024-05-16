@@ -1,7 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import cls from './home.module.scss'
 
 export const Home = () => {
+  const navigate = useNavigate()
+  useEffect(() => {
+    navigate('/showcase')
+  })
+
   const homeRef = useRef<HTMLDivElement>()
   const canvasRef = useRef<HTMLCanvasElement>()
   const [canvasSize, setCanvasSize] = useState({
