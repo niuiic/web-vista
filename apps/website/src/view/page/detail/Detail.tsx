@@ -73,8 +73,12 @@ export const Detail = (props: Props) => {
           </div>
         </div>
       ) : undefined}
-      <div className={cls.sources}>
-        {showcase?.code.map((x) => <Code code={x.content} language={x.filetype} label={x.label} key={x.label}></Code>)}
+      <div className={cls['sources_wrapper']}>
+        <div className={cls.sources}>
+          {showcase?.code.map((x) => (
+            <Code code={x.content} language={x.filetype} label={x.label} key={x.label} className={cls.source}></Code>
+          ))}
+        </div>
       </div>
       <Frame className={cls.frame} html={showcase?.html} css={showcase?.css} js={showcase?.js}></Frame>
     </div>

@@ -75,9 +75,19 @@
 }
 
 /* # sources */
-.sources {
+.sources_wrapper {
   grid-area: sources;
   overflow: auto;
+}
+
+.sources {
+  display: flex;
+  flex-direction: column;
+  min-width: max-content;
+}
+
+.source {
+  min-width: max-content;
 }
 
 /* # frame */
