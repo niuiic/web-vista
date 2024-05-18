@@ -8,7 +8,8 @@ export default defineConfig({
       alias: {
         '@/': path.join(process.cwd(), 'src')
       }
-    }
+    },
+    persistentCache: false
   },
   plugins: [farmSassPlugin(), farmRawPlugin()]
 })
