@@ -1,0 +1,123 @@
+@use 'sass:math';
+
+#app {
+  background: #000000;
+}
+
+.number {
+  position: absolute;
+  top: 27%;
+  z-index: 10;
+  width: 300px;
+  color: #ffffff;
+  font-size: 32px;
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: auto;
+}
+
+.contrast {
+  overflow: hidden;
+  width: 300px;
+  height: 400px;
+  background-color: #000000;
+  filter: contrast(10) hue-rotate(0);
+  animation: hue-rotate 10s infinite linear;
+}
+
+.circle {
+  position: relative;
+  box-sizing: border-box;
+  width: 300px;
+  height: 300px;
+  filter: blur(8px);
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    border-radius: 42% 38% 62% 49% / 45%;
+    background-color: #00ff6f;
+    transform: translate(-50%, -50%) rotate(0);
+    animation: rotate 10s infinite linear;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    z-index: 10;
+    width: 176px;
+    height: 176px;
+    border-radius: 50%;
+    background-color: #000000;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.bubbles {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100px;
+  height: 40px;
+  border-radius: 100px 100px 0 0;
+  background-color: #00ff6f;
+  filter: blur(5px);
+  transform: translate(-50%, 0);
+}
+
+li {
+  position: absolute;
+  border-radius: 50%;
+  background: #00ff6f;
+}
+
+@for $i from 0 through 15 {
+  li:nth-child(#{$i}) {
+    $width: 15 + math.random(15) + px;
+
+    top: 50%;
+    left: 15 + math.random(70) + px;
+    width: $width;
+    height: $width;
+    transform: translate(-50%, -50%);
+    animation: move-to-top #{math.random(6) + 3}s ease-in-out -#{math.div(math.random(5000), 1000)}s infinite;
+  }
+}
+
+@keyframes rotate {
+  50% {
+    border-radius: 45% / 42% 38% 58% 49%;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(720deg);
+  }
+}
+
+@keyframes move-to-top {
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.1;
+    transform: translate(-50%, -180px);
+  }
+}
+
+@keyframes hue-rotate {
+  100% {
+    filter: contrast(15) hue-rotate(360deg);
+  }
+}
