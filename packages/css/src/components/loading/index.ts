@@ -5,7 +5,7 @@ import scss from './index.scss?raw'
 const component = {
   id: 'loading',
   title: 'loading',
-  desc: 'simple loading icon',
+  desc: 'Simple loading icon.',
   category: 'css',
   tags: ['single div', 'animation'],
   html,

@@ -5,7 +5,7 @@ import scss from './index.scss?raw'
 const component = {
   id: 'wavyUnderline',
   title: 'wavy underline',
-  desc: 'Text wave underline implementated with background animation',
+  desc: 'Text wave underline implementated with background animation.',
   category: 'css',
   tags: ['background', 'animation'],
   html,
