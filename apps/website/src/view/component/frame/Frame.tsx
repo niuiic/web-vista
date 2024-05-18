@@ -1,5 +1,7 @@
+import { classes } from '@/util/class'
 import { localUniqId } from '@/util/id'
 import { useEffect, useRef } from 'react'
+import cls from './frame.module.scss'
 
 interface Props {
   css?: string
@@ -47,5 +49,5 @@ export const Frame = (props: Props) => {
     }
   }, [props.js, props.html, props.css])
 
-  return <div id={id} ref={containerRef} className={props.className} />
+  return <div id={id} ref={containerRef} className={classes(cls.frame, props.className)} />
 }
