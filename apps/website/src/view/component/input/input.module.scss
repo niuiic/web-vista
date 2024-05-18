@@ -25,3 +25,7 @@
   width: 20px;
   height: 20px;
 }
+
+.input:has(.input__inner:focus) {
+  box-shadow: 0 0 2px 0 get-css-var(input, focus-box-shadow-color);
+}

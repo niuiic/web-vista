@@ -40,7 +40,8 @@ $text: (
 $input: (
   bg-color: get-css-var(color, primary-light2),
   placeholder-color: get-css-var(color, secondary),
-  color: get-css-var(color, secondary-light)
+  color: get-css-var(color, secondary-light),
+  focus-box-shadow-color: get-css-var(color, secondary)
 );
 
 /* ## selection */
