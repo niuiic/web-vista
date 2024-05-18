@@ -1,4 +1,4 @@
-@keyframes bg-wave-flow {
+@keyframes wave {
   from {
     background-position-x: -10px, 0;
   }
@@ -20,5 +20,5 @@
     0 calc(100% - 4px);
   background-size: 20px 20px;
   line-height: 16px;
-  animation: bg-wave-flow 1s infinite linear;
+  animation: wave 1s infinite linear;
 }
