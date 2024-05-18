@@ -1,5 +1,7 @@
 import type { JsPlugin, UserConfig } from '@farmfe/core'
+import autoprefixer from 'autoprefixer'
 import { createRequire } from 'module'
+import postcss from 'postcss'
 
 const sassImpl = import(createRequire(import.meta.url).resolve('sass-embedded'))
 
@@ -16,7 +18,10 @@ export const farmSassPlugin = (): JsPlugin => {
         resolvedPaths: ['\\.scss$', '\\.sass$']
       },
       executor: async (args) => {
-        const content = await sassImpl.then((x) => x.compile(args.resolvedPath).css).catch(() => '')
+        let content = await sassImpl.then((x) => x.compile(args.resolvedPath).css).catch(() => '')
+        content = await postcss([autoprefixer])
+          .process(content)
+          .then((x) => x.css)
 
         return { content, moduleType: 'sass-css' }
       }

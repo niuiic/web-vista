@@ -1,4 +1,5 @@
 import { defineConfig } from '@farmfe/core'
+import farmPostcssPlugin from '@farmfe/js-plugin-postcss'
 import path from 'path'
 
 export default defineConfig({
@@ -19,6 +20,7 @@ export default defineConfig({
         runtime: 'automatic'
       }
     ],
-    '@farmfe/plugin-sass'
+    '@farmfe/plugin-sass',
+    farmPostcssPlugin()
   ]
 })
