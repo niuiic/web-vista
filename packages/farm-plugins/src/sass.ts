@@ -22,6 +22,7 @@ export const farmSassPlugin = (): JsPlugin => {
         content = await postcss([autoprefixer])
           .process(content)
           .then((x) => x.css)
+          .catch(() => '')
 
         return { content, moduleType: 'sass-css' }
       }
