@@ -20,7 +20,9 @@ export const farmSassPlugin = (): JsPlugin => {
       executor: async (args) => {
         let content = await sassImpl.then((x) => x.compile(args.resolvedPath).css).catch(() => '')
         content = await postcss([autoprefixer])
-          .process(content)
+          .process(content, {
+            from: args.resolvedPath
+          })
           .then((x) => x.css)
           .catch(() => '')
 
