@@ -32,7 +32,11 @@ export const Frame = (props: Props) => {
     }
 
     if (props.html) {
-      shadowRoot.innerHTML = props.html
+      const container = document.createElement('div')
+      container.setAttribute('style', 'min-width: 100%; min-height: 100%; height: 0;')
+      container.setAttribute('id', 'app')
+      container.innerHTML = props.html
+      shadowRoot.appendChild(container)
     }
     if (props.css) {
       const style = document.createElement('style')
