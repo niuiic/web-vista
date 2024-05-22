@@ -3,7 +3,7 @@ import { classes } from '@/util/class'
 import { Code } from '@/view/component/code'
 import { Frame } from '@/view/component/frame'
 import { Image } from '@/view/component/image'
-import { ShowcaseOptions } from '@/view/component/showcase'
+import type { ShowcaseOptions } from '@/view/component/showcase'
 import { useEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import cls from './detail.module.scss'
@@ -69,18 +69,18 @@ export const Detail = (props: Props) => {
           </div>
           <div className={cls['info__right']}>
             <span className={cls.category}>{showcase.category}</span>
-            <Image className={classes(cls.return, 'o-btn')} src={returnSvgUrl} onClick={returnBack}></Image>
+            <Image className={classes(cls.return, 'o-btn')} src={returnSvgUrl} onClick={returnBack} />
           </div>
         </div>
       ) : undefined}
       <div className={cls['sources_wrapper']}>
         <div className={cls.sources}>
           {showcase?.code.map((x) => (
-            <Code code={x.content} language={x.filetype} label={x.label} key={x.label} className={cls.source}></Code>
+            <Code code={x.content} language={x.filetype} label={x.label} key={x.label} className={cls.source} />
           ))}
         </div>
       </div>
-      <Frame className={cls.frame} html={showcase?.html} css={showcase?.css} js={showcase?.js}></Frame>
+      <Frame className={cls.frame} html={showcase?.html} css={showcase?.css} js={showcase?.js} />
     </div>
   )
 }

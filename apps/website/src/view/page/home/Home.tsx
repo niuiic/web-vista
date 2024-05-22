@@ -30,7 +30,7 @@ export const Home = () => {
 
   return (
     <div ref={homeRef} className={cls.home}>
-      <canvas ref={canvasRef} width={canvasSize.width} height={canvasSize.height}></canvas>
+      <canvas ref={canvasRef} width={canvasSize.width} height={canvasSize.height} />
     </div>
   )
 }

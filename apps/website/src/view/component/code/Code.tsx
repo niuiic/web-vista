@@ -44,7 +44,7 @@ export const Code = (props: Props) => {
           src={collapsed ? downSvgUrl : upSvgUrl}
           className={classes(cls['collapse-btn'], 'o-btn')}
           onClick={onClick}
-        ></Image>
+         />
       </div>
       <pre className={cls.body} style={bodyStyle} ref={codeRef} />
     </div>

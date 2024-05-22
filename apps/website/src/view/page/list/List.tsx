@@ -73,7 +73,7 @@ export const List = (props: Props) => {
         <span className={cls['filter__label']}>Title/Tag</span>
         <Input value={input} setValue={setInput} iconUrl={searchSvgUrl} />
         <span className={cls['filter__label']}>Category</span>
-        <Selection selected={selected} setSelected={setSelected} items={items}></Selection>
+        <Selection selected={selected} setSelected={setSelected} items={items} />
         <span className={cls['filter__label']}>Page</span>
         <Pagination
           className={cls.pagination}
@@ -81,7 +81,7 @@ export const List = (props: Props) => {
           setPageNum={setPageNum}
           pageSize={pageSize}
           count={cases.length}
-        ></Pagination>
+         />
       </div>
       <div className={cls.showcases}>
         {cases.slice((pageNum - 1) * pageSize, pageNum * pageSize).map((options, i) => (

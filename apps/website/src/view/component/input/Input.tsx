@@ -18,7 +18,7 @@ export const Input = (props: Props) => {
 
   return (
     <div className={cls.input}>
-      {props.iconUrl ? <Image src={props.iconUrl} className={cls['input__prefix']}></Image> : undefined}
+      {props.iconUrl ? <Image src={props.iconUrl} className={cls['input__prefix']} /> : undefined}
       <input
         value={props.value}
         className={cls['input__inner']}

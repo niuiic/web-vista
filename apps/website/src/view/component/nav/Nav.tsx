@@ -22,7 +22,7 @@ export const Nav = (props: Props) => {
 
       <svg className={cls.slogan} viewBox="0 0 140 60">
         <defs>
-          <path id="circle" d="M 10 25 Q 70 60 130 25"></path>
+          <path id="circle" d="M 10 25 Q 70 60 130 25" />
         </defs>
         <rect
           className={cls.slogan__inner}
@@ -31,7 +31,7 @@ export const Nav = (props: Props) => {
           fill="none"
           strokeWidth={5}
           strokeDasharray="100 100"
-        ></rect>
+         />
         <text>
           <textPath xlinkHref="#circle" stroke="currentcolor" fill="currentcolor">
             Sharing Ideas

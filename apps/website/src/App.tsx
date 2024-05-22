@@ -2,8 +2,9 @@ import { Layout } from '@/view/component/layout'
 import { useEffect, useState } from 'react'
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 import { Footer } from './view/component/footer'
-import { Entry, Nav } from './view/component/nav'
-import { ShowcaseOptions } from './view/component/showcase'
+import type { Entry} from './view/component/nav';
+import { Nav } from './view/component/nav'
+import type { ShowcaseOptions } from './view/component/showcase'
 import { Detail } from './view/page/detail/Detail'
 import { Error } from './view/page/error/Error'
 import { Home } from './view/page/home/Home'
@@ -45,11 +46,11 @@ export const App = () => {
       nav={<Nav entries={entries} currentEntry={currentEntry} />}
       main={
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/showcase" element={<List cases={cases.filter((x) => !x.isStandard)} />}></Route>
-          <Route path="/standard" element={<List cases={cases.filter((x) => x.isStandard)} />}></Route>
-          <Route path="/detail" element={<Detail cases={cases} />}></Route>
-          <Route path="*" element={<Error />}></Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/showcase" element={<List cases={cases.filter((x) => !x.isStandard)} />} />
+          <Route path="/standard" element={<List cases={cases.filter((x) => x.isStandard)} />} />
+          <Route path="/detail" element={<Detail cases={cases} />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       }
       footer={<Footer />}
