@@ -1,19 +1,15 @@
 @use 'sass:math';
 
+$bg-color: #000000;
+$font-color: #ffffff;
+$bubble-color: #00ff6f;
+
+/* # app */
 #app {
-  background: #000000;
+  background: $bg-color;
 }
 
-.number {
-  position: absolute;
-  top: 27%;
-  z-index: 10;
-  width: 300px;
-  color: #ffffff;
-  font-size: 32px;
-  text-align: center;
-}
-
+/* # container */
 .container {
   position: relative;
   width: 300px;
@@ -21,22 +17,60 @@
   margin: auto;
 }
 
+/* # number */
+.number {
+  position: absolute;
+  top: 27%;
+  z-index: 10;
+  width: 300px;
+  color: $font-color;
+  font-size: 32px;
+  text-align: center;
+}
+
+/* # contrast */
+@keyframes hue-rotate {
+  0% {
+    filter: contrast(10) hue-rotate(0);
+  }
+
+  100% {
+    filter: contrast(15) hue-rotate(360deg);
+  }
+}
+
 .contrast {
   overflow: hidden;
-  width: 300px;
-  height: 400px;
-  background-color: #000000;
-  filter: contrast(10) hue-rotate(0);
+  height: 100%;
+  background-color: $bg-color;
   animation: hue-rotate 10s infinite linear;
+}
+
+/* # circle */
+@keyframes rotate {
+  0% {
+    border-radius: 45% / 42% 38% 58% 49%;
+    transform: translate(-50%, -50%) rotate(0);
+  }
+
+  50% {
+    border-radius: 42% 38% 62% 49% / 45%;
+  }
+
+  100% {
+    border-radius: 45% / 42% 38% 58% 49%;
+    transform: translate(-50%, -50%) rotate(720deg);
+  }
 }
 
 .circle {
   position: relative;
-  box-sizing: border-box;
   width: 300px;
   height: 300px;
+  /* anti-alias */
   filter: blur(8px);
 
+  /* outer circle */
   &::after {
     content: '';
     position: absolute;
@@ -44,12 +78,11 @@
     left: 50%;
     width: 200px;
     height: 200px;
-    border-radius: 42% 38% 62% 49% / 45%;
-    background-color: #00ff6f;
-    transform: translate(-50%, -50%) rotate(0);
+    background-color: $bubble-color;
     animation: rotate 10s infinite linear;
   }
 
+  /* inner circle */
   &::before {
     content: '';
     position: absolute;
@@ -59,11 +92,12 @@
     width: 176px;
     height: 176px;
     border-radius: 50%;
-    background-color: #000000;
+    background-color: $bg-color;
     transform: translate(-50%, -50%);
   }
 }
 
+/* # bubbles */
 .bubbles {
   position: absolute;
   bottom: 0;
@@ -71,7 +105,7 @@
   width: 100px;
   height: 40px;
   border-radius: 100px 100px 0 0;
-  background-color: #00ff6f;
+  background-color: $bubble-color;
   filter: blur(5px);
   transform: translate(-50%, 0);
 }
@@ -79,33 +113,14 @@
 li {
   position: absolute;
   border-radius: 50%;
-  background: #00ff6f;
-}
-
-@for $i from 0 through 15 {
-  li:nth-child(#{$i}) {
-    $width: 15 + math.random(15) + px;
-
-    top: 50%;
-    left: 15 + math.random(70) + px;
-    width: $width;
-    height: $width;
-    transform: translate(-50%, -50%);
-    animation: move-to-top #{math.random(6) + 3}s ease-in-out -#{math.div(math.random(5000), 1000)}s infinite;
-  }
-}
-
-@keyframes rotate {
-  50% {
-    border-radius: 45% / 42% 38% 58% 49%;
-  }
-
-  100% {
-    transform: translate(-50%, -50%) rotate(720deg);
-  }
+  background: $bubble-color;
 }
 
 @keyframes move-to-top {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+
   90% {
     opacity: 1;
   }
@@ -116,8 +131,14 @@ li {
   }
 }
 
-@keyframes hue-rotate {
-  100% {
-    filter: contrast(15) hue-rotate(360deg);
+@for $i from 0 through 15 {
+  li:nth-child(#{$i}) {
+    $size: 15 + math.random(15) + px;
+
+    top: 50%;
+    left: 10 + math.random(100) + px;
+    width: $size;
+    height: $size;
+    animation: move-to-top #{math.random(6) + 3}s ease-in-out -#{math.div(math.random(5000), 1000)}s infinite;
   }
 }
