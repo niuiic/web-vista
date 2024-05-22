@@ -26,6 +26,7 @@
     ],
     "declaration-block-no-redundant-longhand-properties": "off",
     "font-family-no-missing-generic-family-keyword": "off",
+    "comment-empty-line-before": "off",
     "selector-pseudo-class-no-unknown": [
       true,
       {
