@@ -1,5 +1,3 @@
-require("task")
-
 require("format").setup({
 	temp_file = function(file_path)
 		local core = require("core")
@@ -13,4 +11,18 @@ require("format").setup({
 	filetypes = {
 		glsl = require("format.builtins.prettier"),
 	},
+})
+
+local task = require("task")
+local output = require("task.output")
+
+task.register({
+	name = "eslint fix",
+	config = function()
+		return {
+			cmd = "pnpm",
+			args = { "eslint", "--fix", [[**/*.{js,ts,tsx}]] },
+		}
+	end,
+	on_exit = output.notify,
 })
