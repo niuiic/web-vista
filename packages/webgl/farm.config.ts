@@ -1,33 +1,15 @@
-import type { UserConfig } from '@farmfe/core'
-import { builtinModules } from 'node:module'
+import { defineConfig } from '@farmfe/core'
+import { farmRawPlugin, farmSassPlugin } from 'farm-plugins'
 import path from 'path'
 
-const config: UserConfig = {
+export default defineConfig({
   compilation: {
     resolve: {
       alias: {
         '@/': path.join(process.cwd(), 'src')
       }
     },
-    external: [...builtinModules.map((x) => `^${x}$`), ...builtinModules.map((x) => `^node:${x}$`)],
-    partialBundling: {
-      enforceResources: [
-        {
-          name: 'index.js',
-          test: ['.+']
-        }
-      ]
-    },
-    minify: false,
-    sourcemap: false,
-    presetEnv: false,
-    output: {
-      assetsFilename: 'assets/[resourceName].[hash].[ext]'
-    },
-    assets: {
-      include: ['frag', 'vert']
-    }
-  }
-}
-
-export default config
+    persistentCache: false
+  },
+  plugins: [farmSassPlugin(), farmRawPlugin()]
+})

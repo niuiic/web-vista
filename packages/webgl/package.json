@@ -6,5 +6,8 @@
     "dev": "farm start",
     "build": "farm build",
     "preview": "farm preview"
+  },
+  "devDependencies": {
+    "farm-plugins": "workspace:*"
   }
 }

@@ -1,36 +1,26 @@
-import fsSource from './test.frag?raw'
-import vsSource from './test.vert?raw'
+import * as THREE from 'three'
 
-const canvas = document.createElement('canvas')
-canvas.setAttribute('id', 'webgl')
-canvas.setAttribute('width', '800')
-canvas.setAttribute('height', '800')
-document.getElementById('app')?.appendChild(canvas)
+const scene = new THREE.Scene()
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
 
-const gl = canvas.getContext('webgl')!
+const renderer = new THREE.WebGLRenderer()
+renderer.setSize(window.innerWidth, window.innerHeight)
+document.body.appendChild(renderer.domElement)
 
-const vertexShader = gl.createShader(gl.VERTEX_SHADER)!
-gl.shaderSource(vertexShader, vsSource)
-gl.compileShader(vertexShader)
+const geometry = new THREE.BoxGeometry(1, 1, 1)
+const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 })
+const cube = new THREE.Mesh(geometry, material)
+scene.add(cube)
 
-const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER)!
-gl.shaderSource(fragmentShader, fsSource)
-gl.compileShader(fragmentShader)
+camera.position.z = 5
 
-const shaderProgram = gl.createProgram()!
-gl.attachShader(shaderProgram, vertexShader)
-gl.attachShader(shaderProgram, fragmentShader)
-gl.linkProgram(shaderProgram)
-gl.useProgram(shaderProgram)
+function animate() {
+  requestAnimationFrame(animate)
 
-const vertices = new Float32Array([-0.5, -0.5, 0.5, -0.5, 0.0, 0.5])
-const vertexBuffer = gl.createBuffer()
-gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer)
-gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW)
-const positionAttributeLocation = gl.getAttribLocation(shaderProgram, 'aVertexPosition')
-gl.enableVertexAttribArray(positionAttributeLocation)
-gl.vertexAttribPointer(positionAttributeLocation, 2, gl.FLOAT, false, 0, 0)
+  cube.rotation.x += 0.01
+  cube.rotation.y += 0.01
 
-gl.clearColor(0.0, 0.0, 0.0, 1.0)
-gl.clear(gl.COLOR_BUFFER_BIT)
-gl.drawArrays(gl.TRIANGLES, 0, 3)
+  renderer.render(scene, camera)
+}
+
+animate()

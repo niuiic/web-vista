@@ -19,12 +19,5 @@
     "noErrorTruncation": true,
     "noEmit": true
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "declare/**/*.d.ts",
-    "cli/**/*.ts",
-    "farm.config.ts",
-    "farm.config.build.ts"
-  ]
+  "include": ["src/**/*.ts", "declare/**/*.d.ts", "farm.config.ts", "farm.config.build.ts", "build.ts"]
 }
