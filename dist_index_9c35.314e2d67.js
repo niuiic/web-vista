@@ -1,4 +1,4 @@
-(function(_){for(var r in _){_[r].__farm_resource_pot__='dist_index_7232.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"18c496f7":function  (e,c,t,l){!function(e){for(var c in e)e[c].__farm_resource_pot__="counter.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(c,e[c]);}({"1bee128a":function(e,c,t,l){"use strict";Object.defineProperty(c,"__esModule",{value:!0}),Object.defineProperty(c,"default",{enumerable:!0,get:function(){return s;}});let n=t("@swc/helpers/_/_interop_require_default"),r=n._(t("d82e6e42")),i=n._(t("de6ffd56")),o=n._(t("6197a48d")),u=n._(t("b58e7079")),s={id:"counter",title:"counter",desc:"css counter characterization",category:"css",tags:["standard"],isStandard:!0,html:i.default,css:o.default+r.default,code:[{label:"html",filetype:"html",content:i.default},{label:"scss",filetype:"scss",content:u.default}]};},"6197a48d":function(e,c,t,l){"use strict";Object.defineProperty(c,"__esModule",{value:!0}),Object.defineProperty(c,"default",{enumerable:!0,get:function(){return n;}});let n=`.parent {
+(function(_){for(var r in _){_[r].__farm_resource_pot__='dist_index_9c35.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"18c496f7":function  (e,c,t,l){!function(e){for(var c in e)e[c].__farm_resource_pot__="counter.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(c,e[c]);}({"1bee128a":function(e,c,t,l){"use strict";Object.defineProperty(c,"__esModule",{value:!0}),Object.defineProperty(c,"default",{enumerable:!0,get:function(){return s;}});let n=t("@swc/helpers/_/_interop_require_default"),r=n._(t("d82e6e42")),i=n._(t("de6ffd56")),o=n._(t("6197a48d")),u=n._(t("b58e7079")),s={id:"counter",title:"counter",desc:"css counter characterization",category:"css",tags:["standard"],isStandard:!0,html:i.default,css:o.default+r.default,code:[{label:"html",filetype:"html",content:i.default},{label:"scss",filetype:"scss",content:u.default}]};},"6197a48d":function(e,c,t,l){"use strict";Object.defineProperty(c,"__esModule",{value:!0}),Object.defineProperty(c,"default",{enumerable:!0,get:function(){return n;}});let n=`.parent {
   counter-reset: counter1 0;
 }
 
@@ -193,7 +193,7 @@ Padding, margin and border of the inline element would not push away surrounding
   padding: 10px;
   margin: 10px;
   border: 10px solid black;
-}`;}});},"23ec4682":function  (e,t,d,l){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return b;}}),d("d11778a3"),d("d789ca88"),d("972e19ca"),d("35f342be"),d("1ce5aab9"),d("f022a658"),d("bc2c8358"),d("18c496f7"),d("b8e2a72a"),d("512d1a77"),d("77e6ea10"),d("dd9304fa"),d("48d2528d"),d("3ab76d5d"),d("73a05872"),d("e639dd12"),d("356229ae"),d("e90b5e00"),function(e){for(var t in e)e[t].__farm_resource_pot__="index_03e9.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"953dfae2":function(e,t,d,l){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return v;}});let o=d("@swc/helpers/_/_interop_require_default"),c=o._(d("b3908126")),b=o._(d("d9ee3aa5")),f=o._(d("975c52b8")),s=o._(d("2e3d6988")),r=o._(d("f3e012b0")),u=o._(d("c0fd6a57")),n=o._(d("1bee128a")),_=o._(d("03a0d524")),i=o._(d("8c0b1759")),p=o._(d("4aa6b49a")),j=o._(d("cb8aa143")),m=o._(d("377810c4")),g=o._(d("5f78ff55")),x=o._(d("9b37ac6b")),y=o._(d("8a844209")),w=o._(d("3650c57d")),h=o._(d("f83ec78b")),v=[c.default,b.default,f.default,s.default,r.default,u.default,n.default,_.default,i.default,p.default,j.default,m.default,g.default,x.default,y.default,w.default,h.default];},d82e6e42:function(e,t,d,l){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return o;}});let o=`section {
+}`;}});},"23ec4682":function  (e,t,d,l){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return b;}}),d("d11778a3"),d("d789ca88"),d("972e19ca"),d("61d1ddd8"),d("1ce5aab9"),d("f022a658"),d("bc2c8358"),d("18c496f7"),d("b8e2a72a"),d("512d1a77"),d("77e6ea10"),d("dd9304fa"),d("86c72e09"),d("3ab76d5d"),d("73a05872"),d("e639dd12"),d("356229ae"),d("e90b5e00"),function(e){for(var t in e)e[t].__farm_resource_pot__="index_03e9.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"953dfae2":function(e,t,d,l){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return v;}});let o=d("@swc/helpers/_/_interop_require_default"),c=o._(d("b3908126")),b=o._(d("d9ee3aa5")),f=o._(d("975c52b8")),s=o._(d("2e3d6988")),r=o._(d("f3e012b0")),u=o._(d("c0fd6a57")),n=o._(d("1bee128a")),_=o._(d("03a0d524")),i=o._(d("8c0b1759")),p=o._(d("4aa6b49a")),j=o._(d("cb8aa143")),m=o._(d("377810c4")),g=o._(d("5f78ff55")),x=o._(d("9b37ac6b")),y=o._(d("8a844209")),w=o._(d("3650c57d")),h=o._(d("f83ec78b")),v=[c.default,b.default,f.default,s.default,r.default,u.default,n.default,_.default,i.default,p.default,j.default,m.default,g.default,x.default,y.default,w.default,h.default];},d82e6e42:function(e,t,d,l){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return o;}});let o=`section {
   position: relative;
   padding: 16px;
   margin: 2px;
@@ -208,7 +208,7 @@ section + section {
 
 section h1 {
   font-size: 18px;
-}`;}}),(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.setInitialLoadedResources(["absolute.1a09ac56.js","anonymousBlockBox.dbe29078.js","batteryCharge.6ddce7de.js","boxModel.492d930c.js","boxSize.61ad8a96.js","clock.e97503ab.js","counter.bc2da8bb.js","flex.3b702141.js","float.3517fa88.js","formattingContext.ad078a57.js","lineHeight.40a22170.js","loading.d5939ac9.js","minContent.2ba46c7d.js","pulse.c20a3dff.js","verticalAlign.91781c84.js","wavyUnderline.39069a0a.js","zIndex.fbbbce27.js"]),(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.setDynamicModuleResourcesMap({});var o=(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__;o.bootstrap();var c=o.require("953dfae2");let b=c.default||c;},"356229ae":function  (e,t,r,n){!function(e){for(var t in e)e[t].__farm_resource_pot__="wavyUnderline.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"2e9047b6":function(e,t,r,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`@keyframes wave {
+}`;}}),(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.setInitialLoadedResources(["absolute.1a09ac56.js","anonymousBlockBox.dbe29078.js","batteryCharge.a7f030eb.js","boxModel.492d930c.js","boxSize.61ad8a96.js","clock.e97503ab.js","counter.bc2da8bb.js","flex.3b702141.js","float.3517fa88.js","formattingContext.ad078a57.js","lineHeight.40a22170.js","loading.9eca49d5.js","minContent.2ba46c7d.js","pulse.c20a3dff.js","verticalAlign.91781c84.js","wavyUnderline.39069a0a.js","zIndex.fbbbce27.js"]),(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.setDynamicModuleResourcesMap({});var o=(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__;o.bootstrap();var c=o.require("953dfae2");let b=c.default||c;},"356229ae":function  (e,t,r,n){!function(e){for(var t in e)e[t].__farm_resource_pot__="wavyUnderline.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"2e9047b6":function(e,t,r,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`@keyframes wave {
   from {
     background-position-x: -10px, 0;
   }
@@ -248,7 +248,128 @@ section h1 {
   line-height: 16px;
   animation: wave 1s infinite linear;
 }`;},"5a4fa45f":function(e,t,r,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`<span class="text">wavyUnderline</span>
-`;}});},"35f342be":function  (t,e,i,o){!function(t){for(var e in t)t[e].__farm_resource_pot__="batteryCharge.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(e,t[e]);}({"26bd0e9e":function(t,e,i,o){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),Object.defineProperty(e,"default",{enumerable:!0,get:function(){return n;}});let n=`@use 'sass:math';
+`;}});},"3ab76d5d":function  (e,t,n,i){!function(e){for(var t in e)e[t].__farm_resource_pot__="minContent.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"533e8601":function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return l;}});let l=`.box {
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.defined-width {
+  width: -moz-max-content;
+  width: max-content;
+}`;},"5f78ff55":function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return r;}});let l=n("@swc/helpers/_/_interop_require_default"),s=l._(n("d82e6e42")),o=l._(n("fe19a1e4")),c=l._(n("533e8601")),d=l._(n("e8ed8fc5")),r={id:"minContent",title:"min-content",desc:"css width min-content characterization",category:"css",tags:["standard"],isStandard:!0,html:o.default,css:c.default+s.default,code:[{label:"html",filetype:"html",content:o.default},{label:"scss",filetype:"scss",content:d.default}]};},e8ed8fc5:function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return l;}});let l=`.box {
+  width: min-content;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.defined-width {
+  width: max-content;
+}
+`;},fe19a1e4:function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return l;}});let l=`<section>
+  <h1>The English language is divided into words, and the cjk text is a single character.</h1>
+  <hr />
+
+  <div class="box">
+    <span>hello world</span>
+  </div>
+
+  <div class="box">
+    <span>中文</span>
+  </div>
+</section>
+
+<section>
+  <h1>Inline-block elements with defined widths are not split. Also works for inline-flex, inline-grid, etc.</h1>
+  <hr />
+
+  <div class="box">
+    <span class="inline-block">中文</span>
+    <span>中文</span>
+  </div>
+  <div class="box">
+    <span class="inline-block defined-width">中文</span>
+    <span>中文</span>
+  </div>
+</section>
+`;}});},"512d1a77":function  (e,t,l,n){!function(e){for(var t in e)e[t].__farm_resource_pot__="float.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"5b9b2f6d":function(e,t,l,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return r;}});let r=`.parent {
+  background-color: red;
+}
+
+.line2 {
+  float: right;
+}
+
+.float1,
+.float2 {
+  float: left;
+}
+
+li {
+  float: left;
+}
+
+.parent3 > :nth-child(3) {
+  clear: both;
+}
+`;},"6dd6dd16":function(e,t,l,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return r;}});let r=`<section>
+  <h1>The offset reference for the float is the current line box.</h1>
+  <hr />
+
+  <div class="parent">
+    <span class="line1">line1</span>
+    <br />
+    <span class="line2">line2</span>
+  </div>
+</section>
+
+<section>
+  <h1>Multiple floats in the same row will be aligned next to each other.</h1>
+  <hr />
+
+  <div class="parent2">
+    <span class="float1">float1</span>
+    <span class="float2">float2</span>
+  </div>
+</section>
+
+<section>
+  <h1>The clear attribute will disable elements from being adjacent to floated elements.</h1>
+  <hr />
+
+  <ul class="parent3">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul>
+</section>
+`;},"8c0b1759":function(e,t,l,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return f;}});let r=l("@swc/helpers/_/_interop_require_default"),o=r._(l("d82e6e42")),i=r._(l("6dd6dd16")),s=r._(l("ca8bbf13")),c=r._(l("5b9b2f6d")),f={id:"float",title:"float",desc:"css float characterization",category:"css",tags:["standard"],isStandard:!0,html:i.default,css:s.default+o.default,code:[{label:"html",filetype:"html",content:i.default},{label:"scss",filetype:"scss",content:c.default}]};},ca8bbf13:function(e,t,l,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return r;}});let r=`.parent {
+  background-color: red;
+}
+
+.line2 {
+  float: right;
+}
+
+.float1,
+.float2 {
+  float: left;
+}
+
+li {
+  float: left;
+}
+
+.parent3 > :nth-child(3) {
+  clear: both;
+}`;}});},"61d1ddd8":function  (t,e,i,o){!function(t){for(var e in t)t[e].__farm_resource_pot__="batteryCharge.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(e,t[e]);}({"26bd0e9e":function(t,e,i,o){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),Object.defineProperty(e,"default",{enumerable:!0,get:function(){return n;}});let n=`@use 'sass:math';
 
 $bg-color: #000000;
 $font-color: #ffffff;
@@ -534,383 +655,130 @@ li {
 }
 li:nth-child(0) {
   top: 50%;
-  left: 13px;
-  width: 18px;
-  height: 18px;
-  animation: move-to-top 5s ease-in-out -1.992s infinite;
+  left: 50px;
+  width: 21px;
+  height: 21px;
+  animation: move-to-top 9s ease-in-out -4.928s infinite;
 }
 
 li:nth-child(1) {
   top: 50%;
-  left: 72px;
-  width: 19px;
-  height: 19px;
-  animation: move-to-top 5s ease-in-out -1.38s infinite;
+  left: 80px;
+  width: 30px;
+  height: 30px;
+  animation: move-to-top 9s ease-in-out -0.873s infinite;
 }
 
 li:nth-child(2) {
   top: 50%;
-  left: 86px;
-  width: 29px;
-  height: 29px;
-  animation: move-to-top 9s ease-in-out -1.982s infinite;
+  left: 24px;
+  width: 18px;
+  height: 18px;
+  animation: move-to-top 5s ease-in-out -2.635s infinite;
 }
 
 li:nth-child(3) {
   top: 50%;
-  left: 48px;
-  width: 28px;
-  height: 28px;
-  animation: move-to-top 4s ease-in-out -3.549s infinite;
+  left: 91px;
+  width: 30px;
+  height: 30px;
+  animation: move-to-top 7s ease-in-out -1.625s infinite;
 }
 
 li:nth-child(4) {
   top: 50%;
-  left: 42px;
-  width: 28px;
-  height: 28px;
-  animation: move-to-top 6s ease-in-out -2.999s infinite;
+  left: 90px;
+  width: 19px;
+  height: 19px;
+  animation: move-to-top 5s ease-in-out -4.426s infinite;
 }
 
 li:nth-child(5) {
   top: 50%;
-  left: 103px;
-  width: 16px;
-  height: 16px;
-  animation: move-to-top 9s ease-in-out -4.314s infinite;
+  left: 92px;
+  width: 30px;
+  height: 30px;
+  animation: move-to-top 4s ease-in-out -1.385s infinite;
 }
 
 li:nth-child(6) {
   top: 50%;
-  left: 62px;
-  width: 29px;
-  height: 29px;
-  animation: move-to-top 8s ease-in-out -3.239s infinite;
+  left: 38px;
+  width: 16px;
+  height: 16px;
+  animation: move-to-top 6s ease-in-out -1.624s infinite;
 }
 
 li:nth-child(7) {
   top: 50%;
-  left: 108px;
-  width: 16px;
-  height: 16px;
-  animation: move-to-top 9s ease-in-out -1.325s infinite;
+  left: 36px;
+  width: 19px;
+  height: 19px;
+  animation: move-to-top 7s ease-in-out -2.948s infinite;
 }
 
 li:nth-child(8) {
   top: 50%;
-  left: 29px;
-  width: 27px;
-  height: 27px;
-  animation: move-to-top 4s ease-in-out -3.521s infinite;
+  left: 13px;
+  width: 24px;
+  height: 24px;
+  animation: move-to-top 4s ease-in-out -2.539s infinite;
 }
 
 li:nth-child(9) {
   top: 50%;
-  left: 31px;
-  width: 20px;
-  height: 20px;
-  animation: move-to-top 7s ease-in-out -1.927s infinite;
+  left: 34px;
+  width: 29px;
+  height: 29px;
+  animation: move-to-top 7s ease-in-out -3.933s infinite;
 }
 
 li:nth-child(10) {
   top: 50%;
-  left: 28px;
-  width: 28px;
-  height: 28px;
-  animation: move-to-top 8s ease-in-out -3.113s infinite;
+  left: 33px;
+  width: 16px;
+  height: 16px;
+  animation: move-to-top 6s ease-in-out -1.299s infinite;
 }
 
 li:nth-child(11) {
   top: 50%;
-  left: 86px;
+  left: 105px;
   width: 27px;
   height: 27px;
-  animation: move-to-top 8s ease-in-out -2.98s infinite;
+  animation: move-to-top 4s ease-in-out -3.96s infinite;
 }
 
 li:nth-child(12) {
   top: 50%;
-  left: 74px;
-  width: 22px;
-  height: 22px;
-  animation: move-to-top 8s ease-in-out -3.72s infinite;
+  left: 69px;
+  width: 28px;
+  height: 28px;
+  animation: move-to-top 7s ease-in-out -3.708s infinite;
 }
 
 li:nth-child(13) {
   top: 50%;
-  left: 103px;
-  width: 19px;
-  height: 19px;
-  animation: move-to-top 7s ease-in-out -1.262s infinite;
+  left: 15px;
+  width: 29px;
+  height: 29px;
+  animation: move-to-top 7s ease-in-out -4.361s infinite;
 }
 
 li:nth-child(14) {
   top: 50%;
-  left: 75px;
-  width: 26px;
-  height: 26px;
-  animation: move-to-top 5s ease-in-out -3.621s infinite;
+  left: 40px;
+  width: 27px;
+  height: 27px;
+  animation: move-to-top 6s ease-in-out -0.819s infinite;
 }
 
 li:nth-child(15) {
   top: 50%;
-  left: 72px;
-  width: 30px;
-  height: 30px;
-  animation: move-to-top 4s ease-in-out -0.191s infinite;
-}`;}});},"3ab76d5d":function  (e,t,n,i){!function(e){for(var t in e)e[t].__farm_resource_pot__="minContent.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"533e8601":function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return l;}});let l=`.box {
-  width: -moz-min-content;
-  width: min-content;
-}
-
-.inline-block {
-  display: inline-block;
-}
-
-.defined-width {
-  width: -moz-max-content;
-  width: max-content;
-}`;},"5f78ff55":function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return r;}});let l=n("@swc/helpers/_/_interop_require_default"),s=l._(n("d82e6e42")),o=l._(n("fe19a1e4")),c=l._(n("533e8601")),d=l._(n("e8ed8fc5")),r={id:"minContent",title:"min-content",desc:"css width min-content characterization",category:"css",tags:["standard"],isStandard:!0,html:o.default,css:c.default+s.default,code:[{label:"html",filetype:"html",content:o.default},{label:"scss",filetype:"scss",content:d.default}]};},e8ed8fc5:function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return l;}});let l=`.box {
-  width: min-content;
-}
-
-.inline-block {
-  display: inline-block;
-}
-
-.defined-width {
-  width: max-content;
-}
-`;},fe19a1e4:function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return l;}});let l=`<section>
-  <h1>The English language is divided into words, and the cjk text is a single character.</h1>
-  <hr />
-
-  <div class="box">
-    <span>hello world</span>
-  </div>
-
-  <div class="box">
-    <span>中文</span>
-  </div>
-</section>
-
-<section>
-  <h1>Inline-block elements with defined widths are not split. Also works for inline-flex, inline-grid, etc.</h1>
-  <hr />
-
-  <div class="box">
-    <span class="inline-block">中文</span>
-    <span>中文</span>
-  </div>
-  <div class="box">
-    <span class="inline-block defined-width">中文</span>
-    <span>中文</span>
-  </div>
-</section>
-`;}});},"48d2528d":function  (e,t,i,o){!function(e){for(var t in e)e[t].__farm_resource_pot__="loading.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"10032f9c":function(e,t,i,o){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`<div class="load">
-  <div>G</div>
-  <div>N</div>
-  <div>I</div>
-  <div>D</div>
-  <div>A</div>
-  <div>O</div>
-  <div>L</div>
-</div>
-`;},"377810c4":function(e,t,i,o){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return c;}});let n=i("@swc/helpers/_/_interop_require_default"),d=n._(i("10032f9c")),l=n._(i("999c83f8")),r=n._(i("9bdda8b0")),c={id:"loading",title:"loading",desc:"Text loading animation.",category:"css",tags:["animation"],html:d.default,css:l.default,code:[{label:"html",filetype:"html",content:d.default},{label:"scss",filetype:"scss",content:r.default}]};},"999c83f8":function(e,t,i,o){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`#app {
-  background: #000000;
-}
-
-.load {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  width: 600px;
-  height: 36px;
-  margin-left: -300px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-
-@keyframes move {
-  0% {
-    left: 0;
-    opacity: 0;
-  }
-  35% {
-    left: 41%;
-    opacity: 1;
-    transform: rotate(0deg);
-  }
-  65% {
-    left: 59%;
-    opacity: 1;
-    transform: rotate(0deg);
-  }
-  100% {
-    left: 100%;
-    opacity: 0;
-    transform: rotate(-180deg);
-  }
-}
-.load div {
-  position: absolute;
-  width: 20px;
-  height: 36px;
-  color: #35c4f0;
-  opacity: 0;
-  transform: rotate(180deg);
-  animation: move 2s linear infinite;
-}
-
-.load div:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.load div:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-.load div:nth-child(4) {
-  animation-delay: 0.6s;
-}
-
-.load div:nth-child(5) {
-  animation-delay: 0.8s;
-}
-
-.load div:nth-child(6) {
-  animation-delay: 1s;
-}
-
-.load div:nth-child(7) {
-  animation-delay: 1.2s;
-}`;},"9bdda8b0":function(e,t,i,o){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`#app {
-  background: #000000;
-}
-
-.load {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  width: 600px;
-  height: 36px;
-  margin-left: -300px;
-  user-select: none;
-}
-
-@keyframes move {
-  0% {
-    left: 0;
-    opacity: 0;
-  }
-
-  35% {
-    left: 41%;
-    opacity: 1;
-    transform: rotate(0deg);
-  }
-
-  65% {
-    left: 59%;
-    opacity: 1;
-    transform: rotate(0deg);
-  }
-
-  100% {
-    left: 100%;
-    opacity: 0;
-    transform: rotate(-180deg);
-  }
-}
-
-.load div {
-  position: absolute;
-  width: 20px;
-  height: 36px;
-  color: #35c4f0;
-  opacity: 0;
-  transform: rotate(180deg);
-  animation: move 2s linear infinite;
-}
-
-@for $i from 2 through 7 {
-  .load div:nth-child(#{$i}) {
-    animation-delay: 0.2s * ($i - 1);
-  }
-}
-`;}});},"512d1a77":function  (e,t,l,n){!function(e){for(var t in e)e[t].__farm_resource_pot__="float.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"5b9b2f6d":function(e,t,l,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return r;}});let r=`.parent {
-  background-color: red;
-}
-
-.line2 {
-  float: right;
-}
-
-.float1,
-.float2 {
-  float: left;
-}
-
-li {
-  float: left;
-}
-
-.parent3 > :nth-child(3) {
-  clear: both;
-}
-`;},"6dd6dd16":function(e,t,l,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return r;}});let r=`<section>
-  <h1>The offset reference for the float is the current line box.</h1>
-  <hr />
-
-  <div class="parent">
-    <span class="line1">line1</span>
-    <br />
-    <span class="line2">line2</span>
-  </div>
-</section>
-
-<section>
-  <h1>Multiple floats in the same row will be aligned next to each other.</h1>
-  <hr />
-
-  <div class="parent2">
-    <span class="float1">float1</span>
-    <span class="float2">float2</span>
-  </div>
-</section>
-
-<section>
-  <h1>The clear attribute will disable elements from being adjacent to floated elements.</h1>
-  <hr />
-
-  <ul class="parent3">
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-  </ul>
-</section>
-`;},"8c0b1759":function(e,t,l,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return f;}});let r=l("@swc/helpers/_/_interop_require_default"),o=r._(l("d82e6e42")),i=r._(l("6dd6dd16")),s=r._(l("ca8bbf13")),c=r._(l("5b9b2f6d")),f={id:"float",title:"float",desc:"css float characterization",category:"css",tags:["standard"],isStandard:!0,html:i.default,css:s.default+o.default,code:[{label:"html",filetype:"html",content:i.default},{label:"scss",filetype:"scss",content:c.default}]};},ca8bbf13:function(e,t,l,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return r;}});let r=`.parent {
-  background-color: red;
-}
-
-.line2 {
-  float: right;
-}
-
-.float1,
-.float2 {
-  float: left;
-}
-
-li {
-  float: left;
-}
-
-.parent3 > :nth-child(3) {
-  clear: both;
+  left: 60px;
+  width: 21px;
+  height: 21px;
+  animation: move-to-top 9s ease-in-out -3.331s infinite;
 }`;}});},"73a05872":function  (e,t,n,i){!function(e){for(var t in e)e[t].__farm_resource_pot__="pulse.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"40c79067":function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return o;}});let o=`#app {
   position: relative;
 }
@@ -1147,7 +1015,141 @@ li {
 .child6 {
   display: flow-root;
   margin-block: 10px;
-}`;}});},"972e19ca":function  (e,o,n,l){!function(e){for(var o in e)e[o].__farm_resource_pot__="anonymousBlockBox.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(o,e[o]);}({"4386746a":function(e,o,n,l){"use strict";Object.defineProperty(o,"__esModule",{value:!0}),Object.defineProperty(o,"default",{enumerable:!0,get:function(){return i;}});let i=`<section>
+}`;}});},"86c72e09":function  (e,t,i,o){!function(e){for(var t in e)e[t].__farm_resource_pot__="loading.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"10032f9c":function(e,t,i,o){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`<div class="load">
+  <div>G</div>
+  <div>N</div>
+  <div>I</div>
+  <div>D</div>
+  <div>A</div>
+  <div>O</div>
+  <div>L</div>
+</div>
+`;},"377810c4":function(e,t,i,o){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return s;}});let n=i("@swc/helpers/_/_interop_require_default"),d=n._(i("10032f9c")),l=n._(i("999c83f8")),r=n._(i("9bdda8b0")),s={id:"loading",title:"loading",desc:"Text loading animation.",category:"css",tags:["animation"],html:d.default,css:l.default,code:[{label:"html",filetype:"html",content:d.default},{label:"scss",filetype:"scss",content:r.default}]};},"999c83f8":function(e,t,i,o){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`#app {
+  position: relative;
+  background: #000000;
+}
+
+.load {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 600px;
+  height: 36px;
+  margin-left: -300px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+@keyframes move {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  35% {
+    left: 41%;
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  65% {
+    left: 59%;
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+    transform: rotate(-180deg);
+  }
+}
+.load div {
+  position: absolute;
+  width: 20px;
+  height: 36px;
+  color: #35c4f0;
+  opacity: 0;
+  transform: rotate(180deg);
+  animation: move 2s linear infinite;
+}
+
+.load div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.load div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.load div:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.load div:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.load div:nth-child(6) {
+  animation-delay: 1s;
+}
+
+.load div:nth-child(7) {
+  animation-delay: 1.2s;
+}`;},"9bdda8b0":function(e,t,i,o){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`#app {
+  position: relative;
+  background: #000000;
+}
+
+.load {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 600px;
+  height: 36px;
+  margin-left: -300px;
+  user-select: none;
+}
+
+@keyframes move {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+
+  35% {
+    left: 41%;
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+
+  65% {
+    left: 59%;
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    left: 100%;
+    opacity: 0;
+    transform: rotate(-180deg);
+  }
+}
+
+.load div {
+  position: absolute;
+  width: 20px;
+  height: 36px;
+  color: #35c4f0;
+  opacity: 0;
+  transform: rotate(180deg);
+  animation: move 2s linear infinite;
+}
+
+@for $i from 2 through 7 {
+  .load div:nth-child(#{$i}) {
+    animation-delay: 0.2s * ($i - 1);
+  }
+}
+`;}});},"972e19ca":function  (e,o,n,l){!function(e){for(var o in e)e[o].__farm_resource_pot__="anonymousBlockBox.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(o,e[o]);}({"4386746a":function(e,o,n,l){"use strict";Object.defineProperty(o,"__esModule",{value:!0}),Object.defineProperty(o,"default",{enumerable:!0,get:function(){return i;}});let i=`<section>
   <h1>
     If a block container box has a box-level box inside it, then we force it to have only block-level boxes inside it.
     <br />
@@ -2894,4 +2896,4 @@ ul {
   background-color: yellow;
 }
 `;},f3e012b0:function(e,o,t,i){"use strict";Object.defineProperty(o,"__esModule",{value:!0}),Object.defineProperty(o,"default",{enumerable:!0,get:function(){return h;}});let d=t("@swc/helpers/_/_interop_require_default"),n=d._(t("d82e6e42")),r=d._(t("992f9bd0")),c=d._(t("0878149f")),l=d._(t("e78c92ad")),h={id:"boxSize",title:"box size",desc:"css box size characterization",category:"css",tags:["standard"],isStandard:!0,html:r.default,css:c.default+n.default,code:[{label:"html",filetype:"html",content:r.default},{label:"scss",filetype:"scss",content:l.default}]};}});},});
-//# sourceMappingURL=dist_index_7232.3536c6cb.js.map
+//# sourceMappingURL=dist_index_9c35.314e2d67.js.map
