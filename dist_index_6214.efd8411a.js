@@ -1,4 +1,611 @@
-(function(_){for(var r in _){_[r].__farm_resource_pot__='dist_index_6ec0.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"128ed115":function  (t,e,i,o){!function(t){for(var e in t)t[e].__farm_resource_pot__="batteryCharge.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(e,t[e]);}({"26bd0e9e":function(t,e,i,o){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),Object.defineProperty(e,"default",{enumerable:!0,get:function(){return n;}});let n=`@use 'sass:math';
+(function(_){for(var r in _){_[r].__farm_resource_pot__='dist_index_6214.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"18c496f7":function  (e,c,t,l){!function(e){for(var c in e)e[c].__farm_resource_pot__="counter.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(c,e[c]);}({"1bee128a":function(e,c,t,l){"use strict";Object.defineProperty(c,"__esModule",{value:!0}),Object.defineProperty(c,"default",{enumerable:!0,get:function(){return s;}});let n=t("@swc/helpers/_/_interop_require_default"),r=n._(t("d82e6e42")),i=n._(t("de6ffd56")),o=n._(t("6197a48d")),u=n._(t("b58e7079")),s={id:"counter",title:"counter",desc:"css counter characterization",category:"css",tags:["standard"],isStandard:!0,html:i.default,css:o.default+r.default,code:[{label:"html",filetype:"html",content:i.default},{label:"scss",filetype:"scss",content:u.default}]};},"6197a48d":function(e,c,t,l){"use strict";Object.defineProperty(c,"__esModule",{value:!0}),Object.defineProperty(c,"default",{enumerable:!0,get:function(){return n;}});let n=`.parent {
+  counter-reset: counter1 0;
+}
+
+.child {
+  counter-increment: counter1 1;
+}
+
+.child::before {
+  content: counter(counter1, upper-roman);
+}
+
+.parent2 {
+  counter-reset: counter2 0 counter3 0;
+}
+
+.child1 {
+  counter-increment: counter2 1;
+  counter-reset: counter3 0;
+}
+
+.child2 {
+  counter-increment: counter3 1;
+}
+
+.child1::before {
+  content: counter(counter2);
+}
+
+.child2::before {
+  content: counter(counter3);
+}
+
+.parent3 {
+  counter-reset: counter4 0;
+}
+
+.child3 {
+  counter-increment: counter4 1;
+}
+
+.child3::before {
+  content: counters(counter4, "-", decimal);
+}`;},b58e7079:function(e,c,t,l){"use strict";Object.defineProperty(c,"__esModule",{value:!0}),Object.defineProperty(c,"default",{enumerable:!0,get:function(){return n;}});let n=`.parent {
+  counter-reset: counter1 0;
+}
+
+.child {
+  counter-increment: counter1 1;
+}
+
+.child::before {
+  content: counter(counter1, upper-roman);
+}
+
+.parent2 {
+  counter-reset: counter2 0 counter3 0;
+}
+
+.child1 {
+  counter-increment: counter2 1;
+  counter-reset: counter3 0;
+}
+
+.child2 {
+  counter-increment: counter3 1;
+}
+
+.child1::before {
+  content: counter(counter2);
+}
+
+.child2::before {
+  content: counter(counter3);
+}
+
+.parent3 {
+  counter-reset: counter4 0;
+}
+
+.child3 {
+  counter-increment: counter4 1;
+}
+
+.child3::before {
+  content: counters(counter4, '-', decimal);
+}
+`;},de6ffd56:function(e,c,t,l){"use strict";Object.defineProperty(c,"__esModule",{value:!0}),Object.defineProperty(c,"default",{enumerable:!0,get:function(){return n;}});let n=`<section>
+  <h1>Basic usage</h1>
+  <hr />
+
+  <ul class="parent">
+    <li class="child">child</li>
+    <li>
+      <span class="child">child</span>
+    </li>
+    <li class="child">child</li>
+    <li class="child">child</li>
+  </ul>
+</section>
+
+<section>
+  <h1>Multiple counters</h1>
+  <hr />
+
+  <ul class="parent2">
+    <li class="child1">child1</li>
+    <li class="child2">child2</li>
+    <li class="child2">child2</li>
+    <li class="child2">child2</li>
+    <li class="child1">child1</li>
+    <li class="parent2">parent2</li>
+    <li class="child2">child2</li>
+  </ul>
+</section>
+
+<section>
+  <h1>Nested counters</h1>
+  <hr />
+
+  <ul class="parent3">
+    <li class="child3">child3</li>
+    <li class="child3">child3</li>
+    <li class="child3">
+      <ul class="parent3">
+        <li class="child3">child3</li>
+        <li class="child3">child3</li>
+      </ul>
+    </li>
+    <li class="child3">child3</li>
+  </ul>
+</section>
+`;}});},"1ce5aab9":function  (e,t,n,r){!function(e){for(var t in e)e[t].__farm_resource_pot__="boxModel.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"253673e4":function(e,t,n,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`<section>
+<h1>
+  'width: 100%;' represents the proportion of the content area of the child box to the content area of the parent box.
+  This would not be affected by box-sizing.
+</h1>
+<hr/>
+
+<div class="parent">
+  <div class="child"></div>
+</div>
+</section>
+
+<section>
+<h1>
+Padding, margin and border of the inline element would not push away surrounding elements vertically.
+</h1>
+<hr/>
+
+<p class="p1">
+  <span class="inline-1">inline-1</span>
+  <span class="inline-2">inline-2</span>
+  <p class="p2">p2</p>
+</p>
+</section>
+`;},"2e3d6988":function(e,t,n,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return s;}});let i=n("@swc/helpers/_/_interop_require_default"),o=i._(n("d82e6e42")),d=i._(n("253673e4")),l=i._(n("abd82204")),c=i._(n("92cc28ef")),s={id:"boxModel",title:"box model",desc:"css box model characterization",category:"css",tags:["standard"],isStandard:!0,html:d.default,css:l.default+o.default,code:[{label:"html",filetype:"html",content:d.default},{label:"scss",filetype:"scss",content:c.default}]};},"92cc28ef":function(e,t,n,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`.parent {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  margin: 10px;
+  border: 10px solid black;
+  background-color: green;
+}
+
+.child {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
+.inline-1 {
+  padding: 10px;
+  margin: 10px;
+  border: 10px solid black;
+}
+`;},abd82204:function(e,t,n,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`.parent {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  margin: 10px;
+  border: 10px solid black;
+  background-color: green;
+}
+
+.child {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
+.inline-1 {
+  padding: 10px;
+  margin: 10px;
+  border: 10px solid black;
+}`;}});},"23ec4682":function  (e,t,d,l){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return b;}}),d("d11778a3"),d("d789ca88"),d("972e19ca"),d("8f7a2418"),d("1ce5aab9"),d("f022a658"),d("bc2c8358"),d("18c496f7"),d("b8e2a72a"),d("512d1a77"),d("77e6ea10"),d("dd9304fa"),d("3ab76d5d"),d("73a05872"),d("e639dd12"),d("356229ae"),d("e90b5e00"),function(e){for(var t in e)e[t].__farm_resource_pot__="index_03e9.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"953dfae2":function(e,t,d,l){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return h;}});let o=d("@swc/helpers/_/_interop_require_default"),f=o._(d("b3908126")),b=o._(d("d9ee3aa5")),c=o._(d("975c52b8")),r=o._(d("2e3d6988")),s=o._(d("f3e012b0")),u=o._(d("c0fd6a57")),n=o._(d("1bee128a")),_=o._(d("03a0d524")),i=o._(d("8c0b1759")),p=o._(d("4aa6b49a")),j=o._(d("cb8aa143")),m=o._(d("5f78ff55")),g=o._(d("9b37ac6b")),x=o._(d("8a844209")),y=o._(d("3650c57d")),w=o._(d("f83ec78b")),h=[f.default,b.default,c.default,r.default,s.default,u.default,n.default,_.default,i.default,p.default,j.default,m.default,g.default,x.default,y.default,w.default];},d82e6e42:function(e,t,d,l){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return o;}});let o=`section {
+  position: relative;
+  padding: 16px;
+  margin: 2px;
+  border: 1px solid black;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+section + section {
+  margin-top: 24px;
+}
+
+section h1 {
+  font-size: 18px;
+}`;}}),(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.setInitialLoadedResources(["absolute.1a09ac56.js","anonymousBlockBox.dbe29078.js","batteryCharge.e4efe9e4.js","boxModel.492d930c.js","boxSize.61ad8a96.js","clock.e97503ab.js","counter.bc2da8bb.js","flex.3b702141.js","float.3517fa88.js","formattingContext.ad078a57.js","lineHeight.40a22170.js","minContent.2ba46c7d.js","pulse.c20a3dff.js","verticalAlign.91781c84.js","wavyUnderline.39069a0a.js","zIndex.fbbbce27.js"]),(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.setDynamicModuleResourcesMap({});var o=(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__;o.bootstrap();var f=o.require("953dfae2");let b=f.default||f;},"356229ae":function  (e,t,r,n){!function(e){for(var t in e)e[t].__farm_resource_pot__="wavyUnderline.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"2e9047b6":function(e,t,r,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`@keyframes wave {
+  from {
+    background-position-x: -10px, 0;
+  }
+
+  to {
+    background-position-x:
+      -30px,
+      -20px;
+  }
+}
+
+.text {
+  display: inline-block;
+  background:
+    radial-gradient(circle at 10px -7px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x,
+    radial-gradient(circle at 10px 27px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x;
+  background-position:
+    -10px calc(100% + 16px),
+    0 calc(100% - 4px);
+  background-size: 20px 20px;
+  line-height: 16px;
+  animation: wave 1s infinite linear;
+}
+`;},"3650c57d":function(e,t,r,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return p;}});let i=r("@swc/helpers/_/_interop_require_default"),c=i._(r("5a4fa45f")),o=i._(r("3bff51e1")),l=i._(r("2e9047b6")),p={id:"wavyUnderline",title:"wavy underline",desc:"Text wave underline implementated with background animation.",category:"css",tags:["background","animation"],html:c.default,css:o.default,code:[{label:"html",filetype:"html",content:c.default},{label:"scss",filetype:"scss",content:l.default}]};},"3bff51e1":function(e,t,r,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`@keyframes wave {
+  from {
+    background-position-x: -10px, 0;
+  }
+  to {
+    background-position-x: -30px, -20px;
+  }
+}
+.text {
+  display: inline-block;
+  background: radial-gradient(circle at 10px -7px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x, radial-gradient(circle at 10px 27px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x;
+  background-position: -10px calc(100% + 16px), 0 calc(100% - 4px);
+  background-size: 20px 20px;
+  line-height: 16px;
+  animation: wave 1s infinite linear;
+}`;},"5a4fa45f":function(e,t,r,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`<span class="text">wavyUnderline</span>
+`;}});},"3ab76d5d":function  (e,t,n,i){!function(e){for(var t in e)e[t].__farm_resource_pot__="minContent.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"533e8601":function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return l;}});let l=`.box {
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.defined-width {
+  width: -moz-max-content;
+  width: max-content;
+}`;},"5f78ff55":function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return r;}});let l=n("@swc/helpers/_/_interop_require_default"),s=l._(n("d82e6e42")),o=l._(n("fe19a1e4")),c=l._(n("533e8601")),d=l._(n("e8ed8fc5")),r={id:"minContent",title:"min-content",desc:"css width min-content characterization",category:"css",tags:["standard"],isStandard:!0,html:o.default,css:c.default+s.default,code:[{label:"html",filetype:"html",content:o.default},{label:"scss",filetype:"scss",content:d.default}]};},e8ed8fc5:function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return l;}});let l=`.box {
+  width: min-content;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.defined-width {
+  width: max-content;
+}
+`;},fe19a1e4:function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return l;}});let l=`<section>
+  <h1>The English language is divided into words, and the cjk text is a single character.</h1>
+  <hr />
+
+  <div class="box">
+    <span>hello world</span>
+  </div>
+
+  <div class="box">
+    <span>中文</span>
+  </div>
+</section>
+
+<section>
+  <h1>Inline-block elements with defined widths are not split. Also works for inline-flex, inline-grid, etc.</h1>
+  <hr />
+
+  <div class="box">
+    <span class="inline-block">中文</span>
+    <span>中文</span>
+  </div>
+  <div class="box">
+    <span class="inline-block defined-width">中文</span>
+    <span>中文</span>
+  </div>
+</section>
+`;}});},"512d1a77":function  (e,t,l,n){!function(e){for(var t in e)e[t].__farm_resource_pot__="float.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"5b9b2f6d":function(e,t,l,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return r;}});let r=`.parent {
+  background-color: red;
+}
+
+.line2 {
+  float: right;
+}
+
+.float1,
+.float2 {
+  float: left;
+}
+
+li {
+  float: left;
+}
+
+.parent3 > :nth-child(3) {
+  clear: both;
+}
+`;},"6dd6dd16":function(e,t,l,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return r;}});let r=`<section>
+  <h1>The offset reference for the float is the current line box.</h1>
+  <hr />
+
+  <div class="parent">
+    <span class="line1">line1</span>
+    <br />
+    <span class="line2">line2</span>
+  </div>
+</section>
+
+<section>
+  <h1>Multiple floats in the same row will be aligned next to each other.</h1>
+  <hr />
+
+  <div class="parent2">
+    <span class="float1">float1</span>
+    <span class="float2">float2</span>
+  </div>
+</section>
+
+<section>
+  <h1>The clear attribute will disable elements from being adjacent to floated elements.</h1>
+  <hr />
+
+  <ul class="parent3">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul>
+</section>
+`;},"8c0b1759":function(e,t,l,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return f;}});let r=l("@swc/helpers/_/_interop_require_default"),o=r._(l("d82e6e42")),i=r._(l("6dd6dd16")),s=r._(l("ca8bbf13")),c=r._(l("5b9b2f6d")),f={id:"float",title:"float",desc:"css float characterization",category:"css",tags:["standard"],isStandard:!0,html:i.default,css:s.default+o.default,code:[{label:"html",filetype:"html",content:i.default},{label:"scss",filetype:"scss",content:c.default}]};},ca8bbf13:function(e,t,l,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return r;}});let r=`.parent {
+  background-color: red;
+}
+
+.line2 {
+  float: right;
+}
+
+.float1,
+.float2 {
+  float: left;
+}
+
+li {
+  float: left;
+}
+
+.parent3 > :nth-child(3) {
+  clear: both;
+}`;}});},"73a05872":function  (e,t,n,i){!function(e){for(var t in e)e[t].__farm_resource_pot__="pulse.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"40c79067":function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return o;}});let o=`#app {
+  position: relative;
+}
+
+.loading,
+.loading::before,
+.loading::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin-top: -30px;
+  margin-left: -30px;
+  border-radius: 50%;
+  background: #1bc2a6;
+}
+
+.loading::before {
+  content: "";
+  animation: expand 1.5s infinite;
+}
+
+.loading::after {
+  content: "";
+  animation: expand 1.5s -0.4s infinite;
+}
+
+@keyframes expand {
+  from {
+    opacity: 1;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 0;
+    transform: scale(2);
+  }
+}`;},"4148376d":function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return o;}});let o=`#app {
+  position: relative;
+}
+
+.loading,
+.loading::before,
+.loading::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin-top: -30px;
+  margin-left: -30px;
+  border-radius: 50%;
+  background: #1bc2a6;
+}
+
+.loading::before {
+  content: '';
+  animation: expand 1.5s infinite;
+}
+
+.loading::after {
+  content: '';
+  animation: expand 1.5s -0.4s infinite;
+}
+
+@keyframes expand {
+  from {
+    opacity: 1;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+`;},"63f77b08":function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return o;}});let o=`<div class="loading"></div>
+`;},"9b37ac6b":function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return f;}});let o=n("@swc/helpers/_/_interop_require_default"),r=o._(n("63f77b08")),l=o._(n("40c79067")),s=o._(n("4148376d")),f={id:"pulse",title:"pulse",desc:"Simple loading icon.",category:"css",tags:["animation"],html:r.default,css:l.default,code:[{label:"html",filetype:"html",content:r.default},{label:"scss",filetype:"scss",content:s.default}]};}});},"77e6ea10":function  (e,t,i,r){!function(e){for(var t in e)e[t].__farm_resource_pot__="formattingContext.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"3d6ac7fd":function(e,t,i,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`<section>
+  <h3>
+    When a formatting context is created, its boundary is at the border position of the corresponding element.
+    <br />
+    Creating BFC does not affect margin of the element. The margin of parent element and the margin of child element are
+    still in the same BFC.
+  </h3>
+  <hr />
+
+  <div class="parent1">
+    <div class="child1"></div>
+  </div>
+</section>
+
+<section>
+  <h1>
+    The margin of parent element is in the outer BFC, and the margin of child element is in the BFC created by the
+    parent element.
+  </h1>
+  <hr />
+
+  <div class="parent2">
+    <div class="child2"></div>
+  </div>
+</section>
+
+<section>
+  <h1>BFC created by child4 isolates the margin of child3 and the margin of child5.</h1>
+  <hr />
+
+  <div class="parent3">
+    <div class="child3"></div>
+    <div class="child4">
+      <div class="child5"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h1>BFC created by child6 isolates its block margins.</h1>
+  <hr />
+
+  <div class="parent4">
+    <div class="child6"></div>
+  </div>
+</section>
+`;},"4aa6b49a":function(e,t,i,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return s;}});let n=i("@swc/helpers/_/_interop_require_default"),d=n._(i("d82e6e42")),o=n._(i("3d6ac7fd")),c=n._(i("b4fd3cbd")),l=n._(i("6d7accd3")),s={id:"formattingContext",title:"formatting context",desc:"css formatting context characterization",category:"css",tags:["standard"],isStandard:!0,html:o.default,css:c.default+d.default,code:[{label:"html",filetype:"html",content:o.default},{label:"scss",filetype:"scss",content:l.default}]};},"6d7accd3":function(e,t,i,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`.parent1 {
+  margin-top: 10px;
+  background: red;
+}
+
+.child1 {
+  display: flow-root;
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: green;
+}
+
+.parent2 {
+  display: flow-root;
+  margin-top: 10px;
+  background: red;
+}
+
+.child2 {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: green;
+}
+
+.parent3 {
+  background: red;
+}
+
+.child3 {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  background: green;
+}
+
+.child4 {
+  display: flow-root;
+}
+
+.child5 {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: yellow;
+}
+
+.parent4 {
+  display: flow-root;
+  background: red;
+}
+
+.child6 {
+  display: flow-root;
+  margin-block: 10px;
+}
+`;},b4fd3cbd:function(e,t,i,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`.parent1 {
+  margin-top: 10px;
+  background: red;
+}
+
+.child1 {
+  display: flow-root;
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: green;
+}
+
+.parent2 {
+  display: flow-root;
+  margin-top: 10px;
+  background: red;
+}
+
+.child2 {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: green;
+}
+
+.parent3 {
+  background: red;
+}
+
+.child3 {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  background: green;
+}
+
+.child4 {
+  display: flow-root;
+}
+
+.child5 {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: yellow;
+}
+
+.parent4 {
+  display: flow-root;
+  background: red;
+}
+
+.child6 {
+  display: flow-root;
+  margin-block: 10px;
+}`;}});},"8f7a2418":function  (t,e,i,o){!function(t){for(var e in t)t[e].__farm_resource_pot__="batteryCharge.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(e,t[e]);}({"26bd0e9e":function(t,e,i,o){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),Object.defineProperty(e,"default",{enumerable:!0,get:function(){return n;}});let n=`@use 'sass:math';
 
 $bg-color: #000000;
 $font-color: #ffffff;
@@ -284,660 +891,130 @@ li {
 }
 li:nth-child(0) {
   top: 50%;
-  left: 19px;
-  width: 28px;
-  height: 28px;
-  animation: move-to-top 4s ease-in-out -4.698s infinite;
+  left: 79px;
+  width: 20px;
+  height: 20px;
+  animation: move-to-top 7s ease-in-out -0.266s infinite;
 }
 
 li:nth-child(1) {
   top: 50%;
-  left: 16px;
-  width: 29px;
-  height: 29px;
-  animation: move-to-top 9s ease-in-out -3.832s infinite;
+  left: 99px;
+  width: 27px;
+  height: 27px;
+  animation: move-to-top 5s ease-in-out -4.499s infinite;
 }
 
 li:nth-child(2) {
   top: 50%;
-  left: 36px;
-  width: 23px;
-  height: 23px;
-  animation: move-to-top 7s ease-in-out -0.213s infinite;
+  left: 108px;
+  width: 22px;
+  height: 22px;
+  animation: move-to-top 9s ease-in-out -1.124s infinite;
 }
 
 li:nth-child(3) {
   top: 50%;
-  left: 25px;
+  left: 47px;
   width: 17px;
   height: 17px;
-  animation: move-to-top 7s ease-in-out -4.821s infinite;
+  animation: move-to-top 6s ease-in-out -2.023s infinite;
 }
 
 li:nth-child(4) {
   top: 50%;
-  left: 80px;
-  width: 23px;
-  height: 23px;
-  animation: move-to-top 6s ease-in-out -0.578s infinite;
+  left: 47px;
+  width: 22px;
+  height: 22px;
+  animation: move-to-top 4s ease-in-out -2.404s infinite;
 }
 
 li:nth-child(5) {
   top: 50%;
-  left: 107px;
-  width: 16px;
-  height: 16px;
-  animation: move-to-top 5s ease-in-out -1.323s infinite;
+  left: 33px;
+  width: 24px;
+  height: 24px;
+  animation: move-to-top 8s ease-in-out -2.939s infinite;
 }
 
 li:nth-child(6) {
   top: 50%;
-  left: 11px;
-  width: 28px;
-  height: 28px;
-  animation: move-to-top 4s ease-in-out -4.559s infinite;
+  left: 26px;
+  width: 26px;
+  height: 26px;
+  animation: move-to-top 5s ease-in-out -3.033s infinite;
 }
 
 li:nth-child(7) {
   top: 50%;
-  left: 103px;
-  width: 28px;
-  height: 28px;
-  animation: move-to-top 7s ease-in-out -0.23s infinite;
+  left: 12px;
+  width: 27px;
+  height: 27px;
+  animation: move-to-top 5s ease-in-out -2.05s infinite;
 }
 
 li:nth-child(8) {
   top: 50%;
-  left: 107px;
-  width: 19px;
-  height: 19px;
-  animation: move-to-top 6s ease-in-out -1.875s infinite;
+  left: 44px;
+  width: 28px;
+  height: 28px;
+  animation: move-to-top 7s ease-in-out -0.491s infinite;
 }
 
 li:nth-child(9) {
   top: 50%;
-  left: 34px;
-  width: 16px;
-  height: 16px;
-  animation: move-to-top 6s ease-in-out -4.975s infinite;
+  left: 72px;
+  width: 23px;
+  height: 23px;
+  animation: move-to-top 6s ease-in-out -3.36s infinite;
 }
 
 li:nth-child(10) {
   top: 50%;
-  left: 52px;
-  width: 29px;
-  height: 29px;
-  animation: move-to-top 7s ease-in-out -0.71s infinite;
+  left: 51px;
+  width: 27px;
+  height: 27px;
+  animation: move-to-top 9s ease-in-out -1.354s infinite;
 }
 
 li:nth-child(11) {
   top: 50%;
-  left: 50px;
-  width: 30px;
-  height: 30px;
-  animation: move-to-top 4s ease-in-out -0.259s infinite;
+  left: 80px;
+  width: 27px;
+  height: 27px;
+  animation: move-to-top 8s ease-in-out -2.829s infinite;
 }
 
 li:nth-child(12) {
   top: 50%;
-  left: 33px;
-  width: 30px;
-  height: 30px;
-  animation: move-to-top 4s ease-in-out -4.648s infinite;
+  left: 38px;
+  width: 29px;
+  height: 29px;
+  animation: move-to-top 6s ease-in-out -3.552s infinite;
 }
 
 li:nth-child(13) {
   top: 50%;
-  left: 28px;
-  width: 18px;
-  height: 18px;
-  animation: move-to-top 7s ease-in-out -3.563s infinite;
+  left: 55px;
+  width: 16px;
+  height: 16px;
+  animation: move-to-top 7s ease-in-out -0.523s infinite;
 }
 
 li:nth-child(14) {
   top: 50%;
-  left: 13px;
-  width: 24px;
-  height: 24px;
-  animation: move-to-top 7s ease-in-out -2.092s infinite;
+  left: 26px;
+  width: 29px;
+  height: 29px;
+  animation: move-to-top 9s ease-in-out -1.293s infinite;
 }
 
 li:nth-child(15) {
   top: 50%;
-  left: 104px;
-  width: 27px;
-  height: 27px;
-  animation: move-to-top 4s ease-in-out -2.286s infinite;
-}`;}});},"18c496f7":function  (e,c,t,l){!function(e){for(var c in e)e[c].__farm_resource_pot__="counter.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(c,e[c]);}({"1bee128a":function(e,c,t,l){"use strict";Object.defineProperty(c,"__esModule",{value:!0}),Object.defineProperty(c,"default",{enumerable:!0,get:function(){return s;}});let n=t("@swc/helpers/_/_interop_require_default"),r=n._(t("d82e6e42")),i=n._(t("de6ffd56")),o=n._(t("6197a48d")),u=n._(t("b58e7079")),s={id:"counter",title:"counter",desc:"css counter characterization",category:"css",tags:["standard"],isStandard:!0,html:i.default,css:o.default+r.default,code:[{label:"html",filetype:"html",content:i.default},{label:"scss",filetype:"scss",content:u.default}]};},"6197a48d":function(e,c,t,l){"use strict";Object.defineProperty(c,"__esModule",{value:!0}),Object.defineProperty(c,"default",{enumerable:!0,get:function(){return n;}});let n=`.parent {
-  counter-reset: counter1 0;
-}
-
-.child {
-  counter-increment: counter1 1;
-}
-
-.child::before {
-  content: counter(counter1, upper-roman);
-}
-
-.parent2 {
-  counter-reset: counter2 0 counter3 0;
-}
-
-.child1 {
-  counter-increment: counter2 1;
-  counter-reset: counter3 0;
-}
-
-.child2 {
-  counter-increment: counter3 1;
-}
-
-.child1::before {
-  content: counter(counter2);
-}
-
-.child2::before {
-  content: counter(counter3);
-}
-
-.parent3 {
-  counter-reset: counter4 0;
-}
-
-.child3 {
-  counter-increment: counter4 1;
-}
-
-.child3::before {
-  content: counters(counter4, "-", decimal);
-}`;},b58e7079:function(e,c,t,l){"use strict";Object.defineProperty(c,"__esModule",{value:!0}),Object.defineProperty(c,"default",{enumerable:!0,get:function(){return n;}});let n=`.parent {
-  counter-reset: counter1 0;
-}
-
-.child {
-  counter-increment: counter1 1;
-}
-
-.child::before {
-  content: counter(counter1, upper-roman);
-}
-
-.parent2 {
-  counter-reset: counter2 0 counter3 0;
-}
-
-.child1 {
-  counter-increment: counter2 1;
-  counter-reset: counter3 0;
-}
-
-.child2 {
-  counter-increment: counter3 1;
-}
-
-.child1::before {
-  content: counter(counter2);
-}
-
-.child2::before {
-  content: counter(counter3);
-}
-
-.parent3 {
-  counter-reset: counter4 0;
-}
-
-.child3 {
-  counter-increment: counter4 1;
-}
-
-.child3::before {
-  content: counters(counter4, '-', decimal);
-}
-`;},de6ffd56:function(e,c,t,l){"use strict";Object.defineProperty(c,"__esModule",{value:!0}),Object.defineProperty(c,"default",{enumerable:!0,get:function(){return n;}});let n=`<section>
-  <h1>Basic usage</h1>
-  <hr />
-
-  <ul class="parent">
-    <li class="child">child</li>
-    <li>
-      <span class="child">child</span>
-    </li>
-    <li class="child">child</li>
-    <li class="child">child</li>
-  </ul>
-</section>
-
-<section>
-  <h1>Multiple counters</h1>
-  <hr />
-
-  <ul class="parent2">
-    <li class="child1">child1</li>
-    <li class="child2">child2</li>
-    <li class="child2">child2</li>
-    <li class="child2">child2</li>
-    <li class="child1">child1</li>
-    <li class="parent2">parent2</li>
-    <li class="child2">child2</li>
-  </ul>
-</section>
-
-<section>
-  <h1>Nested counters</h1>
-  <hr />
-
-  <ul class="parent3">
-    <li class="child3">child3</li>
-    <li class="child3">child3</li>
-    <li class="child3">
-      <ul class="parent3">
-        <li class="child3">child3</li>
-        <li class="child3">child3</li>
-      </ul>
-    </li>
-    <li class="child3">child3</li>
-  </ul>
-</section>
-`;}});},"1ce5aab9":function  (e,t,n,r){!function(e){for(var t in e)e[t].__farm_resource_pot__="boxModel.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"253673e4":function(e,t,n,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`<section>
-<h1>
-  'width: 100%;' represents the proportion of the content area of the child box to the content area of the parent box.
-  This would not be affected by box-sizing.
-</h1>
-<hr/>
-
-<div class="parent">
-  <div class="child"></div>
-</div>
-</section>
-
-<section>
-<h1>
-Padding, margin and border of the inline element would not push away surrounding elements vertically.
-</h1>
-<hr/>
-
-<p class="p1">
-  <span class="inline-1">inline-1</span>
-  <span class="inline-2">inline-2</span>
-  <p class="p2">p2</p>
-</p>
-</section>
-`;},"2e3d6988":function(e,t,n,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return s;}});let i=n("@swc/helpers/_/_interop_require_default"),o=i._(n("d82e6e42")),d=i._(n("253673e4")),l=i._(n("abd82204")),c=i._(n("92cc28ef")),s={id:"boxModel",title:"box model",desc:"css box model characterization",category:"css",tags:["standard"],isStandard:!0,html:d.default,css:l.default+o.default,code:[{label:"html",filetype:"html",content:d.default},{label:"scss",filetype:"scss",content:c.default}]};},"92cc28ef":function(e,t,n,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`.parent {
-  width: 100px;
-  height: 100px;
-  padding: 10px;
-  margin: 10px;
-  border: 10px solid black;
-  background-color: green;
-}
-
-.child {
-  width: 100%;
-  height: 100%;
-  background-color: red;
-}
-
-.inline-1 {
-  padding: 10px;
-  margin: 10px;
-  border: 10px solid black;
-}
-`;},abd82204:function(e,t,n,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`.parent {
-  width: 100px;
-  height: 100px;
-  padding: 10px;
-  margin: 10px;
-  border: 10px solid black;
-  background-color: green;
-}
-
-.child {
-  width: 100%;
-  height: 100%;
-  background-color: red;
-}
-
-.inline-1 {
-  padding: 10px;
-  margin: 10px;
-  border: 10px solid black;
-}`;}});},"23ec4682":function  (e,t,d,l){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return b;}}),d("d11778a3"),d("d789ca88"),d("972e19ca"),d("128ed115"),d("1ce5aab9"),d("f022a658"),d("bc2c8358"),d("18c496f7"),d("b8e2a72a"),d("512d1a77"),d("77e6ea10"),d("dd9304fa"),d("c3692c7d"),d("3ab76d5d"),d("e639dd12"),d("356229ae"),d("e90b5e00"),function(e){for(var t in e)e[t].__farm_resource_pot__="index_03e9.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"953dfae2":function(e,t,d,l){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return h;}});let o=d("@swc/helpers/_/_interop_require_default"),c=o._(d("b3908126")),b=o._(d("d9ee3aa5")),f=o._(d("975c52b8")),r=o._(d("2e3d6988")),s=o._(d("f3e012b0")),n=o._(d("c0fd6a57")),u=o._(d("1bee128a")),_=o._(d("03a0d524")),i=o._(d("8c0b1759")),p=o._(d("4aa6b49a")),j=o._(d("cb8aa143")),m=o._(d("377810c4")),g=o._(d("5f78ff55")),x=o._(d("8a844209")),y=o._(d("3650c57d")),w=o._(d("f83ec78b")),h=[c.default,b.default,f.default,r.default,s.default,n.default,u.default,_.default,i.default,p.default,j.default,m.default,g.default,x.default,y.default,w.default];},d82e6e42:function(e,t,d,l){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return o;}});let o=`section {
-  position: relative;
-  padding: 16px;
-  margin: 2px;
-  border: 1px solid black;
-  border-radius: 8px;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
-}
-
-section + section {
-  margin-top: 24px;
-}
-
-section h1 {
-  font-size: 18px;
-}`;}}),(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.setInitialLoadedResources(["absolute.1a09ac56.js","anonymousBlockBox.dbe29078.js","batteryCharge.0b3a0f88.js","boxModel.492d930c.js","boxSize.61ad8a96.js","clock.e97503ab.js","counter.bc2da8bb.js","flex.3b702141.js","float.3517fa88.js","formattingContext.ad078a57.js","lineHeight.40a22170.js","loading.cd574f5c.js","minContent.2ba46c7d.js","verticalAlign.91781c84.js","wavyUnderline.39069a0a.js","zIndex.fbbbce27.js"]),(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.setDynamicModuleResourcesMap({});var o=(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__;o.bootstrap();var c=o.require("953dfae2");let b=c.default||c;},"356229ae":function  (e,t,r,n){!function(e){for(var t in e)e[t].__farm_resource_pot__="wavyUnderline.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"2e9047b6":function(e,t,r,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`@keyframes wave {
-  from {
-    background-position-x: -10px, 0;
-  }
-
-  to {
-    background-position-x:
-      -30px,
-      -20px;
-  }
-}
-
-.text {
-  display: inline-block;
-  background:
-    radial-gradient(circle at 10px -7px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x,
-    radial-gradient(circle at 10px 27px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x;
-  background-position:
-    -10px calc(100% + 16px),
-    0 calc(100% - 4px);
-  background-size: 20px 20px;
-  line-height: 16px;
-  animation: wave 1s infinite linear;
-}
-`;},"3650c57d":function(e,t,r,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return p;}});let i=r("@swc/helpers/_/_interop_require_default"),c=i._(r("5a4fa45f")),o=i._(r("3bff51e1")),l=i._(r("2e9047b6")),p={id:"wavyUnderline",title:"wavy underline",desc:"Text wave underline implementated with background animation.",category:"css",tags:["background","animation"],html:c.default,css:o.default,code:[{label:"html",filetype:"html",content:c.default},{label:"scss",filetype:"scss",content:l.default}]};},"3bff51e1":function(e,t,r,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`@keyframes wave {
-  from {
-    background-position-x: -10px, 0;
-  }
-  to {
-    background-position-x: -30px, -20px;
-  }
-}
-.text {
-  display: inline-block;
-  background: radial-gradient(circle at 10px -7px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x, radial-gradient(circle at 10px 27px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x;
-  background-position: -10px calc(100% + 16px), 0 calc(100% - 4px);
-  background-size: 20px 20px;
-  line-height: 16px;
-  animation: wave 1s infinite linear;
-}`;},"5a4fa45f":function(e,t,r,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`<span class="text">wavyUnderline</span>
-`;}});},"3ab76d5d":function  (e,t,n,i){!function(e){for(var t in e)e[t].__farm_resource_pot__="minContent.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"533e8601":function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return l;}});let l=`.box {
-  width: -moz-min-content;
-  width: min-content;
-}
-
-.inline-block {
-  display: inline-block;
-}
-
-.defined-width {
-  width: -moz-max-content;
-  width: max-content;
-}`;},"5f78ff55":function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return r;}});let l=n("@swc/helpers/_/_interop_require_default"),s=l._(n("d82e6e42")),o=l._(n("fe19a1e4")),c=l._(n("533e8601")),d=l._(n("e8ed8fc5")),r={id:"minContent",title:"min-content",desc:"css width min-content characterization",category:"css",tags:["standard"],isStandard:!0,html:o.default,css:c.default+s.default,code:[{label:"html",filetype:"html",content:o.default},{label:"scss",filetype:"scss",content:d.default}]};},e8ed8fc5:function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return l;}});let l=`.box {
-  width: min-content;
-}
-
-.inline-block {
-  display: inline-block;
-}
-
-.defined-width {
-  width: max-content;
-}
-`;},fe19a1e4:function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return l;}});let l=`<section>
-  <h1>The English language is divided into words, and the cjk text is a single character.</h1>
-  <hr />
-
-  <div class="box">
-    <span>hello world</span>
-  </div>
-
-  <div class="box">
-    <span>中文</span>
-  </div>
-</section>
-
-<section>
-  <h1>Inline-block elements with defined widths are not split. Also works for inline-flex, inline-grid, etc.</h1>
-  <hr />
-
-  <div class="box">
-    <span class="inline-block">中文</span>
-    <span>中文</span>
-  </div>
-  <div class="box">
-    <span class="inline-block defined-width">中文</span>
-    <span>中文</span>
-  </div>
-</section>
-`;}});},"512d1a77":function  (e,t,l,n){!function(e){for(var t in e)e[t].__farm_resource_pot__="float.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"5b9b2f6d":function(e,t,l,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return r;}});let r=`.parent {
-  background-color: red;
-}
-
-.line2 {
-  float: right;
-}
-
-.float1,
-.float2 {
-  float: left;
-}
-
-li {
-  float: left;
-}
-
-.parent3 > :nth-child(3) {
-  clear: both;
-}
-`;},"6dd6dd16":function(e,t,l,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return r;}});let r=`<section>
-  <h1>The offset reference for the float is the current line box.</h1>
-  <hr />
-
-  <div class="parent">
-    <span class="line1">line1</span>
-    <br />
-    <span class="line2">line2</span>
-  </div>
-</section>
-
-<section>
-  <h1>Multiple floats in the same row will be aligned next to each other.</h1>
-  <hr />
-
-  <div class="parent2">
-    <span class="float1">float1</span>
-    <span class="float2">float2</span>
-  </div>
-</section>
-
-<section>
-  <h1>The clear attribute will disable elements from being adjacent to floated elements.</h1>
-  <hr />
-
-  <ul class="parent3">
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-  </ul>
-</section>
-`;},"8c0b1759":function(e,t,l,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return f;}});let r=l("@swc/helpers/_/_interop_require_default"),o=r._(l("d82e6e42")),i=r._(l("6dd6dd16")),s=r._(l("ca8bbf13")),c=r._(l("5b9b2f6d")),f={id:"float",title:"float",desc:"css float characterization",category:"css",tags:["standard"],isStandard:!0,html:i.default,css:s.default+o.default,code:[{label:"html",filetype:"html",content:i.default},{label:"scss",filetype:"scss",content:c.default}]};},ca8bbf13:function(e,t,l,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return r;}});let r=`.parent {
-  background-color: red;
-}
-
-.line2 {
-  float: right;
-}
-
-.float1,
-.float2 {
-  float: left;
-}
-
-li {
-  float: left;
-}
-
-.parent3 > :nth-child(3) {
-  clear: both;
-}`;}});},"77e6ea10":function  (e,t,i,r){!function(e){for(var t in e)e[t].__farm_resource_pot__="formattingContext.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"3d6ac7fd":function(e,t,i,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`<section>
-  <h3>
-    When a formatting context is created, its boundary is at the border position of the corresponding element.
-    <br />
-    Creating BFC does not affect margin of the element. The margin of parent element and the margin of child element are
-    still in the same BFC.
-  </h3>
-  <hr />
-
-  <div class="parent1">
-    <div class="child1"></div>
-  </div>
-</section>
-
-<section>
-  <h1>
-    The margin of parent element is in the outer BFC, and the margin of child element is in the BFC created by the
-    parent element.
-  </h1>
-  <hr />
-
-  <div class="parent2">
-    <div class="child2"></div>
-  </div>
-</section>
-
-<section>
-  <h1>BFC created by child4 isolates the margin of child3 and the margin of child5.</h1>
-  <hr />
-
-  <div class="parent3">
-    <div class="child3"></div>
-    <div class="child4">
-      <div class="child5"></div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h1>BFC created by child6 isolates its block margins.</h1>
-  <hr />
-
-  <div class="parent4">
-    <div class="child6"></div>
-  </div>
-</section>
-`;},"4aa6b49a":function(e,t,i,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return s;}});let n=i("@swc/helpers/_/_interop_require_default"),d=n._(i("d82e6e42")),o=n._(i("3d6ac7fd")),c=n._(i("b4fd3cbd")),l=n._(i("6d7accd3")),s={id:"formattingContext",title:"formatting context",desc:"css formatting context characterization",category:"css",tags:["standard"],isStandard:!0,html:o.default,css:c.default+d.default,code:[{label:"html",filetype:"html",content:o.default},{label:"scss",filetype:"scss",content:l.default}]};},"6d7accd3":function(e,t,i,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`.parent1 {
-  margin-top: 10px;
-  background: red;
-}
-
-.child1 {
-  display: flow-root;
-  width: 100px;
-  height: 100px;
-  margin-top: 10px;
-  background: green;
-}
-
-.parent2 {
-  display: flow-root;
-  margin-top: 10px;
-  background: red;
-}
-
-.child2 {
-  width: 100px;
-  height: 100px;
-  margin-top: 10px;
-  background: green;
-}
-
-.parent3 {
-  background: red;
-}
-
-.child3 {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 20px;
-  background: green;
-}
-
-.child4 {
-  display: flow-root;
-}
-
-.child5 {
-  width: 100px;
-  height: 100px;
-  margin-top: 10px;
-  background: yellow;
-}
-
-.parent4 {
-  display: flow-root;
-  background: red;
-}
-
-.child6 {
-  display: flow-root;
-  margin-block: 10px;
-}
-`;},b4fd3cbd:function(e,t,i,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`.parent1 {
-  margin-top: 10px;
-  background: red;
-}
-
-.child1 {
-  display: flow-root;
-  width: 100px;
-  height: 100px;
-  margin-top: 10px;
-  background: green;
-}
-
-.parent2 {
-  display: flow-root;
-  margin-top: 10px;
-  background: red;
-}
-
-.child2 {
-  width: 100px;
-  height: 100px;
-  margin-top: 10px;
-  background: green;
-}
-
-.parent3 {
-  background: red;
-}
-
-.child3 {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 20px;
-  background: green;
-}
-
-.child4 {
-  display: flow-root;
-}
-
-.child5 {
-  width: 100px;
-  height: 100px;
-  margin-top: 10px;
-  background: yellow;
-}
-
-.parent4 {
-  display: flow-root;
-  background: red;
-}
-
-.child6 {
-  display: flow-root;
-  margin-block: 10px;
+  left: 26px;
+  width: 16px;
+  height: 16px;
+  animation: move-to-top 5s ease-in-out -4.024s infinite;
 }`;}});},"972e19ca":function  (e,o,n,l){!function(e){for(var o in e)e[o].__farm_resource_pot__="anonymousBlockBox.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(o,e[o]);}({"4386746a":function(e,o,n,l){"use strict";Object.defineProperty(o,"__esModule",{value:!0}),Object.defineProperty(o,"default",{enumerable:!0,get:function(){return i;}});let i=`<section>
   <h1>
     If a block container box has a box-level box inside it, then we force it to have only block-level boxes inside it.
@@ -2136,84 +2213,7 @@ ul {
     </ul>
   </div>
 </div>
-`;},c0fd6a57:function(i,e,t,l){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),Object.defineProperty(e,"default",{enumerable:!0,get:function(){return s;}});let r=t("@swc/helpers/_/_interop_require_default"),o=r._(t("53a1347d")),n=r._(t("5272ca90")),m=r._(t("0ff84df9")),s={id:"clock",title:"clock",desc:"clock animation",category:"css",tags:["animation"],html:o.default,css:n.default,code:[{label:"html",filetype:"html",content:o.default},{label:"scss",filetype:"scss",content:m.default}]};}});},"c3692c7d":function  (e,t,n,i){!function(e){for(var t in e)e[t].__farm_resource_pot__="loading.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"10032f9c":function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return o;}});let o=`<div class="loading"></div>
-`;},"377810c4":function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return f;}});let o=n("@swc/helpers/_/_interop_require_default"),r=o._(n("10032f9c")),l=o._(n("999c83f8")),d=o._(n("9bdda8b0")),f={id:"loading",title:"loading",desc:"Simple loading icon.",category:"css",tags:["single div","animation"],html:r.default,css:l.default,code:[{label:"html",filetype:"html",content:r.default},{label:"scss",filetype:"scss",content:d.default}]};},"999c83f8":function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return o;}});let o=`#app {
-  position: relative;
-}
-
-.loading,
-.loading::before,
-.loading::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 60px;
-  height: 60px;
-  margin-top: -30px;
-  margin-left: -30px;
-  border-radius: 50%;
-  background: #1bc2a6;
-}
-
-.loading::before {
-  content: "";
-  animation: expand 1.5s infinite;
-}
-
-.loading::after {
-  content: "";
-  animation: expand 1.5s -0.4s infinite;
-}
-
-@keyframes expand {
-  from {
-    opacity: 1;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 0;
-    transform: scale(2);
-  }
-}`;},"9bdda8b0":function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return o;}});let o=`#app {
-  position: relative;
-}
-
-.loading,
-.loading::before,
-.loading::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 60px;
-  height: 60px;
-  margin-top: -30px;
-  margin-left: -30px;
-  border-radius: 50%;
-  background: #1bc2a6;
-}
-
-.loading::before {
-  content: '';
-  animation: expand 1.5s infinite;
-}
-
-.loading::after {
-  content: '';
-  animation: expand 1.5s -0.4s infinite;
-}
-
-@keyframes expand {
-  from {
-    opacity: 1;
-    transform: scale(0.8);
-  }
-
-  to {
-    opacity: 0;
-    transform: scale(2);
-  }
-}
-`;}});},"d11778a3":function  (e,t,r,o){(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a={__FARM_TARGET_ENV__:"browser"},function(e,t){var r={};function o(e){return Promise.resolve(i(e));}function i(t){if(r[t])return r[t].exports;var s={id:t,exports:{}};return r[t]=s,e[t](s,s.exports,i,o),s.exports;}i(t);}({"13561da2":function(e,t,r,o){"use strict";function i(e,t){return Object.keys(e).forEach(function(r){"default"===r||Object.prototype.hasOwnProperty.call(t,r)||Object.defineProperty(t,r,{enumerable:!0,get:function(){return e[r];}});}),e;}Object.defineProperty(t,"__esModule",{value:!0}),function(e,t){for(var r in t)Object.defineProperty(e,r,{enumerable:!0,get:t[r]});}(t,{_:function(){return i;},_export_star:function(){return i;}});},54183975:function(e,t,r,o){"use strict";function i(e){if("function"!=typeof WeakMap)return null;var t=new WeakMap,r=new WeakMap;return(i=function(e){return e?r:t;})(e);}function s(e,t){if(!t&&e&&e.__esModule)return e;if(null===e||"object"!=typeof e&&"function"!=typeof e)return{default:e};var r=i(t);if(r&&r.has(e))return r.get(e);var o={__proto__:null},s=Object.defineProperty&&Object.getOwnPropertyDescriptor;for(var n in e)if("default"!==n&&Object.prototype.hasOwnProperty.call(e,n)){var u=s?Object.getOwnPropertyDescriptor(e,n):null;u&&(u.get||u.set)?Object.defineProperty(o,n,u):o[n]=e[n];}return o.default=e,r&&r.set(e,o),o;}Object.defineProperty(t,"__esModule",{value:!0}),function(e,t){for(var r in t)Object.defineProperty(e,r,{enumerable:!0,get:t[r]});}(t,{_:function(){return s;},_interop_require_wildcard:function(){return s;}});},"55d27d5a":function(e,t,r,o){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),function(e,t){for(var r in t)Object.defineProperty(e,r,{enumerable:!0,get:t[r]});}(t,{ResourceLoader:function(){return u;},__farm_global_this__:function(){return i;},isBrowser:function(){return n;},targetEnv:function(){return s;}});let i=(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a,s=i.__FARM_TARGET_ENV__||"node",n="browser"===s&&(globalThis||window).document;class u{moduleSystem;_loadedResources;_loadingResources;publicPaths;constructor(e,t){this.moduleSystem=e,this._loadedResources={},this._loadingResources={},this.publicPaths=t;}load(e,t=0){if(!n){let t=this.moduleSystem.pluginContainer.hookBail("loadResource",e);if(t)return t.then(t=>{if(!t.success&&t.retryWithDefaultResourceLoader){if("script"===e.type)return this._loadScript(`./${e.path}`);if("link"===e.type)return this._loadLink(`./${e.path}`);}else if(!t.success)throw Error(`[Farm] Failed to load resource: "${e.path}, type: ${e.type}". Original Error: ${t.err}`);});if("script"===e.type)return this._loadScript(`./${e.path}`);if("link"===e.type)return this._loadLink(`./${e.path}`);}let r=this.publicPaths[t],o=`${r.endsWith("/")?r.slice(0,-1):r}/${e.path}`;if(this._loadedResources[e.path])return;if(this._loadingResources[e.path])return this._loadingResources[e.path];let i=this.moduleSystem.pluginContainer.hookBail("loadResource",e);return i?i.then(r=>{if(r.success)this.setLoadedResource(e.path);else if(r.retryWithDefaultResourceLoader)return this._load(o,e,t);else throw Error(`[Farm] Failed to load resource: "${e.path}, type: ${e.type}". Original Error: ${r.err}`);}):this._load(o,e,t);}setLoadedResource(e,t=!0){this._loadedResources[e]=t;}isResourceLoaded(e){return this._loadedResources[e];}_load(e,t,r){let o=Promise.resolve();return"script"===t.type?o=this._loadScript(e):"link"===t.type&&(o=this._loadLink(e)),this._loadingResources[t.path]=o,o.then(()=>{this._loadedResources[t.path]=!0,this._loadingResources[t.path]=null;}).catch(o=>{if(console.warn(`[Farm] Failed to load resource "${e}" using publicPath: ${this.publicPaths[r]}`),++r<this.publicPaths.length)return this._load(e,t,r);throw this._loadingResources[t.path]=null,Error(`[Farm] Failed to load resource: "${t.path}, type: ${t.type}". ${o}`);}),o;}_loadScript(e){return n?new Promise((t,r)=>{let o=document.createElement("script");o.src=e,document.body.appendChild(o),o.onload=()=>{t();},o.onerror=e=>{r(e);};}):import(e);}_loadLink(e){return n?new Promise((t,r)=>{let o=document.createElement("link");o.rel="stylesheet",o.href=e,document.head.appendChild(o),o.onload=()=>{t();},o.onerror=e=>{r(e);};}):Promise.resolve();}}},"5c9dc4a5":function(e,t,r,o){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"ModuleSystem",{enumerable:!0,get:function(){return p;}});let i=r("b82fc02f"),s=r("bd5d65ea"),n=r("55d27d5a"),u=r("f566227b"),l=r("54183975"),c=r("13561da2"),d=globalThis||window,h={"@swc/helpers/_/_interop_require_default":{default:u._interop_require_default,_:u._interop_require_default},"@swc/helpers/_/_interop_require_wildcard":{default:l._interop_require_wildcard,_:l._interop_require_wildcard},"@swc/helpers/_/_export_star":{default:c._export_star,_:c._export_star}};class p{modules;cache;externalModules;reRegisterModules;publicPaths;dynamicModuleResourcesMap;resourceLoader;pluginContainer;targetEnv;constructor(){this.modules={},this.cache={},this.publicPaths=[],this.dynamicModuleResourcesMap={},this.resourceLoader=new n.ResourceLoader(this,this.publicPaths),this.pluginContainer=new s.FarmRuntimePluginContainer([]),this.targetEnv=n.targetEnv,this.externalModules={},this.reRegisterModules=!1;}require(e,t=!1){if(h[e])return h[e];if(this.cache[e]&&!this.pluginContainer.hookBail("readModuleCache",this.cache[e]))return this.cache[e].exports;let r=this.modules[e];if(!r){if(this.externalModules[e]){let r=this.externalModules[e];return t&&r.default||r;}return("node"===this.targetEnv||!n.isBrowser)&&nodeRequire?nodeRequire(e):(this.pluginContainer.hookSerial("moduleNotFound",e),console.debug(`[Farm] Module "${e}" is not registered`),{});}let o=new i.Module(e,this.require.bind(this));o.resource_pot=r.__farm_resource_pot__,this.pluginContainer.hookSerial("moduleCreated",o),this.cache[e]=o,(globalThis||global||window||{}).require||((globalThis||global||window||{require:undefined}).require=this.require.bind(this));let s=r(o,o.exports,this.require.bind(this),this.farmDynamicRequire.bind(this));return s&&s instanceof Promise?s.then(()=>(this.pluginContainer.hookSerial("moduleInitialized",o),o.exports)):(this.pluginContainer.hookSerial("moduleInitialized",o),o.exports);}farmDynamicRequire(e){if(this.modules[e]){let t=this.require(e);return t.__farm_async?t.default:Promise.resolve(t);}return this.loadDynamicResources(e);}loadDynamicResources(e,t=!1){let r=this.dynamicModuleResourcesMap[e];if(!r||0===r.length)throw Error(`Dynamic imported module "${e}" does not belong to any resource`);return t&&(this.reRegisterModules=!0,this.clearCache(e)),Promise.all(r.map(e=>(t&&this.resourceLoader.setLoadedResource(e.path,!1),this.resourceLoader.load(e)))).then(()=>{if(!this.modules[e])throw Error(`Dynamic imported module "${e}" is not registered.`);this.reRegisterModules=!1;let t=this.require(e);return t.__farm_async?t.default:t;}).catch(t=>{throw console.error(`[Farm] Error loading dynamic module "${e}"`,t),t;});}register(e,t){if(this.modules[e]&&!this.reRegisterModules){console.warn(`Module "${e}" has registered! It should not be registered twice`);return;}this.modules[e]=t;}update(e,t){this.modules[e]=t,this.clearCache(e);}delete(e){return!!this.modules[e]&&(this.clearCache(e),delete this.modules[e],!0);}getModuleUrl(e){let t=this.publicPaths[0]??"";return d.location?`${d.location.protocol}//${d.location.host}${t.endsWith("/")?t.slice(0,-1):t}/${this.modules[e].__farm_resource_pot__}`:this.modules[e].__farm_resource_pot__;}getCache(e){return this.cache[e];}clearCache(e){return!!this.cache[e]&&(delete this.cache[e],!0);}setInitialLoadedResources(e){for(let t of e)this.resourceLoader.setLoadedResource(t);}setDynamicModuleResourcesMap(e){this.dynamicModuleResourcesMap=e;}setPublicPaths(e){this.publicPaths=e,this.resourceLoader.publicPaths=this.publicPaths;}setPlugins(e){this.pluginContainer.plugins=e;}addPlugin(e){this.pluginContainer.plugins.every(t=>t.name!==e.name)&&this.pluginContainer.plugins.push(e);}removePlugin(e){this.pluginContainer.plugins=this.pluginContainer.plugins.filter(t=>t.name!==e);}setExternalModules(e){Object.assign(this.externalModules,e||{});}bootstrap(){this.pluginContainer.hookSerial("bootstrap",this);}}},"688d37b3":function(e,t,r,o){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return s;}});let i="undefined"!=typeof globalThis?globalThis:window,s={name:"farm-runtime-import-meta",_moduleSystem:{},bootstrap(e){this._moduleSystem=e;},moduleCreated(e){e.meta.env={...{NODE_ENV:"production"}??{},mode:"production",dev:!1,prod:!0};let t=this._moduleSystem.publicPaths?.[0]||"",{location:r}=i,o=r?`${r.protocol}//${r.host}${t.replace(/\/$/,"")}/${e.id}?t=${Date.now()}`:e.resource_pot;e.meta.url=o;}};},a0fe17cf:function(e,t,r,o){"use strict";let i;Object.defineProperty(t,"__esModule",{value:!0}),function(e,t){for(var r in t)Object.defineProperty(e,r,{enumerable:!0,get:t[r]});}(t,{ModuleSystem:function(){return n.ModuleSystem;},Plugin:function(){return u.FarmRuntimePlugin;}});let s=r("f566227b")._(r("688d37b3")),n=r("5c9dc4a5"),u=r("bd5d65ea");r("55d27d5a").__farm_global_this__.__farm_module_system__=(i=new n.ModuleSystem,function(){return i;})(),(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.setPlugins([s.default]);},b82fc02f:function(e,t,r,o){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"Module",{enumerable:!0,get:function(){return i;}});class i{id;exports;resource_pot;meta;require;constructor(e,t){this.id=e,this.exports={},this.meta={env:{}},this.require=t;}}},bd5d65ea:function(e,t,r,o){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"FarmRuntimePluginContainer",{enumerable:!0,get:function(){return i;}});class i{plugins=[];constructor(e){this.plugins=e;}hookSerial(e,...t){for(let r of this.plugins){let o=r[e];o&&o.apply(r,t);}}hookBail(e,...t){for(let r of this.plugins){let o=r[e];if(o){let e=o.apply(r,t);if(e)return e;}}}}},f566227b:function(e,t,r,o){"use strict";function i(e){return e&&e.__esModule?e:{default:e};}Object.defineProperty(t,"__esModule",{value:!0}),function(e,t){for(var r in t)Object.defineProperty(e,r,{enumerable:!0,get:t[r]});}(t,{_:function(){return i;},_interop_require_default:function(){return i;}});}},"a0fe17cf");},"d789ca88":function  (e,t,o,n){!function(e){for(var t in e)e[t].__farm_resource_pot__="absolute.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"1b6d9e9a":function(e,t,o,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`<section>
+`;},c0fd6a57:function(i,e,t,l){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),Object.defineProperty(e,"default",{enumerable:!0,get:function(){return s;}});let r=t("@swc/helpers/_/_interop_require_default"),o=r._(t("53a1347d")),n=r._(t("5272ca90")),m=r._(t("0ff84df9")),s={id:"clock",title:"clock",desc:"clock animation",category:"css",tags:["animation"],html:o.default,css:n.default,code:[{label:"html",filetype:"html",content:o.default},{label:"scss",filetype:"scss",content:m.default}]};}});},"d11778a3":function  (e,t,r,o){(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a={__FARM_TARGET_ENV__:"browser"},function(e,t){var r={};function o(e){return Promise.resolve(i(e));}function i(t){if(r[t])return r[t].exports;var s={id:t,exports:{}};return r[t]=s,e[t](s,s.exports,i,o),s.exports;}i(t);}({"13561da2":function(e,t,r,o){"use strict";function i(e,t){return Object.keys(e).forEach(function(r){"default"===r||Object.prototype.hasOwnProperty.call(t,r)||Object.defineProperty(t,r,{enumerable:!0,get:function(){return e[r];}});}),e;}Object.defineProperty(t,"__esModule",{value:!0}),function(e,t){for(var r in t)Object.defineProperty(e,r,{enumerable:!0,get:t[r]});}(t,{_:function(){return i;},_export_star:function(){return i;}});},54183975:function(e,t,r,o){"use strict";function i(e){if("function"!=typeof WeakMap)return null;var t=new WeakMap,r=new WeakMap;return(i=function(e){return e?r:t;})(e);}function s(e,t){if(!t&&e&&e.__esModule)return e;if(null===e||"object"!=typeof e&&"function"!=typeof e)return{default:e};var r=i(t);if(r&&r.has(e))return r.get(e);var o={__proto__:null},s=Object.defineProperty&&Object.getOwnPropertyDescriptor;for(var n in e)if("default"!==n&&Object.prototype.hasOwnProperty.call(e,n)){var u=s?Object.getOwnPropertyDescriptor(e,n):null;u&&(u.get||u.set)?Object.defineProperty(o,n,u):o[n]=e[n];}return o.default=e,r&&r.set(e,o),o;}Object.defineProperty(t,"__esModule",{value:!0}),function(e,t){for(var r in t)Object.defineProperty(e,r,{enumerable:!0,get:t[r]});}(t,{_:function(){return s;},_interop_require_wildcard:function(){return s;}});},"55d27d5a":function(e,t,r,o){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),function(e,t){for(var r in t)Object.defineProperty(e,r,{enumerable:!0,get:t[r]});}(t,{ResourceLoader:function(){return u;},__farm_global_this__:function(){return i;},isBrowser:function(){return n;},targetEnv:function(){return s;}});let i=(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a,s=i.__FARM_TARGET_ENV__||"node",n="browser"===s&&(globalThis||window).document;class u{moduleSystem;_loadedResources;_loadingResources;publicPaths;constructor(e,t){this.moduleSystem=e,this._loadedResources={},this._loadingResources={},this.publicPaths=t;}load(e,t=0){if(!n){let t=this.moduleSystem.pluginContainer.hookBail("loadResource",e);if(t)return t.then(t=>{if(!t.success&&t.retryWithDefaultResourceLoader){if("script"===e.type)return this._loadScript(`./${e.path}`);if("link"===e.type)return this._loadLink(`./${e.path}`);}else if(!t.success)throw Error(`[Farm] Failed to load resource: "${e.path}, type: ${e.type}". Original Error: ${t.err}`);});if("script"===e.type)return this._loadScript(`./${e.path}`);if("link"===e.type)return this._loadLink(`./${e.path}`);}let r=this.publicPaths[t],o=`${r.endsWith("/")?r.slice(0,-1):r}/${e.path}`;if(this._loadedResources[e.path])return;if(this._loadingResources[e.path])return this._loadingResources[e.path];let i=this.moduleSystem.pluginContainer.hookBail("loadResource",e);return i?i.then(r=>{if(r.success)this.setLoadedResource(e.path);else if(r.retryWithDefaultResourceLoader)return this._load(o,e,t);else throw Error(`[Farm] Failed to load resource: "${e.path}, type: ${e.type}". Original Error: ${r.err}`);}):this._load(o,e,t);}setLoadedResource(e,t=!0){this._loadedResources[e]=t;}isResourceLoaded(e){return this._loadedResources[e];}_load(e,t,r){let o=Promise.resolve();return"script"===t.type?o=this._loadScript(e):"link"===t.type&&(o=this._loadLink(e)),this._loadingResources[t.path]=o,o.then(()=>{this._loadedResources[t.path]=!0,this._loadingResources[t.path]=null;}).catch(o=>{if(console.warn(`[Farm] Failed to load resource "${e}" using publicPath: ${this.publicPaths[r]}`),++r<this.publicPaths.length)return this._load(e,t,r);throw this._loadingResources[t.path]=null,Error(`[Farm] Failed to load resource: "${t.path}, type: ${t.type}". ${o}`);}),o;}_loadScript(e){return n?new Promise((t,r)=>{let o=document.createElement("script");o.src=e,document.body.appendChild(o),o.onload=()=>{t();},o.onerror=e=>{r(e);};}):import(e);}_loadLink(e){return n?new Promise((t,r)=>{let o=document.createElement("link");o.rel="stylesheet",o.href=e,document.head.appendChild(o),o.onload=()=>{t();},o.onerror=e=>{r(e);};}):Promise.resolve();}}},"5c9dc4a5":function(e,t,r,o){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"ModuleSystem",{enumerable:!0,get:function(){return p;}});let i=r("b82fc02f"),s=r("bd5d65ea"),n=r("55d27d5a"),u=r("f566227b"),l=r("54183975"),c=r("13561da2"),d=globalThis||window,h={"@swc/helpers/_/_interop_require_default":{default:u._interop_require_default,_:u._interop_require_default},"@swc/helpers/_/_interop_require_wildcard":{default:l._interop_require_wildcard,_:l._interop_require_wildcard},"@swc/helpers/_/_export_star":{default:c._export_star,_:c._export_star}};class p{modules;cache;externalModules;reRegisterModules;publicPaths;dynamicModuleResourcesMap;resourceLoader;pluginContainer;targetEnv;constructor(){this.modules={},this.cache={},this.publicPaths=[],this.dynamicModuleResourcesMap={},this.resourceLoader=new n.ResourceLoader(this,this.publicPaths),this.pluginContainer=new s.FarmRuntimePluginContainer([]),this.targetEnv=n.targetEnv,this.externalModules={},this.reRegisterModules=!1;}require(e,t=!1){if(h[e])return h[e];if(this.cache[e]&&!this.pluginContainer.hookBail("readModuleCache",this.cache[e]))return this.cache[e].exports;let r=this.modules[e];if(!r){if(this.externalModules[e]){let r=this.externalModules[e];return t&&r.default||r;}return("node"===this.targetEnv||!n.isBrowser)&&nodeRequire?nodeRequire(e):(this.pluginContainer.hookSerial("moduleNotFound",e),console.debug(`[Farm] Module "${e}" is not registered`),{});}let o=new i.Module(e,this.require.bind(this));o.resource_pot=r.__farm_resource_pot__,this.pluginContainer.hookSerial("moduleCreated",o),this.cache[e]=o,(globalThis||global||window||{}).require||((globalThis||global||window||{require:undefined}).require=this.require.bind(this));let s=r(o,o.exports,this.require.bind(this),this.farmDynamicRequire.bind(this));return s&&s instanceof Promise?s.then(()=>(this.pluginContainer.hookSerial("moduleInitialized",o),o.exports)):(this.pluginContainer.hookSerial("moduleInitialized",o),o.exports);}farmDynamicRequire(e){if(this.modules[e]){let t=this.require(e);return t.__farm_async?t.default:Promise.resolve(t);}return this.loadDynamicResources(e);}loadDynamicResources(e,t=!1){let r=this.dynamicModuleResourcesMap[e];if(!r||0===r.length)throw Error(`Dynamic imported module "${e}" does not belong to any resource`);return t&&(this.reRegisterModules=!0,this.clearCache(e)),Promise.all(r.map(e=>(t&&this.resourceLoader.setLoadedResource(e.path,!1),this.resourceLoader.load(e)))).then(()=>{if(!this.modules[e])throw Error(`Dynamic imported module "${e}" is not registered.`);this.reRegisterModules=!1;let t=this.require(e);return t.__farm_async?t.default:t;}).catch(t=>{throw console.error(`[Farm] Error loading dynamic module "${e}"`,t),t;});}register(e,t){if(this.modules[e]&&!this.reRegisterModules){console.warn(`Module "${e}" has registered! It should not be registered twice`);return;}this.modules[e]=t;}update(e,t){this.modules[e]=t,this.clearCache(e);}delete(e){return!!this.modules[e]&&(this.clearCache(e),delete this.modules[e],!0);}getModuleUrl(e){let t=this.publicPaths[0]??"";return d.location?`${d.location.protocol}//${d.location.host}${t.endsWith("/")?t.slice(0,-1):t}/${this.modules[e].__farm_resource_pot__}`:this.modules[e].__farm_resource_pot__;}getCache(e){return this.cache[e];}clearCache(e){return!!this.cache[e]&&(delete this.cache[e],!0);}setInitialLoadedResources(e){for(let t of e)this.resourceLoader.setLoadedResource(t);}setDynamicModuleResourcesMap(e){this.dynamicModuleResourcesMap=e;}setPublicPaths(e){this.publicPaths=e,this.resourceLoader.publicPaths=this.publicPaths;}setPlugins(e){this.pluginContainer.plugins=e;}addPlugin(e){this.pluginContainer.plugins.every(t=>t.name!==e.name)&&this.pluginContainer.plugins.push(e);}removePlugin(e){this.pluginContainer.plugins=this.pluginContainer.plugins.filter(t=>t.name!==e);}setExternalModules(e){Object.assign(this.externalModules,e||{});}bootstrap(){this.pluginContainer.hookSerial("bootstrap",this);}}},"688d37b3":function(e,t,r,o){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return s;}});let i="undefined"!=typeof globalThis?globalThis:window,s={name:"farm-runtime-import-meta",_moduleSystem:{},bootstrap(e){this._moduleSystem=e;},moduleCreated(e){e.meta.env={...{NODE_ENV:"production"}??{},mode:"production",dev:!1,prod:!0};let t=this._moduleSystem.publicPaths?.[0]||"",{location:r}=i,o=r?`${r.protocol}//${r.host}${t.replace(/\/$/,"")}/${e.id}?t=${Date.now()}`:e.resource_pot;e.meta.url=o;}};},a0fe17cf:function(e,t,r,o){"use strict";let i;Object.defineProperty(t,"__esModule",{value:!0}),function(e,t){for(var r in t)Object.defineProperty(e,r,{enumerable:!0,get:t[r]});}(t,{ModuleSystem:function(){return n.ModuleSystem;},Plugin:function(){return u.FarmRuntimePlugin;}});let s=r("f566227b")._(r("688d37b3")),n=r("5c9dc4a5"),u=r("bd5d65ea");r("55d27d5a").__farm_global_this__.__farm_module_system__=(i=new n.ModuleSystem,function(){return i;})(),(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.setPlugins([s.default]);},b82fc02f:function(e,t,r,o){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"Module",{enumerable:!0,get:function(){return i;}});class i{id;exports;resource_pot;meta;require;constructor(e,t){this.id=e,this.exports={},this.meta={env:{}},this.require=t;}}},bd5d65ea:function(e,t,r,o){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"FarmRuntimePluginContainer",{enumerable:!0,get:function(){return i;}});class i{plugins=[];constructor(e){this.plugins=e;}hookSerial(e,...t){for(let r of this.plugins){let o=r[e];o&&o.apply(r,t);}}hookBail(e,...t){for(let r of this.plugins){let o=r[e];if(o){let e=o.apply(r,t);if(e)return e;}}}}},f566227b:function(e,t,r,o){"use strict";function i(e){return e&&e.__esModule?e:{default:e};}Object.defineProperty(t,"__esModule",{value:!0}),function(e,t){for(var r in t)Object.defineProperty(e,r,{enumerable:!0,get:t[r]});}(t,{_:function(){return i;},_interop_require_default:function(){return i;}});}},"a0fe17cf");},"d789ca88":function  (e,t,o,n){!function(e){for(var t in e)e[t].__farm_resource_pot__="absolute.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"1b6d9e9a":function(e,t,o,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`<section>
   <h1>Setting absolute positioning changes the element's display value to the corresponding block type.</h1>
   <hr />
 
@@ -2762,4 +2762,4 @@ ul {
   background-color: yellow;
 }
 `;},f3e012b0:function(e,o,t,i){"use strict";Object.defineProperty(o,"__esModule",{value:!0}),Object.defineProperty(o,"default",{enumerable:!0,get:function(){return h;}});let d=t("@swc/helpers/_/_interop_require_default"),n=d._(t("d82e6e42")),r=d._(t("992f9bd0")),c=d._(t("0878149f")),l=d._(t("e78c92ad")),h={id:"boxSize",title:"box size",desc:"css box size characterization",category:"css",tags:["standard"],isStandard:!0,html:r.default,css:c.default+n.default,code:[{label:"html",filetype:"html",content:r.default},{label:"scss",filetype:"scss",content:l.default}]};}});},});
-//# sourceMappingURL=dist_index_6ec0.4a12173c.js.map
+//# sourceMappingURL=dist_index_6214.efd8411a.js.map
