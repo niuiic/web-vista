@@ -1,375 +1,4 @@
-(function(_){for(var r in _){_[r].__farm_resource_pot__='dist_index_4cea.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"18c496f7":function  (e,c,t,l){!function(e){for(var c in e)e[c].__farm_resource_pot__="counter.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(c,e[c]);}({"1bee128a":function(e,c,t,l){"use strict";Object.defineProperty(c,"__esModule",{value:!0}),Object.defineProperty(c,"default",{enumerable:!0,get:function(){return s;}});let n=t("@swc/helpers/_/_interop_require_default"),r=n._(t("d82e6e42")),i=n._(t("de6ffd56")),o=n._(t("6197a48d")),u=n._(t("b58e7079")),s={id:"counter",title:"counter",desc:"css counter characterization",category:"css",tags:["standard"],isStandard:!0,html:i.default,css:o.default+r.default,code:[{label:"html",filetype:"html",content:i.default},{label:"scss",filetype:"scss",content:u.default}]};},"6197a48d":function(e,c,t,l){"use strict";Object.defineProperty(c,"__esModule",{value:!0}),Object.defineProperty(c,"default",{enumerable:!0,get:function(){return n;}});let n=`.parent {
-  counter-reset: counter1 0;
-}
-
-.child {
-  counter-increment: counter1 1;
-}
-
-.child::before {
-  content: counter(counter1, upper-roman);
-}
-
-.parent2 {
-  counter-reset: counter2 0 counter3 0;
-}
-
-.child1 {
-  counter-increment: counter2 1;
-  counter-reset: counter3 0;
-}
-
-.child2 {
-  counter-increment: counter3 1;
-}
-
-.child1::before {
-  content: counter(counter2);
-}
-
-.child2::before {
-  content: counter(counter3);
-}
-
-.parent3 {
-  counter-reset: counter4 0;
-}
-
-.child3 {
-  counter-increment: counter4 1;
-}
-
-.child3::before {
-  content: counters(counter4, "-", decimal);
-}`;},b58e7079:function(e,c,t,l){"use strict";Object.defineProperty(c,"__esModule",{value:!0}),Object.defineProperty(c,"default",{enumerable:!0,get:function(){return n;}});let n=`.parent {
-  counter-reset: counter1 0;
-}
-
-.child {
-  counter-increment: counter1 1;
-}
-
-.child::before {
-  content: counter(counter1, upper-roman);
-}
-
-.parent2 {
-  counter-reset: counter2 0 counter3 0;
-}
-
-.child1 {
-  counter-increment: counter2 1;
-  counter-reset: counter3 0;
-}
-
-.child2 {
-  counter-increment: counter3 1;
-}
-
-.child1::before {
-  content: counter(counter2);
-}
-
-.child2::before {
-  content: counter(counter3);
-}
-
-.parent3 {
-  counter-reset: counter4 0;
-}
-
-.child3 {
-  counter-increment: counter4 1;
-}
-
-.child3::before {
-  content: counters(counter4, '-', decimal);
-}
-`;},de6ffd56:function(e,c,t,l){"use strict";Object.defineProperty(c,"__esModule",{value:!0}),Object.defineProperty(c,"default",{enumerable:!0,get:function(){return n;}});let n=`<section>
-  <h1>Basic usage</h1>
-  <hr />
-
-  <ul class="parent">
-    <li class="child">child</li>
-    <li>
-      <span class="child">child</span>
-    </li>
-    <li class="child">child</li>
-    <li class="child">child</li>
-  </ul>
-</section>
-
-<section>
-  <h1>Multiple counters</h1>
-  <hr />
-
-  <ul class="parent2">
-    <li class="child1">child1</li>
-    <li class="child2">child2</li>
-    <li class="child2">child2</li>
-    <li class="child2">child2</li>
-    <li class="child1">child1</li>
-    <li class="parent2">parent2</li>
-    <li class="child2">child2</li>
-  </ul>
-</section>
-
-<section>
-  <h1>Nested counters</h1>
-  <hr />
-
-  <ul class="parent3">
-    <li class="child3">child3</li>
-    <li class="child3">child3</li>
-    <li class="child3">
-      <ul class="parent3">
-        <li class="child3">child3</li>
-        <li class="child3">child3</li>
-      </ul>
-    </li>
-    <li class="child3">child3</li>
-  </ul>
-</section>
-`;}});},"1ce5aab9":function  (e,t,n,r){!function(e){for(var t in e)e[t].__farm_resource_pot__="boxModel.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"253673e4":function(e,t,n,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`<section>
-<h1>
-  'width: 100%;' represents the proportion of the content area of the child box to the content area of the parent box.
-  This would not be affected by box-sizing.
-</h1>
-<hr/>
-
-<div class="parent">
-  <div class="child"></div>
-</div>
-</section>
-
-<section>
-<h1>
-Padding, margin and border of the inline element would not push away surrounding elements vertically.
-</h1>
-<hr/>
-
-<p class="p1">
-  <span class="inline-1">inline-1</span>
-  <span class="inline-2">inline-2</span>
-  <p class="p2">p2</p>
-</p>
-</section>
-`;},"2e3d6988":function(e,t,n,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return s;}});let i=n("@swc/helpers/_/_interop_require_default"),o=i._(n("d82e6e42")),d=i._(n("253673e4")),l=i._(n("abd82204")),c=i._(n("92cc28ef")),s={id:"boxModel",title:"box model",desc:"css box model characterization",category:"css",tags:["standard"],isStandard:!0,html:d.default,css:l.default+o.default,code:[{label:"html",filetype:"html",content:d.default},{label:"scss",filetype:"scss",content:c.default}]};},"92cc28ef":function(e,t,n,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`.parent {
-  width: 100px;
-  height: 100px;
-  padding: 10px;
-  margin: 10px;
-  border: 10px solid black;
-  background-color: green;
-}
-
-.child {
-  width: 100%;
-  height: 100%;
-  background-color: red;
-}
-
-.inline-1 {
-  padding: 10px;
-  margin: 10px;
-  border: 10px solid black;
-}
-`;},abd82204:function(e,t,n,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`.parent {
-  width: 100px;
-  height: 100px;
-  padding: 10px;
-  margin: 10px;
-  border: 10px solid black;
-  background-color: green;
-}
-
-.child {
-  width: 100%;
-  height: 100%;
-  background-color: red;
-}
-
-.inline-1 {
-  padding: 10px;
-  margin: 10px;
-  border: 10px solid black;
-}`;}});},"23ec4682":function  (e,t,d,l){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return f;}}),d("d11778a3"),d("d789ca88"),d("972e19ca"),d("6a84c3c1"),d("1ce5aab9"),d("f022a658"),d("70e0a708"),d("18c496f7"),d("b8e2a72a"),d("512d1a77"),d("77e6ea10"),d("dd9304fa"),d("c3692c7d"),d("3ab76d5d"),d("e639dd12"),d("356229ae"),d("e90b5e00"),function(e){for(var t in e)e[t].__farm_resource_pot__="index_03e9.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"953dfae2":function(e,t,d,l){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return h;}});let o=d("@swc/helpers/_/_interop_require_default"),c=o._(d("b3908126")),f=o._(d("d9ee3aa5")),r=o._(d("975c52b8")),b=o._(d("2e3d6988")),s=o._(d("f3e012b0")),n=o._(d("c0fd6a57")),u=o._(d("1bee128a")),_=o._(d("03a0d524")),i=o._(d("8c0b1759")),p=o._(d("4aa6b49a")),j=o._(d("cb8aa143")),m=o._(d("377810c4")),g=o._(d("5f78ff55")),x=o._(d("8a844209")),y=o._(d("3650c57d")),w=o._(d("f83ec78b")),h=[c.default,f.default,r.default,b.default,s.default,n.default,u.default,_.default,i.default,p.default,j.default,m.default,g.default,x.default,y.default,w.default];},d82e6e42:function(e,t,d,l){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return o;}});let o=`section {
-  position: relative;
-  padding: 16px;
-  margin: 2px;
-  border: 1px solid black;
-  border-radius: 8px;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
-}
-
-section + section {
-  margin-top: 24px;
-}
-
-section h1 {
-  font-size: 18px;
-}`;}}),(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.setInitialLoadedResources(["absolute.1a09ac56.js","anonymousBlockBox.dbe29078.js","batteryCharge.2c635765.js","boxModel.492d930c.js","boxSize.61ad8a96.js","clock.ef89a2c7.js","counter.bc2da8bb.js","flex.3b702141.js","float.3517fa88.js","formattingContext.ad078a57.js","lineHeight.40a22170.js","loading.cd574f5c.js","minContent.2ba46c7d.js","verticalAlign.91781c84.js","wavyUnderline.39069a0a.js","zIndex.fbbbce27.js"]),(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.setDynamicModuleResourcesMap({});var o=(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__;o.bootstrap();var c=o.require("953dfae2");let f=c.default||c;},"356229ae":function  (e,t,r,n){!function(e){for(var t in e)e[t].__farm_resource_pot__="wavyUnderline.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"2e9047b6":function(e,t,r,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`@keyframes wave {
-  from {
-    background-position-x: -10px, 0;
-  }
-
-  to {
-    background-position-x:
-      -30px,
-      -20px;
-  }
-}
-
-.text {
-  display: inline-block;
-  background:
-    radial-gradient(circle at 10px -7px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x,
-    radial-gradient(circle at 10px 27px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x;
-  background-position:
-    -10px calc(100% + 16px),
-    0 calc(100% - 4px);
-  background-size: 20px 20px;
-  line-height: 16px;
-  animation: wave 1s infinite linear;
-}
-`;},"3650c57d":function(e,t,r,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return p;}});let i=r("@swc/helpers/_/_interop_require_default"),c=i._(r("5a4fa45f")),o=i._(r("3bff51e1")),l=i._(r("2e9047b6")),p={id:"wavyUnderline",title:"wavy underline",desc:"Text wave underline implementated with background animation.",category:"css",tags:["background","animation"],html:c.default,css:o.default,code:[{label:"html",filetype:"html",content:c.default},{label:"scss",filetype:"scss",content:l.default}]};},"3bff51e1":function(e,t,r,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`@keyframes wave {
-  from {
-    background-position-x: -10px, 0;
-  }
-  to {
-    background-position-x: -30px, -20px;
-  }
-}
-.text {
-  display: inline-block;
-  background: radial-gradient(circle at 10px -7px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x, radial-gradient(circle at 10px 27px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x;
-  background-position: -10px calc(100% + 16px), 0 calc(100% - 4px);
-  background-size: 20px 20px;
-  line-height: 16px;
-  animation: wave 1s infinite linear;
-}`;},"5a4fa45f":function(e,t,r,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`<span class="text">wavyUnderline</span>
-`;}});},"3ab76d5d":function  (e,t,n,i){!function(e){for(var t in e)e[t].__farm_resource_pot__="minContent.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"533e8601":function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return l;}});let l=`.box {
-  width: -moz-min-content;
-  width: min-content;
-}
-
-.inline-block {
-  display: inline-block;
-}
-
-.defined-width {
-  width: -moz-max-content;
-  width: max-content;
-}`;},"5f78ff55":function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return r;}});let l=n("@swc/helpers/_/_interop_require_default"),s=l._(n("d82e6e42")),o=l._(n("fe19a1e4")),c=l._(n("533e8601")),d=l._(n("e8ed8fc5")),r={id:"minContent",title:"min-content",desc:"css width min-content characterization",category:"css",tags:["standard"],isStandard:!0,html:o.default,css:c.default+s.default,code:[{label:"html",filetype:"html",content:o.default},{label:"scss",filetype:"scss",content:d.default}]};},e8ed8fc5:function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return l;}});let l=`.box {
-  width: min-content;
-}
-
-.inline-block {
-  display: inline-block;
-}
-
-.defined-width {
-  width: max-content;
-}
-`;},fe19a1e4:function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return l;}});let l=`<section>
-  <h1>The English language is divided into words, and the cjk text is a single character.</h1>
-  <hr />
-
-  <div class="box">
-    <span>hello world</span>
-  </div>
-
-  <div class="box">
-    <span>中文</span>
-  </div>
-</section>
-
-<section>
-  <h1>Inline-block elements with defined widths are not split. Also works for inline-flex, inline-grid, etc.</h1>
-  <hr />
-
-  <div class="box">
-    <span class="inline-block">中文</span>
-    <span>中文</span>
-  </div>
-  <div class="box">
-    <span class="inline-block defined-width">中文</span>
-    <span>中文</span>
-  </div>
-</section>
-`;}});},"512d1a77":function  (e,t,l,n){!function(e){for(var t in e)e[t].__farm_resource_pot__="float.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"5b9b2f6d":function(e,t,l,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return r;}});let r=`.parent {
-  background-color: red;
-}
-
-.line2 {
-  float: right;
-}
-
-.float1,
-.float2 {
-  float: left;
-}
-
-li {
-  float: left;
-}
-
-.parent3 > :nth-child(3) {
-  clear: both;
-}
-`;},"6dd6dd16":function(e,t,l,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return r;}});let r=`<section>
-  <h1>The offset reference for the float is the current line box.</h1>
-  <hr />
-
-  <div class="parent">
-    <span class="line1">line1</span>
-    <br />
-    <span class="line2">line2</span>
-  </div>
-</section>
-
-<section>
-  <h1>Multiple floats in the same row will be aligned next to each other.</h1>
-  <hr />
-
-  <div class="parent2">
-    <span class="float1">float1</span>
-    <span class="float2">float2</span>
-  </div>
-</section>
-
-<section>
-  <h1>The clear attribute will disable elements from being adjacent to floated elements.</h1>
-  <hr />
-
-  <ul class="parent3">
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-  </ul>
-</section>
-`;},"8c0b1759":function(e,t,l,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return f;}});let r=l("@swc/helpers/_/_interop_require_default"),o=r._(l("d82e6e42")),i=r._(l("6dd6dd16")),s=r._(l("ca8bbf13")),c=r._(l("5b9b2f6d")),f={id:"float",title:"float",desc:"css float characterization",category:"css",tags:["standard"],isStandard:!0,html:i.default,css:s.default+o.default,code:[{label:"html",filetype:"html",content:i.default},{label:"scss",filetype:"scss",content:c.default}]};},ca8bbf13:function(e,t,l,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return r;}});let r=`.parent {
-  background-color: red;
-}
-
-.line2 {
-  float: right;
-}
-
-.float1,
-.float2 {
-  float: left;
-}
-
-li {
-  float: left;
-}
-
-.parent3 > :nth-child(3) {
-  clear: both;
-}`;}});},"6a84c3c1":function  (t,e,i,o){!function(t){for(var e in t)t[e].__farm_resource_pot__="batteryCharge.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(e,t[e]);}({"26bd0e9e":function(t,e,i,o){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),Object.defineProperty(e,"default",{enumerable:!0,get:function(){return n;}});let n=`@use 'sass:math';
+(function(_){for(var r in _){_[r].__farm_resource_pot__='dist_index_6ec0.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"128ed115":function  (t,e,i,o){!function(t){for(var e in t)t[e].__farm_resource_pot__="batteryCharge.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(e,t[e]);}({"26bd0e9e":function(t,e,i,o){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),Object.defineProperty(e,"default",{enumerable:!0,get:function(){return n;}});let n=`@use 'sass:math';
 
 $bg-color: #000000;
 $font-color: #ffffff;
@@ -655,131 +284,749 @@ li {
 }
 li:nth-child(0) {
   top: 50%;
-  left: 37px;
-  width: 16px;
-  height: 16px;
-  animation: move-to-top 8s ease-in-out -0.915s infinite;
+  left: 19px;
+  width: 28px;
+  height: 28px;
+  animation: move-to-top 4s ease-in-out -4.698s infinite;
 }
 
 li:nth-child(1) {
   top: 50%;
-  left: 26px;
-  width: 21px;
-  height: 21px;
-  animation: move-to-top 7s ease-in-out -0.885s infinite;
+  left: 16px;
+  width: 29px;
+  height: 29px;
+  animation: move-to-top 9s ease-in-out -3.832s infinite;
 }
 
 li:nth-child(2) {
   top: 50%;
-  left: 79px;
+  left: 36px;
   width: 23px;
   height: 23px;
-  animation: move-to-top 8s ease-in-out -4.581s infinite;
+  animation: move-to-top 7s ease-in-out -0.213s infinite;
 }
 
 li:nth-child(3) {
   top: 50%;
-  left: 36px;
-  width: 21px;
-  height: 21px;
-  animation: move-to-top 5s ease-in-out -3.137s infinite;
+  left: 25px;
+  width: 17px;
+  height: 17px;
+  animation: move-to-top 7s ease-in-out -4.821s infinite;
 }
 
 li:nth-child(4) {
   top: 50%;
-  left: 43px;
-  width: 21px;
-  height: 21px;
-  animation: move-to-top 6s ease-in-out -1.342s infinite;
+  left: 80px;
+  width: 23px;
+  height: 23px;
+  animation: move-to-top 6s ease-in-out -0.578s infinite;
 }
 
 li:nth-child(5) {
   top: 50%;
-  left: 36px;
-  width: 29px;
-  height: 29px;
-  animation: move-to-top 5s ease-in-out -4.493s infinite;
+  left: 107px;
+  width: 16px;
+  height: 16px;
+  animation: move-to-top 5s ease-in-out -1.323s infinite;
 }
 
 li:nth-child(6) {
   top: 50%;
-  left: 95px;
-  width: 17px;
-  height: 17px;
-  animation: move-to-top 8s ease-in-out -3.071s infinite;
+  left: 11px;
+  width: 28px;
+  height: 28px;
+  animation: move-to-top 4s ease-in-out -4.559s infinite;
 }
 
 li:nth-child(7) {
   top: 50%;
   left: 103px;
-  width: 20px;
-  height: 20px;
-  animation: move-to-top 8s ease-in-out -0.184s infinite;
+  width: 28px;
+  height: 28px;
+  animation: move-to-top 7s ease-in-out -0.23s infinite;
 }
 
 li:nth-child(8) {
   top: 50%;
-  left: 33px;
-  width: 27px;
-  height: 27px;
-  animation: move-to-top 7s ease-in-out -1.87s infinite;
+  left: 107px;
+  width: 19px;
+  height: 19px;
+  animation: move-to-top 6s ease-in-out -1.875s infinite;
 }
 
 li:nth-child(9) {
   top: 50%;
-  left: 81px;
-  width: 21px;
-  height: 21px;
-  animation: move-to-top 4s ease-in-out -0.445s infinite;
+  left: 34px;
+  width: 16px;
+  height: 16px;
+  animation: move-to-top 6s ease-in-out -4.975s infinite;
 }
 
 li:nth-child(10) {
   top: 50%;
-  left: 50px;
-  width: 30px;
-  height: 30px;
-  animation: move-to-top 6s ease-in-out -1.314s infinite;
+  left: 52px;
+  width: 29px;
+  height: 29px;
+  animation: move-to-top 7s ease-in-out -0.71s infinite;
 }
 
 li:nth-child(11) {
   top: 50%;
-  left: 37px;
-  width: 24px;
-  height: 24px;
-  animation: move-to-top 6s ease-in-out -0.175s infinite;
+  left: 50px;
+  width: 30px;
+  height: 30px;
+  animation: move-to-top 4s ease-in-out -0.259s infinite;
 }
 
 li:nth-child(12) {
   top: 50%;
-  left: 58px;
+  left: 33px;
   width: 30px;
   height: 30px;
-  animation: move-to-top 5s ease-in-out -0.076s infinite;
+  animation: move-to-top 4s ease-in-out -4.648s infinite;
 }
 
 li:nth-child(13) {
   top: 50%;
-  left: 15px;
-  width: 27px;
-  height: 27px;
-  animation: move-to-top 6s ease-in-out -4.768s infinite;
+  left: 28px;
+  width: 18px;
+  height: 18px;
+  animation: move-to-top 7s ease-in-out -3.563s infinite;
 }
 
 li:nth-child(14) {
   top: 50%;
-  left: 57px;
-  width: 21px;
-  height: 21px;
-  animation: move-to-top 6s ease-in-out -1.605s infinite;
+  left: 13px;
+  width: 24px;
+  height: 24px;
+  animation: move-to-top 7s ease-in-out -2.092s infinite;
 }
 
 li:nth-child(15) {
   top: 50%;
-  left: 16px;
-  width: 21px;
-  height: 21px;
-  animation: move-to-top 8s ease-in-out -4.165s infinite;
-}`;}});},"70e0a708":function  (t,e,i,r){!function(t){for(var e in t)t[e].__farm_resource_pot__="clock.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(e,t[e]);}({"0ff84df9":function(t,e,i,r){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),Object.defineProperty(e,"default",{enumerable:!0,get:function(){return l;}});let l=`@use 'sass:math';
+  left: 104px;
+  width: 27px;
+  height: 27px;
+  animation: move-to-top 4s ease-in-out -2.286s infinite;
+}`;}});},"18c496f7":function  (e,c,t,l){!function(e){for(var c in e)e[c].__farm_resource_pot__="counter.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(c,e[c]);}({"1bee128a":function(e,c,t,l){"use strict";Object.defineProperty(c,"__esModule",{value:!0}),Object.defineProperty(c,"default",{enumerable:!0,get:function(){return s;}});let n=t("@swc/helpers/_/_interop_require_default"),r=n._(t("d82e6e42")),i=n._(t("de6ffd56")),o=n._(t("6197a48d")),u=n._(t("b58e7079")),s={id:"counter",title:"counter",desc:"css counter characterization",category:"css",tags:["standard"],isStandard:!0,html:i.default,css:o.default+r.default,code:[{label:"html",filetype:"html",content:i.default},{label:"scss",filetype:"scss",content:u.default}]};},"6197a48d":function(e,c,t,l){"use strict";Object.defineProperty(c,"__esModule",{value:!0}),Object.defineProperty(c,"default",{enumerable:!0,get:function(){return n;}});let n=`.parent {
+  counter-reset: counter1 0;
+}
+
+.child {
+  counter-increment: counter1 1;
+}
+
+.child::before {
+  content: counter(counter1, upper-roman);
+}
+
+.parent2 {
+  counter-reset: counter2 0 counter3 0;
+}
+
+.child1 {
+  counter-increment: counter2 1;
+  counter-reset: counter3 0;
+}
+
+.child2 {
+  counter-increment: counter3 1;
+}
+
+.child1::before {
+  content: counter(counter2);
+}
+
+.child2::before {
+  content: counter(counter3);
+}
+
+.parent3 {
+  counter-reset: counter4 0;
+}
+
+.child3 {
+  counter-increment: counter4 1;
+}
+
+.child3::before {
+  content: counters(counter4, "-", decimal);
+}`;},b58e7079:function(e,c,t,l){"use strict";Object.defineProperty(c,"__esModule",{value:!0}),Object.defineProperty(c,"default",{enumerable:!0,get:function(){return n;}});let n=`.parent {
+  counter-reset: counter1 0;
+}
+
+.child {
+  counter-increment: counter1 1;
+}
+
+.child::before {
+  content: counter(counter1, upper-roman);
+}
+
+.parent2 {
+  counter-reset: counter2 0 counter3 0;
+}
+
+.child1 {
+  counter-increment: counter2 1;
+  counter-reset: counter3 0;
+}
+
+.child2 {
+  counter-increment: counter3 1;
+}
+
+.child1::before {
+  content: counter(counter2);
+}
+
+.child2::before {
+  content: counter(counter3);
+}
+
+.parent3 {
+  counter-reset: counter4 0;
+}
+
+.child3 {
+  counter-increment: counter4 1;
+}
+
+.child3::before {
+  content: counters(counter4, '-', decimal);
+}
+`;},de6ffd56:function(e,c,t,l){"use strict";Object.defineProperty(c,"__esModule",{value:!0}),Object.defineProperty(c,"default",{enumerable:!0,get:function(){return n;}});let n=`<section>
+  <h1>Basic usage</h1>
+  <hr />
+
+  <ul class="parent">
+    <li class="child">child</li>
+    <li>
+      <span class="child">child</span>
+    </li>
+    <li class="child">child</li>
+    <li class="child">child</li>
+  </ul>
+</section>
+
+<section>
+  <h1>Multiple counters</h1>
+  <hr />
+
+  <ul class="parent2">
+    <li class="child1">child1</li>
+    <li class="child2">child2</li>
+    <li class="child2">child2</li>
+    <li class="child2">child2</li>
+    <li class="child1">child1</li>
+    <li class="parent2">parent2</li>
+    <li class="child2">child2</li>
+  </ul>
+</section>
+
+<section>
+  <h1>Nested counters</h1>
+  <hr />
+
+  <ul class="parent3">
+    <li class="child3">child3</li>
+    <li class="child3">child3</li>
+    <li class="child3">
+      <ul class="parent3">
+        <li class="child3">child3</li>
+        <li class="child3">child3</li>
+      </ul>
+    </li>
+    <li class="child3">child3</li>
+  </ul>
+</section>
+`;}});},"1ce5aab9":function  (e,t,n,r){!function(e){for(var t in e)e[t].__farm_resource_pot__="boxModel.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"253673e4":function(e,t,n,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`<section>
+<h1>
+  'width: 100%;' represents the proportion of the content area of the child box to the content area of the parent box.
+  This would not be affected by box-sizing.
+</h1>
+<hr/>
+
+<div class="parent">
+  <div class="child"></div>
+</div>
+</section>
+
+<section>
+<h1>
+Padding, margin and border of the inline element would not push away surrounding elements vertically.
+</h1>
+<hr/>
+
+<p class="p1">
+  <span class="inline-1">inline-1</span>
+  <span class="inline-2">inline-2</span>
+  <p class="p2">p2</p>
+</p>
+</section>
+`;},"2e3d6988":function(e,t,n,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return s;}});let i=n("@swc/helpers/_/_interop_require_default"),o=i._(n("d82e6e42")),d=i._(n("253673e4")),l=i._(n("abd82204")),c=i._(n("92cc28ef")),s={id:"boxModel",title:"box model",desc:"css box model characterization",category:"css",tags:["standard"],isStandard:!0,html:d.default,css:l.default+o.default,code:[{label:"html",filetype:"html",content:d.default},{label:"scss",filetype:"scss",content:c.default}]};},"92cc28ef":function(e,t,n,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`.parent {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  margin: 10px;
+  border: 10px solid black;
+  background-color: green;
+}
+
+.child {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
+.inline-1 {
+  padding: 10px;
+  margin: 10px;
+  border: 10px solid black;
+}
+`;},abd82204:function(e,t,n,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`.parent {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  margin: 10px;
+  border: 10px solid black;
+  background-color: green;
+}
+
+.child {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
+.inline-1 {
+  padding: 10px;
+  margin: 10px;
+  border: 10px solid black;
+}`;}});},"23ec4682":function  (e,t,d,l){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return b;}}),d("d11778a3"),d("d789ca88"),d("972e19ca"),d("128ed115"),d("1ce5aab9"),d("f022a658"),d("bc2c8358"),d("18c496f7"),d("b8e2a72a"),d("512d1a77"),d("77e6ea10"),d("dd9304fa"),d("c3692c7d"),d("3ab76d5d"),d("e639dd12"),d("356229ae"),d("e90b5e00"),function(e){for(var t in e)e[t].__farm_resource_pot__="index_03e9.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"953dfae2":function(e,t,d,l){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return h;}});let o=d("@swc/helpers/_/_interop_require_default"),c=o._(d("b3908126")),b=o._(d("d9ee3aa5")),f=o._(d("975c52b8")),r=o._(d("2e3d6988")),s=o._(d("f3e012b0")),n=o._(d("c0fd6a57")),u=o._(d("1bee128a")),_=o._(d("03a0d524")),i=o._(d("8c0b1759")),p=o._(d("4aa6b49a")),j=o._(d("cb8aa143")),m=o._(d("377810c4")),g=o._(d("5f78ff55")),x=o._(d("8a844209")),y=o._(d("3650c57d")),w=o._(d("f83ec78b")),h=[c.default,b.default,f.default,r.default,s.default,n.default,u.default,_.default,i.default,p.default,j.default,m.default,g.default,x.default,y.default,w.default];},d82e6e42:function(e,t,d,l){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return o;}});let o=`section {
+  position: relative;
+  padding: 16px;
+  margin: 2px;
+  border: 1px solid black;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+section + section {
+  margin-top: 24px;
+}
+
+section h1 {
+  font-size: 18px;
+}`;}}),(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.setInitialLoadedResources(["absolute.1a09ac56.js","anonymousBlockBox.dbe29078.js","batteryCharge.0b3a0f88.js","boxModel.492d930c.js","boxSize.61ad8a96.js","clock.e97503ab.js","counter.bc2da8bb.js","flex.3b702141.js","float.3517fa88.js","formattingContext.ad078a57.js","lineHeight.40a22170.js","loading.cd574f5c.js","minContent.2ba46c7d.js","verticalAlign.91781c84.js","wavyUnderline.39069a0a.js","zIndex.fbbbce27.js"]),(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.setDynamicModuleResourcesMap({});var o=(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__;o.bootstrap();var c=o.require("953dfae2");let b=c.default||c;},"356229ae":function  (e,t,r,n){!function(e){for(var t in e)e[t].__farm_resource_pot__="wavyUnderline.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"2e9047b6":function(e,t,r,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`@keyframes wave {
+  from {
+    background-position-x: -10px, 0;
+  }
+
+  to {
+    background-position-x:
+      -30px,
+      -20px;
+  }
+}
+
+.text {
+  display: inline-block;
+  background:
+    radial-gradient(circle at 10px -7px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x,
+    radial-gradient(circle at 10px 27px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x;
+  background-position:
+    -10px calc(100% + 16px),
+    0 calc(100% - 4px);
+  background-size: 20px 20px;
+  line-height: 16px;
+  animation: wave 1s infinite linear;
+}
+`;},"3650c57d":function(e,t,r,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return p;}});let i=r("@swc/helpers/_/_interop_require_default"),c=i._(r("5a4fa45f")),o=i._(r("3bff51e1")),l=i._(r("2e9047b6")),p={id:"wavyUnderline",title:"wavy underline",desc:"Text wave underline implementated with background animation.",category:"css",tags:["background","animation"],html:c.default,css:o.default,code:[{label:"html",filetype:"html",content:c.default},{label:"scss",filetype:"scss",content:l.default}]};},"3bff51e1":function(e,t,r,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`@keyframes wave {
+  from {
+    background-position-x: -10px, 0;
+  }
+  to {
+    background-position-x: -30px, -20px;
+  }
+}
+.text {
+  display: inline-block;
+  background: radial-gradient(circle at 10px -7px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x, radial-gradient(circle at 10px 27px, transparent 8px, currentcolor 8px, currentcolor 9px, transparent 9px) repeat-x;
+  background-position: -10px calc(100% + 16px), 0 calc(100% - 4px);
+  background-size: 20px 20px;
+  line-height: 16px;
+  animation: wave 1s infinite linear;
+}`;},"5a4fa45f":function(e,t,r,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`<span class="text">wavyUnderline</span>
+`;}});},"3ab76d5d":function  (e,t,n,i){!function(e){for(var t in e)e[t].__farm_resource_pot__="minContent.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"533e8601":function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return l;}});let l=`.box {
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.defined-width {
+  width: -moz-max-content;
+  width: max-content;
+}`;},"5f78ff55":function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return r;}});let l=n("@swc/helpers/_/_interop_require_default"),s=l._(n("d82e6e42")),o=l._(n("fe19a1e4")),c=l._(n("533e8601")),d=l._(n("e8ed8fc5")),r={id:"minContent",title:"min-content",desc:"css width min-content characterization",category:"css",tags:["standard"],isStandard:!0,html:o.default,css:c.default+s.default,code:[{label:"html",filetype:"html",content:o.default},{label:"scss",filetype:"scss",content:d.default}]};},e8ed8fc5:function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return l;}});let l=`.box {
+  width: min-content;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.defined-width {
+  width: max-content;
+}
+`;},fe19a1e4:function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return l;}});let l=`<section>
+  <h1>The English language is divided into words, and the cjk text is a single character.</h1>
+  <hr />
+
+  <div class="box">
+    <span>hello world</span>
+  </div>
+
+  <div class="box">
+    <span>中文</span>
+  </div>
+</section>
+
+<section>
+  <h1>Inline-block elements with defined widths are not split. Also works for inline-flex, inline-grid, etc.</h1>
+  <hr />
+
+  <div class="box">
+    <span class="inline-block">中文</span>
+    <span>中文</span>
+  </div>
+  <div class="box">
+    <span class="inline-block defined-width">中文</span>
+    <span>中文</span>
+  </div>
+</section>
+`;}});},"512d1a77":function  (e,t,l,n){!function(e){for(var t in e)e[t].__farm_resource_pot__="float.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"5b9b2f6d":function(e,t,l,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return r;}});let r=`.parent {
+  background-color: red;
+}
+
+.line2 {
+  float: right;
+}
+
+.float1,
+.float2 {
+  float: left;
+}
+
+li {
+  float: left;
+}
+
+.parent3 > :nth-child(3) {
+  clear: both;
+}
+`;},"6dd6dd16":function(e,t,l,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return r;}});let r=`<section>
+  <h1>The offset reference for the float is the current line box.</h1>
+  <hr />
+
+  <div class="parent">
+    <span class="line1">line1</span>
+    <br />
+    <span class="line2">line2</span>
+  </div>
+</section>
+
+<section>
+  <h1>Multiple floats in the same row will be aligned next to each other.</h1>
+  <hr />
+
+  <div class="parent2">
+    <span class="float1">float1</span>
+    <span class="float2">float2</span>
+  </div>
+</section>
+
+<section>
+  <h1>The clear attribute will disable elements from being adjacent to floated elements.</h1>
+  <hr />
+
+  <ul class="parent3">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul>
+</section>
+`;},"8c0b1759":function(e,t,l,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return f;}});let r=l("@swc/helpers/_/_interop_require_default"),o=r._(l("d82e6e42")),i=r._(l("6dd6dd16")),s=r._(l("ca8bbf13")),c=r._(l("5b9b2f6d")),f={id:"float",title:"float",desc:"css float characterization",category:"css",tags:["standard"],isStandard:!0,html:i.default,css:s.default+o.default,code:[{label:"html",filetype:"html",content:i.default},{label:"scss",filetype:"scss",content:c.default}]};},ca8bbf13:function(e,t,l,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return r;}});let r=`.parent {
+  background-color: red;
+}
+
+.line2 {
+  float: right;
+}
+
+.float1,
+.float2 {
+  float: left;
+}
+
+li {
+  float: left;
+}
+
+.parent3 > :nth-child(3) {
+  clear: both;
+}`;}});},"77e6ea10":function  (e,t,i,r){!function(e){for(var t in e)e[t].__farm_resource_pot__="formattingContext.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"3d6ac7fd":function(e,t,i,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`<section>
+  <h3>
+    When a formatting context is created, its boundary is at the border position of the corresponding element.
+    <br />
+    Creating BFC does not affect margin of the element. The margin of parent element and the margin of child element are
+    still in the same BFC.
+  </h3>
+  <hr />
+
+  <div class="parent1">
+    <div class="child1"></div>
+  </div>
+</section>
+
+<section>
+  <h1>
+    The margin of parent element is in the outer BFC, and the margin of child element is in the BFC created by the
+    parent element.
+  </h1>
+  <hr />
+
+  <div class="parent2">
+    <div class="child2"></div>
+  </div>
+</section>
+
+<section>
+  <h1>BFC created by child4 isolates the margin of child3 and the margin of child5.</h1>
+  <hr />
+
+  <div class="parent3">
+    <div class="child3"></div>
+    <div class="child4">
+      <div class="child5"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h1>BFC created by child6 isolates its block margins.</h1>
+  <hr />
+
+  <div class="parent4">
+    <div class="child6"></div>
+  </div>
+</section>
+`;},"4aa6b49a":function(e,t,i,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return s;}});let n=i("@swc/helpers/_/_interop_require_default"),d=n._(i("d82e6e42")),o=n._(i("3d6ac7fd")),c=n._(i("b4fd3cbd")),l=n._(i("6d7accd3")),s={id:"formattingContext",title:"formatting context",desc:"css formatting context characterization",category:"css",tags:["standard"],isStandard:!0,html:o.default,css:c.default+d.default,code:[{label:"html",filetype:"html",content:o.default},{label:"scss",filetype:"scss",content:l.default}]};},"6d7accd3":function(e,t,i,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`.parent1 {
+  margin-top: 10px;
+  background: red;
+}
+
+.child1 {
+  display: flow-root;
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: green;
+}
+
+.parent2 {
+  display: flow-root;
+  margin-top: 10px;
+  background: red;
+}
+
+.child2 {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: green;
+}
+
+.parent3 {
+  background: red;
+}
+
+.child3 {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  background: green;
+}
+
+.child4 {
+  display: flow-root;
+}
+
+.child5 {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: yellow;
+}
+
+.parent4 {
+  display: flow-root;
+  background: red;
+}
+
+.child6 {
+  display: flow-root;
+  margin-block: 10px;
+}
+`;},b4fd3cbd:function(e,t,i,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`.parent1 {
+  margin-top: 10px;
+  background: red;
+}
+
+.child1 {
+  display: flow-root;
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: green;
+}
+
+.parent2 {
+  display: flow-root;
+  margin-top: 10px;
+  background: red;
+}
+
+.child2 {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: green;
+}
+
+.parent3 {
+  background: red;
+}
+
+.child3 {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  background: green;
+}
+
+.child4 {
+  display: flow-root;
+}
+
+.child5 {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: yellow;
+}
+
+.parent4 {
+  display: flow-root;
+  background: red;
+}
+
+.child6 {
+  display: flow-root;
+  margin-block: 10px;
+}`;}});},"972e19ca":function  (e,o,n,l){!function(e){for(var o in e)e[o].__farm_resource_pot__="anonymousBlockBox.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(o,e[o]);}({"4386746a":function(e,o,n,l){"use strict";Object.defineProperty(o,"__esModule",{value:!0}),Object.defineProperty(o,"default",{enumerable:!0,get:function(){return i;}});let i=`<section>
+  <h1>
+    If a block container box has a box-level box inside it, then we force it to have only block-level boxes inside it.
+    <br />
+    There is an anonymous block box around inline box.
+  </h1>
+  <hr />
+
+  <div>
+    it's a block container box
+    <p>this is a block level box</p>
+    <span class="inline-level-box">this is a inline level box</span>
+  </div>
+</section>
+
+<section>
+  <h1>
+    An in-flow block-level box would break down the line box.
+    <br />
+    Disconnected first and second halves would be wrapped by an anonymous block box.
+  </h1>
+  <hr />
+
+  <p class="line-box">
+    <span class="inline-box">I'm in a line box</span>
+    <span class="in-flow-block-level-box">this is a block box</span>
+    <span class="inline-box">after</span>
+  </p>
+</section>
+`;},"9370d78c":function(e,o,n,l){"use strict";Object.defineProperty(o,"__esModule",{value:!0}),Object.defineProperty(o,"default",{enumerable:!0,get:function(){return i;}});let i=`.inline-level-box {
+  border: 1px solid red;
+}
+
+.in-flow-block-level-box {
+  display: block;
+}
+
+.inline-box {
+  border: 1px solid red;
+}
+
+.line-box {
+  display: inline;
+}
+`;},"9c741c8f":function(e,o,n,l){"use strict";Object.defineProperty(o,"__esModule",{value:!0}),Object.defineProperty(o,"default",{enumerable:!0,get:function(){return i;}});let i=`.inline-level-box {
+  border: 1px solid red;
+}
+
+.in-flow-block-level-box {
+  display: block;
+}
+
+.inline-box {
+  border: 1px solid red;
+}
+
+.line-box {
+  display: inline;
+}`;},d9ee3aa5:function(e,o,n,l){"use strict";Object.defineProperty(o,"__esModule",{value:!0}),Object.defineProperty(o,"default",{enumerable:!0,get:function(){return b;}});let i=n("@swc/helpers/_/_interop_require_default"),t=i._(n("d82e6e42")),s=i._(n("4386746a")),r=i._(n("9c741c8f")),c=i._(n("9370d78c")),b={id:"anonymousBlockBox",title:"anonymous block box",desc:"how anonymous boxes are generated",category:"css",tags:["standard"],isStandard:!0,html:s.default,css:r.default+t.default,code:[{label:"html",filetype:"html",content:s.default},{label:"scss",filetype:"scss",content:c.default}]};}});},"b8e2a72a":function  (e,t,l,r){!function(e){for(var t in e)e[t].__farm_resource_pot__="flex.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"03a0d524":function(e,t,l,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return o;}});let n=l("@swc/helpers/_/_interop_require_default"),d=n._(l("d82e6e42")),c=n._(l("592f58e5")),f=n._(l("faf30963")),i=n._(l("edc1dd7f")),o={id:"flex",title:"flex",desc:"css flex characterization",category:"css",tags:["standard"],isStandard:!0,html:c.default,css:f.default+d.default,code:[{label:"html",filetype:"html",content:c.default},{label:"scss",filetype:"scss",content:i.default}]};},"592f58e5":function(e,t,l,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`<section>
+  <h1>If the sum of the flex-grow of a flex item is less than 1, the flex container may not be filled.</h1>
+  <hr />
+
+  <div class="parent">
+    <div class="child"></div>
+    <div class="child"></div>
+  </div>
+</section>
+`;},edc1dd7f:function(e,t,l,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`.parent {
+  display: flex;
+  width: 300px;
+  height: 50px;
+  background-color: red;
+}
+
+.child {
+  flex: 0.4 1 100px;
+  background-color: green;
+}
+`;},faf30963:function(e,t,l,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`.parent {
+  display: flex;
+  width: 300px;
+  height: 50px;
+  background-color: red;
+}
+
+.child {
+  flex: 0.4 1 100px;
+  background-color: green;
+}`;}});},"bc2c8358":function  (i,e,t,l){!function(i){for(var e in i)i[e].__farm_resource_pot__="clock.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(e,i[e]);}({"0ff84df9":function(i,e,t,l){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),Object.defineProperty(e,"default",{enumerable:!0,get:function(){return r;}});let r=`@use 'sass:math';
 
 /* # clock */
 .clock {
@@ -1090,17 +1337,9 @@ ul {
 }
 
 /* ## minutes */
-$half-step: math.div(1, 120) * 100%;
-
 @keyframes dsm {
-  @for $i from 1 through 60 {
-    #{$half-step * 2 * $i - $half-step} {
-      transform: translateY(-2em * $i + 2em);
-    }
-
-    #{$half-step * 2 * $i} {
-      transform: translateY(-2em * $i);
-    }
+  to {
+    transform: translateY(-120em);
   }
 }
 
@@ -1110,7 +1349,7 @@ $half-step: math.div(1, 120) * 100%;
 
 .digit-minutes li {
   counter-increment: minutes;
-  animation: dsm 3600s linear infinite;
+  animation: dsm 3600s steps(60, end) 0s infinite;
 }
 
 .digit-minutes li::before {
@@ -1124,13 +1363,13 @@ $half-step: math.div(1, 120) * 100%;
 
 .digit-seconds li {
   counter-increment: seconds;
-  animation: dsm 60s steps(60, end) infinite;
+  animation: dsm 60s steps(60, end) 0s infinite;
 }
 
 .digit-seconds li::before {
   content: counter(seconds);
 }
-`;},"5272ca90":function(t,e,i,r){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),Object.defineProperty(e,"default",{enumerable:!0,get:function(){return l;}});let l=`/* # clock */
+`;},"5272ca90":function(i,e,t,l){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),Object.defineProperty(e,"default",{enumerable:!0,get:function(){return r;}});let r=`/* # clock */
 .clock {
   position: relative;
   font-size: 1em;
@@ -1646,364 +1885,7 @@ ul {
 
 /* ## minutes */
 @keyframes dsm {
-  0.8333333333% {
-    transform: translateY(0em);
-  }
-  1.6666666667% {
-    transform: translateY(-2em);
-  }
-  2.5% {
-    transform: translateY(-2em);
-  }
-  3.3333333333% {
-    transform: translateY(-4em);
-  }
-  4.1666666667% {
-    transform: translateY(-4em);
-  }
-  5% {
-    transform: translateY(-6em);
-  }
-  5.8333333333% {
-    transform: translateY(-6em);
-  }
-  6.6666666667% {
-    transform: translateY(-8em);
-  }
-  7.5% {
-    transform: translateY(-8em);
-  }
-  8.3333333333% {
-    transform: translateY(-10em);
-  }
-  9.1666666667% {
-    transform: translateY(-10em);
-  }
-  10% {
-    transform: translateY(-12em);
-  }
-  10.8333333333% {
-    transform: translateY(-12em);
-  }
-  11.6666666667% {
-    transform: translateY(-14em);
-  }
-  12.5% {
-    transform: translateY(-14em);
-  }
-  13.3333333333% {
-    transform: translateY(-16em);
-  }
-  14.1666666667% {
-    transform: translateY(-16em);
-  }
-  15% {
-    transform: translateY(-18em);
-  }
-  15.8333333333% {
-    transform: translateY(-18em);
-  }
-  16.6666666667% {
-    transform: translateY(-20em);
-  }
-  17.5% {
-    transform: translateY(-20em);
-  }
-  18.3333333333% {
-    transform: translateY(-22em);
-  }
-  19.1666666667% {
-    transform: translateY(-22em);
-  }
-  20% {
-    transform: translateY(-24em);
-  }
-  20.8333333333% {
-    transform: translateY(-24em);
-  }
-  21.6666666667% {
-    transform: translateY(-26em);
-  }
-  22.5% {
-    transform: translateY(-26em);
-  }
-  23.3333333333% {
-    transform: translateY(-28em);
-  }
-  24.1666666667% {
-    transform: translateY(-28em);
-  }
-  25% {
-    transform: translateY(-30em);
-  }
-  25.8333333333% {
-    transform: translateY(-30em);
-  }
-  26.6666666667% {
-    transform: translateY(-32em);
-  }
-  27.5% {
-    transform: translateY(-32em);
-  }
-  28.3333333333% {
-    transform: translateY(-34em);
-  }
-  29.1666666667% {
-    transform: translateY(-34em);
-  }
-  30% {
-    transform: translateY(-36em);
-  }
-  30.8333333333% {
-    transform: translateY(-36em);
-  }
-  31.6666666667% {
-    transform: translateY(-38em);
-  }
-  32.5% {
-    transform: translateY(-38em);
-  }
-  33.3333333333% {
-    transform: translateY(-40em);
-  }
-  34.1666666667% {
-    transform: translateY(-40em);
-  }
-  35% {
-    transform: translateY(-42em);
-  }
-  35.8333333333% {
-    transform: translateY(-42em);
-  }
-  36.6666666667% {
-    transform: translateY(-44em);
-  }
-  37.5% {
-    transform: translateY(-44em);
-  }
-  38.3333333333% {
-    transform: translateY(-46em);
-  }
-  39.1666666667% {
-    transform: translateY(-46em);
-  }
-  40% {
-    transform: translateY(-48em);
-  }
-  40.8333333333% {
-    transform: translateY(-48em);
-  }
-  41.6666666667% {
-    transform: translateY(-50em);
-  }
-  42.5% {
-    transform: translateY(-50em);
-  }
-  43.3333333333% {
-    transform: translateY(-52em);
-  }
-  44.1666666667% {
-    transform: translateY(-52em);
-  }
-  45% {
-    transform: translateY(-54em);
-  }
-  45.8333333333% {
-    transform: translateY(-54em);
-  }
-  46.6666666667% {
-    transform: translateY(-56em);
-  }
-  47.5% {
-    transform: translateY(-56em);
-  }
-  48.3333333333% {
-    transform: translateY(-58em);
-  }
-  49.1666666667% {
-    transform: translateY(-58em);
-  }
-  50% {
-    transform: translateY(-60em);
-  }
-  50.8333333333% {
-    transform: translateY(-60em);
-  }
-  51.6666666667% {
-    transform: translateY(-62em);
-  }
-  52.5% {
-    transform: translateY(-62em);
-  }
-  53.3333333333% {
-    transform: translateY(-64em);
-  }
-  54.1666666667% {
-    transform: translateY(-64em);
-  }
-  55% {
-    transform: translateY(-66em);
-  }
-  55.8333333333% {
-    transform: translateY(-66em);
-  }
-  56.6666666667% {
-    transform: translateY(-68em);
-  }
-  57.5% {
-    transform: translateY(-68em);
-  }
-  58.3333333333% {
-    transform: translateY(-70em);
-  }
-  59.1666666667% {
-    transform: translateY(-70em);
-  }
-  60% {
-    transform: translateY(-72em);
-  }
-  60.8333333333% {
-    transform: translateY(-72em);
-  }
-  61.6666666667% {
-    transform: translateY(-74em);
-  }
-  62.5% {
-    transform: translateY(-74em);
-  }
-  63.3333333333% {
-    transform: translateY(-76em);
-  }
-  64.1666666667% {
-    transform: translateY(-76em);
-  }
-  65% {
-    transform: translateY(-78em);
-  }
-  65.8333333333% {
-    transform: translateY(-78em);
-  }
-  66.6666666667% {
-    transform: translateY(-80em);
-  }
-  67.5% {
-    transform: translateY(-80em);
-  }
-  68.3333333333% {
-    transform: translateY(-82em);
-  }
-  69.1666666667% {
-    transform: translateY(-82em);
-  }
-  70% {
-    transform: translateY(-84em);
-  }
-  70.8333333333% {
-    transform: translateY(-84em);
-  }
-  71.6666666667% {
-    transform: translateY(-86em);
-  }
-  72.5% {
-    transform: translateY(-86em);
-  }
-  73.3333333333% {
-    transform: translateY(-88em);
-  }
-  74.1666666667% {
-    transform: translateY(-88em);
-  }
-  75% {
-    transform: translateY(-90em);
-  }
-  75.8333333333% {
-    transform: translateY(-90em);
-  }
-  76.6666666667% {
-    transform: translateY(-92em);
-  }
-  77.5% {
-    transform: translateY(-92em);
-  }
-  78.3333333333% {
-    transform: translateY(-94em);
-  }
-  79.1666666667% {
-    transform: translateY(-94em);
-  }
-  80% {
-    transform: translateY(-96em);
-  }
-  80.8333333333% {
-    transform: translateY(-96em);
-  }
-  81.6666666667% {
-    transform: translateY(-98em);
-  }
-  82.5% {
-    transform: translateY(-98em);
-  }
-  83.3333333333% {
-    transform: translateY(-100em);
-  }
-  84.1666666667% {
-    transform: translateY(-100em);
-  }
-  85% {
-    transform: translateY(-102em);
-  }
-  85.8333333333% {
-    transform: translateY(-102em);
-  }
-  86.6666666667% {
-    transform: translateY(-104em);
-  }
-  87.5% {
-    transform: translateY(-104em);
-  }
-  88.3333333333% {
-    transform: translateY(-106em);
-  }
-  89.1666666667% {
-    transform: translateY(-106em);
-  }
-  90% {
-    transform: translateY(-108em);
-  }
-  90.8333333333% {
-    transform: translateY(-108em);
-  }
-  91.6666666667% {
-    transform: translateY(-110em);
-  }
-  92.5% {
-    transform: translateY(-110em);
-  }
-  93.3333333333% {
-    transform: translateY(-112em);
-  }
-  94.1666666667% {
-    transform: translateY(-112em);
-  }
-  95% {
-    transform: translateY(-114em);
-  }
-  95.8333333333% {
-    transform: translateY(-114em);
-  }
-  96.6666666667% {
-    transform: translateY(-116em);
-  }
-  97.5% {
-    transform: translateY(-116em);
-  }
-  98.3333333333% {
-    transform: translateY(-118em);
-  }
-  99.1666666667% {
-    transform: translateY(-118em);
-  }
-  100% {
+  to {
     transform: translateY(-120em);
   }
 }
@@ -2013,7 +1895,7 @@ ul {
 
 .digit-minutes li {
   counter-increment: minutes;
-  animation: dsm 3600s linear infinite;
+  animation: dsm 3600s steps(60, end) 0s infinite;
 }
 
 .digit-minutes li::before {
@@ -2027,12 +1909,12 @@ ul {
 
 .digit-seconds li {
   counter-increment: seconds;
-  animation: dsm 60s steps(60, end) infinite;
+  animation: dsm 60s steps(60, end) 0s infinite;
 }
 
 .digit-seconds li::before {
   content: counter(seconds);
-}`;},"53a1347d":function(t,e,i,r){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),Object.defineProperty(e,"default",{enumerable:!0,get:function(){return l;}});let l=`<div class="clock">
+}`;},"53a1347d":function(i,e,t,l){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),Object.defineProperty(e,"default",{enumerable:!0,get:function(){return r;}});let r=`<div class="clock">
   <div class="frame-face"></div>
   <ul class="minute-marks">
     <li></li>
@@ -2254,254 +2136,7 @@ ul {
     </ul>
   </div>
 </div>
-`;},c0fd6a57:function(t,e,i,r){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),Object.defineProperty(e,"default",{enumerable:!0,get:function(){return s;}});let l=i("@swc/helpers/_/_interop_require_default"),n=l._(i("53a1347d")),m=l._(i("5272ca90")),o=l._(i("0ff84df9")),s={id:"clock",title:"clock",desc:"clock animation",category:"css",tags:["animation"],html:n.default,css:m.default,code:[{label:"html",filetype:"html",content:n.default},{label:"scss",filetype:"scss",content:o.default}]};}});},"77e6ea10":function  (e,t,i,r){!function(e){for(var t in e)e[t].__farm_resource_pot__="formattingContext.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"3d6ac7fd":function(e,t,i,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`<section>
-  <h3>
-    When a formatting context is created, its boundary is at the border position of the corresponding element.
-    <br />
-    Creating BFC does not affect margin of the element. The margin of parent element and the margin of child element are
-    still in the same BFC.
-  </h3>
-  <hr />
-
-  <div class="parent1">
-    <div class="child1"></div>
-  </div>
-</section>
-
-<section>
-  <h1>
-    The margin of parent element is in the outer BFC, and the margin of child element is in the BFC created by the
-    parent element.
-  </h1>
-  <hr />
-
-  <div class="parent2">
-    <div class="child2"></div>
-  </div>
-</section>
-
-<section>
-  <h1>BFC created by child4 isolates the margin of child3 and the margin of child5.</h1>
-  <hr />
-
-  <div class="parent3">
-    <div class="child3"></div>
-    <div class="child4">
-      <div class="child5"></div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h1>BFC created by child6 isolates its block margins.</h1>
-  <hr />
-
-  <div class="parent4">
-    <div class="child6"></div>
-  </div>
-</section>
-`;},"4aa6b49a":function(e,t,i,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return s;}});let n=i("@swc/helpers/_/_interop_require_default"),d=n._(i("d82e6e42")),o=n._(i("3d6ac7fd")),c=n._(i("b4fd3cbd")),l=n._(i("6d7accd3")),s={id:"formattingContext",title:"formatting context",desc:"css formatting context characterization",category:"css",tags:["standard"],isStandard:!0,html:o.default,css:c.default+d.default,code:[{label:"html",filetype:"html",content:o.default},{label:"scss",filetype:"scss",content:l.default}]};},"6d7accd3":function(e,t,i,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`.parent1 {
-  margin-top: 10px;
-  background: red;
-}
-
-.child1 {
-  display: flow-root;
-  width: 100px;
-  height: 100px;
-  margin-top: 10px;
-  background: green;
-}
-
-.parent2 {
-  display: flow-root;
-  margin-top: 10px;
-  background: red;
-}
-
-.child2 {
-  width: 100px;
-  height: 100px;
-  margin-top: 10px;
-  background: green;
-}
-
-.parent3 {
-  background: red;
-}
-
-.child3 {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 20px;
-  background: green;
-}
-
-.child4 {
-  display: flow-root;
-}
-
-.child5 {
-  width: 100px;
-  height: 100px;
-  margin-top: 10px;
-  background: yellow;
-}
-
-.parent4 {
-  display: flow-root;
-  background: red;
-}
-
-.child6 {
-  display: flow-root;
-  margin-block: 10px;
-}
-`;},b4fd3cbd:function(e,t,i,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`.parent1 {
-  margin-top: 10px;
-  background: red;
-}
-
-.child1 {
-  display: flow-root;
-  width: 100px;
-  height: 100px;
-  margin-top: 10px;
-  background: green;
-}
-
-.parent2 {
-  display: flow-root;
-  margin-top: 10px;
-  background: red;
-}
-
-.child2 {
-  width: 100px;
-  height: 100px;
-  margin-top: 10px;
-  background: green;
-}
-
-.parent3 {
-  background: red;
-}
-
-.child3 {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 20px;
-  background: green;
-}
-
-.child4 {
-  display: flow-root;
-}
-
-.child5 {
-  width: 100px;
-  height: 100px;
-  margin-top: 10px;
-  background: yellow;
-}
-
-.parent4 {
-  display: flow-root;
-  background: red;
-}
-
-.child6 {
-  display: flow-root;
-  margin-block: 10px;
-}`;}});},"972e19ca":function  (e,o,n,l){!function(e){for(var o in e)e[o].__farm_resource_pot__="anonymousBlockBox.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(o,e[o]);}({"4386746a":function(e,o,n,l){"use strict";Object.defineProperty(o,"__esModule",{value:!0}),Object.defineProperty(o,"default",{enumerable:!0,get:function(){return i;}});let i=`<section>
-  <h1>
-    If a block container box has a box-level box inside it, then we force it to have only block-level boxes inside it.
-    <br />
-    There is an anonymous block box around inline box.
-  </h1>
-  <hr />
-
-  <div>
-    it's a block container box
-    <p>this is a block level box</p>
-    <span class="inline-level-box">this is a inline level box</span>
-  </div>
-</section>
-
-<section>
-  <h1>
-    An in-flow block-level box would break down the line box.
-    <br />
-    Disconnected first and second halves would be wrapped by an anonymous block box.
-  </h1>
-  <hr />
-
-  <p class="line-box">
-    <span class="inline-box">I'm in a line box</span>
-    <span class="in-flow-block-level-box">this is a block box</span>
-    <span class="inline-box">after</span>
-  </p>
-</section>
-`;},"9370d78c":function(e,o,n,l){"use strict";Object.defineProperty(o,"__esModule",{value:!0}),Object.defineProperty(o,"default",{enumerable:!0,get:function(){return i;}});let i=`.inline-level-box {
-  border: 1px solid red;
-}
-
-.in-flow-block-level-box {
-  display: block;
-}
-
-.inline-box {
-  border: 1px solid red;
-}
-
-.line-box {
-  display: inline;
-}
-`;},"9c741c8f":function(e,o,n,l){"use strict";Object.defineProperty(o,"__esModule",{value:!0}),Object.defineProperty(o,"default",{enumerable:!0,get:function(){return i;}});let i=`.inline-level-box {
-  border: 1px solid red;
-}
-
-.in-flow-block-level-box {
-  display: block;
-}
-
-.inline-box {
-  border: 1px solid red;
-}
-
-.line-box {
-  display: inline;
-}`;},d9ee3aa5:function(e,o,n,l){"use strict";Object.defineProperty(o,"__esModule",{value:!0}),Object.defineProperty(o,"default",{enumerable:!0,get:function(){return b;}});let i=n("@swc/helpers/_/_interop_require_default"),t=i._(n("d82e6e42")),s=i._(n("4386746a")),r=i._(n("9c741c8f")),c=i._(n("9370d78c")),b={id:"anonymousBlockBox",title:"anonymous block box",desc:"how anonymous boxes are generated",category:"css",tags:["standard"],isStandard:!0,html:s.default,css:r.default+t.default,code:[{label:"html",filetype:"html",content:s.default},{label:"scss",filetype:"scss",content:c.default}]};}});},"b8e2a72a":function  (e,t,l,r){!function(e){for(var t in e)e[t].__farm_resource_pot__="flex.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"03a0d524":function(e,t,l,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return o;}});let n=l("@swc/helpers/_/_interop_require_default"),d=n._(l("d82e6e42")),c=n._(l("592f58e5")),f=n._(l("faf30963")),i=n._(l("edc1dd7f")),o={id:"flex",title:"flex",desc:"css flex characterization",category:"css",tags:["standard"],isStandard:!0,html:c.default,css:f.default+d.default,code:[{label:"html",filetype:"html",content:c.default},{label:"scss",filetype:"scss",content:i.default}]};},"592f58e5":function(e,t,l,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`<section>
-  <h1>If the sum of the flex-grow of a flex item is less than 1, the flex container may not be filled.</h1>
-  <hr />
-
-  <div class="parent">
-    <div class="child"></div>
-    <div class="child"></div>
-  </div>
-</section>
-`;},edc1dd7f:function(e,t,l,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`.parent {
-  display: flex;
-  width: 300px;
-  height: 50px;
-  background-color: red;
-}
-
-.child {
-  flex: 0.4 1 100px;
-  background-color: green;
-}
-`;},faf30963:function(e,t,l,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`.parent {
-  display: flex;
-  width: 300px;
-  height: 50px;
-  background-color: red;
-}
-
-.child {
-  flex: 0.4 1 100px;
-  background-color: green;
-}`;}});},"c3692c7d":function  (e,t,n,i){!function(e){for(var t in e)e[t].__farm_resource_pot__="loading.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"10032f9c":function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return o;}});let o=`<div class="loading"></div>
+`;},c0fd6a57:function(i,e,t,l){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),Object.defineProperty(e,"default",{enumerable:!0,get:function(){return s;}});let r=t("@swc/helpers/_/_interop_require_default"),o=r._(t("53a1347d")),n=r._(t("5272ca90")),m=r._(t("0ff84df9")),s={id:"clock",title:"clock",desc:"clock animation",category:"css",tags:["animation"],html:o.default,css:n.default,code:[{label:"html",filetype:"html",content:o.default},{label:"scss",filetype:"scss",content:m.default}]};}});},"c3692c7d":function  (e,t,n,i){!function(e){for(var t in e)e[t].__farm_resource_pot__="loading.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"10032f9c":function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return o;}});let o=`<div class="loading"></div>
 `;},"377810c4":function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return f;}});let o=n("@swc/helpers/_/_interop_require_default"),r=o._(n("10032f9c")),l=o._(n("999c83f8")),d=o._(n("9bdda8b0")),f={id:"loading",title:"loading",desc:"Simple loading icon.",category:"css",tags:["single div","animation"],html:r.default,css:l.default,code:[{label:"html",filetype:"html",content:r.default},{label:"scss",filetype:"scss",content:d.default}]};},"999c83f8":function(e,t,n,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return o;}});let o=`#app {
   position: relative;
 }
@@ -3127,4 +2762,4 @@ ul {
   background-color: yellow;
 }
 `;},f3e012b0:function(e,o,t,i){"use strict";Object.defineProperty(o,"__esModule",{value:!0}),Object.defineProperty(o,"default",{enumerable:!0,get:function(){return h;}});let d=t("@swc/helpers/_/_interop_require_default"),n=d._(t("d82e6e42")),r=d._(t("992f9bd0")),c=d._(t("0878149f")),l=d._(t("e78c92ad")),h={id:"boxSize",title:"box size",desc:"css box size characterization",category:"css",tags:["standard"],isStandard:!0,html:r.default,css:c.default+n.default,code:[{label:"html",filetype:"html",content:r.default},{label:"scss",filetype:"scss",content:l.default}]};}});},});
-//# sourceMappingURL=dist_index_4cea.12c3a5be.js.map
+//# sourceMappingURL=dist_index_6ec0.4a12173c.js.map
