@@ -24,9 +24,9 @@
         "message": "Expected class selector to be kebab-case"
       }
     ],
-    "declaration-block-no-redundant-longhand-properties": "off",
-    "font-family-no-missing-generic-family-keyword": "off",
-    "comment-empty-line-before": "off",
+    "declaration-block-no-redundant-longhand-properties": null,
+    "font-family-no-missing-generic-family-keyword": null,
+    "comment-empty-line-before": null,
     "selector-pseudo-class-no-unknown": [
       true,
       {
