@@ -3,11 +3,11 @@ import css from './index.scss'
 import scss from './index.scss?raw'
 
 const component = {
-  id: 'loading',
-  title: 'loading',
+  id: 'pulse',
+  title: 'pulse',
   desc: 'Simple loading icon.',
   category: 'css',
-  tags: ['single div', 'animation'],
+  tags: ['animation'],
   html,
   css,
   code: [
