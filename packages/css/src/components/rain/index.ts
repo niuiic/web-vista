@@ -5,7 +5,7 @@ import scss from './index.scss?raw'
 const component = {
   id: 'rain',
   title: 'rain',
-  desc: 'rain animation',
+  desc: 'Rain animation',
   category: 'css',
   tags: ['animation'],
   html,

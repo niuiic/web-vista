@@ -5,7 +5,7 @@ import scss from './index.scss?raw'
 const component = {
   id: 'clock',
   title: 'clock',
-  desc: 'clock animation',
+  desc: 'Clock animation',
   category: 'css',
   tags: ['animation'],
   html,
