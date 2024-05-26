@@ -1,0 +1,42 @@
+@use 'sass:math';
+
+#app {
+  display: flex;
+  background: #000000;
+}
+
+.fire {
+  position: relative;
+  box-sizing: border-box;
+  margin: auto;
+  border: 200px solid #000000;
+  border-bottom-color: transparent;
+  border-radius: 45%;
+  background-color: #b5932f;
+  filter: blur(20px) contrast(30);
+  transform: scaleX(50%);
+}
+
+.dot {
+  position: absolute;
+  bottom: -200px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #000000;
+}
+
+@keyframes move {
+  100% {
+    transform: translate3d(0, -350px, 0);
+  }
+}
+
+@for $i from 1 to 50 {
+  .dot:nth-child(#{$i}) {
+    bottom: -#{math.random(240) + 120}px;
+    left: #{math.random(300) - 160}px;
+    animation: move #{math.div(7 + math.random(26), 10)}s infinite #{math.div(math.random(60), 10)}s linear;
+  }
+}
