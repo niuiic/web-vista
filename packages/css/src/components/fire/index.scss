@@ -14,7 +14,7 @@
   border-radius: 45%;
   background-color: #b5932f;
   filter: blur(20px) contrast(30);
-  transform: scaleX(50%);
+  transform: translateY(-50%) scaleX(50%);
 }
 
 .dot {
