@@ -1,4 +1,4 @@
-(function(_){for(var r in _){_[r].__farm_resource_pot__='dist_index_2f49.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"1ce5aab9":function  (e,t,n,r){!function(e){for(var t in e)e[t].__farm_resource_pot__="boxModel.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"253673e4":function(e,t,n,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`<section>
+(function(_){for(var r in _){_[r].__farm_resource_pot__='dist_index_83da.js';(globalThis || window || global)['d1befa03c79ca0b84ecc488dea96bc68'].__farm_module_system__.register(r,_[r])}})({"1ce5aab9":function  (e,t,n,r){!function(e){for(var t in e)e[t].__farm_resource_pot__="boxModel.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"253673e4":function(e,t,n,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return i;}});let i=`<section>
 <h1>
   'width: 100%;' represents the proportion of the content area of the child box to the content area of the parent box.
   This would not be affected by box-sizing.
@@ -347,7 +347,74 @@ li {
 .child {
   flex: 0.4 1 100px;
   background-color: green;
-}`;}});},"dd9304fa":function  (e,t,i,n){!function(e){for(var t in e)e[t].__farm_resource_pot__="lineHeight.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"19fa51aa":function(e,t,i,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return l;}});let l=`.parent {
+}`;}});},"d8c23508":function  (e,t,i,r){!function(e){for(var t in e)e[t].__farm_resource_pot__="typeWriter.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"44d24b50":function(e,t,i,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`#app {
+  display: flex;
+}
+
+.container {
+  position: relative;
+  max-width: 80%;
+  margin: auto;
+}
+
+@property --stop {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+@keyframes write {
+  from {
+    --stop: 0%;
+  }
+  to {
+    --stop: 100%;
+  }
+}
+.text {
+  line-height: 24px;
+  -webkit-mask-image: linear-gradient(to right, black var(--stop), transparent var(--stop), transparent 100%);
+          mask-image: linear-gradient(to right, black var(--stop), transparent var(--stop), transparent 100%);
+  animation: write 10s linear infinite;
+  animation-fill-mode: forwards;
+}`;},"8b2013b2":function(e,t,i,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`#app {
+  display: flex;
+}
+
+.container {
+  position: relative;
+  max-width: 80%;
+  margin: auto;
+}
+
+@property --stop {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 0%;
+}
+
+@keyframes write {
+  from {
+    --stop: 0%;
+  }
+
+  to {
+    --stop: 100%;
+  }
+}
+
+.text {
+  line-height: 24px;
+  mask-image: linear-gradient(to right, black var(--stop), transparent var(--stop), transparent 100%);
+  animation: write 10s linear infinite;
+  animation-fill-mode: forwards;
+}
+`;},a3160ee9:function(e,t,i,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return n;}});let n=`<div class="container">
+  <span class="text"
+    >Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire
+    world, stimulating progress, giving birth to evolution.</span
+  >
+</div>
+`;},f52aaf30:function(e,t,i,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return p;}});let n=i("@swc/helpers/_/_interop_require_default"),o=n._(i("a3160ee9")),s=n._(i("44d24b50")),l=n._(i("8b2013b2")),p={id:"typeWriter",title:"type writer",desc:"Type writer animation",category:"css",tags:["animation"],html:o.default,css:s.default,code:[{label:"html",filetype:"html",content:o.default},{label:"scss",filetype:"scss",content:l.default}]};}});},"dd9304fa":function  (e,t,i,n){!function(e){for(var t in e)e[t].__farm_resource_pot__="lineHeight.js",(globalThis||window||global).c7a628cba22e28eb17b5f5c6ae2a266a.__farm_module_system__.register(t,e[t]);}({"19fa51aa":function(e,t,i,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return l;}});let l=`.parent {
   background-color: red;
   line-height: 20px;
 }
@@ -469,4 +536,4 @@ li {
   background-color: green;
 }
 `;},f83ec78b:function(e,t,i,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return s;}});let d=i("@swc/helpers/_/_interop_require_default"),c=d._(i("d82e6e42")),r=d._(i("d77c119d")),o=d._(i("7a9ba8dd")),l=d._(i("ddc10d6f")),s={id:"zIndex",title:"z-index",desc:"css z-index characterization",category:"css",tags:["standard"],isStandard:!0,html:r.default,css:o.default+c.default,code:[{label:"html",filetype:"html",content:r.default},{label:"scss",filetype:"scss",content:l.default}]};}});},});
-//# sourceMappingURL=dist_index_2f49.ca32e2be.js.map
+//# sourceMappingURL=dist_index_83da.e983bed5.js.map
