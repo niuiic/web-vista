@@ -1,0 +1,53 @@
+#app {
+  display: flex;
+  background-color: black;
+}
+
+.dice {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  transform-style: preserve-3d;
+  counter-reset: side;
+  animation: spin 2s infinite linear;
+}
+
+.side {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  font-size: 36px;
+  line-height: 100px;
+  counter-increment: side;
+  text-align: center;
+
+  &::before {
+    content: counter(side);
+  }
+}
+
+@for $i from 1 through 4 {
+  .side:nth-child(#{$i}) {
+    transform: rotateY($i * 90deg) translateZ(50px);
+  }
+}
+
+.side:nth-child(5) {
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.side:nth-child(6) {
+  transform: rotateX(-90deg) translateZ(50px);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
