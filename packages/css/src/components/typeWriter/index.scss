@@ -1,0 +1,32 @@
+#app {
+  display: flex;
+}
+
+.container {
+  position: relative;
+  max-width: 80%;
+  margin: auto;
+}
+
+@property --stop {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 0%;
+}
+
+@keyframes write {
+  from {
+    --stop: 0%;
+  }
+
+  to {
+    --stop: 100%;
+  }
+}
+
+.text {
+  line-height: 24px;
+  mask-image: linear-gradient(to right, black var(--stop), transparent var(--stop), transparent 100%);
+  animation: write 10s linear;
+  animation-fill-mode: forwards;
+}
