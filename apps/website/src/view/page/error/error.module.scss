@@ -1,0 +1,102 @@
+@use 'sass:math';
+
+/* # wrapper */
+.error {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  transform: rotateX(15deg) rotateY(15deg);
+  transform-style: preserve-3d;
+}
+
+/* # box */
+$size: 400px;
+$step: 3;
+
+@keyframes rotate {
+  @for $i from 1 through $step {
+    $start: math.div(1, $step) * 100% * ($i - 1);
+    $end: math.div(1, $step) * 100% * $i;
+
+    #{$start} {
+      left: ($i - 1) * $size;
+      transform: rotateZ(0);
+    }
+
+    #{($end - $start) * 0.8 + $start} {
+      transform: rotateZ(90deg);
+    }
+
+    #{($end - $start) * 0.85 + $start} {
+      transform: rotateZ(88deg);
+    }
+
+    #{($end - $start) * 0.9 + $start} {
+      transform: rotateZ(90deg);
+    }
+
+    #{($end - $start) * 0.999 + $start} {
+      left: ($i - 1) * $size;
+      transform: rotateZ(90deg);
+    }
+
+    #{$end} {
+      left: $i * $size;
+      transform: rotateZ(90deg);
+    }
+  }
+}
+
+.box {
+  position: relative;
+  width: $size;
+  height: $size;
+  transform-style: preserve-3d;
+  transform-origin: 100% 100%;
+  /* animation: rotate #{3 * $step}s cubic-bezier(1, 0.05, 0.98, 1) infinite; */
+}
+
+.side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  color: #ffffff;
+  font-size: 240px;
+  line-height: $size;
+  text-align: center;
+}
+
+/* front */
+.side:nth-child(1) {
+  transform: translateZ(math.div($size, 2));
+}
+
+/* top */
+.side:nth-child(2) {
+  transform: rotateX(90deg) translateZ(math.div($size, 2));
+}
+
+/* back */
+.side:nth-child(3) {
+  transform: rotateX(180deg) translateZ(math.div($size, 2));
+}
+
+/* bottom */
+.side:nth-child(4) {
+  transform: rotateX(270deg) translateZ(math.div($size, 2));
+}
+
+/* right */
+.side:nth-child(5) {
+  transform: rotateY(90deg) translateZ(math.div($size, 2));
+}
+
+/* left */
+.side:nth-child(6) {
+  transform: rotateY(-90deg) translateZ(math.div($size, 2));
+}

@@ -1,12 +1,18 @@
-import { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import cls from './error.module.scss'
 
 export const Error = () => {
-  const navigate = useNavigate()
-
-  useEffect(() => {
-    navigate('/')
-  }, [])
-
-  return <div>Something went wrong</div>
+  return (
+    <div className={cls.error}>
+      <div className={cls.wrapper}>
+        <ul className={cls.box}>
+          <li className={cls.side} />
+          <li className={cls.side}>0</li>
+          <li className={cls.side} />
+          <li className={cls.side} />
+          <li className={cls.side}>4</li>
+          <li className={cls.side}>4</li>
+        </ul>
+      </div>
+    </div>
+  )
 }
