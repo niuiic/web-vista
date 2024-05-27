@@ -1,4 +1,4 @@
-$duration: 0.6s;
+$duration: 0.5s;
 
 #app {
   display: flex;
@@ -10,6 +10,7 @@ $duration: 0.6s;
   height: 250px;
   margin: auto;
   perspective: 600px;
+  transform: translateX(50%);
 }
 
 @keyframes flip {
@@ -45,8 +46,8 @@ $duration: 0.6s;
   transform: scale(1.05) rotateY(-180deg);
 }
 
-@for $i from 2 through 9 {
+@for $i from 2 through 19 {
   .page:nth-child(#{$i}) {
-    animation: flip #{$duration * $i} ease-in-out forwards;
+    animation: flip #{$duration * $i} ease-in-out forwards infinite;
   }
 }

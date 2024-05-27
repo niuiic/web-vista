@@ -27,6 +27,6 @@
 .text {
   line-height: 24px;
   mask-image: linear-gradient(to right, black var(--stop), transparent var(--stop), transparent 100%);
-  animation: write 10s linear;
+  animation: write 10s linear infinite;
   animation-fill-mode: forwards;
 }
