@@ -7,7 +7,7 @@ const component = {
   title: 'type writer',
   desc: 'Type writer animation',
   category: 'css',
-  tags: ['animation'],
+  tags: ['animation', 'background'],
   html,
   css,
   code: [
