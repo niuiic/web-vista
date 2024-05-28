@@ -13,7 +13,7 @@ export default defineConfig({
       targetEnv: 'node',
       format: 'cjs'
     },
-    external: [...builtinModules.map((x) => `^${x}$`), ...builtinModules.map((x) => `^node:${x}$`)],
+    external: [...builtinModules.map((x) => `^${x}$`), ...builtinModules.map((x) => `^node:${x}$`), '@farmfe/core'],
     presetEnv: false
   },
   plugins: [

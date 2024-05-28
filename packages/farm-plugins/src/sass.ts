@@ -18,13 +18,21 @@ export const farmSassPlugin = (): JsPlugin => {
         resolvedPaths: ['\\.scss$', '\\.sass$']
       },
       executor: async (args) => {
-        let content = await sassImpl.then((x) => x.compile(args.resolvedPath).css).catch(() => '')
+        let content = await sassImpl
+          .then((x) => x.compile(args.resolvedPath).css)
+          .catch((e) => {
+            console.log(e)
+            return ''
+          })
         content = await postcss([autoprefixer])
           .process(content, {
             from: args.resolvedPath
           })
           .then((x) => x.css)
-          .catch(() => '')
+          .catch((e) => {
+            console.log(e)
+            return ''
+          })
 
         return { content, moduleType: 'sass-css' }
       }
