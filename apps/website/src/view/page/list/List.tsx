@@ -33,7 +33,12 @@ export const List = (props: Props) => {
   }, [props.cases])
   useEffect(() => {
     const match = location.search.match(/search=([^&]+)/)
-    const search = match ? JSON.parse(decode(match[1])) : {}
+    let search: Record<string, any>
+    try {
+      search = match ? JSON.parse(decode(match[1])) : {}
+    } catch {
+      search = {}
+    }
     setInput(search.input ?? '')
     setSelected(search.selected ?? [])
     setPageNum(search.pageNum ?? 1)
@@ -81,7 +86,7 @@ export const List = (props: Props) => {
           setPageNum={setPageNum}
           pageSize={pageSize}
           count={cases.length}
-         />
+        />
       </div>
       <div className={cls.showcases}>
         {cases.slice((pageNum - 1) * pageSize, pageNum * pageSize).map((options, i) => (
