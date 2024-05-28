@@ -5,7 +5,7 @@ import { Selection } from '@/view/component/selection/Selection'
 import type { ShowcaseOptions } from '@/view/component/showcase'
 import { Showcase } from '@/view/component/showcase'
 import { decode, encode } from 'js-base64'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import cls from './list.module.scss'
 
@@ -45,6 +45,7 @@ export const List = (props: Props) => {
   }, [location])
 
   // # cases
+  const casesRef = useRef<HTMLDivElement>()
   const [cases, setCases] = useState<ShowcaseOptions[]>([])
   const updateCases = () => {
     setCases(
@@ -66,6 +67,9 @@ export const List = (props: Props) => {
     )
   }
   useEffect(updateCases, [props.cases, input, selected])
+  useEffect(() => {
+    casesRef.current?.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [pageNum, props.cases, input, selected])
 
   const checkDetail = (showcase: ShowcaseOptions) => {
     const search = { input, selected, pageNum }
@@ -88,7 +92,7 @@ export const List = (props: Props) => {
           count={cases.length}
         />
       </div>
-      <div className={cls.showcases}>
+      <div className={cls.showcases} ref={casesRef}>
         {cases.slice((pageNum - 1) * pageSize, pageNum * pageSize).map((options, i) => (
           <Showcase className={cls.showcase} options={options} key={i} onClick={checkDetail} />
         ))}
