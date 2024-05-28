@@ -1,4 +1,9 @@
 @use 'sass:math';
+@use '@/style/tool/function' as *;
+
+$size: 400px;
+$step: 3;
+$duration: 3s;
 
 /* # wrapper */
 .error {
@@ -9,14 +14,12 @@
 }
 
 .wrapper {
+  margin-left: $size;
   transform: rotateX(15deg) rotateY(15deg);
   transform-style: preserve-3d;
 }
 
 /* # box */
-$size: 400px;
-$step: 3;
-
 @keyframes rotate {
   @for $i from 1 through $step {
     $start: math.div(1, $step) * 100% * ($i - 1);
@@ -57,46 +60,129 @@ $step: 3;
   height: $size;
   transform-style: preserve-3d;
   transform-origin: 100% 100%;
-  /* animation: rotate #{3 * $step}s cubic-bezier(1, 0.05, 0.98, 1) infinite; */
+  animation: rotate #{$duration * $step} cubic-bezier(1, 0.05, 0.98, 1) infinite;
 }
 
+/* # side */
 .side {
   position: absolute;
   width: 100%;
   height: 100%;
   border: 1px solid black;
-  color: #ffffff;
+  color: get-css-var(error, color);
+  box-shadow: 0 0 50px 0 get-css-var(error, box-shadow-color);
   font-size: 240px;
   line-height: $size;
   text-align: center;
+
+  &::before {
+    content: '';
+    display: inline-block;
+  }
 }
 
-/* front */
+/* ## front side */
 .side:nth-child(1) {
   transform: translateZ(math.div($size, 2));
 }
 
-/* top */
-.side:nth-child(2) {
-  transform: rotateX(90deg) translateZ(math.div($size, 2));
+/* ## top side */
+@keyframes top {
+  @for $i from 0 through $step {
+    #{math.div(1, $step) * $i * 100%} {
+      @if $i == 0 {
+        content: '0';
+      } @else if $i == 1 {
+        content: '4';
+      } @else {
+        content: '';
+      }
+    }
+  }
 }
 
-/* back */
+.side:nth-child(2) {
+  transform: rotateX(90deg) translateZ(math.div($size, 2));
+
+  &::before {
+    transform: rotateZ(180deg) rotateY(180deg);
+    animation: top #{$duration * $step} steps(1) infinite;
+  }
+}
+
+/* ## back side */
 .side:nth-child(3) {
   transform: rotateX(180deg) translateZ(math.div($size, 2));
 }
 
-/* bottom */
+/* ## bottom side */
+@keyframes bottom {
+  @for $i from 0 through $step {
+    #{math.div(1, $step) * $i * 100%} {
+      @if $i == 0 {
+        content: '';
+      } @else if $i == 1 {
+        content: '4';
+      } @else {
+        content: '0';
+      }
+    }
+  }
+}
+
 .side:nth-child(4) {
   transform: rotateX(270deg) translateZ(math.div($size, 2));
+
+  &::before {
+    transform: rotateY(180deg);
+    animation: bottom #{$duration * $step} steps(1) infinite;
+  }
 }
 
-/* right */
+/* ## right side */
+@keyframes right {
+  @for $i from 0 through $step {
+    #{math.div(1, $step) * $i * 100%} {
+      @if $i == 0 {
+        content: '4';
+      } @else if $i == 1 {
+        content: '0';
+      } @else {
+        content: '4';
+      }
+    }
+  }
+}
+
 .side:nth-child(5) {
   transform: rotateY(90deg) translateZ(math.div($size, 2));
+
+  &::before {
+    transform: rotateZ(-90deg) rotateY(180deg);
+    animation: right #{$duration * $step} steps(1) infinite;
+  }
 }
 
-/* left */
+/* ## left side */
+@keyframes left {
+  @for $i from 0 through $step {
+    #{math.div(1, $step) * $i * 100%} {
+      @if $i == 0 {
+        content: '4';
+      } @else if $i == 1 {
+        content: '';
+      } @else {
+        content: '4';
+      }
+    }
+  }
+}
+
 .side:nth-child(6) {
   transform: rotateY(-90deg) translateZ(math.div($size, 2));
+
+  &::before {
+    transform: rotateZ(90deg) rotateY(180deg);
+    animation: left #{$duration * $step} steps(1) infinite;
+  }
 }

@@ -6,11 +6,11 @@ export const Error = () => {
       <div className={cls.wrapper}>
         <ul className={cls.box}>
           <li className={cls.side} />
-          <li className={cls.side}>0</li>
           <li className={cls.side} />
           <li className={cls.side} />
-          <li className={cls.side}>4</li>
-          <li className={cls.side}>4</li>
+          <li className={cls.side} />
+          <li className={cls.side} />
+          <li className={cls.side} />
         </ul>
       </div>
     </div>

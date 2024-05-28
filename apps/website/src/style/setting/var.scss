@@ -110,6 +110,12 @@ $main: (
   bg-color: get-css-var(color, primary)
 );
 
+/* ## error */
+$error: (
+  color: get-css-var(color, secondary),
+  box-shadow-color: get-css-var(color, success-light)
+);
+
 /* # set */
 $vars: (
   color: $color,
@@ -124,7 +130,8 @@ $vars: (
   detail: $detail,
   code: $code,
   scrollbar: $scrollbar,
-  pagination: $pagination
+  pagination: $pagination,
+  error: $error
 );
 
 :root {
