@@ -17,34 +17,36 @@
 $step: 5;
 
 @keyframes rotate {
-  0% {
-    transform: rotateZ(0deg);
-  }
+  @for $i from 1 through $step {
+    $start: math.div(1, $step) * ($i - 1) * 100%;
+    $end: math.div(1, $step) * $i * 100%;
 
-  88% {
-    transform: rotateZ(90deg);
-  }
+    #{$start} {
+      left: ($i - 1) * 100px;
+      transform: rotateZ(0);
+    }
 
-  92% {
-    transform: rotateZ(88deg);
-  }
+    #{($end - $start) * 0.88 + $start} {
+      transform: rotateZ(90deg);
+    }
 
-  95% {
-    transform: rotateZ(90deg);
-  }
+    #{($end - $start) * 0.92 + $start} {
+      transform: rotateZ(88deg);
+    }
 
-  100% {
-    transform: rotateZ(90deg);
-  }
-}
+    #{($end - $start) * 0.95 + $start} {
+      transform: rotateZ(90deg);
+    }
 
-@keyframes move {
-  0% {
-    left: 0;
-  }
+    #{($end - $start) * 0.999 + $start} {
+      left: ($i - 1) * 100px;
+      transform: rotateZ(90deg);
+    }
 
-  100% {
-    left: $step * 100px;
+    #{$end} {
+      left: $i * 100px;
+      transform: rotateZ(90deg);
+    }
   }
 }
 
@@ -54,9 +56,7 @@ $step: 5;
   width: 100px;
   height: 100px;
   transform-origin: 100% 100%;
-  animation:
-    rotate 3s infinite cubic-bezier(1, 0.05, 0.98, 1),
-    move #{3 * $step}s infinite steps($step, end);
+  animation: rotate #{3 * $step}s infinite cubic-bezier(1, 0.05, 0.98, 1);
   transform-style: preserve-3d;
 
   li {
