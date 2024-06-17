@@ -4,8 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "farm start",
-    "build": "farm build",
-    "preview": "farm preview"
+    "build": "tsx build.ts"
   },
   "devDependencies": {
     "farm-plugins": "workspace:*"

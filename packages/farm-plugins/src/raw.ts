@@ -1,5 +1,5 @@
 import type { JsPlugin, UserConfig } from '@farmfe/core'
-import { readFileSync } from 'fs'
+import { readFile } from 'fs'
 
 export const farmRawPlugin = (): JsPlugin[] => {
   let farmConfig: UserConfig['compilation']
@@ -12,7 +12,14 @@ export const farmRawPlugin = (): JsPlugin[] => {
         filters: {
           resolvedPaths: ['\\?raw']
         },
-        executor: async (args) => ({ content: readFileSync(args.resolvedPath, 'utf8'), moduleType: 'raw' })
+        executor: async (args) => ({
+          content: await new Promise<string>((resolve) => {
+            readFile(args.resolvedPath, undefined, (_, data) => {
+              resolve(data.toString())
+            })
+          }),
+          moduleType: 'raw'
+        })
       }
     },
     {
@@ -25,12 +32,12 @@ export const farmRawPlugin = (): JsPlugin[] => {
         filters: {
           moduleTypes: ['raw']
         },
-        executor: async (args, ctx) => {
+        executor: (args, ctx) => {
           if (farmConfig?.mode === 'development') {
             ctx?.addWatchFile(args.resolvedPath, args.resolvedPath)
           }
 
-          return { content: 'export default ' + '`' + args.content + '`', moduleType: 'js' }
+          return { content: 'export default ' + '`' + args.content.replace(/`/g, '\\`') + '`', moduleType: 'js' }
         }
       }
     }

@@ -1,26 +1,74 @@
-import * as THREE from 'three'
+const app = document.querySelector('#app')
 
-const scene = new THREE.Scene()
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
+const modules = import.meta.glob('./components/**/index.ts')
 
-const renderer = new THREE.WebGLRenderer()
-renderer.setSize(window.innerWidth, window.innerHeight)
-document.body.appendChild(renderer.domElement)
+const componentNames = Object.entries(modules)
+  .map(([key]) => {
+    const matched = key.match(/\.\/components\/(.*)\/index.ts/)
+    if (matched) {
+      return matched[1]
+    }
+    return undefined
+  })
+  .filter((x) => x) as string[]
 
-const geometry = new THREE.BoxGeometry(1, 1, 1)
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 })
-const cube = new THREE.Mesh(geometry, material)
-scene.add(cube)
+const getComponentName = () => window.location.pathname.slice(1)
 
-camera.position.z = 5
-
-function animate() {
-  requestAnimationFrame(animate)
-
-  cube.rotation.x += 0.01
-  cube.rotation.y += 0.01
-
-  renderer.render(scene, camera)
+const clearPage = () => {
+  while (app?.firstChild) {
+    app.removeChild(app.firstChild)
+  }
 }
 
-animate()
+const renderComponentList = () => {
+  clearPage()
+
+  const container = document.createElement('ol')
+
+  container.addEventListener('click', (e) => {
+    const componentName: string = (e.target as HTMLElement).innerText
+    history.pushState(undefined, '', componentName)
+    renderComponent(componentName)
+  })
+
+  componentNames.forEach((component) => {
+    const entry = document.createElement('li')
+    entry.setAttribute('style', 'user-select: none; cursor: pointer;')
+    entry.innerText = component
+    container.appendChild(entry)
+  })
+
+  app?.appendChild(container)
+}
+
+const renderComponent = async (componentName: string) => {
+  if (!app) {
+    return
+  }
+  clearPage()
+  const component = ((await modules[`./components/${componentName}/index.ts`]()) as any).default
+  app.innerHTML = component.html
+  if (component.css) {
+    const style = document.createElement('style')
+    style.textContent = component.css
+    app.appendChild(style)
+  }
+  if (component.js) {
+    const script = document.createElement('script')
+    script.setAttribute('type', 'module')
+    script.textContent = component.js
+    app.appendChild(script)
+  }
+}
+
+const renderPage = () => {
+  const componentName = getComponentName()
+  if (componentNames.includes(componentName)) {
+    renderComponent(componentName)
+  } else {
+    renderComponentList()
+  }
+}
+
+window.addEventListener('popstate', renderPage)
+renderPage()

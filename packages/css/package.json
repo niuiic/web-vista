@@ -9,8 +9,7 @@
   },
   "scripts": {
     "dev": "farm start",
-    "build": "tsx build.ts",
-    "preview": "farm preview"
+    "build": "tsx build.ts"
   },
   "devDependencies": {
     "farm-plugins": "workspace:*"

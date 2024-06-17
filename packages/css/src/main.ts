@@ -12,19 +12,17 @@ const componentNames = Object.entries(modules)
   })
   .filter((x) => x) as string[]
 
+const getComponentName = () => window.location.pathname.slice(1)
+
 const clearPage = () => {
   while (app?.firstChild) {
     app.removeChild(app.firstChild)
   }
-  const style = document.head.querySelector('#componentStyle')
-  if (style) {
-    document.head.removeChild(style)
-  }
 }
 
-const getComponentName = () => window.location.pathname.slice(1)
-
 const renderComponentList = () => {
+  clearPage()
+
   const container = document.createElement('ol')
 
   container.addEventListener('click', (e) => {
@@ -40,21 +38,27 @@ const renderComponentList = () => {
     container.appendChild(entry)
   })
 
-  clearPage()
-
   app?.appendChild(container)
 }
 
 const renderComponent = async (componentName: string) => {
-  clearPage()
   if (!app) {
     return
   }
+  clearPage()
   const component = ((await modules[`./components/${componentName}/index.ts`]()) as any).default
-  const style = document.createElement('style')
-  style.textContent = component.css
-  document.head.appendChild(style)
   app.innerHTML = component.html
+  if (component.css) {
+    const style = document.createElement('style')
+    style.textContent = component.css
+    app.appendChild(style)
+  }
+  if (component.js) {
+    const script = document.createElement('script')
+    script.setAttribute('type', 'module')
+    script.textContent = component.js
+    app.appendChild(script)
+  }
 }
 
 const renderPage = () => {
@@ -66,5 +70,5 @@ const renderPage = () => {
   }
 }
 
-window.addEventListener('popstate', () => renderPage())
+window.addEventListener('popstate', renderPage)
 renderPage()

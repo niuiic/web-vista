@@ -1,5 +1,5 @@
 import { defineConfig } from '@farmfe/core'
-import { farmRawPlugin, farmSassPlugin } from 'farm-plugins'
+import { farmRawPlugin, farmSassPlugin, farmTypescriptPlugin } from 'farm-plugins'
 import path from 'path'
 
 export default defineConfig({
@@ -11,5 +11,5 @@ export default defineConfig({
     },
     persistentCache: false
   },
-  plugins: [farmSassPlugin(), farmRawPlugin()]
+  plugins: [farmSassPlugin(), farmRawPlugin(), farmTypescriptPlugin()]
 })

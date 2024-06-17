@@ -17,36 +17,31 @@ export const farmSassPlugin = (): JsPlugin => {
       filters: {
         resolvedPaths: ['\\.scss$', '\\.sass$']
       },
-      executor: async (args) => {
-        let content = await sassImpl
+      executor: async (args) =>
+        await sassImpl
           .then((x) => x.compile(args.resolvedPath).css)
-          .catch((e) => {
-            console.log(e)
-            return ''
-          })
-        content = await postcss([autoprefixer])
-          .process(content, {
-            from: args.resolvedPath
-          })
+          .then((x) =>
+            postcss([autoprefixer]).process(x, {
+              from: args.resolvedPath
+            })
+          )
           .then((x) => x.css)
           .catch((e) => {
-            console.log(e)
+            console.error(e)
             return ''
           })
-
-        return { content, moduleType: 'sass-css' }
-      }
+          .then((x) => ({ content: x, moduleType: 'sass-css' }))
     },
     transform: {
       filters: {
         moduleTypes: ['sass-css']
       },
-      executor: async (args, ctx) => {
+      executor: (args, ctx) => {
         if (farmConfig?.mode === 'development') {
           ctx?.addWatchFile(args.resolvedPath, args.resolvedPath)
         }
 
-        return { content: 'export default' + '`' + args.content + '`', moduleType: 'js' }
+        return { content: 'export default' + '`' + args.content.replace(/`/g, '\\`') + '`', moduleType: 'js' }
       }
     }
   }
