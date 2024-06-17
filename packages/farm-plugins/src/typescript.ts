@@ -11,7 +11,12 @@ export const farmTypescriptPlugin = (): JsPlugin => {
         resolvedPaths: ['\\?js']
       },
       executor: (args) =>
-        transformFile(args.resolvedPath)
+        transformFile(args.resolvedPath, {
+          jsc: {
+            target: 'esnext'
+          },
+          minify: true
+        })
           .then((x) => ({ content: x.code, moduleType: 'ts-js' }))
           .catch(() => ({ content: '', moduleType: 'ts-js' }))
     },
