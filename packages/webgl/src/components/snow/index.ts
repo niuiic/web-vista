@@ -1,6 +1,6 @@
 import js from './impl.ts?js'
 // import ts from './impl.ts?raw'
-import snowflakeUrl from '../../assets/images/snowflake.png'
+import snowflakeUrl from '@/assets/images/snowflake.png'
 import html from './index.html?raw'
 
 const component = {
