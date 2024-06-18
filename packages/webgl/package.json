@@ -2,6 +2,11 @@
   "name": "webgl",
   "version": "0.0.0",
   "type": "module",
+  "module": "./dist/index.mjs",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    "import": "./dist/index.mjs"
+  },
   "scripts": {
     "dev": "farm start",
     "build": "tsx build.ts"

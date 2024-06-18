@@ -1,6 +1,7 @@
 import js from './impl.ts?js'
 // import ts from './impl.ts?raw'
 import snowflakeUrl from '@/assets/images/snowflake.png'
+import { injectAssets } from '@/utils/asset'
 import html from './index.html?raw'
 
 const component = {
@@ -10,7 +11,7 @@ const component = {
   category: 'webgl',
   tags: ['animation'],
   html,
-  js: js.replace(/snowflakeUrl/g, `'${snowflakeUrl}'`),
+  js: injectAssets(js, { snowflakeUrl }),
   code: [
     {
       label: 'html',

@@ -1,4 +1,4 @@
-import { execSync } from 'child_process'
+import { build } from '@farmfe/core'
 import { readdirSync, unlinkSync, writeFileSync } from 'fs'
 import { join } from 'path'
 
@@ -28,8 +28,8 @@ indexTemplate = indexTemplate + `export default [${components.join(', ')}] as Co
 
 writeFileSync(join(process.cwd(), 'src/index.ts'), indexTemplate)
 
-execSync('pnpm farm build -c farm.config.build.ts', {
-  stdio: 'inherit'
+build({
+  configPath: join(process.cwd(), 'farm.config.build.ts')
+}).finally(() => {
+  unlinkSync(join(process.cwd(), 'src/index.ts'))
 })
-
-unlinkSync(join(process.cwd(), 'src/index.ts'))
