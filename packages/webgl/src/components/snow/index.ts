@@ -1,7 +1,7 @@
-import js from './impl.ts?js'
-// import ts from './impl.ts?raw'
 import snowflakeUrl from '@/assets/images/snowflake.png'
 import { injectAssets } from '@/utils/asset'
+import js from './impl.ts?js'
+import ts from './impl.ts?raw'
 import html from './index.html?raw'
 
 const component = {
@@ -17,12 +17,12 @@ const component = {
       label: 'html',
       filetype: 'html',
       content: html
+    },
+    {
+      label: 'script',
+      filetype: 'typescript',
+      content: ts
     }
-    // {
-    //   label: 'script',
-    //   filetype: 'typescript',
-    //   content: ts
-    // }
   ]
 }
 
