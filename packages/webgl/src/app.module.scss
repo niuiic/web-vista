@@ -1,0 +1,18 @@
+.app {
+  display: flow-root;
+  height: 100vh;
+}
+
+.list {
+  margin-top: 24px;
+}
+
+.entry {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}

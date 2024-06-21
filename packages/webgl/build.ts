@@ -1,25 +1,16 @@
-import { build } from '@farmfe/core'
 import { readdirSync, unlinkSync, writeFileSync } from 'fs'
 import { join } from 'path'
+import { build } from 'vite'
 
 let indexTemplate = `
 interface Component {
   id: string
   title: string
-  desc: string
-  category: string,
+  desc?: string
+  category?: string
   tags?: string[]
-  isStandard?: boolean
-
-  html: string
-  css?: string
-  js?: string
-
-  code: {
-    label: string
-    filetype: string
-    content: string
-  }[]
+  impl: () => React.JSX.Element
+  code?: { label: string; filetype: string; content: string }[]
 }
 `
 const components = readdirSync(join(process.cwd(), 'src/components'))
@@ -28,8 +19,4 @@ indexTemplate = indexTemplate + `export default [${components.join(', ')}] as Co
 
 writeFileSync(join(process.cwd(), 'src/index.ts'), indexTemplate)
 
-build({
-  configPath: join(process.cwd(), 'farm.config.build.ts')
-}).finally(() => {
-  unlinkSync(join(process.cwd(), 'src/index.ts'))
-})
+build().finally(() => unlinkSync(join(process.cwd(), 'src/index.ts')))

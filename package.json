@@ -18,6 +18,8 @@
     "@farmfe/plugin-sass": "^1.0.5",
     "@swc/core": "^1.6.1",
     "@types/node": "^20.14.5",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
     "@types/three": "^0.165.0",
     "@typescript-eslint/eslint-plugin": "^7.13.1",
     "@typescript-eslint/parser": "^7.13.1",
@@ -47,11 +49,15 @@
     "typescript": "^5.4.5",
     "vite": "^5.3.1",
     "vite-plugin-compression2": "^1.1.1",
+    "vite-plugin-dts": "^3.9.1",
     "vite-plugin-image-optimizer": "^1.1.8",
     "vite-plugin-pwa": "^0.20.0"
   },
   "dependencies": {
     "@tweenjs/tween.js": "^23.1.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.23.1",
     "three": "^0.165.0"
   }
 }
