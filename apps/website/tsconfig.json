@@ -17,7 +17,8 @@
     "lib": ["ESNext", "DOM"],
     "skipLibCheck": true,
     "noErrorTruncation": true,
-    "noEmit": true
+    "noEmit": true,
+    "allowImportingTsExtensions": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts", "declare/**/*.d.ts", "farm.config.ts"]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts", "declare/**/*.d.ts", "farm.config.ts", "vite.config.ts"]
 }

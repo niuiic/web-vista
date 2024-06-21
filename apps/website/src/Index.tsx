@@ -6,7 +6,7 @@ import 'highlight.js/styles/tokyo-night-dark.min.css'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { HashRouter } from 'react-router-dom'
-import { App } from './App'
+import { App } from './App.tsx'
 
 if (!document.head.attachShadow) {
   notify('error', 'Your browser does not support shadow dom. Please use the another browser supporting it instead.')

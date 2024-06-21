@@ -2,13 +2,13 @@ import { Layout } from '@/view/component/layout'
 import { useEffect, useState } from 'react'
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 import { Footer } from './view/component/footer'
-import type { Entry} from './view/component/nav';
+import type { Entry } from './view/component/nav'
 import { Nav } from './view/component/nav'
 import type { ShowcaseOptions } from './view/component/showcase'
-import { Detail } from './view/page/detail/Detail'
-import { Error } from './view/page/error/Error'
-import { Home } from './view/page/home/Home'
-import { List } from './view/page/list/List'
+import { Detail } from './view/page/detail/Detail.tsx'
+import { Error } from './view/page/error/Error.tsx'
+import { Home } from './view/page/home/Home.tsx'
+import { List } from './view/page/list/List.tsx'
 
 export const App = () => {
   const navigate = useNavigate()

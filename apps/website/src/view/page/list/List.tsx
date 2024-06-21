@@ -1,7 +1,7 @@
 import searchSvgUrl from '@/asset/image/search.svg'
 import { Input } from '@/view/component/input'
 import { Pagination } from '@/view/component/pagination'
-import { Selection } from '@/view/component/selection/Selection'
+import { Selection } from '@/view/component/selection'
 import type { ShowcaseOptions } from '@/view/component/showcase'
 import { Showcase } from '@/view/component/showcase'
 import { decode, encode } from 'js-base64'
