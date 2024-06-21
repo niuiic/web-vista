@@ -8,10 +8,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@farmfe/js-plugin-postcss": "^1.7.0",
-    "@farmfe/plugin-react": "^1.1.0",
-    "@types/highlightjs": "^9.12.6",
-    "react-refresh": "^0.14.2"
+    "@types/highlightjs": "^9.12.6"
   },
   "dependencies": {
     "css": "workspace:*",
