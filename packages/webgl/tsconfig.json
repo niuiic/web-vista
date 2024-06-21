@@ -20,13 +20,5 @@
     "noEmit": true,
     "allowImportingTsExtensions": true
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "declare/**/*.d.ts",
-    "farm.config.ts",
-    "farm.config.build.ts",
-    "vite.config.ts",
-    "build.ts"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "declare/**/*.d.ts", "vite.config.ts", "build.ts"]
 }

@@ -10,8 +10,5 @@
   "scripts": {
     "dev": "vite dev",
     "build": "tsx build.ts"
-  },
-  "devDependencies": {
-    "farm-plugins": "workspace:*"
   }
 }
