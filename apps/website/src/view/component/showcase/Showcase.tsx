@@ -1,5 +1,4 @@
 import { classes } from '@/util/class'
-import { Frame } from '../frame'
 import type { ShowcaseOptions } from './nonBusiness'
 import cls from './showcase.module.scss'
 
@@ -14,7 +13,9 @@ export const Showcase = (props: Props) => {
 
   return (
     <div className={classes(cls.showcase, props.className, 'o-btn')} onClick={() => props.onClick(props.options)}>
-      <Frame className={cls.frame} html={props.options.html} css={props.options.css} js={props.options.js} />
+      <div className={cls.frame}>
+        <props.options.impl />
+      </div>
       <div className={cls.info}>
         <div className={cls.info__left}>
           <p className={cls.title} title={props.options.title}>

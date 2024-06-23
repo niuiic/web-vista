@@ -21,7 +21,11 @@ export const Code = (props: Props) => {
 
   useEffect(() => {
     if (codeRef.current) {
-      codeRef.current.innerHTML = hljs.highlight(props.code, { language: props.language }).value
+      try {
+        codeRef.current.innerHTML = hljs.highlight(props.code, { language: props.language }).value
+      } catch {
+        codeRef.current.innerText = props.code
+      }
     }
     setTimeout(() => {
       setBodyStyle({})
@@ -44,7 +48,7 @@ export const Code = (props: Props) => {
           src={collapsed ? downSvgUrl : upSvgUrl}
           className={classes(cls['collapse-btn'], 'o-btn')}
           onClick={onClick}
-         />
+        />
       </div>
       <pre className={cls.body} style={bodyStyle} ref={codeRef} />
     </div>

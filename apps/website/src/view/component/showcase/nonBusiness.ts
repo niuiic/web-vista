@@ -5,14 +5,6 @@ export interface ShowcaseOptions {
   category: string
   tags?: string[]
   isStandard?: boolean
-
-  html: string
-  css?: string
-  js?: string
-
-  code: {
-    label: string
-    filetype: string
-    content: string
-  }[]
+  impl: () => React.JSX.Element
+  code?: { label: string; filetype: string; content: string }[]
 }

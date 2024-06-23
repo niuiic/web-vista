@@ -1,7 +1,6 @@
 import returnSvgUrl from '@/asset/image/return.svg'
 import { classes } from '@/util/class'
 import { Code } from '@/view/component/code'
-import { Frame } from '@/view/component/frame'
 import { Image } from '@/view/component/image'
 import type { ShowcaseOptions } from '@/view/component/showcase'
 import { useEffect, useState } from 'react'
@@ -75,12 +74,12 @@ export const Detail = (props: Props) => {
       ) : undefined}
       <div className={cls['sources_wrapper']}>
         <div className={cls.sources}>
-          {showcase?.code.map((x) => (
+          {showcase?.code?.map((x) => (
             <Code code={x.content} language={x.filetype} label={x.label} key={x.label} className={cls.source} />
           ))}
         </div>
       </div>
-      <Frame className={cls.frame} html={showcase?.html} css={showcase?.css} js={showcase?.js} />
+      <div className={cls.frame}>{showcase ? <showcase.impl /> : undefined}</div>
     </div>
   )
 }

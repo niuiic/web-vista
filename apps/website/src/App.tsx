@@ -38,7 +38,7 @@ export const App = () => {
   // # cases
   const [cases, setCases] = useState<ShowcaseOptions[]>([])
   useEffect(() => {
-    import('css').then((x) => setCases(x.default))
+    Promise.all([import('css'), import('webgl')]).then(([css, webgl]) => setCases([...css.default, ...webgl.default]))
   }, [])
 
   return (

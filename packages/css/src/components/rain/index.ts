@@ -1,27 +1,24 @@
-import html from './index.html?raw'
-import css from './index.scss'
-import scss from './index.scss?raw'
+import { Rain } from './Rain.tsx'
+import template from './Rain.tsx?raw'
+import style from './rain.module.scss?raw'
 
-const component = {
+export default {
   id: 'rain',
   title: 'rain',
   desc: 'Rain animation',
   category: 'css',
   tags: ['animation'],
-  html,
-  css,
+  impl: Rain,
   code: [
     {
-      label: 'html',
-      filetype: 'html',
-      content: html
+      label: 'template',
+      filetype: 'typescript',
+      content: template
     },
     {
-      label: 'scss',
+      label: 'style',
       filetype: 'scss',
-      content: scss
+      content: style
     }
   ]
-}
-
-export default component
+} satisfies Component
