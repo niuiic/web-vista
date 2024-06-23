@@ -1,0 +1,31 @@
+@use '@/styles/section.scss';
+
+.parent {
+  background-color: red;
+  line-height: 20px;
+}
+
+.child {
+  font-size: 40px;
+  line-height: 1.5;
+}
+
+.child2 {
+  font-size: 60px;
+  line-height: 2;
+}
+
+.parent2 {
+  background-color: yellow;
+  line-height: 150px;
+}
+
+.parent3 {
+  background-color: red;
+  line-height: 100px;
+}
+
+.child3 {
+  font-size: 20px;
+  line-height: 1.5;
+}

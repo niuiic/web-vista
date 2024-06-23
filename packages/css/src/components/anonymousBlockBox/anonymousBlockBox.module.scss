@@ -1,0 +1,17 @@
+@use '@/styles/section.scss';
+
+.inline-level-box {
+  border: 1px solid red;
+}
+
+.in-flow-block-level-box {
+  display: block;
+}
+
+.inline-box {
+  border: 1px solid red;
+}
+
+.line-box {
+  display: inline;
+}

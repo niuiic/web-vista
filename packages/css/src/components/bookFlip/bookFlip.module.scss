@@ -1,0 +1,55 @@
+$duration: 0.5s;
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.book {
+  position: relative;
+  width: 220px;
+  height: 250px;
+  margin: auto;
+  perspective: 600px;
+  transform: translateX(50%);
+}
+
+@keyframes flip {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(-180deg);
+  }
+}
+
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #efefef;
+  border-radius: 4px;
+  background: #ffffff;
+  transform-origin: left 0;
+}
+
+.page:first-child,
+.page:last-child {
+  z-index: -1;
+  border-width: 0;
+  background: #999999;
+  transform: scale(1.05);
+  transform-origin: left center;
+}
+
+.page:first-child {
+  transform: scale(1.05) rotateY(-180deg);
+}
+
+@for $i from 2 through 19 {
+  .page:nth-child(#{$i}) {
+    animation: flip #{$duration * $i} ease-in-out forwards infinite;
+  }
+}

@@ -1,0 +1,13 @@
+@use '@/styles/section.scss';
+
+.box {
+  width: min-content;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.defined-width {
+  width: max-content;
+}

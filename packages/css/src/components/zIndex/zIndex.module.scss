@@ -1,0 +1,21 @@
+@use '@/styles/section.scss';
+
+.parent {
+  height: 100px;
+}
+
+.child1 {
+  position: absolute;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.child2 {
+  position: relative;
+  z-index: 2;
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}

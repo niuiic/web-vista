@@ -1,0 +1,46 @@
+@use '@/styles/section.scss';
+
+.parent {
+  counter-reset: counter1 0;
+}
+
+.child {
+  counter-increment: counter1 1;
+}
+
+.child::before {
+  content: counter(counter1, upper-roman);
+}
+
+.parent2 {
+  counter-reset: counter2 0 counter3 0;
+}
+
+.child1 {
+  counter-increment: counter2 1;
+  counter-reset: counter3 0;
+}
+
+.child2 {
+  counter-increment: counter3 1;
+}
+
+.child1::before {
+  content: counter(counter2);
+}
+
+.child2::before {
+  content: counter(counter3);
+}
+
+.parent3 {
+  counter-reset: counter4 0;
+}
+
+.child3 {
+  counter-increment: counter4 1;
+}
+
+.child3::before {
+  content: counters(counter4, '-', decimal);
+}

@@ -1,0 +1,59 @@
+@use '@/styles/section.scss';
+
+.parent1 {
+  margin-top: 10px;
+  background: red;
+}
+
+.child1 {
+  display: flow-root;
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: green;
+}
+
+.parent2 {
+  display: flow-root;
+  margin-top: 10px;
+  background: red;
+}
+
+.child2 {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: green;
+}
+
+.parent3 {
+  background: red;
+}
+
+.child3 {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  background: green;
+}
+
+.child4 {
+  display: flow-root;
+}
+
+.child5 {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  background: yellow;
+}
+
+.parent4 {
+  display: flow-root;
+  background: red;
+}
+
+.child6 {
+  display: flow-root;
+  margin-block: 10px;
+}

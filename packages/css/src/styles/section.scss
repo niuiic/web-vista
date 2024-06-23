@@ -1,4 +1,4 @@
-section {
+.section {
   position: relative;
   padding: 16px;
   margin: 2px;
@@ -7,10 +7,10 @@ section {
   box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 10%);
 }
 
-section + section {
+.section + .section {
   margin-top: 24px;
 }
 
-section h1 {
+.section__title {
   font-size: 18px;
 }

@@ -1,0 +1,22 @@
+@use '@/styles/section.scss';
+
+.parent {
+  background-color: red;
+}
+
+.line2 {
+  float: right;
+}
+
+.float1,
+.float2 {
+  float: left;
+}
+
+li {
+  float: left;
+}
+
+.parent3 > :nth-child(3) {
+  clear: both;
+}
