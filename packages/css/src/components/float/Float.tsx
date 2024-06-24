@@ -30,11 +30,11 @@ export const Float = () => (
       <hr />
 
       <ul className={cls.parent3}>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
+        {Array.from({ length: 5 }).map((_, i) => (
+          <li className={cls.parent3__child} key={i}>
+            {i + 1}
+          </li>
+        ))}
       </ul>
     </section>
   </>
