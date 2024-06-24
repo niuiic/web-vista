@@ -20,11 +20,11 @@ export const BoxModel = () => (
       </h1>
       <hr />
 
-      <p className={cls.p1}>
+      <div className={cls.p1}>
         <span className={cls['inline-1']}>inline-1</span>
         <span className={cls['inline-2']}>inline-2</span>
-        <p className={cls.p2}>p2</p>
-      </p>
+        <div className={cls.p2}>p2</div>
+      </div>
     </section>
   </>
 )

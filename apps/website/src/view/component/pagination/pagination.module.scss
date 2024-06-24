@@ -5,6 +5,10 @@
   align-items: center;
 }
 
+.pagination--empty {
+  height: 36px + 2 * 8px;
+}
+
 .item {
   width: 36px;
   height: 36px;

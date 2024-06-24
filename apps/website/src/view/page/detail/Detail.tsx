@@ -54,17 +54,17 @@ export const Detail = (props: Props) => {
       {showcase ? (
         <div className={cls.info}>
           <div className={cls['info__left']}>
-            <p className={cls.title} title={showcase.title}>
+            <div className={cls.title} title={showcase.title}>
               {showcase.title}
-            </p>
+            </div>
             {hasTags() ? (
-              <p className={cls.tags} title={showcase.tags?.join('/')}>
+              <div className={cls.tags} title={showcase.tags?.join('/')}>
                 {showcase.tags?.join('/')}
-              </p>
+              </div>
             ) : undefined}
-            <p className={cls.desc} title={showcase.desc}>
+            <div className={cls.desc} title={showcase.desc}>
               {showcase.desc}
-            </p>
+            </div>
           </div>
           <div className={cls['info__right']}>
             <span className={cls.category}>{showcase.category}</span>

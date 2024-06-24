@@ -18,19 +18,19 @@ export const Showcase = (props: Props) => {
       </div>
       <div className={cls.info}>
         <div className={cls.info__left}>
-          <p className={cls.title} title={props.options.title}>
+          <div className={cls.title} title={props.options.title}>
             {props.options.title}
-          </p>
+          </div>
           {hasTags() ? (
-            <p className={cls.tags} title={props.options.tags?.join('/')}>
+            <div className={cls.tags} title={props.options.tags?.join('/')}>
               {props.options.tags?.join('/')}
-            </p>
+            </div>
           ) : undefined}
-          <p className={cls.desc} title={props.options.desc}>
+          <div className={cls.desc} title={props.options.desc}>
             {props.options.desc}
-          </p>
+          </div>
         </div>
-        <p className={cls.category}>{props.options.category}</p>
+        <div className={cls.category}>{props.options.category}</div>
       </div>
     </div>
   )

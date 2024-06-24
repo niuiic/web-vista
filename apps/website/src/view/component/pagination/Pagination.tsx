@@ -19,7 +19,7 @@ export const Pagination = (props: Props) => {
   const onClick = (pageNum: number) => props.setPageNum(pageNum)
 
   return (
-    <div className={classes(cls.pagination, props.className)}>
+    <div className={classes(cls.pagination, props.className, props.count === 0 ? cls['pagination--empty'] : undefined)}>
       {items.map((x) => (
         <div
           className={classes(cls.item, 'o-btn', props.pageNum === x ? cls['item--selected'] : undefined)}
