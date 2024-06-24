@@ -1,0 +1,1 @@
+import{j as o}from"./index.BQYQJ3AC.js";const t=()=>o.jsx("div",{children:"hello"}),e={id:"snow",title:"snow",desc:"Snow animation",category:"webgl",tags:["animation"],impl:t,code:[]},n=[e];export{n as default};

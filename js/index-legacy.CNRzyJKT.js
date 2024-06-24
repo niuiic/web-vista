@@ -1,0 +1,1 @@
+System.register(["./index-legacy.BUdbIBhh.js"],(function(e,t){"use strict";var n;return{setters:[function(e){n=e.j}],execute:function(){e("default",[{id:"snow",title:"snow",desc:"Snow animation",category:"webgl",tags:["animation"],impl:function(){return n.jsx("div",{children:"hello"})},code:[]}])}}}));
