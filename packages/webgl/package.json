@@ -5,7 +5,7 @@
   "module": "./dist/js/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "dev": "vite dev",
+    "dev": "vite dev --host",
     "build": "tsx build.ts"
   }
 }
