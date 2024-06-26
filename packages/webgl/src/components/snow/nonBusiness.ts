@@ -1,6 +1,6 @@
-import snowflakeUrl from '@/assets/images/snowflake.png'
 import { useThree } from '@/utils/useThree'
 import { BufferAttribute, BufferGeometry, Points, PointsMaterial, Scene, TextureLoader } from 'three'
+import snowflakeUrl from './snowflake.png'
 
 export const useSnow = (container: HTMLElement) => {
   const { renderer, camera, dispose } = useThree(container)
