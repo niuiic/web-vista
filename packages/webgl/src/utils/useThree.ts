@@ -2,7 +2,11 @@ import { PerspectiveCamera, WebGLRenderer } from 'three'
 
 export const useThree = (container: HTMLElement) => {
   // # container
-  const observer = new ResizeObserver(() => resetView())
+  let timer: any
+  const observer = new ResizeObserver(() => {
+    timer && clearTimeout(timer)
+    timer = setTimeout(resetView, 200)
+  })
   observer.observe(container)
 
   // # canvas

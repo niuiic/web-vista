@@ -43,12 +43,12 @@ export const Code = (props: Props) => {
   return (
     <div className={classes(cls.code, props.className, collapsed ? cls['code--collapsed'] : undefined)}>
       <div className={cls.header}>
-        <span>{props.label}</span>
         <Image
           src={collapsed ? downSvgUrl : upSvgUrl}
           className={classes(cls['collapse-btn'], 'o-btn')}
           onClick={onClick}
         />
+        <span>{props.label}</span>
       </div>
       <pre className={cls.body} style={bodyStyle} ref={codeRef} />
     </div>

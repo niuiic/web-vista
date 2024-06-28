@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { useSnow } from './nonBusiness'
+import { useSnow } from './impl'
 
 export const Snow = () => {
   const containerRef = useRef<HTMLDivElement>()
