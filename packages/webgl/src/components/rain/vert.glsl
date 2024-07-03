@@ -29,10 +29,11 @@ void main() {
         x = position.x;
     }
 
-    float y = (.5 - mod(position.y + uTime * speedY, 1.1)) * 2.;
-    reverse = step(y, -1.) * step(-y, 1.1);
+    float jumpDistance = 0.1 * speed / 2.;
+    float y = (.5 - mod(position.y + uTime * speedY, 1. + jumpDistance)) * 2.;
+    reverse = step(y, -1.) * step(-y, 1. + jumpDistance);
     if (y < -1.) {
-        y = -1. - .05 * sin((y + 1.) * 5. * uPi);
+        y = -1. - .05 * speed / 2. * sin((y + 1.) * .5 / jumpDistance * uPi);
     }
 
     gl_Position = vec4(x, y, 0., 1.);
