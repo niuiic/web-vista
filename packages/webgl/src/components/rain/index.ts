@@ -1,17 +1,16 @@
-import useThree from '@/utils/useThree.ts?raw'
 import fragmentShader from './frag.glsl?raw'
 import script from './impl.ts?raw'
-import { Snow } from './Snow.tsx'
-import template from './Snow.tsx?raw'
+import { Rain } from './Rain.tsx'
+import template from './Rain.tsx?raw'
 import vertexShader from './vert.glsl?raw'
 
 export default {
-  id: 'snow',
-  title: 'snow',
-  desc: 'Snow animation',
+  id: 'rainWebgl',
+  title: 'rain',
+  desc: 'Rain animation',
   category: 'webgl',
-  tags: ['threejs', 'animation'],
-  impl: Snow,
+  tags: ['shader', 'animation'],
+  impl: Rain,
   code: [
     {
       label: 'template',
@@ -22,11 +21,6 @@ export default {
       label: 'script',
       filetype: 'typescript',
       content: script
-    },
-    {
-      label: 'useThree',
-      filetype: 'typescript',
-      content: useThree
     },
     {
       label: 'fragmentShader',

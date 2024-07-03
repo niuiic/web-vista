@@ -8,15 +8,6 @@
     "no-return-assign": "off",
     "no-useless-concat": "off",
     "react/no-unescaped-entities": "off",
-    "@typescript-eslint/ban-types": [
-      "error",
-      {
-        "types": {
-          "null": "use \"undefined\" instead of \"null\"",
-          "{}": false
-        }
-      }
-    ],
     "@typescript-eslint/no-unused-vars": ["error", { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }]
   }
 }

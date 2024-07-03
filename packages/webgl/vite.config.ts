@@ -53,7 +53,7 @@ export default defineConfig(({ command }) => {
           chunkFileNames: 'js/[name].[hash].js',
           assetFileNames: '[ext]/[name].[hash].[ext]'
         },
-        external: ['three', 'tween', 'react', 'react/jsx-runtime']
+        external: ['three', 'tween', 'react', 'react/jsx-runtime', 'twgl.js']
       }
     },
     minify: true
