@@ -54,7 +54,7 @@ export const App = () => {
   useEffect(() => {
     renderPage()
     window.addEventListener('popstate', renderPage)
-  })
+  }, [])
 
   return <div className={cls.app}>{showList ? <List onClick={clickEntry} /> : Component}</div>
 }

@@ -6,7 +6,7 @@ export const Home = () => {
   const navigate = useNavigate()
   useEffect(() => {
     navigate('/showcase')
-  })
+  }, [])
 
   const homeRef = useRef<HTMLDivElement>()
   const canvasRef = useRef<HTMLCanvasElement>()
