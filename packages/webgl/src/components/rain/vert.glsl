@@ -15,7 +15,7 @@ flat out float speedY;
 flat out float reverse;
 
 void main() {
-    gl_PointSize = uSize;
+    gl_PointSize = uSize * speed / 2.;
 
     speedX = uSpeedX * speed;
     speedY = uSpeedY * speed;
