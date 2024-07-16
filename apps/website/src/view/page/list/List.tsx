@@ -28,6 +28,9 @@ export const List = (props: Props) => {
   const [selected, setSelected] = useState<string[]>(search.selected ?? [])
   const items = ['css', 'webgl']
   const [pageNum, setPageNum] = useState<number>(search.pageNum ?? 1)
+  useEffect(() => {
+    setPageNum(1)
+  }, [props.cases])
   const pageSize = 6
   const assignInput = (input: string) => {
     setInput(input)
